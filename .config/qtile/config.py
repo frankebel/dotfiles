@@ -226,9 +226,13 @@ widgets_right = [
         widget.Sep(),
         widget.TextBox(**colors_filler_2, **my_separator),
         # Network Usage
+        widget.TextBox(
+            text='\uf1eb' if is_laptop else '',
+            **colors_text_1,
+        ),
         my_widget.net.Net(
             interface='wlp2s0' if is_laptop else 'eno1',
-            format=' {down:.1f} {down_unit} \u2193\u2191 {up:.1f} {up_unit}',
+            format='{down:.1f} {down_unit} \u25bc\u25b2 {up:.1f} {up_unit}',
             update_interval=5,
             **colors_text_1,
         ),
