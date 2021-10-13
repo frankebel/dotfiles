@@ -97,6 +97,7 @@ keys = [
     Key([mod], "b", lazy.spawn("firefox"), desc="Lauch Browser"),
     Key([mod], "m", lazy.spawn("thunderbird"), desc="Lauch Mail"),
     Key([mod], "o", lazy.spawn("pcmanfm"), desc="Launch File Manager"),
+    Key([], "Print", lazy.spawn("flameshot gui"), desc="Take Screenshot"),
 
     # Keyboard Layout
     Key([mod], "z", lazy.widget["keyboardlayout"].next_keyboard(), desc="Nexp keyboard layout"),
