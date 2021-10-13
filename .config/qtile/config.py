@@ -123,8 +123,10 @@ for i in groups:
     ])
 
 # COLORS
-# Dracula color scheme.
-colors = {
+
+def dracula_theme():
+    """Dracula color scheme."""
+    colors = {
         'Background': '#282a36',
         'Current Line': '#44475a',
         'Selection': '#44475a', 
@@ -137,9 +139,10 @@ colors = {
         'Purple': '#bd93f9',
         'Red': '#ff5555',
         'Yellow': '#f1fa8c',
-}
+    }
+    return colors
 
-def dracula_theme():
+def widget_dracula():
     """Colors for widgets."""
     foreground1 = colors['Green']
     background1 = colors['Current Line']
@@ -151,7 +154,8 @@ def dracula_theme():
     colors_filler_2 = {'foreground': background1, 'background': background2}
     return colors_text_1, colors_text_2, colors_filler_1, colors_filler_2
 
-colors_text_1, colors_text_2, colors_filler_1, colors_filler_2 = dracula_theme()
+colors = dracula_theme()
+colors_text_1, colors_text_2, colors_filler_1, colors_filler_2 = widget_dracula()
 
 # Layouts
 layout_theme = {
@@ -185,8 +189,7 @@ widget_defaults = dict(
 extension_defaults = widget_defaults.copy()
 
 
-# Since widgets on the left side are unique to each screen,
-# they are inside a function.
+# Widgets on the left side are unique to each screen,
 def init_widgets_left():
     return [
             # Current Layout
@@ -210,20 +213,12 @@ def init_widgets_left():
         ]
 
 def my_separator():
+    """Separator settings for slash effect."""
     return {'text': '\ue0ba', 'fontsize': 16, 'padding': 0}
 my_separator = my_separator()
 
-def right_separator(background='#ff0000', foreground='#00ff00'):
-    return widget.TextBox(
-            text='\ue0ba',
-            fontsize=16,
-            padding=0,
-            background=background,
-            foreground=foreground,
-        )
 
 widgets_right = [
-        widget.Sep(),
         # Notifications
         widget.TextBox(text='Notify'),
         widget.Notify(),
@@ -301,25 +296,36 @@ widgets_right = [
         ),
 ]
 
-if is_laptop:
-    widgets_laptop = [
-            widget.Sep(),
-            # Battery
-            my_widget.battery.Battery(
-                format='\u2b4d {char} {percent:.0f} % ({hour:d}:{min:02d})',
-                charge_char='\u25b2',
-                discharge_char='\u25bc',
-                **colors_text_2,
-                update_interval=5,
-            ),
-    ]
-else:
-    widgets_laptop = []
 
-screens = [
+widgets_laptop = [
+        widget.Sep(),
+        # Battery
+        my_widget.battery.Battery(
+            format='\u2b4d {char} {percent:.0f} % ({hour:d}:{min:02d})',
+            charge_char='\u25b2',
+            discharge_char='\u25bc',
+            **colors_text_2,
+            update_interval=5,
+        ),
+]
+
+## SCREENS
+if is_laptop:
+    screens = [
         Screen(
             top=bar.Bar(
                 widgets=[*init_widgets_left(), widget.Spacer(), widget.Systray(), *widgets_laptop, *widgets_right],
+                size=24,
+                opacity=1,
+                background=colors['Background'],
+            )
+        ),
+    ]
+else:
+    screens = [
+        Screen(
+            top=bar.Bar(
+                widgets=[*init_widgets_left(), widget.Spacer(), widget.Systray(), *widgets_right],
                 size=24,
                 opacity=1,
                 background=colors['Background'],
@@ -333,7 +339,7 @@ screens = [
                 background=colors['Background'],
             )
         )
-]
+    ]
 
 # Drag floating layouts.
 mouse = [
