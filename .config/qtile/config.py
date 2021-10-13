@@ -36,6 +36,7 @@ from libqtile.utils import guess_terminal
 import my_widget.volume
 import my_widget.net
 import my_widget.cpu
+import my_widget.battery
 
 mod = "mod4"
 terminal = "alacritty"
@@ -300,10 +301,25 @@ widgets_right = [
         ),
 ]
 
+if is_laptop:
+    widgets_laptop = [
+            widget.Sep(),
+            # Battery
+            my_widget.battery.Battery(
+                format='\u2b4d {char} {percent:.0f} % ({hour:d}:{min:02d})',
+                charge_char='\u25b2',
+                discharge_char='\u25bc',
+                **colors_text_2,
+                update_interval=5,
+            ),
+    ]
+else:
+    widgets_laptop = []
+
 screens = [
         Screen(
             top=bar.Bar(
-                widgets=[*init_widgets_left(), widget.Spacer(), widget.Systray(), *widgets_right],
+                widgets=[*init_widgets_left(), widget.Spacer(), widget.Systray(), *widgets_laptop, *widgets_right],
                 size=24,
                 opacity=1,
                 background=colors['Background'],
