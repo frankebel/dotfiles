@@ -306,7 +306,7 @@ widgets_laptop = [
         widget.Sep(),
         # Battery
         my_widget.battery.Battery(
-            format='\u2b4d {char} {percent:.0f} % ({hour:d}:{min:02d})',
+            format='\u2b4d {char} {hour:d}:{min:02d} ({percent:.0f} %)',
             charge_char='\u25b2',
             discharge_char='\u25bc',
             notify_below=20,
