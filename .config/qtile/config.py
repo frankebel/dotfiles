@@ -97,6 +97,8 @@ keys = [
     Key([mod], "b", lazy.spawn("firefox"), desc="Lauch Browser"),
     Key([mod], "m", lazy.spawn("thunderbird"), desc="Lauch Mail"),
     Key([mod], "o", lazy.spawn("pcmanfm"), desc="Launch File Manager"),
+    Key([mod], "d", lazy.spawn("discord"), desc="Launch Discord"),
+    Key([mod], "s", lazy.spawn("steam"), desc="Launch File Steam"),
     Key([], "Print", lazy.spawn("flameshot gui"), desc="Take Screenshot"),
 
     # Keyboard Layout
@@ -220,10 +222,6 @@ my_separator = my_separator()
 
 
 widgets_right = [
-        # Notifications
-        widget.TextBox(text='Notify'),
-        widget.Notify(),
-        widget.Sep(),
         widget.TextBox(**colors_filler_2, **my_separator),
         # Network Usage
         widget.TextBox(
