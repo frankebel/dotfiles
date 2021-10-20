@@ -24,6 +24,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+# Widgets need the package 'ttf-font-awesome'.
+
 import os
 import subprocess
 from typing import List  # noqa: F401
@@ -105,9 +107,9 @@ keys = [
     Key([mod], "z", lazy.widget["keyboardlayout"].next_keyboard(), desc="Nexp keyboard layout"),
 
     # Volume keys
-    Key([], "XF86AudioMute", lazy.spawn("amixer -D pulse sset Master toggle")),
-    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -D pulse sset Master 5%-")),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -D pulse sset Master 5%+")),
+    Key([], "XF86AudioMute", lazy.spawn("amixer set Master toggle")),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer set Master 5%-")),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer set Master 5%+")),
 ]
 
 
@@ -184,15 +186,17 @@ layouts = [
 
 # WIDGETS
 widget_defaults = dict(
-    font='mono',
+    font='noto sans mono',
     fontsize=14,
-    padding=2,
+    padding=6,
 )
 
 extension_defaults = widget_defaults.copy()
 
+network_icon = '\uf1eb' if is_laptop else '\uf796'
 
-# Widgets on the left side are unique to each screen,
+
+# Widgets on the left side are unique to each screen.
 def init_widgets_left():
     return [
             # Current Layout
@@ -212,65 +216,42 @@ def init_widgets_left():
                 other_screen_border=colors['Green'],
                 **colors_text_1,
             ),
-            widget.TextBox(**colors_filler_1, **my_separator),
         ]
 
-def my_separator():
-    """Separator settings for slash effect."""
-    return {'text': '\ue0ba', 'fontsize': 16, 'padding': 0}
-my_separator = my_separator()
-
-
 widgets_right = [
-        widget.TextBox(**colors_filler_2, **my_separator),
         # Network Usage
-        widget.TextBox(
-            text='\uf1eb' if is_laptop else '',
-            **colors_text_1,
-        ),
         my_widget.net.Net(
             interface='wlp2s0' if is_laptop else 'eno1',
-            format='{down:.1f} {down_unit} \u25bc\u25b2 {up:.1f} {up_unit}',
+            format=network_icon + ' {down:.1f} {down_unit} \u25bc\u25b2 {up:.1f} {up_unit}',
             update_interval=5,
             **colors_text_1,
         ),
-        widget.TextBox(**colors_filler_1, **my_separator),
         # CPU Usage
         my_widget.cpu.CPU(
             format='\uf2db {freq_current:.2f} GHz ({load_percent} %)',
             update_interval=5,
             **colors_text_2,
         ),
-        widget.TextBox(**colors_filler_2, **my_separator),
         # Memory Usage
         widget.Memory(
-            format='{MemUsed: .0f} {mm}iB',
+            format='\uf538{MemUsed: .0f} {mm}iB',
             update_interval=5,
             **colors_text_1,
             ),
-        widget.TextBox(**colors_filler_1, **my_separator),
         # Updates
-        widget.TextBox(
-            text='⟳',
-            fontsize=16,
-            mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(terminal + ' -e yay -Syu')},
-            **colors_text_2
-        ),
         widget.CheckUpdates(
             distro='Arch_yay',
-            display_format='{updates}',
-            no_update_string='0',
+            display_format='{\uf063 updates}',
+            no_update_string='\uf063 0',
             update_interval=3600,
-            mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(terminal + ' -e yay -Syu')},
+            mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(terminal + ' -e yay -Syyu')},
             colour_have_updates=colors_text_2['foreground'],
             colour_no_updates=colors_text_2['foreground'],
             background=colors_text_2['background'],
         ),
-        widget.TextBox(**colors_filler_2, **my_separator),
         # Sound volume
         widget.TextBox(
-            text='墳',
-            fontsize=16,
+            text='\uf028',
             mouse_callbacks={'Button1': lambda: qtile.cmd_spawn('pavucontrol')},
             **colors_text_1,
         ),
@@ -278,12 +259,10 @@ widgets_right = [
             step=5,
             **colors_text_1,
         ),
-        widget.TextBox(**colors_filler_1, **my_separator),
         # Keyboard layout
         widget.TextBox(
-            text='\u2328',
-            fontsize=40,
-            padding=2,
+            text='\uf11c',
+            fontsize=18,
             **colors_text_2,
         ),
         widget.KeyboardLayout(
@@ -291,10 +270,9 @@ widgets_right = [
             display_map={'us colemak':'col', 'us':'us'},
             **colors_text_2,
         ),
-        widget.TextBox(**colors_filler_2, **my_separator),
         # Datetime
         widget.Clock(
-            format=' %FT%T (%a)',
+            format='\uf017 %FT%T (%a)',
             **colors_text_1,
         ),
 ]
