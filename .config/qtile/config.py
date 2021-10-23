@@ -107,10 +107,14 @@ keys = [
     Key([mod], "z", lazy.widget["keyboardlayout"].next_keyboard(), desc="Nexp keyboard layout"),
 
     # Volume keys
-    Key([], "XF86AudioMute", lazy.spawn("amixer set Master toggle"), desc="Mute Master"),
-    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer set Master 5%-", desc="Raise Master Volume")),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer set Master 5%+", desc="Lower Master Volume")),
-    
+    Key([], "XF86AudioMute", lazy.spawn("amixer set Master toggle"), desc="Mute/Unmute master"),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer set Master 5%-", desc="Lower master volume")),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer set Master 5%+", desc="Raise master volume")),
+
+    # Monitor Brightness
+    Key([], "XF86MonBrightnessDown", lazy.spawn("light -U 10"), desc="Lower monitor brightness"),   
+    Key([], "XF86MonBrightnessUp", lazy.spawn("light -A 10"), desc="Raise monitor brightness"),
+
     # Dunst Notifications
     Key(["control"], "space", lazy.spawn("dunstctl close"), desc="Close notification"),
     Key(["control", "shift"], "space", lazy.spawn("dunstctl close-all"), desc="Close all notifications"),
