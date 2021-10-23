@@ -216,12 +216,12 @@ def init_widgets_left():
             # GroupBox
             widget.GroupBox(
                 highlight_method='line',
-                active=colors['Green'],
-                inactive=colors['Background'],
-                this_current_screen_border=colors['Green'],
-                this_screen_border=colors['Green'],
-                other_current_screen_border=colors['Green'],
-                other_screen_border=colors['Green'],
+                active=colors['Purple'],
+                inactive=colors['Purple'],
+                this_current_screen_border=colors['Purple'],
+                this_screen_border=colors['Purple'],
+                other_current_screen_border=colors['Purple'],
+                other_screen_border=colors['Purple'],
             ),
         ]
 
