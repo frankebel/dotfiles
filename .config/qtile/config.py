@@ -165,7 +165,6 @@ def widget_dracula():
     return colors_text_1, colors_text_2, colors_filler_1, colors_filler_2
 
 colors = dracula_theme()
-colors_text_1, colors_text_2, colors_filler_1, colors_filler_2 = widget_dracula()
 
 # Layouts
 layout_theme = {
@@ -194,12 +193,17 @@ widget_defaults = dict(
     font='noto sans mono',
     fontsize=14,
     padding=6,
+    foreground=colors['Purple'],
 )
 
 extension_defaults = widget_defaults.copy()
 
 network_icon = '\uf1eb' if is_laptop else '\uf796'
 
+def my_Sep():
+    return widget.Sep(
+            foreground=colors['Purple'],
+        )
 
 # Widgets on the left side are unique to each screen.
 def init_widgets_left():
@@ -207,7 +211,6 @@ def init_widgets_left():
             # Current Layout
             widget.CurrentLayoutIcon(
                 scale=0.7,
-                background=colors['Current Line'],
             ),
             # widget.TextBox(**colors_filler_2, **my_separator),
             # GroupBox
@@ -219,30 +222,30 @@ def init_widgets_left():
                 this_screen_border=colors['Green'],
                 other_current_screen_border=colors['Green'],
                 other_screen_border=colors['Green'],
-                **colors_text_1,
             ),
         ]
 
 widgets_right = [
+        my_Sep(),
         # Network Usage
         my_widget.net.Net(
             interface='wlp2s0' if is_laptop else 'eno1',
             format=network_icon + ' {down:.1f} {down_unit} \u25bc\u25b2 {up:.1f} {up_unit}',
             update_interval=5,
-            **colors_text_1,
         ),
+        my_Sep(),
         # CPU Usage
         my_widget.cpu.CPU(
             format='\uf2db {freq_current:.2f} GHz ({load_percent} %)',
             update_interval=5,
-            **colors_text_2,
         ),
+        my_Sep(),
         # Memory Usage
         widget.Memory(
             format='\uf538{MemUsed: .0f} {mm}iB',
             update_interval=5,
-            **colors_text_1,
-            ),
+        ),
+        my_Sep(),
         # Updates
         widget.CheckUpdates(
             distro='Arch_yay',
@@ -250,41 +253,38 @@ widgets_right = [
             no_update_string='\uf063 0',
             update_interval=3600,
             mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(terminal + ' -e yay -Syyu')},
-            colour_have_updates=colors_text_2['foreground'],
-            colour_no_updates=colors_text_2['foreground'],
-            background=colors_text_2['background'],
+            colour_have_updates=colors['Purple'],
+            colour_no_updates=colors['Purple'],
         ),
+        my_Sep(),
         # Sound volume
         widget.TextBox(
             text='\uf028',
             mouse_callbacks={'Button1': lambda: qtile.cmd_spawn('pavucontrol')},
-            **colors_text_1,
         ),
         my_widget.volume.Volume(
             step=5,
-            **colors_text_1,
         ),
+        my_Sep(),
         # Keyboard layout
         widget.TextBox(
             text='\uf11c',
             fontsize=18,
-            **colors_text_2,
         ),
         widget.KeyboardLayout(
             configured_keyboards=['us colemak', 'us'],
             display_map={'us colemak':'col', 'us':'us'},
-            **colors_text_2,
         ),
+        my_Sep(),
         # Datetime
         widget.Clock(
             format='\uf017 %FT%T (%a)',
-            **colors_text_1,
         ),
 ]
 
 
 widgets_laptop = [
-        widget.Sep(),
+        my_Sep(),
         # Battery
         my_widget.battery.Battery(
             format='\u2b4d {char} {hour:d}:{min:02d} ({percent:.0f} %)',
@@ -293,7 +293,6 @@ widgets_laptop = [
             notify_below=20,
             low_percentage=0.2,
             low_foreground=colors['Red'],
-            **colors_text_2,
             update_interval=5,
         ),
 ]
