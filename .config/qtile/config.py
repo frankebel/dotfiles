@@ -287,9 +287,11 @@ widgets_laptop = [
         my_Sep(),
         # Battery
         my_widget.battery.Battery(
-            format='\u2b4d {char} {hour:d}:{min:02d} ({percent:.0f} %)',
-            charge_char='\u25b2',
-            discharge_char='\u25bc',
+            format='{char} {hour:d}:{min:02d} ({percent:.0f} %)',
+            empty_char='\uf244',
+            charge_char='\uf241',
+            discharge_char='\uf243',
+            full_char='\uf240',
             notify_below=20,
             low_percentage=0.2,
             low_foreground=colors['Red'],
