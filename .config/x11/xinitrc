@@ -2,6 +2,7 @@
 
 # autostart apps
 dunst &
+flameshot & 
 redshift &
 udiskie &
 case "$(cat /proc/sys/kernel/hostname)" in
