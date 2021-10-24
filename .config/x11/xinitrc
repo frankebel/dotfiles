@@ -1,0 +1,43 @@
+#!/bin/sh
+
+# autostart apps
+dunst &
+redshift &
+udiskie &
+case "$(cat /proc/sys/kernel/hostname)" in
+        *"desktop"*)
+                # Desktop specific
+                ;;
+        *"laptop"*)
+                # Laptop specific
+                blueman-applet &
+                nm-applet &
+                ;;
+        esac
+
+# X11 specific
+xrdb -merge $XDG_CONFIG_HOME/x11/xresources
+
+# display settings
+case "$(cat /proc/sys/kernel/hostname)" in
+	*"desktop"*)
+		# Desktop specific
+		xrandr --output DisplayPort-3 --left-of DisplayPort-1
+		;;
+	*"laptop"*)
+		# Laptop specific
+		;;
+	esac
+
+# Display Power Management Scaling
+xset s off -dpms
+
+# keyboard settings
+xset r 66 # caps lock
+
+# mouse settings
+xinput --set-prop 8 'libinput Accel Profile Enabled' 0, 1
+xinput --set-prop 8 'libinput Accel Speed' -0.4
+
+# start window manager
+exec qtile start
