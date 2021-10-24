@@ -226,12 +226,11 @@ def init_widgets_left():
             widget.CurrentLayoutIcon(
                 scale=0.7,
             ),
-            # widget.TextBox(**colors_filler_2, **my_separator),
             # GroupBox
             widget.GroupBox(
                 highlight_method='line',
                 active=colors['Purple'],
-                inactive=colors['Purple'],
+                inactive=colors['Selection'],
                 this_current_screen_border=colors['Purple'],
                 this_screen_border=colors['Purple'],
                 other_current_screen_border=colors['Purple'],
@@ -260,17 +259,6 @@ widgets_right = [
             update_interval=5,
         ),
         my_Sep(),
-        # Updates
-        widget.CheckUpdates(
-            distro='Arch_yay',
-            display_format='{\uf063 updates}',
-            no_update_string='\uf063 0',
-            update_interval=3600,
-            mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(terminal + ' -e yay -Syyu')},
-            colour_have_updates=colors['Purple'],
-            colour_no_updates=colors['Purple'],
-        ),
-        my_Sep(),
         # Sound volume
         widget.TextBox(
             text='\uf028',
@@ -288,6 +276,17 @@ widgets_right = [
         widget.KeyboardLayout(
             configured_keyboards=['us colemak', 'us'],
             display_map={'us colemak':'col', 'us':'us'},
+        ),
+        my_Sep(),
+        # Updates
+        widget.CheckUpdates(
+            distro='Arch_yay',
+            display_format='{\uf063 updates}',
+            no_update_string='\uf063 0',
+            update_interval=3600,
+            mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(terminal + ' -e yay -Syyu')},
+            colour_have_updates=colors['Purple'],
+            colour_no_updates=colors['Purple'],
         ),
         my_Sep(),
         # Datetime
