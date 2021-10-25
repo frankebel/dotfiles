@@ -106,6 +106,9 @@ keys = [
     Key(["control"], "space", lazy.spawn("dunstctl close"), desc="Close notification"),
     Key(["control", "shift"], "space", lazy.spawn("dunstctl close-all"), desc="Close all notifications"),
     Key(["control"], "grave", lazy.spawn("dunstctl history-pop"), desc="Redisplay last message"),
+
+    # Power Management
+    Key([], "XF86Sleep", lazy.spawn("sysetmctl suspend"), desc="Put Device to sleep"),
 ]
 
 
@@ -268,7 +271,7 @@ widgets_right = [
         # Updates
         widget.CheckUpdates(
             distro='Arch_yay',
-            display_format='{\uf063 updates}',
+            display_format='\uf063 {updates}',
             no_update_string='\uf063 0',
             update_interval=3600,
             mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(terminal + ' -e yay -Syyu')},
