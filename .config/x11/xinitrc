@@ -6,20 +6,6 @@ flameshot &
 redshift &
 udiskie &
 case "$(cat /proc/sys/kernel/hostname)" in
-        *"desktop"*)
-                # Desktop specific
-                ;;
-        *"laptop"*)
-                # Laptop specific
-                blueman-applet &
-                nm-applet &
-                ;;
-        esac
-
-# X11 specific
-xrdb -merge $XDG_CONFIG_HOME/x11/xresources
-
-case "$(cat /proc/sys/kernel/hostname)" in
 	*"desktop"*)
 		# Desktop specific
 		xrandr --output DisplayPort-3 --left-of DisplayPort-1
@@ -27,8 +13,13 @@ case "$(cat /proc/sys/kernel/hostname)" in
 		;;
 	*"laptop"*)
 		# Laptop specific
+                blueman-applet &
+                nm-applet &
 		;;
 	esac
+
+# X11 specific
+xrdb -merge $XDG_CONFIG_HOME/x11/xresources
 
 # Display Power Management Scaling
 xset s off -dpms
