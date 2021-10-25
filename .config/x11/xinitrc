@@ -19,11 +19,11 @@ case "$(cat /proc/sys/kernel/hostname)" in
 # X11 specific
 xrdb -merge $XDG_CONFIG_HOME/x11/xresources
 
-# display settings
 case "$(cat /proc/sys/kernel/hostname)" in
 	*"desktop"*)
 		# Desktop specific
 		xrandr --output DisplayPort-3 --left-of DisplayPort-1
+		amixer set Capture 40%
 		;;
 	*"laptop"*)
 		# Laptop specific
