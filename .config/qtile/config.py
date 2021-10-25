@@ -61,31 +61,19 @@ keys = [
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
-    Key([mod], "space", lazy.layout.next(),
-        desc="Move window focus to other window"),
+    Key([mod], "space", lazy.layout.next(), desc="Move window focus to next window"),
 
-    # Move windows between left/right columns or move up/down in current stack.
-    Key([mod, "shift"], "h", lazy.layout.shuffle_left(),
-        desc="Move window to the left"),
-    Key([mod, "shift"], "l", lazy.layout.shuffle_right(),
-        desc="Move window to the right"),
-    Key([mod, "shift"], "j", lazy.layout.shuffle_down(),
-        desc="Move window down"),
+    # Move windows.
+    Key([mod, "shift"], "h", lazy.layout.swap_left(), desc="Move window to the left"),
+    Key([mod, "shift"], "l", lazy.layout.swap_right(), desc="Move window to the right"),
+    Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down"),
     Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
 
-    # Grow windows. If current window is on the edge of screen and direction
-    # will be to screen edge - window would shrink.
-    Key([mod, "control"], "h",
-        lazy.layout.grow_left(),
-        lazy.layout.shrink(),
-        desc="Grow window to the left"),
-    Key([mod, "control"], "l",
-        lazy.layout.grow_right(),
-        lazy.layout.grow(),
-        desc="Grow window to the right"),
-    Key([mod, "control"], "j", lazy.layout.grow_down(),
-        desc="Grow window down"),
-    Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
+    # Resize windows.
+    Key([mod, "control"], "h", lazy.layout.shrink(), desc="Shrink window"),
+    Key([mod, "control"], "l", lazy.layout.grow(), desc="Grow window"),
+    Key([mod, "control"], "j", lazy.layout.grow(), desc="Grow window"),
+    Key([mod, "control"], "k", lazy.layout.shrink(), desc="Shrink window"),
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
 
     # Toggle between different layouts as defined below
@@ -94,17 +82,16 @@ keys = [
 
     # Custom shortcuts to launch applications/programs.
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
-    Key([mod, "shift"], "Return", lazy.spawn("rofi -show run"),
-    desc="Run Launcher"),
+    Key([mod, "shift"], "Return", lazy.spawn("rofi -show run"), desc="Run Launcher"),
     Key([mod], "b", lazy.spawn("firefox"), desc="Lauch Browser"),
     Key([mod], "m", lazy.spawn("thunderbird"), desc="Lauch Mail"),
     Key([mod], "o", lazy.spawn("pcmanfm"), desc="Launch File Manager"),
     Key([mod], "d", lazy.spawn("discord"), desc="Launch Discord"),
-    Key([mod], "s", lazy.spawn("steam"), desc="Launch File Steam"),
+    Key([mod], "s", lazy.spawn("steam"), desc="Launch Steam"),
     Key([], "Print", lazy.spawn("flameshot gui"), desc="Take Screenshot"),
 
     # Keyboard Layout
-    Key([mod], "z", lazy.widget["keyboardlayout"].next_keyboard(), desc="Nexp keyboard layout"),
+    Key([mod], "z", lazy.widget["keyboardlayout"].next_keyboard(), desc="Next keyboard layout"),
 
     # Volume keys
     Key([], "XF86AudioMute", lazy.spawn("amixer set Master toggle"), desc="Mute/Unmute master"),
@@ -115,7 +102,7 @@ keys = [
     Key([], "XF86MonBrightnessDown", lazy.spawn("light -U 10"), desc="Lower monitor brightness"),   
     Key([], "XF86MonBrightnessUp", lazy.spawn("light -A 10"), desc="Raise monitor brightness"),
 
-    # Dunst Notifications
+    # Notifications
     Key(["control"], "space", lazy.spawn("dunstctl close"), desc="Close notification"),
     Key(["control", "shift"], "space", lazy.spawn("dunstctl close-all"), desc="Close all notifications"),
     Key(["control"], "grave", lazy.spawn("dunstctl history-pop"), desc="Redisplay last message"),
