@@ -5,7 +5,10 @@ This reporsitory contains my configuration files (dotfiles).
 ## Installation
 
 ```bash
+echo 'alias config="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"' >> $HOME/.bashrc
 mkdir $HOME/.dotfiles
-cd $HOME/.dotfiles
-git clone --bare git@github.com:frankebel/dotfiles.git $HOME/.dotfiles
+git clone --bare https://github.com/frankebel/dotfiles.git $HOME/.dotfiles
+config checkout
+config config status.showUntrackedFiles no
+chsh -s /bin/zsh
 ```
