@@ -1,0 +1,4 @@
+# https://starship.rs/config/
+
+[line_break]
+disabled = true
