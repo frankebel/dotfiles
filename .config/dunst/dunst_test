@@ -1,0 +1,11 @@
+#!/bin/sh
+
+pidof dunst && killall dunst
+dunst &
+
+notify-send "head" "message one"
+notify-send -u critical "head" "message two"
+notify-send -u low "head" "message three"
+notify-send "head" "message four"
+notify-send "head" "message five"
+notify-send "head" "message six"
