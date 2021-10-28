@@ -156,18 +156,6 @@ def dracula_theme():
     }
     return colors
 
-def widget_dracula():
-    """Colors for widgets."""
-    foreground1 = colors['Green']
-    background1 = colors['Current Line']
-    foreground2 = colors['Cyan']
-    background2 = colors['Background']
-    colors_text_1 = {'foreground': foreground1, 'background': background1}
-    colors_text_2 = {'foreground': foreground2, 'background': background2}
-    colors_filler_1 = {'foreground': background2, 'background': background1}
-    colors_filler_2 = {'foreground': background1, 'background': background2}
-    return colors_text_1, colors_text_2, colors_filler_1, colors_filler_2
-
 colors = dracula_theme()
 
 # Layouts
