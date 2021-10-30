@@ -107,9 +107,8 @@ keys = [
     Key(["control", "shift"], "space", lazy.spawn("dunstctl close-all"), desc="Close all notifications"),
     Key(["control"], "grave", lazy.spawn("dunstctl history-pop"), desc="Redisplay last message"),
 
-    # Power Management
+    # Screenlock
     Key([mod], "l", lazy.spawn("i3lock --color=282a36 -u"), desc="Lock screen"),
-    Key([], "XF86Sleep", lazy.spawn("sysetmctl suspend"), desc="Put Device to sleep"),
 ]
 
 
