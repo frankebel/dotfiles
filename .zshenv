@@ -15,7 +15,7 @@ export XDG_STATE_HOME="$HOME/.local/state"
 # https://wiki.archlinux.org/title/XDG_Base_Directory
 export GTK2_RC_FILES=$XDG_CONFIG_HOME/gtk-2.0/gtkrc
 export STARSHIP_CONFIG=$XDG_CONFIG_HOME/starship/config.toml
-export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
+# export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 export ZDOTDIR=$HOME/.config/zsh
 export HISTFILE=$XDG_STATE_HOME/zsh/history
 
