@@ -108,6 +108,7 @@ keys = [
     Key(["control"], "grave", lazy.spawn("dunstctl history-pop"), desc="Redisplay last message"),
 
     # Power Management
+    Key([mod], "l", lazy.spawn("i3lock --color=282a36 -u"), desc="Lock screen"),
     Key([], "XF86Sleep", lazy.spawn("sysetmctl suspend"), desc="Put Device to sleep"),
 ]
 
@@ -349,6 +350,11 @@ floating_layout = layout.Floating(float_rules=[
 auto_fullscreen = True
 focus_on_window_activation = "smart"
 reconfigure_screens = True
+
+@hook.subscribe.startup_once
+def autostart():
+    home = os.path.expanduser('~/.config/qtile/autostart.sh')
+    subprocess.call([home])
 
 # If things like steam games want to auto-minimize themselves when losing
 # focus, should we respect this or not?
