@@ -262,7 +262,7 @@ widgets_right = [
             display_format='\uf063 {updates}',
             no_update_string='\uf063 0',
             update_interval=600,
-            mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(terminal + '-e yay -Syu')},
+            mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(terminal + ' -e yay -Syu')},
             colour_have_updates=colors['Purple'],
             colour_no_updates=colors['Purple'],
         ),
