@@ -190,8 +190,6 @@ widget_defaults = dict(
 
 extension_defaults = widget_defaults.copy()
 
-network_icon = '\uf1eb' if is_laptop else '\uf796'
-
 def my_Sep():
     return widget.Sep(
             foreground=colors['Purple'],
@@ -221,7 +219,7 @@ widgets_right = [
         # Network Usage
         my_widget.net.Net(
             interface='wlp2s0' if is_laptop else 'eno1',
-            format=network_icon + ' {down:.1f} {down_unit} \u25bc\u25b2 {up:.1f} {up_unit}',
+            format='\uf0ac {down:.1f} {down_unit} \u25bc\u25b2 {up:.1f} {up_unit}',
             update_interval=5,
         ),
         my_Sep(),
