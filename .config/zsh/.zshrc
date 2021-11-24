@@ -54,7 +54,7 @@ promptinit
 # alias
 alias ls="ls -lAh --color=auto"
 alias grep="grep --color=auto"
-alias config="/usr/bin/env git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias config="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias wget="wget --hsts-file=$XDG_CACHE_HOME/wget-hsts"
 
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
