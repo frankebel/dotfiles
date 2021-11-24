@@ -80,35 +80,8 @@ keys = [
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
 
-    # Custom shortcuts to launch applications/programs.
-    Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
-    Key([mod, "shift"], "Return", lazy.spawn("rofi -show run"), desc="Run Launcher"),
-    Key([mod], "b", lazy.spawn("firefox"), desc="Lauch Browser"),
-    Key([mod], "m", lazy.spawn("thunderbird"), desc="Lauch Mail"),
-    Key([mod], "o", lazy.spawn("pcmanfm"), desc="Launch File Manager"),
-    Key([mod], "d", lazy.spawn("discord"), desc="Launch Discord"),
-    Key([mod], "s", lazy.spawn("steam"), desc="Launch Steam"),
-    Key([], "Print", lazy.spawn("flameshot gui"), desc="Take Screenshot"),
-
     # Keyboard Layout
     Key([mod], "z", lazy.widget["keyboardlayout"].next_keyboard(), desc="Next keyboard layout"),
-
-    # Volume keys
-    Key([], "XF86AudioMute", lazy.spawn("amixer set Master toggle"), desc="Mute/Unmute master"),
-    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer set Master 5%-"), desc="Lower master volume"),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer set Master 5%+"), desc="Raise master volume"),
-
-    # Monitor Brightness
-    Key([], "XF86MonBrightnessDown", lazy.spawn("light -U 10"), desc="Lower monitor brightness"),   
-    Key([], "XF86MonBrightnessUp", lazy.spawn("light -A 10"), desc="Raise monitor brightness"),
-
-    # Notifications
-    Key(["control"], "space", lazy.spawn("dunstctl close"), desc="Close notification"),
-    Key(["control", "shift"], "space", lazy.spawn("dunstctl close-all"), desc="Close all notifications"),
-    Key(["control"], "grave", lazy.spawn("dunstctl history-pop"), desc="Redisplay last message"),
-
-    # Screenlock
-    Key([mod], "l", lazy.spawn("i3lock --color=282a36 -u"), desc="Lock screen"),
 ]
 
 

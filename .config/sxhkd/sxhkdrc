@@ -1,0 +1,59 @@
+# Restart sxhkd
+super + Escape
+	killall sxhkd && sxhkd &
+
+# Applications
+super + Return
+	alacritty
+
+super + shift + Return
+	rofi -show run
+
+super + b
+	firefox
+
+super + m
+	thunderbird
+
+super + d
+	discord
+
+super + s
+	steam
+
+super + o
+	pcmanfm
+
+Print
+	flameshot gui
+
+# Volume keys
+XF86AudioMute
+	amixer set Master toggle &
+
+XF86AudioLowerVolume
+	amixer set Master 5%- &
+
+XF86AudioRaiseVolume
+	amixer set Master 5%+ &
+
+# Monitor Brightness
+XF86MonBrightnessDown
+	light -U 10
+
+XF86MonBrightnessUP
+	light -A 10
+
+# Screenlock
+super + l
+	i3lock --color=282a36 -u
+
+# Notifications
+control + space
+	dunstctl close
+
+control + shift + space
+	dunstctl close-all
+
+control + grave
+	dunstctl history-pop
