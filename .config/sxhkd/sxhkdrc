@@ -41,7 +41,7 @@ XF86AudioRaiseVolume
 XF86MonBrightnessDown
 	light -U 10
 
-XF86MonBrightnessUP
+XF86MonBrightnessUp
 	light -A 10
 
 # Screenlock
