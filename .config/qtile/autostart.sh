@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sxhkd &
+sxhkd > /dev/null &
