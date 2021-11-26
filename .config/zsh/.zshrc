@@ -52,14 +52,12 @@ promptinit
 
 
 # alias
-alias ls="ls -lAh --color=auto"
-alias grep="grep --color=auto"
-alias config="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-alias wget="wget --hsts-file=$XDG_CACHE_HOME/wget-hsts"
+source $XDG_CONFIG_HOME/zsh/aliasrc
 
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent -t 24h > "$XDG_RUNTIME_DIR/ssh-agent.env"
 fi
+
 if [[ ! "$SSH_AUTH_SOCK" ]]; then
     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
