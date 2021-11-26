@@ -74,7 +74,7 @@ keys = [
     Key([mod, "control"], "l", lazy.layout.grow(), desc="Grow window"),
     Key([mod, "control"], "j", lazy.layout.grow(), desc="Grow window"),
     Key([mod, "control"], "k", lazy.layout.shrink(), desc="Shrink window"),
-    Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
+    # Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
@@ -82,6 +82,9 @@ keys = [
 
     # Keyboard Layout
     Key([mod], "z", lazy.widget["keyboardlayout"].next_keyboard(), desc="Next keyboard layout"),
+
+    # Testing area
+    # Key([mod], "e", lazy.spawn(terminal + ' -e newsboat'), desc="Test"),
 ]
 
 
