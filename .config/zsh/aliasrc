@@ -5,6 +5,7 @@ alias ls="ls -lAh --color=auto"
 alias grep="grep --color=auto"
 
 # shorten commands
+alias n='newsboat'
 alias v='nvim'
 
 # XDG Base Directory Specification
