@@ -1,0 +1,23 @@
+# Options
+auto-reload yes
+datetime-format "%FT%T"
+max-items 15
+reload-threads 100
+
+# Keybinds
+bind-key j down
+bind-key k up
+bind-key l open
+bind-key h quit
+bind-key g home
+bind-key G end
+
+# Colors
+color listfocus default black
+color listnormal_unread red default
+color listfocus_unread red black
+color title cyan default
+color info white black
+
+# Open links in programs
+macro v set browser "mpv %u" ; open-in-browser ; set browser " elinks %u"
