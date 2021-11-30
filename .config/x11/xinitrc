@@ -23,7 +23,7 @@ case "$(cat /proc/sys/kernel/hostname)" in
 xrdb -merge $XDG_CONFIG_HOME/x11/xresources
 xrandr --dpi 96
 
-# Display Power Management Scaling
+# Display Power Management Signaling
 xset s off -dpms
 
 # keyboard settings
