@@ -27,6 +27,7 @@
 # Widgets need the package 'ttf-font-awesome'.
 
 import os
+import psutil
 import subprocess
 from typing import List  # noqa: F401
 
@@ -328,6 +329,28 @@ reconfigure_screens = True
 def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.call([home])
+
+@hook.subscribe.client_new
+def _swallow(window):
+    pid = window.window.get_net_wm_pid()
+    ppid = psutil.Process(pid).ppid()
+    cpids = {c.window.get_net_wm_pid(): wid for wid, c in window.qtile.windows_map.items()}
+    for i in range(5):
+        if not ppid:
+            return
+        if ppid in cpids:
+            parent = window.qtile.windows_map.get(cpids[ppid])
+#            if parent.window.get_wm_class()[0] != terminal:
+#                return
+            parent.minimized = True
+            window.parent = parent
+            return
+        ppid = psutil.Process(ppid).ppid()
+
+@hook.subscribe.client_killed
+def _unswallow(window):
+    if hasattr(window, 'parent'):
+        window.parent.minimized = False
 
 # If things like steam games want to auto-minimize themselves when losing
 # focus, should we respect this or not?
