@@ -99,7 +99,7 @@ groups = [
         Group('6'),
         Group('7'),
         Group('8'),
-        Group('9', spawn=['thunderbird'] if is_laptop else ['thunderbird', 'qbittorrent']),
+        Group('9', spawn=['thunderbird']),
 ]
 
 for i in groups:
