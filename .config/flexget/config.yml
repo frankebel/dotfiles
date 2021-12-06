@@ -1,0 +1,14 @@
+schedules:
+  - tasks: '*'
+    interval:
+      minutes: 5
+tasks:
+  Anime:
+    rss: https://subsplease.org/rss/?t&r=1080
+    series:
+      - Mushoku Tensei
+    transmission:
+      host: localhost
+      port: 9091
+      username: transmission
+      password: transmission
