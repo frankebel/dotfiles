@@ -1,6 +1,7 @@
 # often used commands
 alias config="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias mmaster="cd $HOME/Data/Education/master/2021W"
+alias tsm='transmission-remote'
 
 # colorize commands
 alias ls="ls -lAh --color=auto"
@@ -8,6 +9,7 @@ alias grep="grep --color=auto"
 
 # shorten commands
 alias n='newsboat'
+alias t='transmission-remote -l'
 alias v='nvim'
 alias z='zathura'
 
