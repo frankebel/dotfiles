@@ -5,11 +5,15 @@ dunst &
 flameshot & 
 redshift &
 udiskie &
+transmission-daemon &
 xidlehook --not-when-audio --not-when-fullscreen --timer 1800 'systemctl suspend' '' &
+
+# device specific
 case "$(cat /proc/sys/kernel/hostname)" in
 	*"desktop"*)
 		# Desktop specific
 		xrandr --output DisplayPort-3 --left-of DisplayPort-1
+		flexget daemon start -d &
 		amixer set Capture 40% &
 		;;
 	*"laptop"*)
