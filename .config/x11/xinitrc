@@ -12,9 +12,10 @@ xidlehook --not-when-audio --not-when-fullscreen --timer 1800 'systemctl suspend
 case "$(cat /proc/sys/kernel/hostname)" in
 	*"desktop"*)
 		# Desktop specific
-		xrandr --output DisplayPort-3 --left-of DisplayPort-1
 		flexget daemon start -d &
-		amixer set Capture 40% &
+		noisetorch -i alsa_input.pci-0000_0a_00.4.analog-stereo &
+		pactl set-source-volume alsa_input.pci-0000_0a_00.4.analog-stereo 40% &
+		xrandr --output DisplayPort-3 --left-of DisplayPort-1 &
 		;;
 	*"laptop"*)
 		# Laptop specific
