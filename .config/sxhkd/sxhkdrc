@@ -44,19 +44,13 @@ XF86Audio{Lower,Raise}Volume
 	pactl set-sink-volume @DEFAULT_SINK@ {-5%,+5%}
 
 # Monitor Brightness
-{XF86MonBrightnessDown, XF86MonBrightnessUp}
-	light {-U 10, -A 10}
+XF86MonBrightness{Down,Up}
+	light {-U,-A} 10
 
 # Screenlock
 super + F1
 	i3lock --color=282a36 -u
 
 # Notifications
-control + space
-	dunstctl close
-
-control + shift + space
-	dunstctl close-all
-
-control + grave
-	dunstctl history-pop
+control + {space,shift + space,grave}
+	dunstctl {close,close-all,history-pop}
