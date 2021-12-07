@@ -42,7 +42,7 @@ Print
 
 # Monitor Brightness
 {XF86MonBrightnessDown, XF86MonBrightnessUp}
-	light {-U, -A} 10
+	light {-U 10, -A 10}
 
 # Screenlock
 super + F1
