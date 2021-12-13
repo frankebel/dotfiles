@@ -1,3 +1,5 @@
+# test execution
+# flexget --test execute
 schedules:
   - tasks: '*'
     interval:
@@ -6,6 +8,7 @@ tasks:
   Anime:
     rss: https://subsplease.org/rss/?t&r=1080
     series:
+      - Kimetsu no Yaiba
       - Mushoku Tensei
     transmission:
       host: localhost
