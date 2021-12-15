@@ -53,7 +53,7 @@
     "rpc-whitelist-enabled": true,
     "scrape-paused-torrents-enabled": true,
     "script-torrent-done-enabled": true,
-    "script-torrent-done-filename": "/home/frank/.config/transmission-daemon/notifydone.sh",
+    "script-torrent-done-filename": "/home/frank/.config/transmission-daemon/notifydone",
     "seed-queue-enabled": false,
     "seed-queue-size": 10,
     "speed-limit-down": 100,
