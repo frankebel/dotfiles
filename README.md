@@ -1,6 +1,6 @@
 # Dotfiles
 
-This reporsitory contains my configuration files (dotfiles).
+This repository contains my configuration files (dotfiles).
 
 ## Installation
 
