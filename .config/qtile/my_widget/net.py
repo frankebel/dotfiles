@@ -19,7 +19,6 @@
 # SOFTWARE.
 
 import psutil
-
 from libqtile.widget import base
 
 
@@ -58,17 +57,18 @@ class Net(base.ThreadPoolText):
 
     def bytes2human(self, num_bytes):
         """Converts the number of bytes to human readable format."""
-        factor = 1024 if self.binary_prefix else 1000
-        prefixes = iter(['', 'k', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y'])
+        if self.binary_prefix:
+            factor = 1024
+            prefixes = iter(['', 'Ki', 'Mi', 'Gi', 'Ti'])
+        else:
+            factor = 1000
+            prefixes = iter(['', 'k', 'M', 'G', 'T'])
+       
         prefix = next(prefixes)
-
         while num_bytes >= factor:
             num_bytes /= factor
             prefix = next(prefixes)
-
         unit = prefix
-        if unit != '' and self.binary_prefix:
-            unit += 'i'
         unit += 'B/s'
 
         return num_bytes, unit
