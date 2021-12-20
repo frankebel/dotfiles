@@ -196,25 +196,25 @@ widgets_right = [
         # Network Usage
         my_widget.net.Net(
             interface='wlp2s0' if is_laptop else 'eno1',
-            format='\uf0ac {down:.1f} {down_unit} \u25bc\u25b2 {up:.1f} {up_unit}',
+            format='dn {down:.0f} {down_unit} up {up:.0f} {up_unit}',
             update_interval=5,
         ),
         my_Sep(),
         # CPU Usage
         my_widget.cpu.CPU(
-            format='\uf2db {freq_current:.2f} GHz ({load_percent} %)',
+            format='CPU {freq_current:.2f} GHz ({load_percent} %)',
             update_interval=5,
         ),
         my_Sep(),
         # Memory Usage
         widget.Memory(
-            format='\uf538{MemUsed: .0f} {mm}iB',
+            format='MEM {MemUsed: .0f} {mm}iB',
             update_interval=5,
         ),
         my_Sep(),
         # Sound volume
         widget.TextBox(
-            text='\uf028',
+            text='VOL',
             mouse_callbacks={'Button1': lambda: qtile.cmd_spawn('pavucontrol')},
         ),
         my_widget.volume.Volume(
@@ -223,8 +223,7 @@ widgets_right = [
         my_Sep(),
         # Keyboard layout
         widget.TextBox(
-            text='\uf11c',
-            fontsize=18,
+            text='KEY',
         ),
         widget.KeyboardLayout(
             configured_keyboards=['us colemak', 'us'],
@@ -233,7 +232,7 @@ widgets_right = [
         my_Sep(),
         # Datetime
         widget.Clock(
-            format='\uf017 %FT%T (%a)',
+            format='%FT%T (%a)',
         ),
 ]
 
@@ -261,7 +260,6 @@ if is_laptop:
             top=bar.Bar(
                 widgets=[*init_widgets_left(), widget.Spacer(), widget.Systray(), *widgets_laptop, *widgets_right],
                 size=24,
-                opacity=1,
                 background=colors['Background'],
             )
         ),
@@ -272,7 +270,6 @@ else:
             top=bar.Bar(
                 widgets=[*init_widgets_left(), widget.Spacer(), widget.Systray(), *widgets_right],
                 size=24,
-                opacity=1,
                 background=colors['Background'],
             )
         ),
@@ -280,7 +277,6 @@ else:
             top=bar.Bar(
                 widgets=[*init_widgets_left(), widget.Spacer(), *widgets_right],
                 size=24,
-                opacity=1,
                 background=colors['Background'],
             )
         )
