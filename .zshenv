@@ -3,7 +3,7 @@ export EDITOR="nvim"
 export TERMINAL="alacritty"
 export BROWSER="firefox"
 export WM="qtile"
-export READER="firefox"
+export READER="zathura"
 
 # XDG paths
 export XDG_CONFIG_HOME="$HOME/.config"
