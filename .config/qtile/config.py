@@ -199,6 +199,18 @@ widgets_right = [
             update_interval=5,
         ),
         my_Sep(),
+        # Email
+        widget.Maildir(
+            maildir_path='~/.local/share/isync',
+            sub_folders=[
+                {'label': 'MAIL', 'path': 'mailbox/INBOX'},
+                {'label': 'TUW', 'path': 'tuw/INBOX'},
+            ],
+            subfolder_fmt='{label} {value}',
+            nonempty_color=colors['Red'],
+            update_interval=5,
+        ),
+        my_Sep(),
         # Sound volume
         widget.TextBox(
             text='VOL',
