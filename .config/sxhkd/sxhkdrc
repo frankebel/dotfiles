@@ -19,7 +19,10 @@ super + i
 	$TERMINAL -e htop
 
 super + m
-	thunderbird
+	$TERMINAL -e neomutt
+
+super + shift + m
+	$TERMINAL -e mbsync -c ~/.config/isync/mbsyncrc -a
 
 super + n
 	$TERMINAL -e newsboat
@@ -37,6 +40,10 @@ Print
 	flameshot gui
 
 # Volume keys
+ctrl + backslash
+ 	pactl set-source-mute alsa_input.pci-0000_0a_00.4.analog-stereo toggle; \
+	notify-send "MIC MUTE TOGGLE"
+
 XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
 
