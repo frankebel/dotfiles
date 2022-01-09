@@ -1,0 +1,8 @@
+[Unit]
+Description=Mailbox synchronization service
+
+[Service]
+Type=oneshot
+Environment="GNUPGHOME=/home/frank/.local/share/gnupg"
+Environment="PASSWORD_STORE_DIR=/home/frank/.local/share/pass"
+ExecStart=/usr/bin/mbsync -c /home/frank/.config/isync/mbsyncrc -a
