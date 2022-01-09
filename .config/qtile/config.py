@@ -199,18 +199,6 @@ widgets_right = [
             update_interval=5,
         ),
         my_Sep(),
-        # # CPU Usage
-        # my_widget.cpu.CPU(
-        #     format='CPU {freq_current:.2f} GHz ({load_percent} %)',
-        #     update_interval=5,
-        # ),
-        # my_Sep(),
-        # # Memory Usage
-        # widget.Memory(
-        #     format='MEM {MemUsed: .0f} {mm}iB',
-        #     update_interval=5,
-        # ),
-        # my_Sep(),
         # Sound volume
         widget.TextBox(
             text='VOL',
