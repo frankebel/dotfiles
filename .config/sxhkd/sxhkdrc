@@ -75,7 +75,7 @@ super + shift + q
 super + shift + s
 	dunstctl set-paused false; \
 	flexget daemon start -d; \
-	transmission-daemon
+	transmission-daemon &
 
 # Notifications
 control + {space,shift + space,grave}
