@@ -9,7 +9,7 @@ tasks:
     rss: https://subsplease.org/rss/?t&r=1080
     series:
       - Kimetsu no Yaiba
-      - Mushoku Tensei
+      - Shingeki no Kyojin (The Final Season) 
     transmission:
       host: localhost
       port: 9091
