@@ -2,6 +2,7 @@
 alias config="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias mmaster="cd $HOME/Data/Education/master/2021W"
 alias tsm='transmission-remote'
+alias cal='cal -m'
 
 # colorize commands
 alias ls="ls -lAh --color=auto"
@@ -16,3 +17,4 @@ alias z='zathura'
 
 # XDG Base Directory Specification
 alias wget="wget --hsts-file=$XDG_CACHE_HOME/wget-hsts"
+alias mbsync="mbsync -c $XDG_CONFIG_HOME/isync/mbsyncrc"
