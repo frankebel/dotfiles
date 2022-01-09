@@ -38,7 +38,6 @@ from libqtile.utils import guess_terminal
 
 import my_widget.volume
 import my_widget.net
-import my_widget.cpu
 import my_widget.battery
 
 mod = "mod4"
