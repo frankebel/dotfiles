@@ -1,0 +1,43 @@
+# Mailbox
+IMAPStore mailbox-remote
+Host imap.mailbox.org
+Port 993
+User frank.ebel@mailbox.org
+PassCmd "pass show mail/mailbox_pwd"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore mailbox-local
+Path ~/.local/share/isync/mailbox/
+Inbox ~/.local/share/isync/mailbox/INBOX
+Subfolders Verbatim
+
+Channel mailbox
+Far :mailbox-remote:
+Near :mailbox-local:
+Create Both
+Expunge Both
+Patterns *
+SyncState *
+
+# TUW
+IMAPStore tuw-remote
+Host mail.student.tuwien.ac.at
+Port 993
+User e1429282
+PassCmd "pass show tuw/mail"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore tuw-local
+Path ~/.local/share/isync/tuw/
+Inbox ~/.local/share/isync/tuw/INBOX
+Subfolders Verbatim
+
+Channel tuw
+Far :tuw-remote:
+Near :tuw-local:
+Create Both
+Expunge Both
+Patterns *
+SyncState *
