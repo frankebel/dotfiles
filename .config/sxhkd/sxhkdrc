@@ -36,6 +36,9 @@ super + p
 super + s
 	steam
 
+super + x
+	xournalpp
+
 Print
 	flameshot gui
 
