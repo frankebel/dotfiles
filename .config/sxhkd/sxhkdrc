@@ -58,6 +58,22 @@ XF86MonBrightness{Down,Up}
 super + F1
 	i3lock --color=282a36 -u
 
+# reload background processes
+super + shift + r
+	gpg-connect-agent reloadagent /bye
+
+# kill backgroud processes
+super + shift + q
+	dunstctl set-paused true; \
+	flexget daemon stop; \
+	transmission-remote --exit
+
+# start background processes
+super + shift + s
+	dunstctl set-paused false; \
+	flexget daemon start -d; \
+	transmission-daemon
+
 # Notifications
 control + {space,shift + space,grave}
 	dunstctl {close,close-all,history-pop}
