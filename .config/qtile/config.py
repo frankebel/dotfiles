@@ -222,7 +222,7 @@ widgets_right = [
         my_Sep(),
         # Keyboard layout
         widget.TextBox(
-            text='KEY',
+            text='KB',
         ),
         widget.KeyboardLayout(
             configured_keyboards=['us colemak', 'us'],
