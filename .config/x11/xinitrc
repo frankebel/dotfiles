@@ -14,7 +14,7 @@ case "$(cat /proc/sys/kernel/hostname)" in
 		# Desktop specific
 		flexget daemon start -d &
 		noisetorch -i alsa_input.pci-0000_0a_00.4.analog-stereo &
-		pactl set-source-volume alsa_input.pci-0000_0a_00.4.analog-stereo 40% &
+		pactl set-source-volume alsa_input.pci-0000_0a_00.4.analog-stereo 45% &
 		xrandr --output DisplayPort-3 --left-of DisplayPort-1 &
 		;;
 	*"laptop"*)
