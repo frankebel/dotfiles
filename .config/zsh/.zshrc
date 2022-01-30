@@ -54,6 +54,9 @@ promptinit
 # alias
 source $XDG_CONFIG_HOME/zsh/aliasrc
 
+# gpg pinentry
+export GPG_TTY=$(tty)
+
 # ssh-agent
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent -t 24h > "$XDG_RUNTIME_DIR/ssh-agent.env"
