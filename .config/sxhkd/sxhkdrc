@@ -42,6 +42,10 @@ super + x
 Print
 	flameshot gui
 
+# Keyboard layout
+super + z
+	$XDG_CONFIG_HOME/sxhkd/kb_layout
+
 # Volume keys
 ctrl + backslash
  	pactl set-source-mute alsa_input.pci-0000_0a_00.4.analog-stereo toggle; \

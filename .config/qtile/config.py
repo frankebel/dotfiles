@@ -80,9 +80,6 @@ keys = [
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
 
-    # Keyboard Layout
-    Key([mod], "z", lazy.widget["keyboardlayout"].next_keyboard(), desc="Next keyboard layout"),
-
     # Testing area
     # Key([mod], "e", lazy.spawn(terminal + ' -e newsboat'), desc="Test"),
 ]
