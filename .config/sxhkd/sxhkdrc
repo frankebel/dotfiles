@@ -47,9 +47,9 @@ super + z
 	$XDG_CONFIG_HOME/sxhkd/kb_layout
 
 # Volume keys
+# mute/unmute mic
 ctrl + backslash
- 	pactl set-source-mute alsa_input.pci-0000_0a_00.4.analog-stereo toggle; \
-	notify-send "MIC MUTE TOGGLE"
+	$XDG_CONFIG_HOME/sxhkd/mic_mute
 
 XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
