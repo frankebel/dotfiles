@@ -10,6 +10,7 @@ tasks:
     series:
       - Kimetsu no Yaiba
       - Shingeki no Kyojin (The Final Season) 
+      - Sono Bisque Doll wa Koi wo Suru
     transmission:
       host: localhost
       port: 9091
