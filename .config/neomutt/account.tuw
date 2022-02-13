@@ -1,0 +1,26 @@
+# vim: filetype=muttrc
+# TUW
+unmailboxes *
+
+# local storage
+set mbox_type = Maildir
+set folder = "~/.local/share/isync/tuw"
+set spoolfile = +INBOX
+set postponed = +Drafts
+set record = +Sent
+set trash = +Trash
+mailboxes =INBOX =Drafts =Sent =Trash
+mailboxes =2021W =2021W/Process\ Simulation =2021W/Radionuklidbestimmung =Archive
+
+# SMTP
+set smtp_url = "smtp://e1429282@mail.student.tuwien.ac.at:587"
+set smtp_pass = `pass show tuw/mail`
+set my_name = "Frank Ebel"
+set from = "frank.ebel@student.tuwien.ac.at"
+set ssl_starttls
+set ssl_force_tls
+
+# options
+set realname = "Frank Ebel"
+alternates "frank.ebel@student.tuwien.ac.at"
+set my_archive_folder="=Archive"

@@ -1,0 +1,26 @@
+# vim: filetype=muttrc
+# Mailbox
+unmailboxes *
+
+# local storage
+set mbox_type = Maildir
+set folder = "~/.local/share/isync/mailbox"
+set spoolfile = +INBOX
+set postponed = +Drafts
+set record = +Sent
+set trash = +Trash
+mailboxes =INBOX =Drafts =Junk =Sent =Trash
+mailboxes =Archive =Archive/2022 =Archive/2021 =Archive/2020 =Archive/2019 =Archive/2018 
+
+# SMTP
+set smtp_url = "smtps://frank.ebel@mailbox.org@smtp.mailbox.org:465"
+set smtp_pass = `pass show mail/mailbox_pwd`
+set my_name = "Frank Ebel"
+set from = "@"
+set ssl_starttls
+set ssl_force_tls
+
+# options
+set realname = "Frank Ebel"
+alternates "@ebel.page" "@personalmail.page"
+set my_archive_folder="=Archive/2022"
