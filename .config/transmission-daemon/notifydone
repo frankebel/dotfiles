@@ -1,4 +1,4 @@
 #!/bin/sh
 # Send notification when torrent finished downloading.
 
-notify-send --icon=$XDG_CONFIG_HOME/transmission-daemon/tsm.png "Download completion" "$TR_TORRENT_NAME finished downloading."
+notify-send --icon="$XDG_CONFIG_HOME/transmission-daemon/tsm.png" "Download completion" "$TR_TORRENT_NAME finished downloading."
