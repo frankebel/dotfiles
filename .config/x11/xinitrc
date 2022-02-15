@@ -25,7 +25,7 @@ case "$(cat /proc/sys/kernel/hostname)" in
 	esac
 
 # X11 specific
-xrdb -merge $XDG_CONFIG_HOME/x11/xresources
+xrdb -merge "$XDG_CONFIG_HOME/x11/xresources"
 xrandr --dpi 96
 
 # Display Power Management Signaling
