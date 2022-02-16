@@ -1,12 +1,10 @@
-#!/bin/sh
-
 # autostart apps
 dunst &
 flameshot & 
 redshift &
 udiskie &
-transmission-daemon &
-xidlehook --not-when-audio --not-when-fullscreen --timer 1800 'systemctl suspend' '' &
+# transmission-daemon &
+# xidlehook --not-when-audio --not-when-fullscreen --timer 1800 'systemctl suspend' '' &
 
 # device specific
 case "$(cat /proc/sys/kernel/hostname)" in
