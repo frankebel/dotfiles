@@ -12,7 +12,7 @@ alias grep="grep --color=auto"
 # shorten commands
 alias m='neomutt'
 alias n='newsboat'
-alias t='transmission-remote -l'
+alias t='watch -n 0.1 transmission-remote -l'
 alias v='nvim'
 alias z='zathura'
 
