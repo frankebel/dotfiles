@@ -192,8 +192,8 @@ widgets_right = [
         # Network Usage
         my_widget.net.Net(
             interface='wlp2s0' if is_laptop else 'eno1',
-            format='DN {down:4.0f} {down_unit} UP {up:4.0f} {up_unit}',
-            update_interval=5,
+            format='DN {down:4.0f} {down_unit:>5} UP {up:4.0f} {up_unit:>5}',
+            update_interval=1,
         ),
         my_Sep(),
         # Email
