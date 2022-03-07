@@ -20,4 +20,4 @@ color title cyan default
 color info white black
 
 # Open links in programs
-macro v set browser "mpv %u" ; open-in-browser ; set browser " elinks %u"
+macro v set browser "firefox %u" ; open-in-browser ; set browser " elinks %u"
