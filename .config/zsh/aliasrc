@@ -1,6 +1,6 @@
 # often used commands
 alias config="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-alias mmaster="cd $HOME/Data/Education/master/2021W"
+alias mmaster="cd $HOME/Data/Education/master/2022S"
 alias zzz="systemctl suspend"
 alias tsm='transmission-remote'
 alias cal='cal -m'
