@@ -5,6 +5,12 @@ alias zzz="systemctl suspend"
 alias tsm='transmission-remote'
 alias cal='cal -m'
 
+# go up
+alias .1="cd .."
+alias .2="cd ../.."
+alias .3="cd ../../.."
+alias .4="cd ../../../.."
+
 # colorize commands
 alias ls="ls -lAh --color=auto"
 alias grep="grep --color=auto"
