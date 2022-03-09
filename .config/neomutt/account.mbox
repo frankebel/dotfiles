@@ -24,3 +24,6 @@ set ssl_force_tls
 set realname = "Frank Ebel"
 alternates "@ebel.page" "@personalmail.page"
 set my_archive_folder="=Archive/2022"
+
+# reload keybinds
+source keybinds

@@ -24,3 +24,6 @@ set ssl_force_tls
 set realname = "Frank Ebel"
 alternates "frank.ebel@student.tuwien.ac.at"
 set my_archive_folder="=Archive"
+
+# reload keybinds
+source keybinds
