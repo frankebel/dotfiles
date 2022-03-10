@@ -16,8 +16,5 @@ set sidebar_indent_string="    "
 # default account
 source "account.mbox"
 
-# keybinds
-source keybinds
-
 # color theme
 source dracula.muttrc
