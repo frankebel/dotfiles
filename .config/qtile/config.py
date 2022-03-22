@@ -37,6 +37,7 @@ from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
 import my_widget.volume
+import my_widget.pulse_volume
 import my_widget.net
 import my_widget.battery
 
@@ -213,8 +214,9 @@ widgets_right = [
             text='VOL',
             mouse_callbacks={'Button1': lambda: qtile.cmd_spawn('pavucontrol')},
         ),
-        my_widget.volume.Volume(
+        my_widget.pulse_volume.PulseVolume(
             step=5,
+            update_interval=0.05,
         ),
         my_Sep(),
         # Keyboard layout
