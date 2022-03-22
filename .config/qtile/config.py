@@ -36,7 +36,6 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
-import my_widget.volume
 import my_widget.pulse_volume
 import my_widget.net
 import my_widget.battery
