@@ -22,7 +22,7 @@ case "$(cat /etc/hostname)" in
 		;;
 	*"vm"* )
 		# VM specific
-		xrandr --output Virtual-1 --mode 1920x1080 &
+		xrandr --output Virtual1 --mode 1920x1080 &
 		;;
 	esac
 
