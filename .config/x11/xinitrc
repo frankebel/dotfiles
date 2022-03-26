@@ -7,18 +7,22 @@ transmission-daemon &
 xidlehook --not-when-audio --not-when-fullscreen --timer 1800 'systemctl suspend' '' &
 
 # device specific
-case "$(cat /proc/sys/kernel/hostname)" in
-	*"desktop"*)
+case "$(cat /etc/hostname)" in
+	*"desktop"* )
 		# Desktop specific
 		flexget daemon start -d &
 		noisetorch -i alsa_input.pci-0000_0a_00.4.analog-stereo &
 		pactl set-source-volume alsa_input.pci-0000_0a_00.4.analog-stereo 45% &
-		xrandr --output DisplayPort-3 --left-of DisplayPort-1 &
+		xrandr --output DP-4 --left-of DP-2 &
 		;;
-	*"laptop"*)
+	*"laptop"* )
 		# Laptop specific
                 blueman-applet &
                 nm-applet &
+		;;
+	*"vm"* )
+		# VM specific
+		xrandr --output Virtual-1 --mode 1920x1080 &
 		;;
 	esac
 
