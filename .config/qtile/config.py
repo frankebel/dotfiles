@@ -211,7 +211,6 @@ widgets_right = [
         # Sound volume
         widget.TextBox(
             text='VOL',
-            mouse_callbacks={'Button1': lambda: qtile.cmd_spawn('pavucontrol')},
         ),
         my_widget.pulse_volume.PulseVolume(
             step=5,
