@@ -13,8 +13,10 @@ alias .3="cd ../../.."
 alias .4="cd ../../../.."
 
 # colorize commands
-alias ls="ls -lAh --color=auto"
+alias diff="diff --color=auto"
+alias ip="ip -color=auto"
 alias grep="grep --color=auto"
+alias ls="ls -lAh --color=auto"
 
 # shorten commands
 alias m='neomutt'
