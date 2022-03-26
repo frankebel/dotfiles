@@ -1,3 +1,8 @@
+# Set PATH
+typeset -U PATH path
+path=("$path[@]" "$HOME/.local/bin")
+export PATH
+
 # Default Apps
 export EDITOR="nvim"
 export TERMINAL="alacritty"
