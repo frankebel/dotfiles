@@ -14,6 +14,11 @@ case "$(cat /etc/hostname)" in
 		noisetorch -i alsa_input.pci-0000_0a_00.4.analog-stereo &
 		pactl set-source-volume alsa_input.pci-0000_0a_00.4.analog-stereo 45% &
 		xrandr --output DP-4 --left-of DP-2 &
+		# mouse settings
+		xinput --set-prop 8 'libinput Accel Profile Enabled' 0, 1
+		xinput --set-prop 8 'libinput Accel Speed' -0.4
+		# Display Power Management Signaling
+		xset s off -dpms
 		;;
 	*"laptop"* )
 		# Laptop specific
@@ -30,16 +35,9 @@ case "$(cat /etc/hostname)" in
 xrdb -merge "$XDG_CONFIG_HOME/x11/xresources"
 xrandr --dpi 96
 
-# Display Power Management Signaling
-xset s off -dpms
-
 # keyboard settings
 xset r 66 # caps lock
 xset r rate 150 50
-
-# mouse settings
-xinput --set-prop 8 'libinput Accel Profile Enabled' 0, 1
-xinput --set-prop 8 'libinput Accel Speed' -0.4
 
 # start window manager
 exec qtile start
