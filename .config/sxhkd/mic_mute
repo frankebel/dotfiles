@@ -1,6 +1,6 @@
 #!/bin/sh
-pactl set-source-mute alsa_input.pci-0000_0a_00.4.analog-stereo toggle
-case "$(pactl list sources | grep -A6 'alsa_input.pci-0000_0a_00.4.analog-stereo' | grep Mute)" in
+pactl set-source-mute alsa_input.pci-0000_2f_00.4.analog-stereo toggle
+case "$(pactl list sources | grep -A6 'Name: alsa_input.pci-0000_2f_00.4.analog-stereo' | grep Mute)" in
 *"yes"*)
 	notify-send "MIC MUTE"
 	;;
