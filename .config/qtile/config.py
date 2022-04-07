@@ -191,7 +191,7 @@ widgets_right = [
         my_Sep(),
         # Network Usage
         my_widget.net.Net(
-            interface='wlp2s0' if is_laptop else 'eno1',
+            interface='wlp2s0' if is_laptop else 'enp42s0',
             format='DN {down:4.0f} {down_unit:>5} UP {up:4.0f} {up_unit:>5}',
             update_interval=5,
         ),
