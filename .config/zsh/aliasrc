@@ -1,7 +1,8 @@
 # often used commands
 alias cal='cal -m'
 alias config="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-alias mmaster="cd $HOME/Data/Education/master/2022S"
+alias risedb="zathura ~/Data/Games/MHRise/MHRise_DB.pdf"
+alias cdm="cd ~/Data/Education/master/2022S"
 alias shck="shellcheck"
 alias tsm='transmission-remote'
 alias zzz="systemctl suspend"
