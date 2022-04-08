@@ -1,0 +1,10 @@
+[Unit]
+Description=Newsboat feed reload timer
+
+[Timer]
+OnBootSec=30
+OnUnitActiveSec=5m
+Unit=newsboat.service
+
+[Install]
+WantedBy=timers.target
