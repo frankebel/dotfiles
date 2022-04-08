@@ -8,9 +8,7 @@ tasks:
   Anime:
     rss: https://subsplease.org/rss/?t&r=1080
     series:
-      - Kimetsu no Yaiba
-      - Shingeki no Kyojin (The Final Season) 
-      - Sono Bisque Doll wa Koi wo Suru
+      - Kaguya-sama wa Kokurasetai S3
     transmission:
       host: localhost
       port: 9091
