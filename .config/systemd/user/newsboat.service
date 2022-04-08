@@ -4,3 +4,6 @@ Description=Newsboat feed reload service
 [Service]
 Type=oneshot
 ExecStart=/usr/bin/newsboat -x reload
+
+[Install]
+WantedBy=default.target
