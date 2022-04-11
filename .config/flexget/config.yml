@@ -9,6 +9,7 @@ tasks:
     rss: https://subsplease.org/rss/?t&r=1080
     series:
       - Kaguya-sama wa Kokurasetai S3
+      - Spy x Family
     transmission:
       host: localhost
       port: 9091
