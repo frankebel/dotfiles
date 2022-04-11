@@ -1,0 +1,4 @@
+#!/bin/sh
+# applets
+blueman-applet &
+nm-applet &

@@ -39,16 +39,14 @@ case "$(cat /etc/hostname)" in
 		# Display Power Management Signaling
 		xset s off -dpms
 		;;
-	*"laptop"* )
-		# applets
-                blueman-applet &
-                nm-applet &
-		;;
 	*"vm"* )
 		# display
 		xrandr --output Virtual1 --mode 1920x1080 &
 		;;
 	esac
+if [ -x "$XDG_CONFIG_HOME/x11/device_specific" ]; then
+	. "$XDG_CONFIG_HOME/x11/device_specific"
+fi
 
 
 # start window manager
