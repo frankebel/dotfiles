@@ -1,3 +1,9 @@
+*.log
+
+# flexget
+.config-lock
+db-config*
+
 # python
 __pycache__
 
