@@ -1,0 +1,11 @@
+# python
+__pycache__
+
+# transmission-daemon
+dht.dat
+stats.json
+**/transmission-daemon/resume
+**/transmission-daemon/torrents
+
+# zsh
+.zcompdump
