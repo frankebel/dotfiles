@@ -1,6 +1,6 @@
+#!/bin/sh
 # shorten commands
 alias cal='cal -m'
-alias config="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias m='neomutt'
 alias n='newsboat'
 alias shck="shellcheck"
@@ -12,11 +12,11 @@ alias z='zathura'
 alias zzz="systemctl suspend"
 
 # change directories
-alias cdd="cd ~/Data"
-alias cdm="cd ~/Data/Education/master"
-alias cdmc="cd ~/Data/Education/master/2022S"
-alias cdt="cd ~/Temp"
-alias cdtorr="cd ~/Temp/Torrents"
+alias cdd="cd ~/Data; ls"
+alias cdm="cd ~/Data/Education/master; ls"
+alias cdmc="cd ~/Data/Education/master/2022S; ls"
+alias cdt="cd ~/Temp; ls"
+alias cdtorr="cd ~/Temp/Torrents; ls"
 
 # open files
 alias risedb="zathura ~/Data/Games/MHRise/MHRise_DB.pdf"
