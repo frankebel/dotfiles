@@ -1,4 +1,5 @@
 #!/bin/sh
+# shellcheck source-path=SCRIPTDIR/..
 # autostart
 dunst &
 flameshot & 
@@ -7,47 +8,18 @@ udiskie &
 transmission-daemon &
 xidlehook --not-when-audio --not-when-fullscreen --timer 1800 'systemctl suspend' '' &
 
-
-# X11 specific
+# X11
 xrdb -merge "$XDG_CONFIG_HOME/x11/xresources"
 xrandr --dpi 96
-
 
 # keyboard settings
 xset r 66 # caps lock
 xset r rate 150 50
 
-
 # device specific
-case "$(cat /etc/hostname)" in
-	*"desktop"* )
-		# autostart
-		flexget daemon start -d &
-
-		# microphone
-		sleep 3 &&
-			noisetorch -i alsa_input.pci-0000_2f_00.4.analog-stereo &&
-			pactl set-source-volume alsa_input.pci-0000_2f_00.4.analog-stereo 45% &&
-			pactl set-source-volume 'NoiseTorch Microphone' 140% &
-
-		# mouse
-		xinput --set-prop 15 'libinput Accel Profile Enabled' 0, 1
-		xinput --set-prop 15 'libinput Accel Speed' -0.4
-
-		# display
-		xrandr --output DP-4 --left-of DP-2 &
-		# Display Power Management Signaling
-		xset s off -dpms
-		;;
-	*"vm"* )
-		# display
-		xrandr --output Virtual1 --mode 1920x1080 &
-		;;
-	esac
 if [ -x "$XDG_CONFIG_HOME/x11/device_specific" ]; then
 	. "$XDG_CONFIG_HOME/x11/device_specific"
 fi
-
 
 # start window manager
 exec qtile start
