@@ -44,12 +44,12 @@ Print
 
 # Keyboard layout
 super + z
-	"$XDG_CONFIG_HOME/sxhkd/kb_layout"
+	kb_layout
 
 # Volume keys
 # mute/unmute mic
 ctrl + backslash
-	"$XDG_CONFIG_HOME/sxhkd/mic_mute"
+	mic_mute
 
 XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
