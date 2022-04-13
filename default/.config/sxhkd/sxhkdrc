@@ -9,6 +9,9 @@ super + Return
 super + shift + Return
 	rofi -show run
 
+super + shift + p
+	rofi-pass
+
 super + b
 	firefox
 
