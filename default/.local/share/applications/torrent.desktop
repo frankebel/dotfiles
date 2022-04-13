@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=Torrent
+Type=Application
+Exec=/usr/bin/transmission-remote -a %U
