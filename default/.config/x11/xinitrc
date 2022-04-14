@@ -22,4 +22,4 @@ if [ -x "$XDG_CONFIG_HOME/x11/device_specific" ]; then
 fi
 
 # start window manager
-exec qtile start
+exec awesome
