@@ -1,0 +1,2 @@
+# Power management
+alias zzz="systemctl suspend"

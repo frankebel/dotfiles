@@ -1,0 +1,10 @@
+#!/bin/sh
+alias cal='cal -m'
+alias m='neomutt'
+alias n='newsboat'
+alias shck="shellcheck"
+alias t='watch -n 0.1 transmission-remote -l'
+alias tsm='transmission-remote'
+alias tsml='transmission-remote -l'
+alias v='nvim'
+alias z='zathura'

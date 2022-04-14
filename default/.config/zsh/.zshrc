@@ -51,8 +51,10 @@ promptinit
 # End of lines added by compinstall
 
 
-# alias
-source "$XDG_CONFIG_HOME/zsh/aliasrc"
+# source shellconfig
+for _file in "$XDG_CONFIG_HOME"/zsh/shellconfig/*; do
+	source "$_file"
+done
 
 # gpg pinentry
 export GPG_TTY=$(tty)
