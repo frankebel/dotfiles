@@ -30,9 +30,6 @@ super + shift + m
 super + n
 	$TERMINAL -e newsboat
 
-super + o
-	pcmanfm
-
 super + p
 	pavucontrol
 
@@ -47,12 +44,12 @@ Print
 
 # Keyboard layout
 super + z
-	kb_layout
+	kblayout
 
 # Volume keys
 # mute/unmute mic
 ctrl + backslash
-	mic_mute
+	micmute
 
 XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
@@ -65,7 +62,7 @@ XF86MonBrightness{Down,Up}
 	light {-U,-A} 10
 
 # Screenlock
-super + F1
+super + F12
 	i3lock --color=282a36 -u
 
 # reload background processes
