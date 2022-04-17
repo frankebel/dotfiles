@@ -45,8 +45,8 @@ end
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "alacritty"
-editor = os.getenv("EDITOR") or "nano"
+terminal = os.getenv("TERMINAL")
+editor = os.getenv("EDITOR")
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
