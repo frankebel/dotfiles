@@ -1,5 +1,5 @@
 # Restart sxhkd
-super + Escape
+super + F5
 	pkill -SIGUSR1 -x sxhkd
 
 # Applications
