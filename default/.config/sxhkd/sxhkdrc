@@ -21,10 +21,10 @@ super + d
 super + i
 	$TERMINAL -e htop
 
-super + m
+super + e
 	$TERMINAL -e neomutt
 
-super + shift + m
+super + shift + e
 	$TERMINAL -e mbsync -c ~/.config/isync/mbsyncrc -a
 
 super + n
