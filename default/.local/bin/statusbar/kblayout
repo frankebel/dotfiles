@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# Get keyboard layout
+
+string='KB'
+
+get_kblayout(){
+
+	query=$(setxkbmap -query)
+	layout=$(echo "$query" | awk '/layout/ {print $NF}')
+	variant=$(echo "$query" | awk '/variant/ {print $NF}')
+
+	if [ "$variant" = 'colemak' ]
+	then
+		echo "$string col"
+	elif [ "$variant" = '' ]
+	then
+		echo "$string $layout"
+	else
+		echo "$string $layout($variant)"
+	fi
+}
+
+get_kblayout
