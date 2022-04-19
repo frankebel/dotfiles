@@ -82,12 +82,21 @@ awful.layout.layouts = {
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
 
--- Keyboard map indicator and switcher
-mykeyboardlayout = awful.widget.keyboardlayout()
-
 -- {{{ Wibar
--- Create a textclock widget
-mytextclock = wibox.widget.textclock("%FT%T (%a)", 1)
+-- Set path for custom widgets.
+widgets_path = '~/.local/bin/statusbar/'
+
+-- Create a separator widget
+mysep = wibox.widget.separator{
+	orientation = 'vertical',
+	span_ratio = 0.9,
+	forced_width = 10,
+}
+
+-- Not sure why, but awful.widget.watch can't be last widget.
+-- Need dummy widget as last widget.
+widgetlast = wibox.widget.textbox()
+widgetlast.text = ''
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -174,8 +183,17 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
-            mykeyboardlayout,
-            mytextclock,
+	    mysep,
+	    awful.widget.watch('bash -c ' .. widgets_path .. 'mail', 1),
+	    mysep,
+	    awful.widget.watch('bash -c ' .. widgets_path .. 'volumemic', 1),
+	    mysep,
+	    awful.widget.watch('bash -c ' .. widgets_path .. 'volume', 1),
+	    mysep,
+	    awful.widget.watch('bash -c ' .. widgets_path .. 'kblayout', 1),
+	    mysep,
+	    awful.widget.watch('bash -c ' .. widgets_path .. 'datetime', 1),
+	    widgetlast,
         },
     }
 end)
