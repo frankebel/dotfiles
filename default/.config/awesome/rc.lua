@@ -184,6 +184,8 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
 	    mysep,
+	    awful.widget.watch('bash -c ' .. widgets_path .. 'battery', 1),
+	    mysep,
 	    awful.widget.watch('bash -c ' .. widgets_path .. 'mail', 1),
 	    mysep,
 	    awful.widget.watch('bash -c ' .. widgets_path .. 'volumemic', 1),
