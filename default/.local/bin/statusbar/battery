@@ -19,7 +19,9 @@ get_battery(){
 			"Charging" )
 				status='(ch)'
 				;;
-
+			"Full" )
+				status='(full)'
+				;;
 			* )
 				status='(?)'
 				;;
