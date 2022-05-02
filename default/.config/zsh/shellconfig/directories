@@ -1,11 +1,11 @@
 # go up
-alias .1="cd .."
-alias .2="cd ../.."
-alias .3="cd ../../.."
-alias .4="cd ../../../.."
+alias .1='cd ..'
+alias .2='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
 
-alias cdd="cd ~/Data; ls"
-alias cdm="cd ~/Data/Education/master; ls"
-alias cdmc="cd ~/Data/Education/master/2022S; ls"
-alias cdt="cd ~/Temp; ls"
-alias cdtorr="cd ~/Temp/Torrents; ls"
+alias cdd='cd ~/Data; ls'
+alias cdm='cd ~/Data/Education/master; ls'
+alias cdmc='cd ~/Data/Education/master/2022S; ls'
+alias cdt='cd ~/Temp; ls'
+alias cdtorr='cd ~/Temp/Torrents; ls'

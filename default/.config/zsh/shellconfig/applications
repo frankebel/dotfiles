@@ -1,8 +1,8 @@
-#!/bin/sh
 alias cal='cal -m'
+alias l='ls -lAh --color=auto'
 alias m='neomutt'
 alias n='newsboat'
-alias shck="shellcheck"
+alias shck='shellcheck'
 alias t='watch -n 0.1 transmission-remote -l'
 alias tsm='transmission-remote'
 alias tsml='transmission-remote -l'
