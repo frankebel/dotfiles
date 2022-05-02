@@ -364,6 +364,7 @@ root.keys(globalkeys)
 
 -- {{{ Rules
 -- Rules to apply to new clients (through the "manage" signal).
+-- Get window class with "xprop", last entry under "WM_CLASS(STRING).
 awful.rules.rules = {
     -- All clients will match this rule.
     { rule = { },
@@ -386,12 +387,9 @@ awful.rules.rules = {
           "pinentry",
         },
         class = {
-          "Arandr",
-          "Blueman-manager",
           "Gpick",
           "Kruler",
           "MessageWin",  -- kalarm.
-          "Sxiv",
           "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
           "Wpa_gui",
           "veromix",
@@ -412,6 +410,27 @@ awful.rules.rules = {
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
       }, properties = { titlebars_enabled = false }
+    },
+
+    -- Fullscreen applications.
+    { rule_any = {
+        class = {
+	  "mpv",
+	  "Minecraft* 1.18.2",
+	  "steam_app_1446780",
+        }
+      },
+      properties = { fullscreen = true }
+    },
+
+
+    -- Maximizied applications.
+    { rule_any = {
+        class = {
+	  "Sxiv",
+        }
+      },
+      properties = { maximized = true }
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
