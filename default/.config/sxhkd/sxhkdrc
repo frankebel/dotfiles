@@ -21,10 +21,10 @@ super + d
 super + i
 	$TERMINAL -e htop
 
-super + e
+super + m
 	$TERMINAL -e neomutt
 
-super + shift + e
+super + shift + m
 	$TERMINAL -e mbsync -c ~/.config/isync/mbsyncrc -a
 
 super + n
@@ -48,7 +48,7 @@ super + z
 
 # Volume keys
 # mute/unmute mic
-ctrl + backslash
+super + backslash
 	micmute
 
 XF86AudioMute
