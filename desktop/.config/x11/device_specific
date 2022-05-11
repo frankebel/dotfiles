@@ -6,7 +6,7 @@ flexget daemon start -d &
 sleep 3 &&
 	noisetorch -i alsa_input.pci-0000_2f_00.4.analog-stereo &&
 	pactl set-source-volume alsa_input.pci-0000_2f_00.4.analog-stereo 45% &&
-	pactl set-source-volume 'NoiseTorch Microphone' 140% &
+	pactl set-source-volume 'NoiseTorch Microphone for Starship/Matisse HD Audio Controller Analog Stereo' 140% &
 
 # mouse
 xinput --set-prop 15 'libinput Accel Profile Enabled' 0, 1
