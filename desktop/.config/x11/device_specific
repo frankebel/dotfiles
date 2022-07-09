@@ -9,8 +9,8 @@ sleep 3 &&
 	pactl set-source-volume 'NoiseTorch Microphone for Starship/Matisse HD Audio Controller Analog Stereo' 140% &
 
 # mouse
-xinput --set-prop 15 'libinput Accel Profile Enabled' 0, 1
-xinput --set-prop 15 'libinput Accel Speed' -0.4
+xinput set-prop 'pointer:Logitech G Pro ' 'libinput Accel Profile Enabled' 0, 1
+xinput set-prop 'pointer:Logitech G Pro ' 'libinput Accel Speed' -0.4
 
 # display
 xrandr --output DisplayPort-3 --left-of DisplayPort-1
