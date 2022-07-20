@@ -417,7 +417,7 @@ awful.rules.rules = {
         class = {
 	  "mpv",
 	  "Minecraft* 1.18.2",
-	  "steam_app_1446780",
+	  "steam_app_1446780",  -- Monster Hunter Rise
         }
       },
       properties = { fullscreen = true }
