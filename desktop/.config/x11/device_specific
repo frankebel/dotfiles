@@ -1,6 +1,6 @@
 #!/bin/sh
 # autostart
-# flexget daemon start -d &
+flexget daemon start -d
 
 # microphone
 sleep 3 &&
