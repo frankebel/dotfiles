@@ -364,7 +364,8 @@ root.keys(globalkeys)
 
 -- {{{ Rules
 -- Rules to apply to new clients (through the "manage" signal).
--- Get window class with "xprop", last entry under "WM_CLASS(STRING).
+-- Use command "xprop WM_CLASS"
+-- First string will be the instance, second string the class.
 awful.rules.rules = {
     -- All clients will match this rule.
     { rule = { },
@@ -416,11 +417,24 @@ awful.rules.rules = {
     { rule_any = {
         class = {
 	  "mpv",
-	  "Minecraft* 1.18.2",
-	  "steam_app_1446780",  -- Monster Hunter Rise
         }
       },
       properties = { fullscreen = true }
+    },
+
+    -- Games
+    { rule_any = {
+        class = {
+	  "Minecraft* 1.18.2",
+	  "steam_app_1446780",  -- Monster Hunter Rise
+	  "steam_app_548430", -- Deep Rock Galactic
+        }
+      },
+      properties = {
+	floating = true,
+	fullscreen = true,
+	ontop = true
+      }
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
