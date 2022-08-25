@@ -1,4 +1,5 @@
 alias cal='cal -m'
+alias i='nsxiv'
 alias l='ls -lAh --color=auto'
 alias m='neomutt'
 alias n='newsboat'
