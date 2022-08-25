@@ -2,19 +2,17 @@
 # autostart
 flexget daemon start -d
 
-# microphone
-sleep 3 &&
-	noisetorch -i alsa_input.pci-0000_2f_00.4.analog-stereo &&
-	pactl set-source-volume alsa_input.pci-0000_2f_00.4.analog-stereo 45% &&
-	pactl set-source-volume 'NoiseTorch Microphone for Starship/Matisse HD Audio Controller Analog Stereo' 140% &
-
-# mouse
-xinput set-prop 'pointer:Logitech G Pro ' 'libinput Accel Profile Enabled' 0, 1
-xinput set-prop 'pointer:Logitech G Pro ' 'libinput Accel Speed' -0.4
-
 # display
 xrandr --output DisplayPort-3 --left-of DisplayPort-1
 xrandr --output DisplayPort-1 --set TearFree on
 xrandr --output DisplayPort-3 --set TearFree on
 # Display Power Management Signaling
 xset s off -dpms
+
+# microphone
+sleep 3 &&
+	noisetorch -i 'alsa_input.usb-Samson_Technologies_Samson_Q2U_Microphone-00.analog-stereo' &
+
+# mouse
+xinput set-prop 'pointer:Logitech G Pro ' 'libinput Accel Profile Enabled' 0, 1
+xinput set-prop 'pointer:Logitech G Pro ' 'libinput Accel Speed' -0.4
