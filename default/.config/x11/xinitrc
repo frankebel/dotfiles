@@ -2,10 +2,9 @@
 # shellcheck source-path=SCRIPTDIR/..
 # autostart
 dunst &
-flameshot & 
 redshift &
 udiskie &
-transmission-daemon &
+transmission-daemon
 xidlehook --not-when-audio --not-when-fullscreen --timer 1800 'systemctl suspend' '' &
 
 # X11
