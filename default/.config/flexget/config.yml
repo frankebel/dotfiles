@@ -8,9 +8,11 @@ tasks:
   Anime:
     rss: https://subsplease.org/rss/?t&r=1080
     series:
-      - Kaguya-sama wa Kokurasetai S3
-      - Paripi Koumei
-      - Spy x Family
+      - Lycoris Recoil
+      - Mamahaha no Tsurego ga Motokano datta
+      - Overlord
+      - Yofukashi no Uta
+      - Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e S2
     transmission:
       host: localhost
       port: 9091
