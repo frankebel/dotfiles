@@ -4,6 +4,9 @@
 .config-lock
 db-config*
 
+# mpv
+**/watch_later
+
 # python
 __pycache__
 
