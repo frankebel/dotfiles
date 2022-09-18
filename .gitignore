@@ -10,6 +10,10 @@ db-config*
 # python
 __pycache__
 
+# systemd
+**/default.target.wants
+**/timers.target.wants
+
 # transmission-daemon
 dht.dat
 stats.json
