@@ -10,7 +10,7 @@ set postponed = +Drafts
 set record = +Sent
 set trash = +Trash
 mailboxes =INBOX =Drafts =Sent =Trash
-mailboxes =2022S =2022S/Machine\ Learning =Archive
+mailboxes =2022W  =Archive
 
 # SMTP
 set smtp_url = "smtp://e1429282@mail.student.tuwien.ac.at:587"
