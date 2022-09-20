@@ -25,7 +25,7 @@ super + m
 	$TERMINAL -e neomutt
 
 super + shift + m
-	$TERMINAL -e mbsync -c ~/.config/isync/mbsyncrc -a
+	$TERMINAL -e mailsync
 
 super + n
 	$TERMINAL -e newsboat
