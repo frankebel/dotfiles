@@ -2,7 +2,13 @@
 # Sync mail and send notification with number of new mails.
 
 maildir="$XDG_DATA_HOME/isync"
-lastrun="$maildir/mailsynclastrun"
+lastrun="$XDG_STATE_HOME/mailsync/lastrun"
+
+# Create lastrun if it does not exist yet.
+if ! [ -d "$(dirname "$lastrun")" ]; then
+	mkdir -p "$(dirname "$lastrun")"
+	touch "$lastrun"
+fi
 
 # Sync mail.
 mbsync -c "$XDG_CONFIG_HOME/isync/mbsyncrc" -a
@@ -10,13 +16,11 @@ mbsync -c "$XDG_CONFIG_HOME/isync/mbsyncrc" -a
 # Check for new mails and send notification if appropiate.
 for account in "$maildir"/*
 do
-	if [ -d "$account" ]; then
-		newcount=$(find "$account/INBOX/new" -type f -newer "$lastrun" | wc -l)
-		if [ "$newcount" -eq 1 ]; then
-			notify-send "$(basename "$account")" "$newcount new mail."
-		elif [ "$newcount" -gt 1 ]; then
-			notify-send "$(basename "$account")" "$newcount new mails."
-		fi
+	newcount=$(find "$account/INBOX/new" -type f -newer "$lastrun" | wc -l)
+	if [ "$newcount" -eq 1 ]; then
+		notify-send "$(basename "$account")" "$newcount new mail."
+	elif [ "$newcount" -gt 1 ]; then
+		notify-send "$(basename "$account")" "$newcount new mails."
 	fi
 done
 
