@@ -7,6 +7,9 @@ db-config*
 # mpv
 **/watch_later
 
+# neovim
+packer_compiled.lua
+
 # python
 __pycache__
 
