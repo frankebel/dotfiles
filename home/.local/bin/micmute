@@ -1,10 +1,12 @@
 #!/bin/sh
+# Toggle default microphone and send notification.
+
 pactl set-source-mute @DEFAULT_SOURCE@ toggle
 case "$(pactl get-source-mute @DEFAULT_SOURCE@)" in
-*"yes"*)
-	notify-send "MIC MUTE"
-	;;
-*"no"*)
-	notify-send "MIC UNMUTE"
-	;;
+    "Mute: yes")
+        notify-send "MIC" "mute"
+        ;;
+    "Mute: no")
+        notify-send "MIC" "unmute"
+        ;;
 esac

@@ -1,20 +1,18 @@
 #!/bin/sh
-
 # Get volume
 
 string='VOL'
 vol_muted='M'
 
-get_volume(){
-	is_muted=$(pactl get-sink-mute @DEFAULT_SINK@)
-	volume=$(pactl get-sink-volume @DEFAULT_SINK@ | grep -o "[0-9]\+%" | head -n 1 | grep -o "[0-9]\+")
+get_volume() {
+    is_muted=$(pactl get-sink-mute @DEFAULT_SINK@)
+    volume=$(pactl get-sink-volume @DEFAULT_SINK@ | sed -E -n 's/.* ([0-9]+)(%).*/\1 \2/p')
 
-	if [ "$is_muted" = "Mute: yes" ]
-	then
-		echo "$string $vol_muted"
-	else
-		echo "$string $volume %"
-	fi
+    if [ "$is_muted" = "Mute: yes" ]; then
+        echo "$string $vol_muted"
+    else
+        echo "$string $volume"
+    fi
 }
 
 get_volume

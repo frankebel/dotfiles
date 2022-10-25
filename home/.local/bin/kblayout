@@ -1,10 +1,11 @@
 #!/bin/sh
+
 case "$(setxkbmap -query)" in
-*"colemak"*)
-	setxkbmap us
-	;;
-*)
-	setxkbmap us -variant colemak
-	xmodmap -e "keycode  66 = BackSpace Escape BackSpace BackSpace BackSpace BackSpace BackSpace"
-	;;
+    *"colemak"*)
+        setxkbmap us
+        ;;
+    *)
+        setxkbmap us -variant colemak
+        xmodmap -e "keycode  66 = BackSpace Escape BackSpace BackSpace BackSpace BackSpace BackSpace"
+        ;;
 esac

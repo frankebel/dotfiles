@@ -1,9 +1,8 @@
 #!/bin/sh
+# Get datetime
 
-# Get date
-
-get_date(){
-	date "+%FT%T (%a)"
+get_date() {
+    date "+%FT%T (%a)"
 }
 
 get_date
