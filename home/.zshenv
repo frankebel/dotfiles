@@ -17,7 +17,7 @@ export "XDG_CACHE_HOME=$HOME/.cache"
 export "XDG_DATA_HOME=$HOME/.local/share"
 export "XDG_STATE_HOME=$HOME/.local/state"
 
-# Manually settings environment variables for necessary software.
+# Manually setting environment variables for necessary software.
 # https://wiki.archlinux.org/title/XDG_Base_Directory
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
