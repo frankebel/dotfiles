@@ -17,16 +17,14 @@ export "XDG_CACHE_HOME=$HOME/.cache"
 export "XDG_DATA_HOME=$HOME/.local/share"
 export "XDG_STATE_HOME=$HOME/.local/state"
 
-# Manually settings paths for necessary software.
+# Manually settings environment variables for necessary software.
 # https://wiki.archlinux.org/title/XDG_Base_Directory
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
-export HISTFILE="$XDG_STATE_HOME/zsh/history"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
+export HISTFILE="$XDG_STATE_HOME/zsh/history"
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass"
-export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/startup.py"
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/config.toml"
-export VSCODE_PORTABLE="$XDG_DATA_HOME/vscode"
 export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 # export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 export ZDOTDIR="$HOME/.config/zsh"
