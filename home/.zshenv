@@ -3,12 +3,13 @@ typeset -U PATH path
 path=("$HOME/.local/bin" "$path[@]")
 export PATH
 
-# Default Apps
-export EDITOR="nvim"
-export TERMINAL="alacritty"
+# Set default programs
+# https://wiki.archlinux.org/title/Environment_variables#Default_programs
 export BROWSER="firefox"
-export WM="qtile"
+export EDITOR="nvim"
 export READER="zathura"
+export TERMINAL="alacritty"
+export VISUAL="nvim"
 
 # XDG paths
 export "XDG_CONFIG_HOME=$HOME/.config"
