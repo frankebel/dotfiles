@@ -1,6 +1,6 @@
-# Set PATH
+# Add `$HOME/.local/bin` to `PATH`
 typeset -U PATH path
-path=("$path[@]" "$HOME/.local/bin")
+path=("$HOME/.local/bin" "$path[@]")
 export PATH
 
 # Default Apps
