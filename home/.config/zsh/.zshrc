@@ -59,14 +59,6 @@ done
 # gpg pinentry
 export GPG_TTY=$(tty)
 
-# ssh-agent
-if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-    ssh-agent -t 24h > "$XDG_RUNTIME_DIR/ssh-agent.env"
-fi
-if [[ ! "$SSH_AUTH_SOCK" ]]; then
-    source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
-fi
-
 # syntax highlighting
 if [ -d "/usr/share/zsh/plugins/zsh-syntax-highlighting" ]; then
 	source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"

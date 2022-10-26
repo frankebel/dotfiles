@@ -31,6 +31,7 @@ export ZDOTDIR="$HOME/.config/zsh"
 
 # Uncategorized
 export QT_QPA_PLATFORMTHEME="qt5ct" # Configure Qt 5 applications without desktop environment
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket" # `ssh-agent` setup with systemd user unit
 
 # Less Colors for Man Pages
 # export LESS_TERMCAP_mb=$'\e[01;31m'       # begin blinking
