@@ -29,9 +29,8 @@ export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 # export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 export ZDOTDIR="$HOME/.config/zsh"
 
-# disable fisle
-export LESSHISTFILE="-"
-export QT_QPA_PLATFORMTHEME="qt5ct"
+# Uncategorized
+export QT_QPA_PLATFORMTHEME="qt5ct" # Configure Qt 5 applications without desktop environment
 
 # Less Colors for Man Pages
 # export LESS_TERMCAP_mb=$'\e[01;31m'       # begin blinking
