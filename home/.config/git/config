@@ -1,12 +1,11 @@
 [user]
 	name = frankebel
 	email = git@ebel.page
-[include]
-	path=signingkey
+	signingkey = git@ebel.page
 [init]
 	defaultBranch = main
 [commit]
-	gpgsign = true
+	gpgSign = true
 [credential]
 	helper = cache --timeout 86400
 [log]
