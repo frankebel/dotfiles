@@ -10,3 +10,7 @@
 	helper = cache --timeout 86400
 [log]
 	date = iso8601-strict
+[tag]
+	gpgSign = true
+[push]
+	gpgSign = if-asked
