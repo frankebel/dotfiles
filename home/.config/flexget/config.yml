@@ -8,11 +8,13 @@ tasks:
   Anime:
     rss: https://subsplease.org/rss/?t&r=1080
     series:
-      - Lycoris Recoil
-      - Mamahaha no Tsurego ga Motokano datta
-      - Overlord
-      - Yofukashi no Uta
-      - Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e S2
+      - Akiba Maid Sensou
+      - Blue Lock
+      - Chainsaw Man
+      - Kage no Jitsuryokusha ni Naritakute!
+      - Mob Psycho 100 S3
+      - Spy x Family
+      - Urusei Yatsura
     transmission:
       host: localhost
       port: 9091
