@@ -3,11 +3,9 @@
 flexget daemon start -d &
 
 # display
-xrandr --output DisplayPort-3 --left-of DisplayPort-1
-xrandr --output DisplayPort-1 --set TearFree on
-xrandr --output DisplayPort-3 --set TearFree on
-# Display Power Management Signaling
-xset s off -dpms
+xrandr --output DisplayPort-1 --primary --right-of DisplayPort-2
+xrandr --output DisplayPort-1 --mode 2560x1440 --rate 144 --set TearFree on
+xrandr --output DisplayPort-2 --mode 2560x1440 --rate 60 --set TearFree on
 
 # microphone
 sleep 3 &&
