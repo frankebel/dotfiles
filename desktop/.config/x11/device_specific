@@ -7,10 +7,6 @@ xrandr --output DisplayPort-1 --primary --right-of DisplayPort-2
 xrandr --output DisplayPort-1 --mode 2560x1440 --rate 144 --set TearFree on
 xrandr --output DisplayPort-2 --mode 2560x1440 --rate 60 --set TearFree on
 
-# microphone
-sleep 3 &&
-	noisetorch -i 'alsa_input.usb-Samson_Technologies_Samson_Q2U_Microphone-00.analog-stereo' &
-
 # mouse
 xinput set-prop 'pointer:Logitech G Pro ' 'libinput Accel Profile Enabled' 0, 1
 xinput set-prop 'pointer:Logitech G Pro ' 'libinput Accel Speed' -0.4
