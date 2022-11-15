@@ -1,68 +1,92 @@
-# Enable colors
-autoload -U colors && colors
+# Aliases
+source "$ZDOTDIR/aliases"
 
-# History
-HISTFILE=~/.cache/zsh/history
-HISTSIZE=1000
-SAVEHIST=1000
-
-# Basic auto/tab completion
-autoload -Uz compinit
-zstyle ':completion:*' menu select
-# case-insensitive autocompletion
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots)		# Include hidden files.
-
-# vi mode
-bindkey -v
-export KEYTIMEOUT=1
-
-# Use vim keys in tab complete menu:
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
-bindkey -v '^?' backward-delete-char
-
-# Change cursor shape for different vi modes.
-function zle-keymap-select () {
+# Cursor shape
+# Set shape depending on mode.
+# shape list: https://ttssh2.osdn.jp/manual/4/en/usage/tips/vim.html
+function zle-keymap-select() {
     case $KEYMAP in
-        vicmd) echo -ne '\e[1 q';;      # block
-        viins|main) echo -ne '\e[5 q';; # beam
+        vicmd)
+            echo -ne '\e[2 q'
+            ;;
+        viins|main)
+            echo -ne '\e[6 q'
+            ;;
     esac
 }
-zle -N zle-keymap-select
 zle-line-init() {
-    zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
-    echo -ne "\e[5 q"
+    echo -ne '\e[6 q'
 }
+zle -N zle-keymap-select
 zle -N zle-line-init
-echo -ne '\e[5 q' # Use beam shape cursor on startup.
-preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/frank/.zshrc'
+# Directory stack
+# View stack with `dirs -v`.
+# Navigate with `cd -n` with "n" being the number.
+DIRSTACKSIZE="20"
+setopt autopushd
+setopt pushdignoredups
+setopt pushdminus
+setopt pushdsilent
+setopt pushdtohome
 
-autoload -Uz promptinit
-promptinit
-# End of lines added by compinstall
+# Completion
+autoload -U compinit
+setopt automenu
+setopt magicequalsubst
+zmodload zsh/complist
+zstyle ':completion:*' menu select
+ # order of completion
+zstyle ':completion:*' completer _expand_alias _complete _approximate
+zstyle ':completion:*' group-name '' # grouping results
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z} r:|=* l:|=*' # man zshcompwid
+eval "$(dircolors)" # set LS_COLORS
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*:*:*:*:corrections' format '%F{yellow}!- %d (errors: %e) -!%f'
+zstyle ':completion:*:*:*:*:descriptions' format '%F{blue}-- %D %d --%f'
+zstyle ':completion:*:*:*:*:messages' format ' %F{purple} -- %d --%f'
+zstyle ':completion:*:*:*:*:warnings' format ' %F{red}-- no matches found --%f'
+compinit
+_comp_options+=(globdots) # include hidden files
 
+# Editor
+# Edit directly in "$EDITOR" by pressing 'v' in normal mode.
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd 'v' edit-command-line
 
-# source shellconfig
-for _file in "$XDG_CONFIG_HOME"/zsh/shellconfig/*; do
-	source "$_file"
-done
+# History
+[ -d "$XDG_STATE_HOME/zsh" ] || mkdir "$XDG_STATE_HOME/zsh"
+HISTFILE="$XDG_STATE_HOME/zsh/history"
+HISTSIZE=10000
+SAVEHIST=10000
+setopt incappendhistory
+setopt histignoredups
 
-# gpg pinentry
-export GPG_TTY=$(tty)
+# Keybinds
+bindkey '^[[3~' delete-char # delete key. Find out with <^v + DELETE>.
+bindkey -M menuselect '\e' send-break # <Esc>
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -v # vi mode
+export KEYTIMEOUT=1
 
-# syntax highlighting
-if [ -d "/usr/share/zsh/plugins/zsh-syntax-highlighting" ]; then
-	source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-fi
+# Prompt TODO 
+# https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html
+# man zshmisc
 
-# Starship prompt
-eval "$(starship init zsh)"
+# Application Specific Settings
+export GPG_TTY=$(tty) # GnuPG pinentry
+eval "$(starship init zsh)" # Starship
+
+# Plugins
+plugindir='/usr/share/zsh/plugins'
+source "$plugindir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$plugindir/zsh-autosuggestions/zsh-autosuggestions.zsh"
+unset plugindir
+
+# Uncategorized
+setopt nobeep
+setopt autocd

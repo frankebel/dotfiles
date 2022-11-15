@@ -1,0 +1,93 @@
+#!/bin/sh
+# Aliases for often used commands.
+
+# Suffix alias
+# man zshbuiltins
+alias -s git='git clone'
+alias -s jpg=nsxiv
+alias -s lua='$EDITOR'
+alias -s mkv=mpv
+alias -s mp4=mpv
+alias -s ods=localc
+alias -s pdf='$READER'
+alias -s png=nsxiv
+alias -s py='$EDITOR'
+alias -s sh='$EDITOR'
+alias -s tex='$EDITOR'
+alias -s webm=mpv
+alias -s xopp=xournalpp
+
+# Color automatically
+alias diff='diff --color=auto'
+alias grep='grep --color=auto'
+alias ip='ip -color=auto'
+alias ls='ls --color=auto'
+
+# Git
+alias g='git'
+alias ga='git add'
+alias gc='git commit'
+alias gd='git diff'
+alias gl='git log'
+alias glo='git log --oneline --graph'
+alias gp='git pull'
+alias grm='git rm'
+alias grt='cd "$(git rev-parse --show-toplevel)"'
+alias gs='git status'
+
+# Go up directories
+alias .1='cd ../'
+alias .2='cd ../../'
+alias .3='cd ../../../'
+alias .4='cd ../../../../'
+
+# Neovim
+alias sv='sudoedit'
+alias v='$EDITOR'
+alias vdf='cd "$DOTDIR" && $EDITOR'
+
+# Often used directories
+alias cda='cd "$DATADIR"; l'
+alias cdf='cd "$DOTDIR"; l'
+alias cm='cd "$MASTERDIR"; l'
+alias cmc='cd "$MASTERDIR/2022w"; l'
+alias cpr='cd "$PROGRAMMINGDIR"; l'
+alias ct='cd "$TEMPDIR"; l'
+alias ctor='cd "$TORRENTDIR"; l'
+
+# Pacman
+alias explicit-installed='pacman -Qqen '\
+'| grep -v "$(pacman -Qqs base-devel)" '\
+'| grep -v "$(pacman -Qqs texlive-most)"'
+alias p='pacman'
+alias pq='pacman -Q'
+alias pqi='pacman -Qi'
+alias psi='pacman -Si'
+alias pss='pacman -Ss'
+alias spr='sudo pacman -Rns'
+alias sps='sudo pacman -S'
+
+# Transmission
+alias t='watch -n 0.1 transmission-remote -l'
+alias tsm='transmission-remote'
+# Sort list by name column excluding first and last line.
+#shellcheck disable=SC2142
+alias tsml='transmission-remote -l '\
+'| awk '\''NR==1{print; next;} {if(last) print last | "sort -k10"; last=$0;} '\
+'END {close("sort -k10"); print last}'\'
+
+# Uncategorized
+alias cal='cal -m'
+alias cb='xclip -selection clipboard'
+alias i='nsxiv'
+alias l='ls -lAh --time-style=long-iso'
+alias m='neomutt'
+alias n='newsboat'
+alias nf='neofetch'
+alias printpath='echo "$PATH" | sed "s/:/\n/g"'
+alias shck='shellcheck'
+alias tree='tree -a -I .git' # ignore .git directory
+alias wtr='curl wttr.in'
+alias x='xournalpp'
+alias z='zathura'
+alias zzz='systemctl suspend'

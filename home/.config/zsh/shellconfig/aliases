@@ -1,5 +1,0 @@
-# Open file mananger in current directory.
-alias fmc='nohup pcmanfm $(pwd) > /dev/null 2>&1 & disown'
-
-# Power management
-alias zzz='systemctl suspend'
