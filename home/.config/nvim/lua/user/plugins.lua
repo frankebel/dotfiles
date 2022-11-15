@@ -47,10 +47,7 @@ return require("packer").startup(function(use)
   use "hrsh7th/cmp-path"
 
   -- LSP
-  use {
-    "neovim/nvim-lspconfig",
-    tag = "v0.*"
-  }
+  use "neovim/nvim-lspconfig"
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig"
 
