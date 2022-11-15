@@ -1,26 +1,42 @@
 #!/bin/sh
-# shellcheck source-path=SCRIPTDIR/..
-# autostart
+
+# Autostart
 dunst &
 redshift &
 udiskie &
 transmission-daemon &
 xidlehook --not-when-audio --not-when-fullscreen --timer 1800 'systemctl suspend' '' &
 
-# X11
-xrdb -merge "$XDG_CONFIG_HOME/x11/xresources"
-xrandr --dpi 96
-
-# keyboard settings
+# Keyboard
 xset r 66 # caps lock
 xset r rate 150 50
 setxkbmap us -variant colemak
 xmodmap -e 'keycode 66 = BackSpace Escape BackSpace BackSpace BackSpace BackSpace BackSpace'
 
-# device specific
-if [ -x "$XDG_CONFIG_HOME/x11/device_specific" ]; then
-	. "$XDG_CONFIG_HOME/x11/device_specific"
-fi
+# X11
+xrdb -merge "$XDG_CONFIG_HOME/x11/xresources"
+xrandr --dpi 96
 
-# start window manager
+# Device specific
+case "$(hostnamectl hostname)" in
+    *"desktop"*)
+        # Autostart
+        flexget daemon start -d &
+
+        # Display
+        xrandr --output DisplayPort-1 --primary --right-of DisplayPort-2
+        xrandr --output DisplayPort-1 --set TearFree on
+        xrandr --output DisplayPort-2 --set TearFree on
+
+        # Mouse
+        xinput set-prop 'pointer:Logitech G Pro ' 'libinput Accel Profile Enabled' 0, 1
+        xinput set-prop 'pointer:Logitech G Pro ' 'libinput Accel Speed' -0.4
+        ;;
+    *"laptop"*)
+        # Autostart
+        blueman-applet &
+        ;;
+esac
+
+# Start window manager (must be last)
 exec awesome
