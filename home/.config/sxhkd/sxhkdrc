@@ -9,11 +9,8 @@ super + Return
 super + shift + Return
 	rofi -show run
 
-super + shift + p
-	rofi-pass
-
 super + b
-	firefox
+	$BROWSER
 
 super + d
 	discord
@@ -28,13 +25,19 @@ super + shift + m
 	$TERMINAL -e mailsync
 
 super + n
-	$TERMINAL -e newsboat
+	killall newsboat; $TERMINAL -e newsboat
 
 super + p
 	pavucontrol
 
+super + shift + p
+	rofi-pass
+
 super + s
 	steam
+
+super + v
+    $TERMINAL -e $EDITOR
 
 super + x
 	xournalpp
