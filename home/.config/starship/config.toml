@@ -1,4 +1,7 @@
 # https://starship.rs/config/
 
+[cmd_duration]
+disabled = true
+
 [line_break]
 disabled = true
