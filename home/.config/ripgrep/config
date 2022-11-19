@@ -1,0 +1,8 @@
+# See https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md#configuration-file
+
+# Ignore `.git` directory
+--glob=!.git/*
+# Include hidden files
+--hidden
+# Use smartcase
+--smart-case
