@@ -15,14 +15,6 @@ end
 
 local packer_bootstrap = ensure_packer()
 
--- Run `PackerSync` whenever this file is updated
-vim.cmd [[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
-]]
-
 -- Install plugins
 return require("packer").startup(function(use)
   -- packer
