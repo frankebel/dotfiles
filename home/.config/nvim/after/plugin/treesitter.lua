@@ -88,3 +88,8 @@ require "nvim-treesitter.configs".setup {
     },
   }
 }
+
+
+-- nvim-treesitter-context
+-- https://github.com/nvim-treesitter/nvim-treesitter-context
+require "treesitter-context".setup {}
