@@ -5,6 +5,13 @@
 [ "${PATH#"$HOME/.local/bin"}" = "$PATH" ] \
     && export PATH="$HOME/.local/bin:$PATH"
 
+# XDG Base Directory Specification
+# https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+
 # Commonly used directories
 export DATADIR="$HOME/data"
 export DOTDIR="$HOME/.dotfiles"
@@ -35,13 +42,6 @@ export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 # export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 export ZDOTDIR="$HOME/.config/zsh"
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
-
-# XDG Base Directory Specification
-# https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_STATE_HOME="$HOME/.local/state"
 
 # Uncategorized
 export MANPAGER='nvim +Man!' # use neovim as manpager
