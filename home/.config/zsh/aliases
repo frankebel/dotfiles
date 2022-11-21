@@ -12,7 +12,6 @@ alias -s ods=localc
 alias -s pdf='$READER'
 alias -s png=nsxiv
 alias -s py='$EDITOR'
-alias -s sh='$EDITOR'
 alias -s tex='$EDITOR'
 alias -s webm=mpv
 alias -s xopp=xournalpp
