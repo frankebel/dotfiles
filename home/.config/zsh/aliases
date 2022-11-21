@@ -56,6 +56,9 @@ alias ct='cd "$TEMPDIR"; l'
 alias ctor='cd "$TORRENTDIR"; l'
 
 # Pacman
+alias aurs='paru -S'
+alias aursi='paru -Si'
+alias aurss='paru -Ss'
 alias explicit-installed='pacman -Qqen '\
 '| grep -v "$(pacman -Qqs base-devel)" '\
 '| grep -v "$(pacman -Qqs texlive-most)"'
