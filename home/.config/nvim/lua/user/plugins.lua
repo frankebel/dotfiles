@@ -38,12 +38,18 @@ return require("packer").startup(function(use)
   use "hrsh7th/cmp-buffer"
   use "hrsh7th/cmp-path"
 
+  -- DAP
+  use "mfussenegger/nvim-dap"
+  use "rcarriga/nvim-dap-ui"
+  use "theHamsta/nvim-dap-virtual-text"
+
   -- LSP
   use "neovim/nvim-lspconfig"
 
   -- Mason
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig"
+  use "jayp0521/mason-nvim-dap.nvim"
 
   -- Telescope
   use {

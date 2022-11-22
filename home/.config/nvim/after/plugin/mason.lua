@@ -19,3 +19,12 @@ require "mason-lspconfig".setup {
     "sumneko_lua",
   }
 }
+
+
+-- Configuration for mason-nvim-dap
+-- See https://github.com/jayp0521/mason-nvim-dap.nvim
+require "mason-nvim-dap".setup {
+  ensure_installed = {
+    "python",
+  }
+}
