@@ -3,27 +3,6 @@
 
 local lspconfig = require "lspconfig"
 
--- Configuration for mason
--- https://github.com/williamboman/mason.nvim
-require "mason".setup {
-  ui = {
-    icons = {
-      package_installed = "✓",
-      package_pending = "➜",
-      package_uninstalled = "✗"
-    }
-  }
-}
-
--- Configuration for mason-lspconfig
--- https://github.com/williamboman/mason-lspconfig.nvim
-require "mason-lspconfig".setup {
-  ensure_installed = {
-    "pyright",
-    "sumneko_lua",
-  }
-}
-
 -- Autocompletion
 local capabilities = require "cmp_nvim_lsp".default_capabilities()
 
