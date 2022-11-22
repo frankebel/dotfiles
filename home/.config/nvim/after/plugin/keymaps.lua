@@ -21,7 +21,21 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", { silent = true })
 -- Paste without yanking
 keymap("v", "p", '"_dP', { silent = true })
 
+
 -- Plugins
+
+-- Gitsigns
+local gitsigns = require "gitsigns"
+keymap("n", "<leader>hn", gitsigns.next_hunk)
+keymap("n", "<leader>hp", gitsigns.prev_hunk)
+keymap("n", "<leader>hh", gitsigns.preview_hunk, { desc = "preview_hunk" })
+keymap("n", "<leader>hb", gitsigns.blame_line, { desc = "blame_line" })
+
+
+-- Nvim-tree
+local nvim_tree = require "nvim-tree.api"
+keymap("n", "<leader>e", nvim_tree.tree.toggle, { desc = "Toggle file manager" })
+
 -- Telescope
 local builtin = require "telescope.builtin"
 local function search_dotfiles()
@@ -39,14 +53,3 @@ keymap("n", "<leader>fk", builtin.keymaps, { desc = "Find Keymaps" })
 keymap("n", "<leader>fo", builtin.oldfiles, { desc = "Find previously open files" })
 
 keymap("n", "<leader>fdf", search_dotfiles, { desc = "Find dotfiles" })
-
--- Gitsigns
-local gitsigns = require "gitsigns"
-keymap("n", "<leader>hn", gitsigns.next_hunk)
-keymap("n", "<leader>hp", gitsigns.prev_hunk)
-keymap("n", "<leader>hh", gitsigns.preview_hunk, { desc = "preview_hunk" })
-keymap("n", "<leader>hb", gitsigns.blame_line, { desc = "blame_line" })
-
--- Nvim-tree
-local nvim_tree = require "nvim-tree.api"
-keymap("n", "<leader>e", nvim_tree.tree.toggle, { desc = "Toggle file manager" })
