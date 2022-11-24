@@ -60,8 +60,8 @@ alias aurs='paru -S'
 alias aursi='paru -Si'
 alias aurss='paru -Ss'
 alias explicit-installed='pacman -Qqen '\
-'| grep -v "$(pacman -Qqs base-devel)" '\
-'| grep -v "$(pacman -Qqs texlive-most)"'
+'| grep -v "$(pacman -Qqg base-devel)" '\
+'| grep -v "$(pacman -Qqg texlive-most)"'
 alias p='pacman'
 alias pq='pacman -Q'
 alias pqi='pacman -Qi'
