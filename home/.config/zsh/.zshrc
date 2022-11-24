@@ -90,3 +90,7 @@ unset plugindir
 # Uncategorized
 setopt nobeep
 setopt autocd
+
+# fzf
+source '/usr/share/fzf/completion.zsh'
+source '/usr/share/fzf/key-bindings.zsh'

@@ -56,19 +56,13 @@ alias ct='cd "$TEMPDIR"; l'
 alias ctor='cd "$TORRENTDIR"; l'
 
 # Pacman
-alias aurs='paru -S'
-alias aursi='paru -Si'
-alias aurss='paru -Ss'
+alias aurs='paru -Slq | fzf --preview "paru -Si {}" | xargs -ro paru -S'
 alias explicit-installed='pacman -Qqen '\
 '| grep -v "$(pacman -Qqg base-devel)" '\
 '| grep -v "$(pacman -Qqg texlive-most)"'
-alias p='pacman'
-alias pq='pacman -Q'
-alias pqi='pacman -Qi'
-alias psi='pacman -Si'
-alias pss='pacman -Ss'
-alias spr='sudo pacman -Rns'
-alias sps='sudo pacman -S'
+alias pacq='pacman -Qq | fzf --preview "pacman -Qi {}" | xargs -ro pacman -Qi'
+alias pacr='pacman -Qq | fzf --preview "pacman -Si {}" | xargs -ro sudo pacman -Rns'
+alias pacs='pacman -Slq | fzf --preview "pacman -Si {}" | xargs -ro sudo pacman -S'
 
 # Transmission
 alias t='watch -n 0.1 transmission-remote -l'

@@ -43,6 +43,20 @@ export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 export ZDOTDIR="$HOME/.config/zsh"
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
 
+# fzf
+export FZF_DEFAULT_COMMAND='fd --follow --hidden'
+export FZF_DEFAULT_OPTS="--layout reverse --height 40% --multi \
+--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 \
+--color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 \
+--color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 \
+--color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_CTRL_T_OPTS="--preview '[ -f {} ] \
+&& bat --style=numbers --color=always {} \
+|| tree -a -C -L 1 {}'"
+export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND --type d"
+export FZF_ALT_C_OPTS="--preview 'tree -a --gitignore -C -L 1 {}'"
+
 # Uncategorized
 export MANPAGER='nvim +Man!' # use neovim as manpager
 export QT_QPA_PLATFORMTHEME="qt5ct" # Configure Qt 5 applications without DE
