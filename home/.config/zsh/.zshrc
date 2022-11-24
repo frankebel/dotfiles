@@ -64,13 +64,13 @@ setopt incappendhistory
 setopt histignoredups
 
 # Keybinds
+bindkey -v # vi mode
 bindkey '^[[3~' delete-char # delete key. Find out with <^v + DELETE>.
 bindkey -M menuselect '\e' send-break # <Esc>
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
-bindkey -v # vi mode
 export KEYTIMEOUT=1
 
 # Prompt TODO 
