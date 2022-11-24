@@ -82,6 +82,7 @@ alias tsml='transmission-remote -l '\
 # Uncategorized
 alias cal='cal -m'
 alias cb='xclip -selection clipboard'
+alias fd='fd --follow --hidden'
 alias i='nsxiv'
 alias l='ls -lAh --time-style=long-iso'
 alias m='neomutt'

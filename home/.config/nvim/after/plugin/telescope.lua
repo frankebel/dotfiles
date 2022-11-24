@@ -14,8 +14,7 @@ telescope.setup {
   },
   pickers = {
     find_files = {
-      -- Find hidden files but ignore `.git` directory
-      find_command = { "rg", "--files", "--hidden", "--glob", "!./git/*" },
+      find_command = { "fd",  "--type", "f", "--follow", "--hidden" },
     },
   },
 }
