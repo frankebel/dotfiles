@@ -15,6 +15,7 @@ require "mason".setup {
 -- See https://github.com/williamboman/mason-lspconfig.nvim
 require "mason-lspconfig".setup {
   ensure_installed = {
+    "jdtls",
     "pyright",
     "sumneko_lua",
   }
@@ -26,5 +27,7 @@ require "mason-lspconfig".setup {
 require "mason-nvim-dap".setup {
   ensure_installed = {
     "python",
+    "javadbg",
+    "javatest",
   }
 }

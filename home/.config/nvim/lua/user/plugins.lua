@@ -85,6 +85,8 @@ return require("packer").startup(function(use)
     ft = "markdown",
     tag = "v0.*",
   }
+  -- Java
+  use "mfussenegger/nvim-jdtls"
 
   -- Uncategorized
   use "Mofiqul/dracula.nvim" -- Colorscheme

@@ -21,6 +21,9 @@ M.on_attach = function(client, bufnr)
   local nmap = function(keys, func, desc)
     vim.keymap.set("n", keys, func, { buffer = bufnr, desc = desc })
   end
+  local vmap = function(keys, func, desc)
+    vim.keymap.set("v", keys, func, { buffer = bufnr, desc = desc })
+  end
 
   nmap("gd", vim.lsp.buf.definition, "Go to definition")
   nmap("gD", vim.lsp.buf.declaration, "Go to declaration")
@@ -41,6 +44,27 @@ M.on_attach = function(client, bufnr)
 
   nmap("gr", vim.lsp.buf.references, "List references")
   nmap("<space>f", function() vim.lsp.buf.format { async = true } end, "Format current buffer")
+
+  if client.name == "jdtls" then
+    -- See https://github.com/mfussenegger/nvim-jdtls
+    local jdtls = require "jdtls"
+    -- Additional mappings
+    nmap("<A-o>", jdtls.organize_imports, "Organize imports")
+    nmap("crv", jdtls.extract_variable, "Extract variable")
+    nmap("crc", jdtls.extract_constant, "Extract constant")
+    vmap("crv", [[<Esc><Cmd>lua require('jdtls').extract_variable(true)<CR>]], "Extract variable")
+    vmap("crc", [[<Esc><Cmd>lua require('jdtls').extract_constant(true)<CR>]], "Extract constant")
+    vmap("crm", [[<Esc><Cmd>lua require('jdtls').extract_method(true)<CR>]], "Extract method")
+    nmap("<leader>df", jdtls.test_class, "Test class")
+    nmap("<leader>dn", jdtls.test_nearest_method, "Test method")
+
+    -- With `hotcodereplace = 'auto' the debug adapter will try to apply code changes
+    -- you make during a debug session immediately.
+    -- Remove the option if you do not want that.
+    -- You can use the `JdtHotcodeReplace` command to trigger it manually
+    jdtls.setup_dap({ hotcodereplace = "auto" })
+    require "jdtls.dap".setup_dap_main_class_configs()
+  end
 end
 
 
