@@ -31,3 +31,18 @@ require "mason-nvim-dap".setup {
     "javatest",
   }
 }
+
+
+-- Configuration for mason-null-ls
+-- See https://github.com/jayp0521/mason-null-ls.nvim
+require "mason-null-ls".setup {
+  ensure_installed = {
+    -- Python
+    "autopep8",
+    "flake8",
+
+    -- Sh
+    "shellcheck",
+    "shfmt",
+  }
+}
