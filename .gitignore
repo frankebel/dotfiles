@@ -5,7 +5,7 @@
 db-config*
 
 # mpv
-**/watch_later
+watch_later
 
 # neovim
 .luarc.json
@@ -15,14 +15,14 @@ packer_compiled.lua
 __pycache__
 
 # systemd
-**/default.target.wants
-**/timers.target.wants
+default.target.wants
+timers.target.wants
 
 # transmission-daemon
 dht.dat
 stats.json
-**/transmission-daemon/resume
-**/transmission-daemon/torrents
+resume/
+torrents/
 
 # zsh
 .zcompdump
