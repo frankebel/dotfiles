@@ -17,7 +17,7 @@ local packer_bootstrap = ensure_packer()
 
 -- Install plugins
 return require("packer").startup(function(use)
-  -- packer
+  -- Packer
   use "wbthomason/packer.nvim"
 
   -- Completion
@@ -78,7 +78,7 @@ return require("packer").startup(function(use)
   }
 
   -- Filetype specific
-  -- markdown
+  -- Markdown
   use {
     "iamcco/markdown-preview.nvim",
     run = "cd app && yarn install",
