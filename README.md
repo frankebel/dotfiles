@@ -60,19 +60,16 @@ stow laptop
 The following programs are necessary to use my dotfiles fully:
 
 ### Neovim
-- [autopep8](https://github.com/hhatto/autopep8)
-- [flake8](https://flake8.pycqa.org/en/latest/)
+- [fd](https://github.com/sharkdp/fd)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
-- [shellcheck](https://www.shellcheck.net/)
-- [shfmt](https://github.com/mvdan/sh)
 ```sh
-sudo pacman -S autopep8 flake8 ripgrep shellcheck shfmt
+sudo pacman -S fd ripgrep
 ```
 
 ### Newsboat
 - [mpv](https://mpv.io/)
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp)
-```
+```sh
 sudo pacman -S mpv yt-dlp
 ```
 
