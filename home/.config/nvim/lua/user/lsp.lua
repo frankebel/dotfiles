@@ -7,13 +7,6 @@ local M = {}
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 M.on_attach = function(client, bufnr)
-  -- Mappings
-  -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-  vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float)
-  vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev)
-  vim.keymap.set("n", "<leader>dn", vim.diagnostic.goto_next)
-  vim.keymap.set("n", "<leader>dq", vim.diagnostic.setloclist)
-
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
