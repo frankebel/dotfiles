@@ -62,7 +62,7 @@ XF86Audio{Lower,Raise}Volume
 
 # Monitor Brightness
 XF86MonBrightness{Down,Up}
-	light {-U,-A} 10
+	xbacklight {-dec,-inc} 10
 
 # Screenlock
 super + F12
