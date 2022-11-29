@@ -4,8 +4,8 @@
 dunst &
 flameshot &
 redshift &
-udiskie &
 transmission-daemon &
+udiskie &
 xidlehook --not-when-audio --not-when-fullscreen --timer 1800 'systemctl suspend' '' &
 
 # Keyboard
