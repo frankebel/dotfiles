@@ -2,6 +2,7 @@
 
 # Autostart
 dunst &
+flameshot &
 redshift &
 udiskie &
 transmission-daemon &
