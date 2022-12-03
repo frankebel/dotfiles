@@ -47,6 +47,7 @@ alias v='$EDITOR'
 alias vdf='cd "$DOTDIR" && $EDITOR'
 
 # Often used directories
+alias cadv='cd $PROGRAMMINGDIR/advent-of-code-2022'
 alias cda='cd "$DATADIR"; l'
 alias cdf='cd "$DOTDIR"; l'
 alias cm='cd "$MASTERDIR"; l'
