@@ -20,4 +20,4 @@ color info white black
 
 # Open links in programs
 macro b set browser "firefox %u" ; open-in-browser ; set browser " elinks %u"
-macro v set browser "mpv --ytdl-format=best %u" ; open-in-browser ; set browser " elinks %u"
+macro v set browser "mpv %u" ; open-in-browser ; set browser " elinks %u"

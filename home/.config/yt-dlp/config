@@ -1,1 +1,2 @@
---format-sort +res:1440
+--embed-metadata
+--format="bv*[height<=1440]+ba/b"
