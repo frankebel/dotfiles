@@ -42,6 +42,11 @@ alias .2='cd ../../'
 alias .3='cd ../../../'
 alias .4='cd ../../../../'
 
+# Interactive and verbose
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -Iv'
+
 # Neovim
 alias sv='sudoedit'
 alias v='$EDITOR'
