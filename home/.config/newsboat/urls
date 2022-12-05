@@ -1,31 +1,43 @@
 "query:Unread Articles:unread = \"yes\""
-#Videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UChIs72whgZI9w6d6FhwGGHA videos tech
-https://www.youtube.com/feeds/videos.xml?channel_id=UCgeS8J9W62B-uLBgzp14BtQ videos tech
-https://odysee.com/$/rss/@HardwareUnboxed:2 videos tech
-https://www.youtube.com/feeds/videos.xml?channel_id=UCDKLZBNM9XZ7pHPZF9D8xDQ videos tech
-https://www.youtube.com/feeds/videos.xml?channel_id=UCRPdsCVuH53rcbTcEkuY4uQ videos tech
-https://www.youtube.com/feeds/videos.xml?channel_id=UCGsaijjOJshS2_ZmMNZgS-g videos tech
-https://odysee.com/$/rss/@Luke:7 videos linux
-https://odysee.com/$/rss/@DistroTube:2 videos linux
-https://odysee.com/$/rss/@AlphaNerd:8 videos linux
-https://odysee.com/$/rss/@BrodieRobertson:5 videos linux
-https://www.youtube.com/feeds/videos.xml?channel_id=UCoxcjq-8xIDTYp3uz647V5A videos educational
-https://www.youtube.com/feeds/videos.xml?channel_id=UCyp1gCHZJU_fGWFf2rtMkCg videos educational
-https://www.youtube.com/feeds/videos.xml?channel_id=UCtwKon9qMt5YLVgQt1tvJKg videos educational
-https://www.youtube.com/feeds/videos.xml?channel_id=UC6107grRI4m0o2-emgoDnAA videos educational
-https://www.youtube.com/feeds/videos.xml?channel_id=UC8VkNBOwvsTlFjoSnNSMmxw videos educational
-https://odysee.com/$/rss/@veritasium:f videos educational
-https://www.youtube.com/feeds/videos.xml?channel_id=UCBa659QWEk1AI4Tg--mrJ2A videos educational
-https://odysee.com/$/rss/@Kurzgesagt:bf videos educational
-https://odysee.com/$/rss/@3Blue1Brown:b videos educational
-https://www.youtube.com/feeds/videos.xml?channel_id=UCj1VqrHhDte54oLgPG4xpuQ videos educational
-https://www.youtube.com/feeds/videos.xml?channel_id=UCqJ-Xo29CKyLTjn6z2XwYAw videos gaming
-https://www.youtube.com/feeds/videos.xml?channel_id=UCsvn_Po0SmunchJYOWpOxMg videos gaming
-https://www.youtube.com/feeds/videos.xml?channel_id=UCHSI8erNrN6hs3sUK6oONLA videos gaming minecraft
-https://www.youtube.com/feeds/videos.xml?channel_id=UCsrxrOtjmWnH5FJhJnkTRBg videos gaming minecraft
-https://www.youtube.com/feeds/videos.xml?channel_id=UCR1D15p_vdP3HkrH8wgjQRw videos entertainment
-https://www.youtube.com/feeds/videos.xml?channel_id=UCcmxOGYGF51T1XsqQLewGtQ videos entertainment
 
-#News
-https://www.archlinux.org/feeds/news/ news
+"query:---Hardware---:tags # \"hardware\""
+https://www.youtube.com/feeds/videos.xml?channel_id=UChIs72whgZI9w6d6FhwGGHA "~Gamers Nexus" hardware videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UCgeS8J9W62B-uLBgzp14BtQ "~GN Extras" hardware videos
+https://odysee.com/$/rss/@HardwareUnboxed:2 "~Hardware Unboxed" hardware videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UCDKLZBNM9XZ7pHPZF9D8xDQ "~Monitors Unboxed" hardware videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UCRPdsCVuH53rcbTcEkuY4uQ "~Moores Law is dead" hardware videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UCGsaijjOJshS2_ZmMNZgS-g "~der8auer" hardware videos
+
+"query:---Linux---:tags # \"linux\""
+https://www.archlinux.org/feeds/news/ linux
+https://odysee.com/$/rss/@Luke:7 "~Luke Smith" linux videos
+https://odysee.com/$/rss/@AlphaNerd:8 "~Mental Outlaw" linux videos
+https://odysee.com/$/rss/@BrodieRobertson:5 "~Brodie Robertson" linux videos
+https://odysee.com/$/rss/@teej_dv:d "~TJ DeVries" linux videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UC8ENHE5xdFSwx71u3fDH5Xw "~The Primeagen" linux videos
+
+"query:---Games---:tags # \"games\""
+https://www.youtube.com/feeds/videos.xml?channel_id=UCqJ-Xo29CKyLTjn6z2XwYAw "~Game Maker's Toolkit" games videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsvn_Po0SmunchJYOWpOxMg "~Videogamedunkey" games videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UCHSI8erNrN6hs3sUK6oONLA "~Ilmango" games videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsrxrOtjmWnH5FJhJnkTRBg "~Cubicmetre" games videos
+
+"query:---Videos---:tags # \"videos\""
+https://www.youtube.com/feeds/videos.xml?channel_id=UCoxcjq-8xIDTYp3uz647V5A "~Numberphile" videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UCyp1gCHZJU_fGWFf2rtMkCg "~Numberphile2" videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UC9-y-6csu5WGm29I7JiwpnA "~Computerphile" videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UCtwKon9qMt5YLVgQt1tvJKg "~Objectivity" videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UC6107grRI4m0o2-emgoDnAA "~Smarter every day" videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UC8VkNBOwvsTlFjoSnNSMmxw "~Smarter every day 2" videos
+https://odysee.com/$/rss/@veritasium:f "~Veritasium" videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UCBa659QWEk1AI4Tg--mrJ2A "~Tom Scott" videos
+https://odysee.com/$/rss/@Kurzgesagt:bf "~Kurzgesagt" videos
+https://odysee.com/$/rss/@3Blue1Brown:b "~3Blue1Brown" videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UCj1VqrHhDte54oLgPG4xpuQ "~Stuff made here" videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UCEIwxahdLz7bap-VDs9h35A "~Steve Mould" videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UC1yNl2E66ZzKApQdRuTQ4tw "~Sabine Hossenfelder" videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UCSju5G2aFaWMqn-_0YBtq5A "~Stand-up Maths" videos
+# Entertainment
+https://www.youtube.com/feeds/videos.xml?channel_id=UCR1D15p_vdP3HkrH8wgjQRw "~Internet Historian" videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UCcmxOGYGF51T1XsqQLewGtQ "~Trash Taste" videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UCimiUgDLbi6P17BdaCZpVbg "~exurb1a" videos
