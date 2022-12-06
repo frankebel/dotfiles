@@ -1,0 +1,5 @@
+#!/bin/sh
+# Launch steam without cluttering HOME
+! [ -d "$XDG_DATA_HOME/Steam" ] && mkdir -p "$XDG_DATA_HOME/Steam"
+HOME="$XDG_DATA_HOME/Steam"
+exec /usr/bin/steam "$@"
