@@ -1,0 +1,7 @@
+#!/bin/sh
+# Set colortemperature of lights in room to 2700 K.
+
+for i in 1 2 3; do
+    hueadm -H "$(pass show home/hue | sed '2q;d')" \
+        -U "$(pass show home/hue | sed '1q;d')" light "$i" 2700K
+done
