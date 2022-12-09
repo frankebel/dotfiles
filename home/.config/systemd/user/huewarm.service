@@ -1,0 +1,6 @@
+[Unit]
+Description=Hue light color temperature service
+
+[Service]
+Type=oneshot
+ExecStart=/home/frank/.local/bin/huewarm
