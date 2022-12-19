@@ -32,6 +32,7 @@ export VISUAL="nvim"
 # https://wiki.archlinux.org/title/XDG_Base_Directory
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+export GOPATH="XDG_DATA_HOME/go"
 export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass"
