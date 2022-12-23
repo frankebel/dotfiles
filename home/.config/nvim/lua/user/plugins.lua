@@ -88,6 +88,8 @@ return require("packer").startup(function(use)
   }
   -- Java
   use "mfussenegger/nvim-jdtls"
+  -- Tridactyl
+  use "tridactyl/vim-tridactyl"
 
   -- Uncategorized
   use "Mofiqul/dracula.nvim" -- Colorscheme

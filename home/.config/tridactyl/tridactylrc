@@ -1,0 +1,65 @@
+" vim: set filetype=tridactyl
+" Delete settings with "sanitise tridactyllocal"
+" Export settings with "mktridactylrc -f ~/.config/tridactyl/tridactylrc"
+" Source settings with "source"
+
+
+" Theme
+set theme dark
+
+
+" Remove built-in search engines
+" See https://github.com/tridactyl/tridactyl/blob/c663b8e2/src/lib/config.ts#L697
+setnull searchurls.amazon
+setnull searchurls.amazonuk
+setnull searchurls.bing
+setnull searchurls.cnrtl
+setnull searchurls.duckduckgo
+setnull searchurls.gentoo_wiki
+setnull searchurls.github
+setnull searchurls.google
+setnull searchurls.googlelucky
+setnull searchurls.googleuk
+setnull searchurls.mdn
+setnull searchurls.osm
+setnull searchurls.qwant
+setnull searchurls.scholar
+setnull searchurls.searx
+setnull searchurls.startpage
+setnull searchurls.twitter
+setnull searchurls.wikipedia
+setnull searchurls.yahoo
+setnull searchurls.youtube
+
+" Set search engines
+set searchurls.aur https://aur.archlinux.org/packages?K=%s
+set searchurls.aw https://wiki.archlinux.org/index.php?title=Special%3ASearch&search=%s
+set searchurls.az https://www.amazon.de/s?k=%s
+set searchurls.geizhals https://geizhals.at/?fs=%s&hloc=at
+set searchurls.gh https://github.com/search?q=%s
+set searchurls.mal https://myanimelist.net/search/all?q=%s&cat=all
+set searchurls.osm https://www.openstreetmap.org/search?query=%s
+set searchurls.pkg https://archlinux.org/packages/?sort=&q=%s
+set searchurls.r https://libreddit.de/r/%s
+set searchurls.s https://search.sapti.me/search?q=%s
+set searchurls.w https://en.wikipedia.org/w/index.php?search=%s
+set searchurls.wh https://www.willhaben.at/iad/kaufen-und-verkaufen/marktplatz?keyword=%s
+set searchurls.yt https://www.youtube.com/results?search_query=%s
+
+
+" Search
+" See "help find"
+set findcase smart
+bind / fillcmdline find
+bind ? fillcmdline find --reverse
+bind n findnext --search-from-view
+bind N findnext --search-from-view --reverse
+bind gn findselect
+bind gN composite findnext --search-from-view --reverse; findselect
+
+
+" Tabs
+bind > tabmove +1
+bind < tabmove -1
+unbind >>
+unbind <<
