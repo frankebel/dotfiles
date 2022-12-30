@@ -94,6 +94,7 @@ alias nf='neofetch'
 alias printpath='echo "$PATH" | sed "s/:/\n/g"'
 alias shck='shellcheck'
 alias tree='tree -a -I .git' # ignore .git directory
+alias uumount='udiskie-umount'
 alias wtr='curl wttr.in'
 alias x='xournalpp'
 alias z='zathura'
