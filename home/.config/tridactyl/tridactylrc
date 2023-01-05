@@ -38,6 +38,7 @@ set searchurls.az https://www.amazon.de/s?k=%s
 set searchurls.geizhals https://geizhals.at/?fs=%s&hloc=at
 set searchurls.gh https://github.com/search?q=%s
 set searchurls.mal https://myanimelist.net/search/all?q=%s&cat=all
+set searchurls.nyaa https://nyaa.si/?f=0&c=0_0&q=%s&s=seeders&o=desc
 set searchurls.osm https://www.openstreetmap.org/search?query=%s
 set searchurls.pkg https://archlinux.org/packages/?sort=&q=%s
 set searchurls.r https://libreddit.de/r/%s
