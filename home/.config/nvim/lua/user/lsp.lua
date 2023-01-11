@@ -36,7 +36,9 @@ M.on_attach = function(client, bufnr)
   end, "Workspace list folders")
 
   nmap("gr", vim.lsp.buf.references, "List references")
-  nmap("<space>f", function() vim.lsp.buf.format { async = true } end, "Format current buffer")
+
+  -- Prepend lsp keymaps with "<leader>l"
+  nmap("<leader>lf", function() vim.lsp.buf.format { async = true } end, "Format current buffer")
 
   if client.name == "jdtls" then
     -- See https://github.com/mfussenegger/nvim-jdtls
