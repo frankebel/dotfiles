@@ -68,7 +68,7 @@ alias explicit-installed='pacman -Qqen '\
 '| grep -vx "$(pacman -Qqg base-devel)" '\
 '| grep -vx "$(pacman -Qqg texlive-most)"'
 alias pacq='pacman -Qq | fzf --preview "pacman -Qi {}" | xargs -ro pacman -Qi'
-alias pacr='pacman -Qq | fzf --preview "pacman -Si {}" | xargs -ro sudo pacman -Rns'
+alias pacr='pacman -Qqe | fzf --preview "pacman -Qi {}" | xargs -ro sudo pacman -Rns'
 alias pacs='pacman -Slq | fzf --preview "pacman -Si {}" | xargs -ro sudo pacman -S'
 
 # Transmission
