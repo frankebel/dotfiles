@@ -1,7 +1,12 @@
 -- Treesitter
 -- https://github.com/nvim-treesitter/nvim-treesitter
 
-require "nvim-treesitter.configs".setup {
+local status_treesitter, treesitter = pcall(require, "nvim-treesitter.configs")
+if not status_treesitter then
+  return
+end
+
+treesitter.setup {
   -- A list of parser names, or "all"
   ensure_installed = "all",
   sync_install = false,
@@ -92,4 +97,10 @@ require "nvim-treesitter.configs".setup {
 
 -- nvim-treesitter-context
 -- https://github.com/nvim-treesitter/nvim-treesitter-context
-require "treesitter-context".setup {}
+
+local status_tc, treesitter_context = pcall(require, "treesitter-context")
+if not status_tc then
+  return
+end
+
+treesitter_context.setup {}

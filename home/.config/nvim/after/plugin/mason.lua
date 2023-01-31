@@ -1,6 +1,12 @@
 -- Configuration for mason
 -- See https://github.com/williamboman/mason.nvim
-require "mason".setup {
+
+local status_mason, mason = pcall(require, "mason")
+if not status_mason then
+  return
+end
+
+mason.setup {
   ui = {
     icons = {
       package_installed = "✓",
@@ -13,7 +19,13 @@ require "mason".setup {
 
 -- Configuration for mason-lspconfig
 -- See https://github.com/williamboman/mason-lspconfig.nvim
-require "mason-lspconfig".setup {
+
+local status, mason_lspconfig = pcall(require, "mason-lspconfig")
+if not status then
+  return
+end
+
+mason_lspconfig.setup {
   ensure_installed = {
     "jdtls",
     "pyright",
@@ -24,7 +36,13 @@ require "mason-lspconfig".setup {
 
 -- Configuration for mason-nvim-dap
 -- See https://github.com/jayp0521/mason-nvim-dap.nvim
-require "mason-nvim-dap".setup {
+
+local status_mnd, mason_nvim_dap = pcall(require, "mason-nvim-dap")
+if not status_mnd then
+  return
+end
+
+mason_nvim_dap.setup {
   ensure_installed = {
     "python",
     "javadbg",
@@ -35,7 +53,13 @@ require "mason-nvim-dap".setup {
 
 -- Configuration for mason-null-ls
 -- See https://github.com/jayp0521/mason-null-ls.nvim
-require "mason-null-ls".setup {
+
+local status_mnl, mason_null_ls = pcall(require, "mason-null-ls")
+if not status_mnl then
+  return
+end
+
+mason_null_ls.setup {
   ensure_installed = {
     -- Python
     "autopep8",

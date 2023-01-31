@@ -1,6 +1,9 @@
 -- Configure DAP
--- See https://github.com/mfussenegger/nvim-dap
-local dap = require "dap"
+-- https://github.com/mfussenegger/nvim-dap
+local status_dap, dap = pcall(require, "dap")
+if not status_dap then
+  return
+end
 
 -- Python
 dap.adapters.python = {
@@ -16,7 +19,7 @@ dap.configurations.python = {
     request = "launch";
     name = "Launch file";
 
-    -- Options below are for debugpy, see https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings for supported options
+    -- Options below are for debugpy, https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings for supported options
 
     program = "${file}"; -- This configuration will launch the current file if used.
     pythonPath = function()
@@ -35,7 +38,10 @@ dap.configurations.python = {
 
 -- Configure nvim-dap-ui
 -- See https://github.com/rcarriga/nvim-dap-ui
-local dapui = require "dapui"
+local status_dapui, dapui = pcall(require, "dapui")
+if not status_dapui then
+  return
+end
 
 dapui.setup()
 
@@ -53,4 +59,8 @@ end
 
 -- Configure nvim-dap-virtual-text
 -- See https://github.com/theHamsta/nvim-dap-virtual-text
-require "nvim-dap-virtual-text".setup {}
+local status_ndvt, nvim_dap_virtual_text = pcall(require, "nvim-dap-virtual-text")
+if not status_ndvt then
+  return
+end
+nvim_dap_virtual_text.setup {}

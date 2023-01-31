@@ -1,8 +1,15 @@
 -- Completion
 -- https://github.com/hrsh7th/nvim-cmp
 
-local cmp = require "cmp"
-local lspkind = require "lspkind"
+local status_cmp, cmp = pcall(require, "cmp")
+if not status_cmp then
+  return
+end
+
+local status_lspkind, lspkind = pcall(require, "lspkind")
+if not status_lspkind then
+  return
+end
 
 cmp.setup {
   snippet = {

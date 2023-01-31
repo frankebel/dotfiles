@@ -1,7 +1,12 @@
 -- Statusline
 -- https://github.com/nvim-lualine/lualine.nvim
 
-require "lualine".setup {
+local status, lualine = pcall(require, "lualine")
+if not status then
+  return
+end
+
+lualine.setup {
   options = {
     component_separators = "|",
     section_separators = "",

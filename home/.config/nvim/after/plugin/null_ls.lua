@@ -1,7 +1,11 @@
 -- null-ls
 -- https://github.com/jose-elias-alvarez/null-ls.nvim
 
-local null_ls = require "null-ls"
+local status, null_ls = pcall(require, "null-ls")
+if not status then
+  return
+end
+
 null_ls.setup {
   sources = {
     -- lua

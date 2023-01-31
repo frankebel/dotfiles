@@ -1,8 +1,16 @@
 -- LSP setup
 -- See https://github.com/neovim/nvim-lspconfig
 
-local lspconfig = require "lspconfig"
-local lsp_user_conf = require "user.lsp"
+local status_lspconfig, lspconfig = pcall(require, "lspconfig")
+if not status_lspconfig then
+  return
+end
+
+
+local status_luc, lsp_user_conf = pcall(require, "user.lsp")
+if not status_luc then
+  return
+end
 
 -- Lua
 lspconfig["sumneko_lua"].setup {

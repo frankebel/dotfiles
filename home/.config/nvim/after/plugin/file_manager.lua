@@ -1,7 +1,12 @@
 -- File manager
 -- https://github.com/nvim-tree/nvim-tree.lua
 
-require "nvim-tree".setup {
+local status, nvim_tree = pcall(require, "nvim-tree")
+if not status then
+  return
+end
+
+nvim_tree.setup {
   view = {
     mappings = {
       list = {
