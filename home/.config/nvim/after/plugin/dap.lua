@@ -1,5 +1,6 @@
 -- Configure DAP
 -- https://github.com/mfussenegger/nvim-dap
+
 local status_dap, dap = pcall(require, "dap")
 if not status_dap then
   return
@@ -37,7 +38,7 @@ dap.configurations.python = {
 
 
 -- Configure nvim-dap-ui
--- See https://github.com/rcarriga/nvim-dap-ui
+-- https://github.com/rcarriga/nvim-dap-ui
 local status_dapui, dapui = pcall(require, "dapui")
 if not status_dapui then
   return
@@ -58,7 +59,7 @@ end
 
 
 -- Configure nvim-dap-virtual-text
--- See https://github.com/theHamsta/nvim-dap-virtual-text
+-- https://github.com/theHamsta/nvim-dap-virtual-text
 local status_ndvt, nvim_dap_virtual_text = pcall(require, "nvim-dap-virtual-text")
 if not status_ndvt then
   return

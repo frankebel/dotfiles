@@ -1,5 +1,5 @@
 -- LSP setup
--- See https://github.com/neovim/nvim-lspconfig
+-- https://github.com/neovim/nvim-lspconfig
 
 local status_lspconfig, lspconfig = pcall(require, "lspconfig")
 if not status_lspconfig then

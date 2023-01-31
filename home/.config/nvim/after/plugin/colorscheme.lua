@@ -1,5 +1,6 @@
 -- Colorscheme
 -- https://github.com/Mofiqul/dracula.nvim
+
 local colorscheme = "dracula"
 
 local status, _ = pcall(vim.cmd.colorscheme, colorscheme)

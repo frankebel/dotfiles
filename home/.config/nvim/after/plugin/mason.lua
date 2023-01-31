@@ -1,5 +1,5 @@
 -- Configuration for mason
--- See https://github.com/williamboman/mason.nvim
+-- https://github.com/williamboman/mason.nvim
 
 local status_mason, mason = pcall(require, "mason")
 if not status_mason then
@@ -18,7 +18,7 @@ mason.setup {
 
 
 -- Configuration for mason-lspconfig
--- See https://github.com/williamboman/mason-lspconfig.nvim
+-- https://github.com/williamboman/mason-lspconfig.nvim
 
 local status, mason_lspconfig = pcall(require, "mason-lspconfig")
 if not status then
@@ -35,7 +35,7 @@ mason_lspconfig.setup {
 
 
 -- Configuration for mason-nvim-dap
--- See https://github.com/jayp0521/mason-nvim-dap.nvim
+-- https://github.com/jayp0521/mason-nvim-dap.nvim
 
 local status_mnd, mason_nvim_dap = pcall(require, "mason-nvim-dap")
 if not status_mnd then
@@ -52,7 +52,7 @@ mason_nvim_dap.setup {
 
 
 -- Configuration for mason-null-ls
--- See https://github.com/jayp0521/mason-null-ls.nvim
+-- https://github.com/jayp0521/mason-null-ls.nvim
 
 local status_mnl, mason_null_ls = pcall(require, "mason-null-ls")
 if not status_mnl then
