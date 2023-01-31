@@ -39,3 +39,13 @@ lspconfig["pyright"].setup {
   flags = lsp_user_conf.lsp_flags,
   on_attach = lsp_user_conf.on_attach,
 }
+
+
+-- Keymaps
+local keymap = vim.keymap.set
+
+-- See `:help vim.diagnostic.*` for documentation on any of the below functions
+keymap("n", "<leader>ld", vim.diagnostic.open_float)
+keymap("n", "[d", vim.diagnostic.goto_prev)
+keymap("n", "]d", vim.diagnostic.goto_next)
+keymap("n", "<leader>q", vim.diagnostic.setloclist)

@@ -7,3 +7,12 @@ if not status then
 end
 
 gitsigns.setup()
+
+
+-- Keymaps
+local keymap = vim.keymap.set
+
+keymap("n", "<leader>hn", gitsigns.next_hunk)
+keymap("n", "<leader>hp", gitsigns.prev_hunk)
+keymap("n", "<leader>hh", gitsigns.preview_hunk, { desc = "preview_hunk" })
+keymap("n", "<leader>hb", gitsigns.blame_line, { desc = "blame_line" })

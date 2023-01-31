@@ -65,3 +65,18 @@ if not status_ndvt then
   return
 end
 nvim_dap_virtual_text.setup {}
+
+
+-- Keymaps
+local keymap = vim.keymap.set
+
+keymap("n", "<leader>db", dap.toggle_breakpoint, { desc = "Toogle breakpoint" })
+keymap("n", "<leader>dB", function() dap.set_breakpoint(vim.fn.input("Breakpoint condition: "))end, { desc = "Set breakpoint with condition" })
+keymap("n", "<F1>", dap.step_back, { desc = "Step back" })
+keymap("n", "<F2>", dap.step_into, { desc = "Step into" })
+keymap("n", "<F3>", dap.step_over, { desc = "Step over" })
+keymap("n", "<F4>", dap.step_out, { desc = "Step out" })
+keymap("n", "<F5>", dap.continue, { desc = "Continue" })
+keymap("n", "<F6>", dap.close, { desc = "Close DAP" })
+keymap("n", "<F7>", dap.terminate, { desc = "Terminate DAP" })
+keymap("n", "<F8>", dapui.close, { desc = "Close dapui" })

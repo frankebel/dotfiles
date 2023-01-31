@@ -15,3 +15,10 @@ nvim_tree.setup {
     },
   },
 }
+
+
+-- Keymaps
+local keymap = vim.keymap.set
+local api = require("nvim-tree.api")
+
+keymap("n", "<leader>e", api.tree.toggle, { desc = "Toggle file manager" })
