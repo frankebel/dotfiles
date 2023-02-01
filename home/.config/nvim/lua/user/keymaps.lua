@@ -9,6 +9,7 @@ keymap("n", "<C-h>", "<C-w>h", { silent = true })
 keymap("n", "<C-j>", "<C-w>j", { silent = true })
 keymap("n", "<C-k>", "<C-w>k", { silent = true })
 keymap("n", "<C-l>", "<C-w>l", { silent = true })
+keymap("n", "<leader>v", "<cmd>vsplit<cr>", { desc = "vsplit"})
 
 -- Indent mode stay
 keymap("v", "<", "<gv", { silent = true })
