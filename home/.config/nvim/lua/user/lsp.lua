@@ -2,6 +2,7 @@
 -- See https://github.com/neovim/nvim-lspconfig
 
 local M = {}
+local group = vim.api.nvim_create_augroup("LspFromatting", { clear = true })
 
 
 -- Use an on_attach function to only map the following keys
@@ -59,6 +60,20 @@ M.on_attach = function(client, bufnr)
     -- You can use the `JdtHotcodeReplace` command to trigger it manually
     jdtls.setup_dap({ hotcodereplace = "auto" })
     require "jdtls.dap".setup_dap_main_class_configs()
+  end
+
+  if client.supports_method("textDocument/formatting") then
+    vim.api.nvim_clear_autocmds({ group = group, buffer = bufnr })
+    vim.api.nvim_create_autocmd(
+      "BufWritePre",
+      {
+        group = group,
+        buffer = bufnr,
+        callback = function()
+          vim.lsp.buf.format({ async = false })
+        end,
+      }
+    )
   end
 end
 
