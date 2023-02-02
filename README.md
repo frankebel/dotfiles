@@ -115,7 +115,7 @@ I use [Arch Linux](https://archlinux.org/) for my operating system as I like the
 I created an install script [archinstall](https://github.com/frankebel/archinstall) for faster setup.
 
 ### Pass
-I use [pass](https://www.passwordstore.org/) and [pass-otp](https://github.com/tadfisher/pass-otp) to store 
+I use [pass](https://www.passwordstore.org/) and [pass-otp](https://github.com/tadfisher/pass-otp) to store
 and manage my passwords. It is set up as a git repository and each account lives inside an `gpg` encrypted file
 (see [gnupg](#gnupg)) which makes version control very easy.
 To quickly retrieve and enter my credentials, I use [rofi-pass](https://github.com/carnager/rofi-pass).
