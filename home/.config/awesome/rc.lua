@@ -45,16 +45,16 @@ end
 beautiful.init("~/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = os.getenv("TERMINAL")
-editor = os.getenv("EDITOR")
-editor_cmd = terminal .. " -e " .. editor
+local terminal = os.getenv("TERMINAL")
+local editor = os.getenv("EDITOR")
+local editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
 -- If you do not like this or do not have such a key,
 -- I suggest you to remap Mod4 to another key using xmodmap or other tools.
 -- However, you can use another modifier like Mod1, but it may interact with others.
-modkey = "Mod4"
+local modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
@@ -84,10 +84,10 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 
 -- {{{ Wibar
 -- Set path for custom widgets.
-widgets_path = '~/.local/bin/statusbar/'
+local widgets_path = '~/.local/bin/statusbar/'
 
 -- Create a separator widget
-mysep = wibox.widget.separator {
+local mysep = wibox.widget.separator {
   orientation = 'vertical',
   span_ratio = 0.9,
   forced_width = 10,
@@ -95,7 +95,7 @@ mysep = wibox.widget.separator {
 
 -- Not sure why, but awful.widget.watch can't be last widget.
 -- Need dummy widget as last widget.
-widgetlast = wibox.widget.textbox()
+local widgetlast = wibox.widget.textbox()
 widgetlast.text = ''
 
 -- Create a wibox for each screen and add it
@@ -210,7 +210,7 @@ root.buttons(gears.table.join(
 -- }}}
 
 -- {{{ Key bindings
-globalkeys = gears.table.join(
+local globalkeys = gears.table.join(
   awful.key({ modkey, }, "F1", hotkeys_popup.show_help,
     { description = "show help", group = "awesome" }),
   awful.key({ modkey, }, "Left", awful.tag.viewprev,
@@ -269,7 +269,7 @@ globalkeys = gears.table.join(
     { description = "select previous", group = "layout" })
 )
 
-clientkeys = gears.table.join(
+local clientkeys = gears.table.join(
   awful.key({ modkey, "Shift" }, "f",
     function(c)
       c.fullscreen = not c.fullscreen
@@ -344,7 +344,7 @@ for i = 1, 9 do
   )
 end
 
-clientbuttons = gears.table.join(
+local clientbuttons = gears.table.join(
   awful.button({}, 1, function(c)
     c:emit_signal("request::activate", "mouse_click", { raise = true })
   end),
@@ -514,11 +514,11 @@ awful.spawn.with_shell("sxhkd")
 -- }}}
 
 -- Swallowing
-table_is_swallowed = { "Alacritty" }
-table_minimize_parent = { "Io.github.celluloid_player.Celluloid" }
-table_cannot_swallow = { "mpv" }
+local table_is_swallowed = { "Alacritty" }
+local table_minimize_parent = { "Io.github.celluloid_player.Celluloid" }
+local table_cannot_swallow = { "mpv" }
 
-function is_in_Table(table, element)
+local function is_in_Table(table, element)
   for _, value in pairs(table) do
     if element:match(value) then
       return true
@@ -527,19 +527,19 @@ function is_in_Table(table, element)
   return false
 end
 
-function is_to_be_swallowed(c)
+local function is_to_be_swallowed(c)
   return (c.class and is_in_Table(table_is_swallowed, c.class)) and true or false
 end
 
-function can_swallow(class)
+local function can_swallow(class)
   return not is_in_Table(table_cannot_swallow, class)
 end
 
-function is_parent_minimized(class)
+local function is_parent_minimized(class)
   return is_in_Table(table_minimize_parent, class)
 end
 
-function copy_size(c, parent_client)
+local function copy_size(c, parent_client)
   if (not c or not parent_client) then
     return
   end
@@ -552,13 +552,13 @@ function copy_size(c, parent_client)
   c.height = parent_client.height;
 end
 
-function check_resize_client(c)
+local function check_resize_client(c)
   if (c.child_resize) then
     copy_size(c.child_resize, c)
   end
 end
 
-function get_parent_pid(child_ppid, callback)
+local function get_parent_pid(child_ppid, callback)
   local ppid_cmd = string.format("pstree -ps %s", child_ppid)
   awful.spawn.easy_async(ppid_cmd, function(stdout, stderr, reason, exit_code)
     -- primitive error checking
@@ -583,7 +583,7 @@ client.connect_signal("manage", function(c)
       error(err)
       return
     end
-    parent_pid = ppid
+    local parent_pid = ppid
     if parent_client and (parent_pid:find("(" .. parent_client.pid .. ")")) and is_to_be_swallowed(parent_client) and
         can_swallow(c.class) then
       if is_parent_minimized(c.class) then
