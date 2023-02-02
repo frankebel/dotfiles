@@ -19,6 +19,8 @@ lspconfig["sumneko_lua"].setup {
       diagnostics = {
         globals = {
           "awesome",
+          "client",
+          "root",
           "vim",
         },
       },
