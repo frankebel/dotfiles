@@ -1,4 +1,7 @@
-# test execution
+# Check configuration syntax
+# flexget check
+#
+# Test execution
 # flexget --test execute
 schedules:
   - tasks: '*'
