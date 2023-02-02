@@ -45,7 +45,6 @@ stow laptop
 | Editor | [Neovim](https://neovim.io/) | [GitHub](https://github.com/neovim/neovim) | [nvim](home/.config/nvim) |
 | Font | [Noto Sans Mono](https://fonts.google.com/noto/specimen/Noto+Sans+Mono) | [GitHub](https://github.com/notofonts/noto-fonts) | |
 | Image Viewer | [nsxiv](https://nsxiv.codeberg.page/) | [Codeberg](https://codeberg.org/nsxiv/nsxiv) | |
-| Keyboard Shortcuts | sxhkd | [GitHub](https://github.com/baskerville/sxhkd) | [sxhkd](home/.config/sxhkd) |
 | Mail | [Neomutt](https://neomutt.org/) | [GitHub](https://github.com/neomutt/neomutt) | [neomutt](home/.config/neomutt) |
 | Mailbox Synchronization | [Isync](https://isync.sourceforge.io/) | | [isync](home/.config/isync) |
 | Media Player | [mpv](https://mpv.io/) | [GitHub](https://github.com/mpv-player/mpv) | [mpv](home/.config/mpv) |
@@ -81,7 +80,6 @@ For software which does not follow it, I try to export the environment variables
 ### Awesome
 As my window manager (WM) I use [awesome](https://awesomewm.org/).
 The help menu can be opened with the key combination `super + F1`.
-Keybinds wich are WM-independent are set with [sxhkd](#sxhkd).
 For the statusbar I have scripts running which are located in [.local/bin/statusbar](home/.local/bin/statusbar).
 
 ### GnuPG
@@ -127,9 +125,3 @@ To quickly retrieve and enter my credentials, I use [rofi-pass](https://github.c
 ### Scripts
 Scripts I use are in [.local/bin](home/.local/bin).
 The directory [statusbar](home/.local/bin/statusbar) contains short scripts I use within [awesome](#awesome).
-
-### Sxhkd
-I use [sxhkd](https://github.com/baskerville/sxhkd) (simple X hotkey daemon) to manage my WM-independent 
-keyboard shortcuts, which makes it easier to switch between window managers.
-Most keybinds are started with the `super` key followed by a letter for my most used applications.
-After that I bound some keys to control my microphone and speaker volume.
