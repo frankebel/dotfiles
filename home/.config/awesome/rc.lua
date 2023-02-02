@@ -266,7 +266,68 @@ local globalkeys = gears.table.join(
   awful.key({ modkey, }, "space", function() awful.layout.inc(1) end,
     { description = "select next", group = "layout" }),
   awful.key({ modkey, "Shift" }, "space", function() awful.layout.inc(-1) end,
-    { description = "select previous", group = "layout" })
+    { description = "select previous", group = "layout" }),
+
+  -- Launch applications
+  awful.key({ modkey, }, "Return", function() awful.spawn(terminal) end,
+    { description = "lauch terminal", group = "applications" }),
+  awful.key({ modkey, "Shift" }, "Return", function() awful.spawn("rofi -show run") end,
+    { description = "launch rofi", group = "applications" }),
+  awful.key({ modkey, }, "b", function() awful.spawn(os.getenv("BROWSER")) end,
+    { description = "launch browser", group = "applications" }),
+  awful.key({ modkey, }, "i", function() awful.spawn(terminal .. " -e htop") end,
+    { description = "launch htop", group = "applications" }),
+  awful.key({ modkey, }, "m", function() awful.spawn(terminal .. " -e neomutt") end,
+    { description = "launch mail", group = "applications" }),
+  awful.key({ modkey, }, "n", function() awful.spawn(terminal .. " -e newsboat") end,
+    { description = "launch newsboat", group = "applications" }),
+  awful.key({ modkey, }, "p", function() awful.spawn("rofi-pass") end,
+    { description = "launch pass", group = "applications" }),
+  awful.key({ modkey, }, "s", function() awful.spawn("steam") end,
+    { description = "launch steam", group = "applications" }),
+  awful.key({ modkey, }, "v", function() awful.spawn(editor_cmd) end,
+    { description = "launch editor", group = "applications" }),
+  awful.key({ modkey, }, "x", function() awful.spawn("xournalpp") end,
+    { description = "launch xournalpp", group = "applications" }),
+  awful.key({}, "Print", function() awful.spawn("flameshot gui") end,
+    { description = "launch flameshot gui", group = "applications" }),
+  awful.key({ modkey }, "F12", function() awful.spawn("i3lock --color=282a36 -u") end,
+    { description = "lock screen", group = "applications" }),
+  awful.key({ modkey }, "z", function() awful.spawn("kblayout") end,
+    { description = "change keyboard layout", group = "applications" }),
+
+  -- Volume keys
+  awful.key({}, "XF86AudioMute", function() awful.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle") end,
+    { description = "mute audio", group = "volume" }),
+  awful.key({}, "XF86AudioLowerVolume", function() awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%") end,
+    { description = "lower volume", group = "volume" }),
+  awful.key({}, "XF86AudioRaiseVolume", function() awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%") end,
+    { description = "raise volume", group = "volume" }),
+  awful.key({ modkey, }, "/", function() awful.spawn("micmute") end,
+    { description = "toggle mic mute", group = "volume" }),
+
+  -- Brightness keys
+  awful.key({}, "XF86MonBrightnessDown", function() awful.spawn("xbacklight -dec 10") end,
+    { description = "lower brightness", group = "brightness" }),
+  awful.key({}, "XF86MonBrightnessUp", function() awful.spawn("xbacklight -inc 10") end,
+    { description = "raise brightness", group = "brightness" }),
+
+  -- Background processes
+  awful.key({ modkey, "Shift" }, "r", function() awful.spawn("gpg-connect-agent reloadagent /bye") end,
+    { description = "reload gpg agent", group = "background processes" }),
+  awful.key({ modkey, "Shift" }, "s", function() awful.spawn("backgroundstart") end,
+    { description = "start background processes", group = "background processes" }),
+  awful.key({ modkey, "Shift" }, "q", function() awful.spawn("backgroundstop") end,
+    { description = "stop background processes", group = "background processes" }),
+
+
+  -- Notifications
+  awful.key({ "Control", }, "space", function() awful.spawn("dunstctl close") end,
+    { description = "close notification", group = "notifictions" }),
+  awful.key({ "Control", "Shift" }, "space", function() awful.spawn("dunstctl close-all") end,
+    { description = "close all notifications", group = "notifictions" }),
+  awful.key({ "Control", }, "`", function() awful.spawn("dunstctl history-pop") end,
+    { description = "open notification", group = "notifictions" })
 )
 
 local clientkeys = gears.table.join(
@@ -506,9 +567,4 @@ end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
--- }}}
-
--- {{{
--- Autostart
-awful.spawn.with_shell("sxhkd")
 -- }}}
