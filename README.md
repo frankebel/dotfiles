@@ -15,7 +15,6 @@ This repository contains my personal configuration files (dotfiles) which I mana
 The color scheme I use is [dracula](https://draculatheme.com/).
 
 - [home](home) contains dotfiles for my home directory.
-- [desktop](desktop) contains dotfiles specific for my desktop setup.
 - [laptop](laptop) contains dotfiles specific for my laptop setup.
 
 ## Installation and Setup
@@ -26,7 +25,6 @@ stow home
 ```
 optional:
 ```sh
-stow desktop
 stow laptop
 ```
 
