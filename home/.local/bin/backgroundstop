@@ -1,0 +1,6 @@
+#!/bin/sh
+# Start background processes.
+
+dunstctl set-paused true
+flexget daemon stop
+transmission-remote --exit

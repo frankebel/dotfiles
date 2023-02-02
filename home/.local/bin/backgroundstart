@@ -1,0 +1,6 @@
+#!/bin/sh
+# Start background processes.
+
+dunstctl set-paused false
+flexget daemon start -d
+transmission-daemon &
