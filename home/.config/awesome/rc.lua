@@ -44,10 +44,7 @@ end
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("~/.config/awesome/theme.lua")
 
--- This is used later as the default terminal and editor to run.
 local terminal = os.getenv("TERMINAL")
-local editor = os.getenv("EDITOR")
-local editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -285,7 +282,7 @@ local globalkeys = gears.table.join(
     { description = "launch pass", group = "applications" }),
   awful.key({ modkey, }, "s", function() awful.spawn("steam") end,
     { description = "launch steam", group = "applications" }),
-  awful.key({ modkey, }, "v", function() awful.spawn(editor_cmd) end,
+  awful.key({ modkey, }, "v", function() awful.spawn(terminal .. " -e " .. os.getenv("EDITOR")) end,
     { description = "launch editor", group = "applications" }),
   awful.key({ modkey, }, "x", function() awful.spawn("xournalpp") end,
     { description = "launch xournalpp", group = "applications" }),
