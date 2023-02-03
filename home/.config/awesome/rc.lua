@@ -40,6 +40,25 @@ do
 end
 -- }}}
 
+-- Function to get hostname
+local function gethostname()
+  local f = assert(io.popen("uname -n", "r"))
+  local s = assert(f:read("*a"))
+  f:close()
+  s = s:gsub("\n", "") -- Remove linebreak.
+  return s
+end
+
+-- Function to check if hostname contains string "laptop"
+local function is_laptop()
+  local hostname = gethostname()
+  if string.match(hostname, "laptop") then
+    return true
+  else
+    return false
+  end
+end
+
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("~/.config/awesome/theme.lua")
@@ -94,6 +113,30 @@ local mysep = wibox.widget.separator {
 -- Need dummy widget as last widget.
 local widgetlast = wibox.widget.textbox()
 widgetlast.text = ''
+
+-- Right widgets
+local widgets_right = {
+  layout = wibox.layout.fixed.horizontal,
+  wibox.widget.systray(),
+  mysep,
+  awful.widget.watch('bash -c ' .. widgets_path .. 'battery', 1),
+  mysep,
+  awful.widget.watch('bash -c ' .. widgets_path .. 'mail', 1),
+  mysep,
+  awful.widget.watch('bash -c ' .. widgets_path .. 'volumemic', 1),
+  mysep,
+  awful.widget.watch('bash -c ' .. widgets_path .. 'volume', 1),
+  mysep,
+  awful.widget.watch('bash -c ' .. widgets_path .. 'kblayout', 1),
+  mysep,
+  awful.widget.watch('bash -c ' .. widgets_path .. 'datetime', 1),
+  widgetlast,
+}
+if not is_laptop() then
+  -- Remove battery widget.
+  table.remove(widgets_right, 3)
+  table.remove(widgets_right, 3)
+end
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -177,23 +220,7 @@ awful.screen.connect_for_each_screen(function(s)
       s.mypromptbox,
     },
     s.mytasklist, -- Middle widget
-    { -- Right widgets
-      layout = wibox.layout.fixed.horizontal,
-      wibox.widget.systray(),
-      mysep,
-      awful.widget.watch('bash -c ' .. widgets_path .. 'battery', 1),
-      mysep,
-      awful.widget.watch('bash -c ' .. widgets_path .. 'mail', 1),
-      mysep,
-      awful.widget.watch('bash -c ' .. widgets_path .. 'volumemic', 1),
-      mysep,
-      awful.widget.watch('bash -c ' .. widgets_path .. 'volume', 1),
-      mysep,
-      awful.widget.watch('bash -c ' .. widgets_path .. 'kblayout', 1),
-      mysep,
-      awful.widget.watch('bash -c ' .. widgets_path .. 'datetime', 1),
-      widgetlast,
-    },
+    widgets_right,
   }
 end)
 -- }}}
