@@ -54,9 +54,7 @@ alias ctor='cd "$TORRENTDIR"; l'
 
 # Pacman
 alias aurs='paru -Slq | fzf --preview "paru -Si {}" | xargs -ro paru -S'
-alias explicit-installed='pacman -Qqen '\
-'| grep -vx "$(pacman -Qqg base-devel)" '\
-'| grep -vx "$(pacman -Qqg texlive-most)"'
+alias explicit-installed='pacman -Qqen | grep -vx "$(pacman -Qqg base-devel)" | grep -vx "$(pacman -Qqg texlive-most)"'
 alias pacq='pacman -Qq | fzf --preview "pacman -Qi {}" | xargs -ro pacman -Qi'
 alias pacr='pacman -Qqe | fzf --preview "pacman -Qi {}" | xargs -ro sudo pacman -Rns'
 alias pacs='pacman -Slq | fzf --preview "pacman -Si {}" | xargs -ro sudo pacman -S'
@@ -66,9 +64,7 @@ alias t='watch -n 0.1 transmission-remote -l'
 alias tsm='transmission-remote'
 # Sort list by name column excluding first and last line.
 #shellcheck disable=SC2142
-alias tsml='transmission-remote -l '\
-'| awk '\''NR==1{print; next;} {if(last) print last | "sort -k10"; last=$0;} '\
-'END {close("sort -k10"); print last}'\'
+alias tsml='transmission-remote -l | awk '\''NR==1{print; next;} {if(last) print last | "sort -k10"; last=$0;} END {close("sort -k10"); print last}'\'
 
 # Uncategorized
 alias cal='cal -m'
