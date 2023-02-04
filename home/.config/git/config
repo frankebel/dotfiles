@@ -1,25 +1,35 @@
-[user]
-	name = Frank Ebel
-	email = git@ebel.page
-	signingkey = git@ebel.page
-[init]
-	defaultBranch = main
 [commit]
 	gpgSign = true
 	verbose = true
+
 [credential]
 	helper = cache --timeout 86400
-[log]
-	date = iso8601-strict
-[tag]
-	gpgSign = true
-[push]
-	gpgSign = if-asked
+
 [diff]
 	colorMoved = default
+
+[init]
+	defaultBranch = main
+
+[log]
+	date = iso8601-strict
+
 [merge]
 	conflictStyle = diff3
+
 [pull]
 	rebase = true
+
+[push]
+	gpgSign = if-asked
+
 [status]
 	showUntrackedFiles = all
+
+[tag]
+	gpgSign = true
+
+[user]
+	email = git@ebel.page
+	name = Frank Ebel
+	signingkey = git@ebel.page
