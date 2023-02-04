@@ -24,17 +24,7 @@ alias ls='ls --color=auto'
 
 # Git
 alias g='git'
-alias ga='git add'
-alias gc='git commit'
-alias gd='git diff'
-alias gl='git log'
-alias gln='git log --name-only'
-alias glo='git log --oneline --graph'
-alias gpl='git pull'
-alias gps='git push'
-alias grm='git rm'
 alias grt='cd "$(git rev-parse --show-toplevel)"'
-alias gs='git status'
 
 # Go up directories
 alias .1='cd ../'

@@ -1,3 +1,30 @@
+[alias]
+	a = add
+	af = !git diff --name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs git add
+	afp = !git diff -name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs -ro git add --patch
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+	b = branch
+	ba = branch -a
+	c = commit
+	can = commit --amend --no-edit
+	cb = !git branch | grep -v '^*' | fzf --no-multi --preview 'git lo --color=always {1}' | xargs git checkout
+	d = diff
+	df = !git diff --name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs git diff
+	l = log
+	lf = !fd --hidden . | fzf --preview 'bat --force-colorization {}' | xargs git log
+	ln = log --name-only
+	lo = log --oneline --graph
+	pl = pull
+	ps = push
+	rc = rebase --continue
+	rf = !git diff --name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs git restore
+	rfp = !git diff --name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs -ro git restore --patch
+	ri = rebase --interactive HEAD~10
+	s = status
+	sp = stash pop
+	su = stash -u
+	undo = reset --mixed HEAD^
+
 [commit]
 	gpgSign = true
 	verbose = true
