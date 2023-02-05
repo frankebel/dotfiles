@@ -13,7 +13,7 @@
 	l = log
 	lf = !fd --hidden . | fzf --preview 'bat --force-colorization {}' | xargs git log
 	ln = log --name-only
-	lo = log --oneline --graph
+	lo = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	pl = pull
 	ps = push
 	rc = rebase --continue
