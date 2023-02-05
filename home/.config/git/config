@@ -1,62 +1,62 @@
 [alias]
-	a = add
-	af = !git diff --name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs git add
-	afp = !git diff -name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs -ro git add --patch
-	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
-	b = branch
-	ba = branch -a
-	c = commit
-	can = commit --amend --no-edit
-	cb = !git branch | grep -v '^*' | fzf --no-multi --preview 'git lo --color=always {1}' | xargs git checkout
-	d = diff
-	df = !git diff --name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs git diff
-	l = log
-	lf = !fd --hidden . | fzf --preview 'bat --force-colorization {}' | xargs git log
-	ln = log --name-only
-	lo = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-	pl = pull
-	ps = push
-	rc = rebase --continue
-	rf = !git diff --name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs git restore
-	rfp = !git diff --name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs -ro git restore --patch
-	ri = rebase --interactive HEAD~10
-	s = status
-	sp = stash pop
-	su = stash -u
-	undo = reset --mixed HEAD^
+    a = add
+    af = !git diff --name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs git add
+    afp = !git diff -name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs -ro git add --patch
+    alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+    b = branch
+    ba = branch -a
+    c = commit
+    can = commit --amend --no-edit
+    cb = !git branch | grep -v '^*' | fzf --no-multi --preview 'git lo --color=always {1}' | xargs git checkout
+    d = diff
+    df = !git diff --name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs git diff
+    l = log
+    lf = !fd --hidden . | fzf --preview 'bat --force-colorization {}' | xargs git log
+    ln = log --name-only
+    lo = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    pl = pull
+    ps = push
+    rc = rebase --continue
+    rf = !git diff --name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs git restore
+    rfp = !git diff --name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs -ro git restore --patch
+    ri = rebase --interactive HEAD~10
+    s = status
+    sp = stash pop
+    su = stash -u
+    undo = reset --mixed HEAD^
 
 [commit]
-	gpgSign = true
-	verbose = true
+    gpgSign = true
+    verbose = true
 
 [credential]
-	helper = cache --timeout 86400
+    helper = cache --timeout 86400
 
 [diff]
-	colorMoved = default
+    colorMoved = default
 
 [init]
-	defaultBranch = main
+    defaultBranch = main
 
 [log]
-	date = iso8601-strict
+    date = iso8601-strict
 
 [merge]
-	conflictStyle = diff3
+    conflictStyle = diff3
 
 [pull]
-	rebase = true
+    rebase = true
 
 [push]
-	gpgSign = if-asked
+    gpgSign = if-asked
 
 [status]
-	showUntrackedFiles = all
+    showUntrackedFiles = all
 
 [tag]
-	gpgSign = true
+    gpgSign = true
 
 [user]
-	email = git@ebel.page
-	name = Frank Ebel
-	signingkey = git@ebel.page
+    email = git@ebel.page
+    name = Frank Ebel
+    signingkey = git@ebel.page
