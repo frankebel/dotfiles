@@ -11,13 +11,26 @@ tasks:
   Anime:
     rss: https://subsplease.org/rss/?t&r=1080
     series:
-      - Akiba Maid Sensou
       - Blue Lock
-      - Chainsaw Man
       - Kage no Jitsuryokusha ni Naritakute!
-      - Mob Psycho 100 S3
-      - Spy x Family
+      - Kubo-san wa Mob wo Yurusanai
+      - Maou Gakuin no Futekigousha S2
+      - NieR Automata
+      - Otonari no Tenshi-sama ni Itsunomanika Dame Ningen ni Sareteita Ken
+      - Tensei Oujo to Tensai Reijou no Mahou Kakumei
+      - Tomo-chan wa Onnanoko!
       - Urusei Yatsura
+      - Vinland Saga S2
+    transmission:
+      host: localhost
+      port: 9091
+      username: transmission
+      password: transmission
+  Erai:
+    rss: https://nyaa.si/?page=rss&u=Erai-raws
+    series:
+      - Itai no wa Iya nano de Bougyoryoku ni Kyokufuri Shitai to Omoimasu Season 2
+    quality: 1080p
     transmission:
       host: localhost
       port: 9091
