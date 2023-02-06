@@ -1,0 +1,11 @@
+[Unit]
+Description=Clear trash of old files
+
+[Timer]
+OnBootSec=30
+OnCalendar=daily
+Persistent=true
+Unit=trash-empty.service
+
+[Install]
+WantedBy=timers.target

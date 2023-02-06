@@ -1,0 +1,6 @@
+[Unit]
+Description=Clear trash of old files
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/trash-empty 32
