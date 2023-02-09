@@ -347,11 +347,11 @@ local globalkeys = gears.table.join(
 
   -- Notifications
   awful.key({ "Control", }, "space", function() awful.spawn("dunstctl close") end,
-    { description = "close notification", group = "notifictions" }),
+    { description = "close notification", group = "notifications" }),
   awful.key({ "Control", "Shift" }, "space", function() awful.spawn("dunstctl close-all") end,
-    { description = "close all notifications", group = "notifictions" }),
+    { description = "close all notifications", group = "notifications" }),
   awful.key({ "Control", }, "`", function() awful.spawn("dunstctl history-pop") end,
-    { description = "open notification", group = "notifictions" })
+    { description = "open notification", group = "notifications" })
 )
 
 local clientkeys = gears.table.join(
