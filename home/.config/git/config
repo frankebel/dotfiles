@@ -1,7 +1,7 @@
 [alias]
     a = add
     af = !git diff --name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs git add
-    afp = !git diff -name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs -ro git add --patch
+    afp = !git diff --name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs -ro git add --patch
     alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
     b = branch
     ba = branch -a
