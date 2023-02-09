@@ -2,6 +2,7 @@
 
 # Autostart
 dunst &
+easyeffects --gapplication-service &
 flameshot &
 redshift &
 transmission-daemon &
