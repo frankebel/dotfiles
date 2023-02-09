@@ -4,13 +4,13 @@
 # Suffix alias
 # man zshbuiltins
 alias -s git='git clone'
-alias -s jpg=nsxiv
+alias -s jpg=sxiv
 alias -s lua='$EDITOR'
 alias -s mkv=mpv
 alias -s mp4=mpv
 alias -s ods=localc
 alias -s pdf='$READER'
-alias -s png=nsxiv
+alias -s png=sxiv
 alias -s py='$EDITOR'
 alias -s tex='$EDITOR'
 alias -s webm=mpv
@@ -81,7 +81,7 @@ alias cb='xclip -selection clipboard'
 alias ccb='cd "$(xclip -selection clipboard -o)"'
 alias fd='fd --follow --hidden'
 alias ftree='fd | tree --fromfile'
-alias i='nsxiv'
+alias i='sxiv'
 alias l='ls -lAh --time-style=long-iso'
 alias m='neomutt'
 alias ms='mailsync'
