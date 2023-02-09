@@ -1,5 +1,8 @@
 *.log
 
+# awesome
+default.lua
+
 # flexget
 .config-lock
 db-config*
