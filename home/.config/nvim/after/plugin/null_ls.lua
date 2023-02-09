@@ -35,6 +35,8 @@ null_ls.setup {
 
     -- sh
     null_ls.builtins.diagnostics.shellcheck,
-    null_ls.builtins.formatting.shfmt,
+    null_ls.builtins.formatting.shfmt.with {
+      extra_args = { "-i", "4", "--binary-next-line", "--case-indent" },
+    },
   },
 }
