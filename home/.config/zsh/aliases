@@ -64,15 +64,15 @@ alias t='watch -n 0.1 transmission-remote -l'
 alias tsm='transmission-remote'
 # Sort list by name column excluding first and last line.
 tsml() {
-	transmission-remote -l |
-		awk 'NR==1{print; next;} {if(last) print last | "sort -k10"; last=$0;} END {close("sort -k10"); print last}'
+    transmission-remote -l \
+        | awk 'NR==1{print; next;} {if(last) print last | "sort -k10"; last=$0;} END {close("sort -k10"); print last}'
 }
 # Fzf select torrents to remove and delete.
 tsmr() {
-	tsml | sed '1d;$d' | awk -F'  ' '{printf("%2s %s\n", $3, $NF)}' |
-		fzf |
-		awk '{print $1}' |
-		xargs -I {} transmission-remote -t '{}' --remove-and-delete
+    tsml | sed '1d;$d' | awk -F'  ' '{printf("%2s %s\n", $3, $NF)}' \
+        | fzf \
+        | awk '{print $1}' \
+        | xargs -I {} transmission-remote -t '{}' --remove-and-delete
 }
 
 # Uncategorized
