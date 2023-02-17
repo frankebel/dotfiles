@@ -29,7 +29,7 @@ mason_lspconfig.setup {
   ensure_installed = {
     "jdtls",
     "pyright",
-    "sumneko_lua",
+    "lua_ls",
   }
 }
 
