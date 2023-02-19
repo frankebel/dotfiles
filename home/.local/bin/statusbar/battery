@@ -8,16 +8,16 @@ get_battery() {
     path="/sys/class/power_supply/BAT0"
     if [ -d "$path" ]; then
         capacity=$(cat "$path/capacity")
-        status=$(cat "$path/status")
-        case "$status" in
-            "Discharging")
+
+        case "$(cat "$path/status")" in
+            Discharging)
                 # No special status
                 status=""
                 ;;
-            "Charging")
+            Charging)
                 status="(ch)"
                 ;;
-            "Full")
+            Full)
                 status="(full)"
                 ;;
             *)
@@ -26,12 +26,13 @@ get_battery() {
         esac
 
         # Send notification on low battery.
-        [ "$capacity" -le "$urgency_threshold" ] && notify-send -u critical "Low Battery"
+        [ "$capacity" -le "$urgency_threshold" ] \
+            && notify-send -u critical "Low Battery"
 
         if [ -n "$status" ]; then
-            echo "$string $status $capacity %"
+            printf "%s %s %s %%\n" "$string" "$status" "$capacity"
         else
-            echo "$string $capacity %"
+            printf "%s %s %%\n" "$string" "$capacity"
         fi
     fi
 }

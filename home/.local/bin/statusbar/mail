@@ -10,7 +10,7 @@ get_mail() {
     mbox_new=$(find "$MAILDIR/$mbox/INBOX/new/" -type f | wc -l)
     tuw_new=$(find "$MAILDIR/$tuw/INBOX/new/" -type f | wc -l)
 
-    printf "%s %s %s" "$string" "$mbox_new" "$tuw_new"
+    printf "%s %s %s\n" "$string" "$mbox_new" "$tuw_new"
 }
 
 get_mail

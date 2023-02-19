@@ -9,10 +9,10 @@ get_volume() {
 
     case "$(pactl get-sink-mute @DEFAULT_SINK@)" in
         *yes*)
-            printf "%s %s" "$string" "$vol_muted"
+            printf "%s %s\n" "$string" "$vol_muted"
             ;;
         *no*)
-            printf "%s %s" "$string" "$volume"
+            printf "%s %s\n" "$string" "$volume"
             ;;
     esac
 }
