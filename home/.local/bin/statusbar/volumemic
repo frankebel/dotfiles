@@ -1,18 +1,20 @@
 #!/bin/sh
 # Get volume of microphone
 
-string='MIC'
-vol_muted='M'
+string="MIC"
+vol_muted="M"
 
 get_volume() {
-    is_muted=$(pactl get-source-mute @DEFAULT_SOURCE@)
-    volume=$(pactl get-source-volume @DEFAULT_SOURCE@ | sed -E -n 's/.* ([0-9]+)(%).*/\1 \2/p')
+    volume=$(pactl get-source-volume @DEFAULT_SOURCE@ | sed -E -n "s/.* ([0-9]+)(%).*/\1 \2/p")
 
-    if [ "$is_muted" = "Mute: yes" ]; then
-        echo "$string $vol_muted"
-    else
-        echo "$string $volume"
-    fi
+    case "$(pactl get-source-mute @DEFAULT_SOURCE@)" in
+        *yes*)
+            printf "%s %s" "$string" "$vol_muted"
+            ;;
+        *no*)
+            printf "%s %s" "$string" "$volume"
+            ;;
+    esac
 }
 
 get_volume

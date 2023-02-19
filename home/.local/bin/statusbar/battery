@@ -1,36 +1,34 @@
 #!/bin/sh
 # Get battery
 
-string='BAT'
-urgency_threshold='20'
+string="BAT"
+urgency_threshold="20"
 
 get_battery() {
-    path='/sys/class/power_supply/BAT0'
-    if [ -d "$path" ]
-    then
+    path="/sys/class/power_supply/BAT0"
+    if [ -d "$path" ]; then
         capacity=$(cat "$path/capacity")
         status=$(cat "$path/status")
         case "$status" in
             "Discharging")
                 # No special status
-                status=''
+                status=""
                 ;;
             "Charging")
-                status='(ch)'
+                status="(ch)"
                 ;;
             "Full")
-                status='(full)'
+                status="(full)"
                 ;;
             *)
-                status='(?)'
+                status="(?)"
                 ;;
         esac
 
         # Send notification on low battery.
         [ "$capacity" -le "$urgency_threshold" ] && notify-send -u critical "Low Battery"
-    
-        if [ -n "$status" ]
-        then
+
+        if [ -n "$status" ]; then
             echo "$string $status $capacity %"
         else
             echo "$string $capacity %"

@@ -1,16 +1,16 @@
 #!/bin/sh
 # Get new mail
 
-string='MAIL'
+string="MAIL"
 MAILDIR="$HOME/.local/share/isync"
-mbox='mailbox'
-tuw='tuw'
+mbox="mailbox"
+tuw="tuw"
 
 get_mail() {
     mbox_new=$(find "$MAILDIR/$mbox/INBOX/new/" -type f | wc -l)
     tuw_new=$(find "$MAILDIR/$tuw/INBOX/new/" -type f | wc -l)
 
-    echo "$string $mbox_new $tuw_new"
+    printf "%s %s %s" "$string" "$mbox_new" "$tuw_new"
 }
 
 get_mail
