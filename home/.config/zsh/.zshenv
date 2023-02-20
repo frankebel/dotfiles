@@ -59,7 +59,7 @@ export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND --type d"
 export FZF_ALT_C_OPTS="--preview 'tree -a --gitignore -C -L 1 {}'"
 
 # Uncategorized
-export MANPAGER='nvim +Man!' # use neovim as manpager
+export MANPAGER='nvim +Man!'        # use neovim as manpager
 export QT_QPA_PLATFORMTHEME="qt5ct" # Configure Qt 5 applications without DE
 # `ssh-agent` setup with systemd user unit
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
