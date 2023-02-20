@@ -40,7 +40,7 @@ export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/startup.py"
 export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/config"
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/config.toml"
 export WGETRC="$XDG_CONFIG_HOME/wgetrc"
-# export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
+export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 export ZDOTDIR="$HOME/.config/zsh"
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
 
