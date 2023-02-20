@@ -8,7 +8,26 @@ end
 
 treesitter.setup {
   -- A list of parser names, or "all"
-  ensure_installed = "all",
+  ensure_installed = {
+    "bash",
+    "comment",
+    "diff",
+    "git_rebase",
+    "gitcommit",
+    "gitignore",
+    "help",
+    "java",
+    "json",
+    "latex",
+    "lua",
+    "markdown",
+    "markdown_inline",
+    "python",
+    "query",
+    "regex",
+    "vim",
+    "yaml",
+  },
   sync_install = false,
   auto_install = true,
   highlight = {
