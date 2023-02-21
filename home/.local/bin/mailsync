@@ -20,8 +20,10 @@ do
     newcount="$(find "$account/INBOX/new" -type f -newer "$lastrun" | wc -l)"
     if [ "$newcount" -eq 1 ]; then
         notify-send "$(basename "$account")" "$newcount new mail."
+        paplay /usr/share/sounds/freedesktop/stereo/complete.oga
     elif [ "$newcount" -gt 1 ]; then
         notify-send "$(basename "$account")" "$newcount new mails."
+        paplay /usr/share/sounds/freedesktop/stereo/complete.oga
     fi
 done
 
