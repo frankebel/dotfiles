@@ -17,11 +17,8 @@ mbsync -c "$config" -a
 # Check for new mails and send notification if appropiate.
 for account in "$maildir"/*; do
     newcount="$(find "$account/INBOX/new" -type f -newer "$lastrun" | wc -l)"
-    if [ "$newcount" -eq 1 ]; then
-        notify-send "$(basename "$account")" "$newcount new mail."
-        paplay /usr/share/sounds/freedesktop/stereo/complete.oga
-    elif [ "$newcount" -gt 1 ]; then
-        notify-send "$(basename "$account")" "$newcount new mails."
+    if [ "$newcount" -gt 0 ]; then
+        notify-send "$(basename "$account")" "$newcount new mail"
         paplay /usr/share/sounds/freedesktop/stereo/complete.oga
     fi
 done
