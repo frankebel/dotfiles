@@ -9,7 +9,9 @@ pass_certificate='7C551C488C40E71141061D7AC9C4C2F2FC54D08E.key'
 
 check_and_delete() {
     # Check if file exists and remove it.
-    [ -f "${1}" ] && rm -v "${1}"
+    if [ -f "${1}" ]; then
+        shred -u "${1}"
+    fi
 }
 
 cd "$GNUPGHOME/private-keys-v1.d" || exit
