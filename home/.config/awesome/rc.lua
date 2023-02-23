@@ -19,9 +19,11 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
 if awesome.startup_errors then
-  naughty.notify({ preset = naughty.config.presets.critical,
+  naughty.notify({
+    preset = naughty.config.presets.critical,
     title = "Oops, there were errors during startup!",
-    text = awesome.startup_errors })
+    text = awesome.startup_errors
+  })
 end
 
 -- Handle runtime errors after startup
@@ -32,9 +34,11 @@ do
     if in_error then return end
     in_error = true
 
-    naughty.notify({ preset = naughty.config.presets.critical,
+    naughty.notify({
+      preset = naughty.config.presets.critical,
       title = "Oops, an error happened!",
-      text = tostring(err) })
+      text = tostring(err)
+    })
     in_error = false
   end)
 end
@@ -175,11 +179,10 @@ local tasklist_buttons = gears.table.join(
     awful.client.focus.byidx(1)
   end),
   awful.button({}, 5, function()
-    awful.client.focus.byidx(-1)
+    awful.client.focus.byidx( -1)
   end))
 
 awful.screen.connect_for_each_screen(function(s)
-
   -- Each screen has its own tag table.
   awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
 
@@ -190,9 +193,9 @@ awful.screen.connect_for_each_screen(function(s)
   s.mylayoutbox = awful.widget.layoutbox(s)
   s.mylayoutbox:buttons(gears.table.join(
     awful.button({}, 1, function() awful.layout.inc(1) end),
-    awful.button({}, 3, function() awful.layout.inc(-1) end),
+    awful.button({}, 3, function() awful.layout.inc( -1) end),
     awful.button({}, 4, function() awful.layout.inc(1) end),
-    awful.button({}, 5, function() awful.layout.inc(-1) end)))
+    awful.button({}, 5, function() awful.layout.inc( -1) end)))
   -- Create a taglist widget
   s.mytaglist = awful.widget.taglist {
     screen  = s,
@@ -252,7 +255,7 @@ local globalkeys = gears.table.join(
   ),
   awful.key({ modkey, }, "k",
     function()
-      awful.client.focus.byidx(-1)
+      awful.client.focus.byidx( -1)
     end,
     { description = "focus previous by index", group = "client" }
   ),
@@ -260,11 +263,11 @@ local globalkeys = gears.table.join(
   -- Layout manipulation
   awful.key({ modkey, "Shift" }, "j", function() awful.client.swap.byidx(1) end,
     { description = "swap with next client by index", group = "client" }),
-  awful.key({ modkey, "Shift" }, "k", function() awful.client.swap.byidx(-1) end,
+  awful.key({ modkey, "Shift" }, "k", function() awful.client.swap.byidx( -1) end,
     { description = "swap with previous client by index", group = "client" }),
   awful.key({ modkey, }, "]", function() awful.screen.focus_relative(1) end,
     { description = "focus the next screen", group = "screen" }),
-  awful.key({ modkey, }, "[", function() awful.screen.focus_relative(-1) end,
+  awful.key({ modkey, }, "[", function() awful.screen.focus_relative( -1) end,
     { description = "focus the previous screen", group = "screen" }),
   awful.key({ modkey, }, "u", awful.client.urgent.jumpto,
     { description = "jump to urgent client", group = "client" }),
@@ -274,22 +277,21 @@ local globalkeys = gears.table.join(
     { description = "reload awesome", group = "awesome" }),
   awful.key({ modkey, "Control" }, "q", awesome.quit,
     { description = "quit awesome", group = "awesome" }),
-
   awful.key({ modkey, }, "l", function() awful.tag.incmwfact(0.05) end,
     { description = "increase master width factor", group = "layout" }),
-  awful.key({ modkey, }, "h", function() awful.tag.incmwfact(-0.05) end,
+  awful.key({ modkey, }, "h", function() awful.tag.incmwfact( -0.05) end,
     { description = "decrease master width factor", group = "layout" }),
   awful.key({ modkey, "Shift" }, "h", function() awful.tag.incnmaster(1, nil, true) end,
     { description = "increase the number of master clients", group = "layout" }),
-  awful.key({ modkey, "Shift" }, "l", function() awful.tag.incnmaster(-1, nil, true) end,
+  awful.key({ modkey, "Shift" }, "l", function() awful.tag.incnmaster( -1, nil, true) end,
     { description = "decrease the number of master clients", group = "layout" }),
   awful.key({ modkey, "Control" }, "h", function() awful.tag.incncol(1, nil, true) end,
     { description = "increase the number of columns", group = "layout" }),
-  awful.key({ modkey, "Control" }, "l", function() awful.tag.incncol(-1, nil, true) end,
+  awful.key({ modkey, "Control" }, "l", function() awful.tag.incncol( -1, nil, true) end,
     { description = "decrease the number of columns", group = "layout" }),
   awful.key({ modkey, }, "space", function() awful.layout.inc(1) end,
     { description = "select next", group = "layout" }),
-  awful.key({ modkey, "Shift" }, "space", function() awful.layout.inc(-1) end,
+  awful.key({ modkey, "Shift" }, "space", function() awful.layout.inc( -1) end,
     { description = "select previous", group = "layout" }),
 
   -- Launch applications
