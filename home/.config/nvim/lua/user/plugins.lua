@@ -1,130 +1,124 @@
--- Use packer as plugin/package manager
--- https://github.com/wbthomason/packer.nvim
+-- Use lazy as plugin manager
+-- https://github.com/folke/lazy.nvim
 
 -- Bootstrap
-local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system { "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path }
-    vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
-
-local packer_bootstrap = ensure_packer()
+vim.opt.rtp:prepend(lazypath)
 
 -- Install plugins
-return require("packer").startup(function(use)
-  -- Packer
-  use "wbthomason/packer.nvim"
+require("lazy").setup(
+  {
+    -- Completion
+    {
+      "hrsh7th/nvim-cmp",
+      version = "v0.*",
+    },
+    "onsails/lspkind.nvim", -- pictograms
+    -- luasnip
+    {
+      "L3MON4D3/LuaSnip",
+      version = "v1.*",
+    },
+    "saadparwaiz1/cmp_luasnip",
+    -- completion plugins
+    "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-nvim-lua",
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-path",
 
-  -- Completion
-  use {
-    "hrsh7th/nvim-cmp",
-    tag = "v0.*",
-  }
-  use "onsails/lspkind.nvim" -- pictograms
-  -- luasnip
-  use {
-    "L3MON4D3/LuaSnip",
-    tag = "v1.*",
-  }
-  use "saadparwaiz1/cmp_luasnip"
-  -- completion plugins
-  use "hrsh7th/cmp-nvim-lsp"
-  use "hrsh7th/cmp-nvim-lua"
-  use "hrsh7th/cmp-buffer"
-  use "hrsh7th/cmp-path"
+    -- DAP
+    "mfussenegger/nvim-dap",
+    "rcarriga/nvim-dap-ui",
+    "theHamsta/nvim-dap-virtual-text",
 
-  -- DAP
-  use "mfussenegger/nvim-dap"
-  use "rcarriga/nvim-dap-ui"
-  use "theHamsta/nvim-dap-virtual-text"
+    -- LSP
+    "neovim/nvim-lspconfig",
 
-  -- LSP
-  use "neovim/nvim-lspconfig"
+    -- Mason
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig",
+    "jayp0521/mason-nvim-dap.nvim",
+    "jayp0521/mason-null-ls.nvim",
 
-  -- Mason
-  use "williamboman/mason.nvim"
-  use "williamboman/mason-lspconfig"
-  use "jayp0521/mason-nvim-dap.nvim"
-  use "jayp0521/mason-null-ls.nvim"
+    -- Telescope
+    {
+      "nvim-telescope/telescope.nvim",
+      version = "0.1.*",
+      dependencies = { "nvim-lua/plenary.nvim" },
+    },
+    {
+      "nvim-telescope/telescope-fzf-native.nvim",
+      build = "make",
+    },
 
-  -- Telescope
-  use {
-    "nvim-telescope/telescope.nvim",
-    tag = "0.1.*",
-    requires = { "nvim-lua/plenary.nvim" },
-  }
-  use {
-    "nvim-telescope/telescope-fzf-native.nvim",
-    run = "make",
-  }
+    -- Treesitter
+    {
+      "nvim-treesitter/nvim-treesitter",
+      build = function()
+        local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+        ts_update()
+      end,
+    },
+    "nvim-treesitter/nvim-treesitter-context",
+    {
+      "nvim-treesitter/nvim-treesitter-textobjects",
+      dependencies = { "nvim-treesitter" },
+    },
+    {
+      "nvim-treesitter/playground",
+      build = ":TSInstall query"
+    },
 
-  -- Treesitter
-  use {
-    "nvim-treesitter/nvim-treesitter",
-    run = function()
-      local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
-      ts_update()
-    end,
-  }
-  use "nvim-treesitter/nvim-treesitter-context"
-  use {
-    "nvim-treesitter/nvim-treesitter-textobjects",
-    after = { "nvim-treesitter" },
-  }
-  use {
-    "nvim-treesitter/playground",
-    run = ":TSInstall query"
-  }
+    -- Filetype specific
+    -- Markdown
+    {
+      "iamcco/markdown-preview.nvim",
+      build = "cd app && yarn install",
+      ft = "markdown",
+      version = "v0.*",
+    },
+    -- Java
+    "mfussenegger/nvim-jdtls",
+    -- Tridactyl
+    "tridactyl/vim-tridactyl",
 
-  -- Filetype specific
-  -- Markdown
-  use {
-    "iamcco/markdown-preview.nvim",
-    run = "cd app && yarn install",
-    ft = "markdown",
-    tag = "v0.*",
+    -- Uncategorized
+    "Mofiqul/dracula.nvim", -- Colorscheme
+    -- Commenting
+    {
+      "numToStr/Comment.nvim",
+      version = "v0.*",
+    },
+    -- Git
+    {
+      "lewis6991/gitsigns.nvim",
+      version = "v0.*",
+    },
+    -- Code actions
+    {
+      "jose-elias-alvarez/null-ls.nvim",
+      dependencies = { "nvim-lua/plenary.nvim" },
+    },
+    -- File manager
+    {
+      "nvim-tree/nvim-tree.lua",
+      dependencies = { "nvim-tree/nvim-web-devicons" },
+      version = "nightly",
+    },
+    -- Statusline
+    {
+      "nvim-lualine/lualine.nvim",
+      dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
   }
-  -- Java
-  use "mfussenegger/nvim-jdtls"
-  -- Tridactyl
-  use "tridactyl/vim-tridactyl"
-
-  -- Uncategorized
-  use "Mofiqul/dracula.nvim" -- Colorscheme
-  -- Commenting
-  use {
-    "numToStr/Comment.nvim",
-    tag = "v0.*",
-  }
-  -- Git
-  use {
-    "lewis6991/gitsigns.nvim",
-    tag = "v0.*",
-  }
-  -- Code actions
-  use {
-    "jose-elias-alvarez/null-ls.nvim",
-    requires = { "nvim-lua/plenary.nvim" },
-  }
-  -- File manager
-  use {
-    "nvim-tree/nvim-tree.lua",
-    requires = { "nvim-tree/nvim-web-devicons" },
-    tag = "nightly",
-  }
-  -- Statusline
-  use {
-    "nvim-lualine/lualine.nvim",
-    requires = { "nvim-tree/nvim-web-devicons" },
-  }
-
-  -- Put after all plugins
-  if packer_bootstrap then
-    require("packer").sync()
-  end
-end)
+)

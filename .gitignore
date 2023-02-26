@@ -12,7 +12,6 @@ watch_later
 
 # neovim
 .luarc.json
-packer_compiled.lua
 
 # python
 __pycache__
