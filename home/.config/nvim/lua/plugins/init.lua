@@ -63,7 +63,6 @@ return {
   "tridactyl/vim-tridactyl",
 
   -- Uncategorized
-  "Mofiqul/dracula.nvim", -- Colorscheme
   -- Commenting
   {
     "numToStr/Comment.nvim",

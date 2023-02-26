@@ -1,0 +1,11 @@
+-- Colorscheme dracula
+-- https://github.com/Mofiqul/dracula.nvim
+
+return {
+  "Mofiqul/dracula.nvim",
+  lazy = false,
+  priority = 1000,
+  config = function()
+    vim.cmd.colorscheme("dracula")
+  end,
+}
