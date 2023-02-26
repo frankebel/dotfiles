@@ -47,7 +47,7 @@ export ZDOTDIR="$HOME/.config/zsh"
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
 
 # fzf
-export FZF_DEFAULT_COMMAND='fd --follow --hidden'
+export FZF_DEFAULT_COMMAND='fd --follow --unrestricted'
 export FZF_DEFAULT_OPTS="--layout reverse --height 40% --multi \
 --color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 \
 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 \
