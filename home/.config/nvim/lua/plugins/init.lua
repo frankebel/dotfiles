@@ -61,11 +61,4 @@ return {
   "mfussenegger/nvim-jdtls",
   -- Tridactyl
   "tridactyl/vim-tridactyl",
-
-  -- Uncategorized
-  -- Code actions
-  {
-    "jose-elias-alvarez/null-ls.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-  },
 }
