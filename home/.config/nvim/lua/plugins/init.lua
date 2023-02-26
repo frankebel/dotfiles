@@ -63,11 +63,6 @@ return {
   "tridactyl/vim-tridactyl",
 
   -- Uncategorized
-  -- Commenting
-  {
-    "numToStr/Comment.nvim",
-    version = "v0.*",
-  },
   -- Git
   {
     "lewis6991/gitsigns.nvim",
