@@ -68,10 +68,4 @@ return {
     "jose-elias-alvarez/null-ls.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
   },
-  -- File manager
-  {
-    "nvim-tree/nvim-tree.lua",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    version = "nightly",
-  },
 }
