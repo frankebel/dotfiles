@@ -63,11 +63,6 @@ return {
   "tridactyl/vim-tridactyl",
 
   -- Uncategorized
-  -- Git
-  {
-    "lewis6991/gitsigns.nvim",
-    version = "v0.*",
-  },
   -- Code actions
   {
     "jose-elias-alvarez/null-ls.nvim",
