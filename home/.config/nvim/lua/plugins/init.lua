@@ -85,9 +85,4 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     version = "nightly",
   },
-  -- Statusline
-  {
-    "nvim-lualine/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-  },
 }
