@@ -31,17 +31,6 @@ return {
   "jayp0521/mason-nvim-dap.nvim",
   "jayp0521/mason-null-ls.nvim",
 
-  -- Telescope
-  {
-    "nvim-telescope/telescope.nvim",
-    version = "0.1.*",
-    dependencies = { "nvim-lua/plenary.nvim" },
-  },
-  {
-    "nvim-telescope/telescope-fzf-native.nvim",
-    build = "make",
-  },
-
   -- Treesitter
   {
     "nvim-treesitter/nvim-treesitter",
