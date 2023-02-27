@@ -31,24 +31,6 @@ return {
   "jayp0521/mason-nvim-dap.nvim",
   "jayp0521/mason-null-ls.nvim",
 
-  -- Treesitter
-  {
-    "nvim-treesitter/nvim-treesitter",
-    build = function()
-      local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
-      ts_update()
-    end,
-  },
-  "nvim-treesitter/nvim-treesitter-context",
-  {
-    "nvim-treesitter/nvim-treesitter-textobjects",
-    dependencies = { "nvim-treesitter" },
-  },
-  {
-    "nvim-treesitter/playground",
-    build = ":TSInstall query"
-  },
-
   -- Filetype specific
   -- Markdown
   {
