@@ -41,6 +41,4 @@ return {
   },
   -- Java
   "mfussenegger/nvim-jdtls",
-  -- Tridactyl
-  "tridactyl/vim-tridactyl",
 }
