@@ -5,8 +5,10 @@ pactl set-source-mute @DEFAULT_SOURCE@ toggle
 case "$(pactl get-source-mute @DEFAULT_SOURCE@)" in
     "Mute: yes")
         notify-send "MIC" "mute"
+        paplay /usr/share/sounds/freedesktop/stereo/device-removed.oga
         ;;
     "Mute: no")
         notify-send "MIC" "unmute"
+        paplay /usr/share/sounds/freedesktop/stereo/device-added.oga
         ;;
 esac
