@@ -30,8 +30,4 @@ return {
   "williamboman/mason-lspconfig",
   "jayp0521/mason-nvim-dap.nvim",
   "jayp0521/mason-null-ls.nvim",
-
-  -- Filetype specific
-  -- Java
-  "mfussenegger/nvim-jdtls",
 }
