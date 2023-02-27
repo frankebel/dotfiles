@@ -32,13 +32,6 @@ return {
   "jayp0521/mason-null-ls.nvim",
 
   -- Filetype specific
-  -- Markdown
-  {
-    "iamcco/markdown-preview.nvim",
-    build = "cd app && yarn install",
-    ft = "markdown",
-    version = "v0.*",
-  },
   -- Java
   "mfussenegger/nvim-jdtls",
 }
