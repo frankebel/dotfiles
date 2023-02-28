@@ -2,6 +2,7 @@
 -- https://github.com/mfussenegger/nvim-dap
 -- https://github.com/rcarriga/nvim-dap-ui
 -- https://github.com/theHamsta/nvim-dap-virtual-text
+-- https://github.com/mfussenegger/nvim-dap-python
 
 return {
   {
@@ -42,5 +43,11 @@ return {
   {
     "theHamsta/nvim-dap-virtual-text",
     config = true,
+  },
+  {
+    "mfussenegger/nvim-dap-python",
+    config = function()
+      require("dap-python").setup(vim.fn.stdpath("data") .. "/mason/packages/debugpy/venv/bin/python")
+    end,
   },
 }
