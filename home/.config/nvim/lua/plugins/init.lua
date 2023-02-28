@@ -17,11 +17,6 @@ return {
   "hrsh7th/cmp-buffer",
   "hrsh7th/cmp-path",
 
-  -- DAP
-  "mfussenegger/nvim-dap",
-  "rcarriga/nvim-dap-ui",
-  "theHamsta/nvim-dap-virtual-text",
-
   -- LSP
   "neovim/nvim-lspconfig",
 
