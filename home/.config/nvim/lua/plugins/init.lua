@@ -19,10 +19,4 @@ return {
 
   -- LSP
   "neovim/nvim-lspconfig",
-
-  -- Mason
-  "williamboman/mason.nvim",
-  "williamboman/mason-lspconfig",
-  "jayp0521/mason-nvim-dap.nvim",
-  "jayp0521/mason-null-ls.nvim",
 }
