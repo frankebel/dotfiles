@@ -1,6 +1,7 @@
 -- Language Server Protocol LSP
 -- https://github.com/neovim/nvim-lspconfig
 -- https://github.com/jose-elias-alvarez/null-ls.nvim
+-- https://github.com/mfussenegger/nvim-jdtls
 
 return {
   {
@@ -89,5 +90,9 @@ return {
         },
       }
     end,
+  },
+  {
+    "mfussenegger/nvim-jdtls",
+    ft = "java",
   },
 }
