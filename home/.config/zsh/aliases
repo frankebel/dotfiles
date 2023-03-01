@@ -78,7 +78,7 @@ tsmr() {
 # Uncategorized
 alias cal='cal -m'
 alias cb='xclip -selection clipboard'
-alias ccb='cd "$(xclip -selection clipboard -o)"'
+alias cdcb='cd "$(xclip -selection clipboard -o)"'
 alias fd='fd --follow --hidden'
 alias ftree='fd | tree --fromfile'
 alias i='sxiv'
