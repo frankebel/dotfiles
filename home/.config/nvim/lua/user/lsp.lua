@@ -1,4 +1,4 @@
--- LSP configuration
+-- Configuration for LSP
 -- See https://github.com/neovim/nvim-lspconfig
 
 local M = {}

@@ -16,7 +16,4 @@ return {
   "hrsh7th/cmp-nvim-lua",
   "hrsh7th/cmp-buffer",
   "hrsh7th/cmp-path",
-
-  -- LSP
-  "neovim/nvim-lspconfig",
 }
