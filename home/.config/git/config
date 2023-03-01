@@ -22,6 +22,7 @@
     rf = !git diff --name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs git restore
     rfp = !git diff --name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs -ro git restore --patch
     ri = rebase --interactive HEAD~10
+    rmf = !git ls-files | fzf --preview 'bat --force-colorization {}' | xargs git rm
     s = status
     sp = stash pop
     su = stash -u
