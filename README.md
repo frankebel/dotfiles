@@ -104,11 +104,8 @@ with `, + v` inside my video player [mpv](https://mpv.io/).
 
 ### Neovim
 I use [Neovim](https://neovim.io/) as my text editor.
-User specific settings are set in [lua/user](home/.config/nvim/lua/user).
-As my plugin manager I use [packer](https://github.com/wbthomason/packer.nvim) set up in
-[plugins.lua](home/.config/nvim/lua/user/plugins.lua).
-Most of the settings are set inside [after/plugin](home/.config/nvim/after/plugin).
-After cloning the settings run `:PackerSync` inside neovim.
+As I use [lazy.nvim](https://github.com/folke/lazy.nvim) as my package manager,
+the list of installed plugins can be viewed in [lazy-lock.json](home/.config/nvim/lazy-lock.json).
 
 ### Operating System
 I use [Arch Linux](https://archlinux.org/) for my operating system as I like their simple and pragmatic approach.
