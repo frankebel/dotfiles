@@ -15,5 +15,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Install plugins
-require("lazy").setup("plugins")
+require("lazy").setup {
+  spec = { import = "plugins" },
+  install = { colorscheme = { "dracula", "habamax" }, },
+}
