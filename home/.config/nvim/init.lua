@@ -1,5 +1,5 @@
 require("user.options")
 require("user.keymaps")
-require("user.plugins")
+require("user.lazy")
 
 require("user.autocmd")
