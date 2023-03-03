@@ -17,7 +17,7 @@ return {
       keymap("n", "<leader>q", vim.diagnostic.setloclist)
 
       local lspconfig = require("lspconfig")
-      local lsp_conf = require("user.lsp")
+      local lsp_conf = require("plugins.lsp.config")
 
       -- Lua
       lspconfig.lua_ls.setup {
