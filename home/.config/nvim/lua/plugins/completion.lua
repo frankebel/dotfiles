@@ -3,6 +3,7 @@
 
 return {
   "hrsh7th/nvim-cmp",
+  event = "InsertEnter",
   dependencies = {
     -- luasnip
     { "L3MON4D3/LuaSnip", version = "*" },
