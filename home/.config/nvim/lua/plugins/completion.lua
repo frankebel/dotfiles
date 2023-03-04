@@ -6,41 +6,37 @@ return {
   dependencies = {
     -- luasnip
     { "L3MON4D3/LuaSnip", version = "*" },
-    "saadparwaiz1/cmp_luasnip",
     -- completion plugins
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-nvim-lua",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
+    "saadparwaiz1/cmp_luasnip",
     -- pictograms
     "onsails/lspkind.nvim",
   },
-  config = function()
+  opts = function()
     local cmp = require("cmp")
-
-    cmp.setup {
+    return {
       snippet = {
         expand = function(args)
-          require "luasnip".lsp_expand(args.body)
+          require("luasnip").lsp_expand(args.body)
         end,
       },
-
       window = {
         -- completion = cmp.config.window.bordered(),
         -- documentation = cmp.config.window.bordered(),
       },
-
       mapping = {
         -- ":help ins-completion"
-        ["<c-p>"] = cmp.mapping.select_prev_item(),
-        ["<c-n>"] = cmp.mapping.select_next_item(),
-        ["<c-b>"] = cmp.mapping.scroll_docs( -4),
-        ["<c-f>"] = cmp.mapping.scroll_docs(4),
-        ["<c-c>"] = cmp.mapping.complete(),
-        ["<c-e>"] = cmp.mapping.abort(),
-        ["<c-y>"] = cmp.mapping.confirm({ select = true }),
+            ["<c-p>"] = cmp.mapping.select_prev_item(),
+            ["<c-n>"] = cmp.mapping.select_next_item(),
+            ["<c-b>"] = cmp.mapping.scroll_docs(-4),
+            ["<c-f>"] = cmp.mapping.scroll_docs(4),
+            ["<c-c>"] = cmp.mapping.complete(),
+            ["<c-e>"] = cmp.mapping.abort(),
+            ["<c-y>"] = cmp.mapping.confirm({ select = true }),
       },
-
       formatting = {
         format = require("lspkind").cmp_format {
           with_text = true,
@@ -53,7 +49,6 @@ return {
           },
         },
       },
-
       sources = {
         { name = "nvim_lsp" },
         { name = "nvim_lua" },
@@ -61,7 +56,6 @@ return {
         { name = "buffer" },
         { name = "path" },
       },
-
       confirm_opts = {
         behavior = cmp.ConfirmBehavior.Replace,
         select = false,
