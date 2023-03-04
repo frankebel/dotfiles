@@ -1,32 +1,46 @@
-local keymap = vim.keymap.set
+local map = function(mode, lhs, rhs, desc)
+  vim.keymap.set(mode, lhs, rhs, { desc = desc })
+end
 
--- Buffers
-keymap("n", "<S-l>", "<cmd>bnext<CR>", { silent = true })
-keymap("n", "<S-h>", "<cmd>bprevious<CR>", { silent = true })
+-- Navigate buffers
+map("n", "<S-l>", "<cmd>bnext<cr>", "Next buffer")
+map("n", "<S-h>", "<cmd>bprevious<cr>", "Previous buffer")
 
--- Splits
-keymap("n", "<C-h>", "<C-w>h", { silent = true })
-keymap("n", "<C-j>", "<C-w>j", { silent = true })
-keymap("n", "<C-k>", "<C-w>k", { silent = true })
-keymap("n", "<C-l>", "<C-w>l", { silent = true })
-keymap("n", "<leader>-", "<cmd>vsplit<cr>", { desc = "vsplit" })
-keymap("n", "<leader>_", "<c-w>q", { desc = "close vsplit" })
+-- Move to window with <ctrl> hjkl
+map("n", "<C-h>", "<C-w>h", "Move left window")
+map("n", "<C-j>", "<C-w>j", "Move lower window")
+map("n", "<C-k>", "<C-w>k", "Move upper window")
+map("n", "<C-l>", "<C-w>l", "Move right window")
 
--- Indent mode stay
-keymap("v", "<", "<gv", { silent = true })
-keymap("v", ">", ">gv", { silent = true })
+-- Resize window with <ctrl> arrow keys
+map("n", "<C-Up>", "<cmd>resize +2<cr>", "Increase window height")
+map("n", "<C-Down>", "<cmd>resize -2<cr>", "Decrease window height")
+map("n", "<C-Left>", "<cmd>vertical resize -2<cr>", "Decrease window width")
+map("n", "<C-Right>", "<cmd>vertical resize +2<cr>", "Increase window width")
+
+-- Open/close vsplit
+map("n", "<leader>-", "<cmd>vsplit<cr>", "Open vsplit")
+map("n", "<leader>_", "<c-w>q", "Close vsplit")
+
+-- Reselect visual area
+map("v", "<", "<gv", "Shift left")
+map("v", ">", ">gv", "Shift right")
+
+-- Search
+map({ "i", "n" }, "<esc>", "<cmd>nohlsearch<cr><esc>", "Escape and clear hlsearch")
+map({ "n", "x" }, "gw", "*N", "Search word under cursor")
 
 -- Move text up and down
-keymap("x", "J", ":move '>+1<CR>gv-gv", { silent = true })
-keymap("x", "K", ":move '<-2<CR>gv-gv", { silent = true })
+map("x", "K", ":move '<-2<CR>gv-gv", "Move lines up")
+map("x", "J", ":move '>+1<CR>gv-gv", "Move lines down")
 
 -- Paste without yanking
-keymap("v", "p", '"_dP', { desc = "Paste without yanking" })
+map("v", "p", '"_dP', "Paste without yanking")
 
--- Close current buffer
-keymap("n", "<leader>bd", "<cmd>bn<cr><cmd>bd#<cr>", { desc = "Delete current buffer" })
+-- Delete current buffer and move to next
+map("n", "<leader>bd", "<cmd>bn<cr><cmd>bd#<cr>", "Delete current buffer")
 
 -- Toggle options
--- Start with "<leader>o"
-keymap("n", "<leader>or", "<cmd>set invrelativenumber<CR>", { desc = "Toggle relativenumber" })
-keymap("n", "<leader>ow", "<cmd>set invwrap<CR>", { desc = "Toggle wrap" })
+map("n", "<leader>or", "<cmd>set invrelativenumber<cr>", "Toggle relativenumber")
+map("n", "<leader>os", "<cmd>set invspell<cr>", "Toggle spell")
+map("n", "<leader>ow", "<cmd>set invwrap<cr>", "Toggle wrap")
