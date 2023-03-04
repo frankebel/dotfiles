@@ -1,16 +1,16 @@
 -- Create automatic commands
--- See :h autocmd
+-- See `:help autocmd`
 
-local autocmd = vim.api.nvim_create_autocmd
-local group = vim.api.nvim_create_augroup("my_group", { clear = true })
+local function augroup(name)
+  return vim.api.nvim_create_augroup("user_" .. name, { clear = true })
+end
 
 -- Remove trailing whitespace
-autocmd(
-  {"BufWritePre"},
+vim.api.nvim_create_autocmd(
+  "BufWritePre",
   {
-    group = group,
+    group = augroup("delete_trailing_whitespace"),
     pattern = "*",
     command = "%s/\\v\\s+$//e",
   }
 )
-
