@@ -7,6 +7,9 @@ return {
   {
     "neovim/nvim-lspconfig",
     event = { "BufReadPre", "BufNewFile" },
+    dependencies = {
+      "mason.nvim"
+    },
     config = function()
       -- Keymaps
       -- See `:help vim.diagnostic.*` for documentation on any of the below functions
