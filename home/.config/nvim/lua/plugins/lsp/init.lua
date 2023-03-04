@@ -6,6 +6,7 @@
 return {
   {
     "neovim/nvim-lspconfig",
+    event = { "BufReadPre", "BufNewFile" },
     config = function()
       -- Keymaps
       -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -56,6 +57,7 @@ return {
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
+    event = { "BufReadPre", "BufNewFile" },
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = function()
       local null_ls = require("null-ls")
