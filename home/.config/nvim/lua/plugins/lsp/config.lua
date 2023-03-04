@@ -12,10 +12,10 @@ M.on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
   -- Mappings
-  local nmap = function(keys, func, desc)
+  local function nmap(keys, func, desc)
     vim.keymap.set("n", keys, func, { buffer = bufnr, desc = desc })
   end
-  local vmap = function(keys, func, desc)
+  local function vmap(keys, func, desc)
     vim.keymap.set("v", keys, func, { buffer = bufnr, desc = desc })
   end
 
