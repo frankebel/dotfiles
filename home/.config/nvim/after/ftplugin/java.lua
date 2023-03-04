@@ -3,7 +3,7 @@
 
 
 local jdtls = require "jdtls"
-local lsp_user_conf = require "user.lsp"
+local lsp_conf = require("plugins.lsp.config")
 local home = os.getenv("HOME")
 local masondir = home .. "/.local/share/nvim/mason"
 local workspace_dir = home .. "/.cache/jdtls/" .. vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
@@ -38,7 +38,7 @@ local config = {
   },
   -- This is the default if not provided, you can remove it. Or adjust as needed.
   root_dir = require "jdtls.setup".find_root({ ".git", "mvnw", "gradlew" }),
-  capabilities = lsp_user_conf.capabilities,
+  capabilities = lsp_conf.capabilities,
   -- Here you can configure eclipse.jdt.ls specific settings
   -- See https://github.com/eclipse/eclipse.jdt.ls/wiki/Running-the-JAVA-LS-server-from-the-command-line#initialize-request
   -- for a list of options
@@ -52,7 +52,7 @@ local config = {
     extendedClientCapabilities = extendedClientCapabilities
   },
   -- See https://github.com/mfussenegger/nvim-jdtls#nvim-dap-setup
-  on_attach = lsp_user_conf.on_attach
+  on_attach = lsp_conf.on_attach
 }
 
 
