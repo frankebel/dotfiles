@@ -6,7 +6,7 @@ local jdtls = require "jdtls"
 local lsp_user_conf = require "user.lsp"
 local home = os.getenv("HOME")
 local masondir = home .. "/.local/share/nvim/mason"
-local workspace_dir = home .."/.cache/jdtls/" .. vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
+local workspace_dir = home .. "/.cache/jdtls/" .. vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 
 
 -- Debugger (via nvim-dap)
@@ -37,7 +37,7 @@ local config = {
     "-data", workspace_dir
   },
   -- This is the default if not provided, you can remove it. Or adjust as needed.
-  root_dir = require "jdtls.setup".find_root({".git", "mvnw", "gradlew"}),
+  root_dir = require "jdtls.setup".find_root({ ".git", "mvnw", "gradlew" }),
   capabilities = lsp_user_conf.capabilities,
   -- Here you can configure eclipse.jdt.ls specific settings
   -- See https://github.com/eclipse/eclipse.jdt.ls/wiki/Running-the-JAVA-LS-server-from-the-command-line#initialize-request
@@ -46,13 +46,11 @@ local config = {
     java = {
     }
   },
-
   -- See https://github.com/mfussenegger/nvim-jdtls#java-debug-installation
   init_options = {
     bundles = bundles,
     extendedClientCapabilities = extendedClientCapabilities
   },
-
   -- See https://github.com/mfussenegger/nvim-jdtls#nvim-dap-setup
   on_attach = lsp_user_conf.on_attach
 }
