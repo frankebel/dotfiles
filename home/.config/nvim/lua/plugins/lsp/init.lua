@@ -57,9 +57,9 @@ return {
   {
     "jose-elias-alvarez/null-ls.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
-    config = function()
+    opts = function()
       local null_ls = require("null-ls")
-      null_ls.setup {
+      return {
         on_attach = function(client, bufnr)
           if client.supports_method("textDocument/formatting") then
             local augroup = vim.api.nvim_create_augroup("LspFromatting", { clear = true })
