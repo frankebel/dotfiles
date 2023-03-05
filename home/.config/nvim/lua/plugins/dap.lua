@@ -7,6 +7,13 @@
 return {
   {
     "mfussenegger/nvim-dap",
+    dependencies = {
+      {
+        "theHamsta/nvim-dap-virtual-text",
+        config = true,
+      },
+      "rcarriga/nvim-dap-ui",
+    },
     keys = {
       { "<leader>db", function() require("dap").toggle_breakpoint() end, desc = "DAP Toggle Breakpoint" },
       {
@@ -22,11 +29,9 @@ return {
       { "<leader>du", function() require("dap").step_out() end,          desc = "DAP Step Out" },
       { "<leader>dq", function() require("dap").terminate() end,         desc = "DAP Quit" },
     },
-  },
-  {
-    "rcarriga/nvim-dap-ui",
     config = function()
       local dap = require("dap")
+      -- Set up  nvim-dap-ui
       local dapui = require("dapui")
       dapui.setup()
       dap.listeners.after.event_initialized["dapui_config"] = function()
@@ -39,10 +44,6 @@ return {
         dapui.close()
       end
     end,
-  },
-  {
-    "theHamsta/nvim-dap-virtual-text",
-    config = true,
   },
   {
     "mfussenegger/nvim-dap-python",
