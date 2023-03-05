@@ -5,6 +5,7 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    event = { "BufReadPost", "BufNewFile" },
     dependencies = {
       {
         -- https://github.com/nvim-treesitter/playground
@@ -15,7 +16,6 @@ return {
       {
         -- https://github.com/nvim-treesitter/nvim-treesitter-context
         "nvim-treesitter/nvim-treesitter-context",
-        event = "BufReadPre",
         config = true,
       },
       "nvim-treesitter/nvim-treesitter-textobjects",
