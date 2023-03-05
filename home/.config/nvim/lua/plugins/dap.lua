@@ -21,7 +21,7 @@ return {
         function()
           require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))
         end,
-        desc = "DAP Toggle Breakpoint"
+        desc = "DAP Set Conditional Breakpoint"
       },
       { "<leader>dc", function() require("dap").continue() end,          desc = "DAP Continue" },
       { "<leader>di", function() require("dap").step_into() end,         desc = "DAP Step Into" },
