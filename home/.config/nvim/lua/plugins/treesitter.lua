@@ -3,20 +3,23 @@
 
 return {
   {
-    -- https://github.com/nvim-treesitter/playground
-    "nvim-treesitter/playground",
-    build = ":TSInstall query",
-    cmd = "TSPlaygroundToggle",
-  },
-  {
-    -- https://github.com/nvim-treesitter/nvim-treesitter-context
-    "nvim-treesitter/nvim-treesitter-context",
-    event = "BufReadPre",
-    config = true,
-  },
-  {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    dependencies = {
+      {
+        -- https://github.com/nvim-treesitter/playground
+        "nvim-treesitter/playground",
+        build = ":TSInstall query",
+        cmd = "TSPlaygroundToggle",
+      },
+      {
+        -- https://github.com/nvim-treesitter/nvim-treesitter-context
+        "nvim-treesitter/nvim-treesitter-context",
+        event = "BufReadPre",
+        config = true,
+      },
+      "nvim-treesitter/nvim-treesitter-textobjects",
+    },
     config = function()
       require("nvim-treesitter.configs").setup {
         -- A list of parser names, or "all"
@@ -128,5 +131,4 @@ return {
       }
     end
   },
-  "nvim-treesitter/nvim-treesitter-textobjects",
 }
