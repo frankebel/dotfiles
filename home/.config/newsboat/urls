@@ -15,6 +15,9 @@ https://odysee.com/$/rss/@AlphaNerd:8 "~Mental Outlaw" linux videos
 https://www.youtube.com/feeds/videos.xml?channel_id=UC8ENHE5xdFSwx71u3fDH5Xw "~The Primeagen" linux videos
 https://odysee.com/$/rss/@teej_dv:d "~TJ DeVries" linux videos
 
+"query:---Blogs---:tags # \"blogs\""
+https://thevaluable.dev/index.xml "~The Valuable Dev" blogs
+
 "query:---Games---:tags # \"games\""
 https://www.youtube.com/feeds/videos.xml?channel_id=UCsrxrOtjmWnH5FJhJnkTRBg "~Cubicmetre" games videos
 https://www.youtube.com/feeds/videos.xml?channel_id=UCqJ-Xo29CKyLTjn6z2XwYAw "~Game Maker's Toolkit" games videos
