@@ -179,7 +179,7 @@ local tasklist_buttons = gears.table.join(
     awful.client.focus.byidx(1)
   end),
   awful.button({}, 5, function()
-    awful.client.focus.byidx( -1)
+    awful.client.focus.byidx(-1)
   end))
 
 awful.screen.connect_for_each_screen(function(s)
@@ -193,9 +193,9 @@ awful.screen.connect_for_each_screen(function(s)
   s.mylayoutbox = awful.widget.layoutbox(s)
   s.mylayoutbox:buttons(gears.table.join(
     awful.button({}, 1, function() awful.layout.inc(1) end),
-    awful.button({}, 3, function() awful.layout.inc( -1) end),
+    awful.button({}, 3, function() awful.layout.inc(-1) end),
     awful.button({}, 4, function() awful.layout.inc(1) end),
-    awful.button({}, 5, function() awful.layout.inc( -1) end)))
+    awful.button({}, 5, function() awful.layout.inc(-1) end)))
   -- Create a taglist widget
   s.mytaglist = awful.widget.taglist {
     screen  = s,
@@ -216,7 +216,8 @@ awful.screen.connect_for_each_screen(function(s)
   -- Add widgets to the wibox
   s.mywibox:setup {
     layout = wibox.layout.align.horizontal,
-    { -- Left widgets
+    {
+      -- Left widgets
       layout = wibox.layout.fixed.horizontal,
       s.mylayoutbox,
       s.mytaglist,
@@ -255,7 +256,7 @@ local globalkeys = gears.table.join(
   ),
   awful.key({ modkey, }, "k",
     function()
-      awful.client.focus.byidx( -1)
+      awful.client.focus.byidx(-1)
     end,
     { description = "focus previous by index", group = "client" }
   ),
@@ -263,11 +264,11 @@ local globalkeys = gears.table.join(
   -- Layout manipulation
   awful.key({ modkey, "Shift" }, "j", function() awful.client.swap.byidx(1) end,
     { description = "swap with next client by index", group = "client" }),
-  awful.key({ modkey, "Shift" }, "k", function() awful.client.swap.byidx( -1) end,
+  awful.key({ modkey, "Shift" }, "k", function() awful.client.swap.byidx(-1) end,
     { description = "swap with previous client by index", group = "client" }),
   awful.key({ modkey, }, "]", function() awful.screen.focus_relative(1) end,
     { description = "focus the next screen", group = "screen" }),
-  awful.key({ modkey, }, "[", function() awful.screen.focus_relative( -1) end,
+  awful.key({ modkey, }, "[", function() awful.screen.focus_relative(-1) end,
     { description = "focus the previous screen", group = "screen" }),
   awful.key({ modkey, }, "u", awful.client.urgent.jumpto,
     { description = "jump to urgent client", group = "client" }),
@@ -279,19 +280,19 @@ local globalkeys = gears.table.join(
     { description = "quit awesome", group = "awesome" }),
   awful.key({ modkey, }, "l", function() awful.tag.incmwfact(0.05) end,
     { description = "increase master width factor", group = "layout" }),
-  awful.key({ modkey, }, "h", function() awful.tag.incmwfact( -0.05) end,
+  awful.key({ modkey, }, "h", function() awful.tag.incmwfact(-0.05) end,
     { description = "decrease master width factor", group = "layout" }),
   awful.key({ modkey, "Shift" }, "h", function() awful.tag.incnmaster(1, nil, true) end,
     { description = "increase the number of master clients", group = "layout" }),
-  awful.key({ modkey, "Shift" }, "l", function() awful.tag.incnmaster( -1, nil, true) end,
+  awful.key({ modkey, "Shift" }, "l", function() awful.tag.incnmaster(-1, nil, true) end,
     { description = "decrease the number of master clients", group = "layout" }),
   awful.key({ modkey, "Control" }, "h", function() awful.tag.incncol(1, nil, true) end,
     { description = "increase the number of columns", group = "layout" }),
-  awful.key({ modkey, "Control" }, "l", function() awful.tag.incncol( -1, nil, true) end,
+  awful.key({ modkey, "Control" }, "l", function() awful.tag.incncol(-1, nil, true) end,
     { description = "decrease the number of columns", group = "layout" }),
   awful.key({ modkey, }, "space", function() awful.layout.inc(1) end,
     { description = "select next", group = "layout" }),
-  awful.key({ modkey, "Shift" }, "space", function() awful.layout.inc( -1) end,
+  awful.key({ modkey, "Shift" }, "space", function() awful.layout.inc(-1) end,
     { description = "select previous", group = "layout" }),
 
   -- Launch applications
@@ -455,8 +456,10 @@ root.keys(globalkeys)
 -- First string will be the instance, second string the class.
 awful.rules.rules = {
   -- All clients will match this rule.
-  { rule = {},
-    properties = { border_width = beautiful.border_width,
+  {
+    rule = {},
+    properties = {
+      border_width = beautiful.border_width,
       border_color = beautiful.border_normal,
       focus = awful.client.focus.filter,
       raise = true,
@@ -468,56 +471,62 @@ awful.rules.rules = {
   },
 
   -- Floating clients.
-  { rule_any = {
-    instance = {
-      "DTA", -- Firefox addon DownThemAll.
-      "copyq", -- Includes session name in class.
-      "pinentry",
+  {
+    rule_any = {
+      instance = {
+        "DTA",   -- Firefox addon DownThemAll.
+        "copyq", -- Includes session name in class.
+        "pinentry",
+      },
+      class = {
+        "Gpick",
+        "Kruler",
+        "MessageWin",  -- kalarm.
+        "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
+        "Wpa_gui",
+        "veromix",
+        "xtightvncviewer"
+      },
+      -- Note that the name property shown in xprop might be set slightly after creation of the client
+      -- and the name shown there might not match defined rules here.
+      name = {
+        "Event Tester", -- xev.
+      },
+      role = {
+        "AlarmWindow",   -- Thunderbird's calendar.
+        "ConfigManager", -- Thunderbird's about:config.
+        "pop-up",        -- e.g. Google Chrome's (detached) Developer Tools.
+      }
     },
-    class = {
-      "Gpick",
-      "Kruler",
-      "MessageWin", -- kalarm.
-      "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
-      "Wpa_gui",
-      "veromix",
-      "xtightvncviewer"
-    },
-
-    -- Note that the name property shown in xprop might be set slightly after creation of the client
-    -- and the name shown there might not match defined rules here.
-    name = {
-      "Event Tester", -- xev.
-    },
-    role = {
-      "AlarmWindow", -- Thunderbird's calendar.
-      "ConfigManager", -- Thunderbird's about:config.
-      "pop-up", -- e.g. Google Chrome's (detached) Developer Tools.
-    }
-  }, properties = { floating = true } },
+    properties = { floating = true }
+  },
 
   -- Add titlebars to normal clients and dialogs
-  { rule_any = { type = { "normal", "dialog" }
-  }, properties = { titlebars_enabled = false }
+  {
+    rule_any = { type = { "normal", "dialog" }
+    },
+    properties = { titlebars_enabled = false }
   },
 
   -- Fullscreen applications.
-  { rule_any = {
-    class = {
-      "mpv",
-    }
-  },
+  {
+    rule_any = {
+      class = {
+        "mpv",
+      }
+    },
     properties = { fullscreen = true }
   },
 
   -- Games
-  { rule_any = {
-    class = {
-      "Minecraft* 1.18.2",
-      "steam_app_1446780", -- Monster Hunter Rise
-      "steam_app_548430", -- Deep Rock Galactic
-    }
-  },
+  {
+    rule_any = {
+      class = {
+        "Minecraft* 1.18.2",
+        "steam_app_1446780", -- Monster Hunter Rise
+        "steam_app_548430",  -- Deep Rock Galactic
+      }
+    },
     properties = {
       floating = true,
       fullscreen = true,
@@ -561,20 +570,24 @@ client.connect_signal("request::titlebars", function(c)
   )
 
   awful.titlebar(c):setup {
-    { -- Left
+    {
+      -- Left
       awful.titlebar.widget.iconwidget(c),
       buttons = buttons,
       layout  = wibox.layout.fixed.horizontal
     },
-    { -- Middle
-      { -- Title
+    {
+      -- Middle
+      {
+        -- Title
         align  = "center",
         widget = awful.titlebar.widget.titlewidget(c)
       },
       buttons = buttons,
       layout  = wibox.layout.flex.horizontal
     },
-    { -- Right
+    {
+      -- Right
       awful.titlebar.widget.floatingbutton(c),
       awful.titlebar.widget.maximizedbutton(c),
       awful.titlebar.widget.stickybutton(c),
