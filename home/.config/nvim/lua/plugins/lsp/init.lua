@@ -80,7 +80,14 @@ return {
         end,
         sources = {
           -- python
-          null_ls.builtins.diagnostics.flake8,
+          null_ls.builtins.diagnostics.flake8.with({
+            extra_args = {
+              "--max-line-length",
+              "88",
+              "--extend-ignore",
+              "E203",
+            },
+          }),
           null_ls.builtins.formatting.black,
           -- sh
           null_ls.builtins.diagnostics.shellcheck,
