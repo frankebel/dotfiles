@@ -7,7 +7,6 @@ vim.g.maplocalleader = " "
 -- `:help options`
 -- Compact list under `:help option-list`
 vim.opt.clipboard = "unnamedplus" -- Use system clipboard
-vim.opt.colorcolumn = "80" -- Screen column
 vim.opt.completeopt = { "menuone", "noselect" } -- Insert mode comlete options
 vim.opt.cursorline = true -- Highlight text line of cursor line
 vim.opt.expandtab = true -- Expand tabs into spaces
