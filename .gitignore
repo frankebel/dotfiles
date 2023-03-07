@@ -1,4 +1,5 @@
 *.log
+*.old
 
 # awesome
 default.lua
