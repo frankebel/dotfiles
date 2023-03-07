@@ -37,6 +37,7 @@ return {
                 "vim",
               },
             },
+            format = { enable = false },
             workspace = {
               -- Make the server aware of Neovim runtime files
               library = vim.api.nvim_get_runtime_file("", true),
@@ -79,6 +80,8 @@ return {
           end
         end,
         sources = {
+          -- lua
+          null_ls.builtins.formatting.stylua,
           -- python
           null_ls.builtins.diagnostics.flake8.with({
             extra_args = {

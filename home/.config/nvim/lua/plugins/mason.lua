@@ -13,6 +13,7 @@ return {
         "java-test",           -- DAP
         -- Lua
         "lua-language-server", -- LSP
+        "stylua",              -- formatter
         -- Python
         "pyright",             -- LSP
         "debugpy",             -- DAP
