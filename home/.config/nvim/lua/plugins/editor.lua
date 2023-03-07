@@ -1,7 +1,6 @@
--- Gitsigns
--- https://github.com/lewis6991/gitsigns.nvim
-
 return {
+  -- git decorations
+  -- https://github.com/lewis6991/gitsigns.nvim
   "lewis6991/gitsigns.nvim",
   event = { "BufReadPre", "BufNewFile" },
   opts = {
@@ -22,5 +21,13 @@ return {
       map("n", "<leader>ghD", function() gs.diffthis("~") end, "Diff This ~")
       -- stylua: ignore end
     end,
+  },
+
+  -- keymaps for commenting
+  -- https://github.com/numToStr/Comment.nvim
+  {
+    "numToStr/Comment.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    config = true,
   },
 }
