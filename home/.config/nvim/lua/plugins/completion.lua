@@ -30,16 +30,16 @@ return {
       },
       mapping = {
         -- ":help ins-completion"
-            ["<c-p>"] = cmp.mapping.select_prev_item(),
-            ["<c-n>"] = cmp.mapping.select_next_item(),
-            ["<c-b>"] = cmp.mapping.scroll_docs(-4),
-            ["<c-f>"] = cmp.mapping.scroll_docs(4),
-            ["<c-c>"] = cmp.mapping.complete(),
-            ["<c-e>"] = cmp.mapping.abort(),
-            ["<c-y>"] = cmp.mapping.confirm({ select = true }),
+        ["<c-p>"] = cmp.mapping.select_prev_item(),
+        ["<c-n>"] = cmp.mapping.select_next_item(),
+        ["<c-b>"] = cmp.mapping.scroll_docs(-4),
+        ["<c-f>"] = cmp.mapping.scroll_docs(4),
+        ["<c-c>"] = cmp.mapping.complete(),
+        ["<c-e>"] = cmp.mapping.abort(),
+        ["<c-y>"] = cmp.mapping.confirm({ select = true }),
       },
       formatting = {
-        format = require("lspkind").cmp_format {
+        format = require("lspkind").cmp_format({
           with_text = true,
           menu = {
             nvim_lsp = "[LSP]",
@@ -48,7 +48,7 @@ return {
             buffer = "[BUF]",
             path = "[PATH]",
           },
-        },
+        }),
       },
       sources = {
         { name = "nvim_lsp" },

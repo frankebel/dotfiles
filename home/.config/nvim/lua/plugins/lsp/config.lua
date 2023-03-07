@@ -4,7 +4,6 @@
 local M = {}
 local group = vim.api.nvim_create_augroup("LspFromatting", { clear = true })
 
-
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 M.on_attach = function(client, bufnr)
@@ -39,11 +38,12 @@ M.on_attach = function(client, bufnr)
   nmap("gr", vim.lsp.buf.references, "List references")
 
   -- Prepend lsp keymaps with "<leader>l"
+  -- stylua: ignore
   nmap("<leader>lf", function() vim.lsp.buf.format { async = true } end, "Format current buffer")
 
   if client.name == "jdtls" then
     -- See https://github.com/mfussenegger/nvim-jdtls
-    local jdtls = require "jdtls"
+    local jdtls = require("jdtls")
     -- Additional mappings
     nmap("<A-o>", jdtls.organize_imports, "Organize imports")
     nmap("crv", jdtls.extract_variable, "Extract variable")
@@ -59,34 +59,28 @@ M.on_attach = function(client, bufnr)
     -- Remove the option if you do not want that.
     -- You can use the `JdtHotcodeReplace` command to trigger it manually
     jdtls.setup_dap({ hotcodereplace = "auto" })
-    require "jdtls.dap".setup_dap_main_class_configs()
+    require("jdtls.dap").setup_dap_main_class_configs()
   end
 
   if client.supports_method("textDocument/formatting") then
     vim.api.nvim_clear_autocmds({ group = group, buffer = bufnr })
-    vim.api.nvim_create_autocmd(
-      "BufWritePre",
-      {
-        group = group,
-        buffer = bufnr,
-        callback = function()
-          vim.lsp.buf.format({ async = false })
-        end,
-      }
-    )
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      group = group,
+      buffer = bufnr,
+      callback = function()
+        vim.lsp.buf.format({ async = false })
+      end,
+    })
   end
 end
-
 
 M.lsp_flags = {
   -- This is the default in Nvim 0.7+
   debounce_text_changes = 150,
 }
 
-
 -- Autocompletion
 -- See https://github.com/hrsh7th/cmp-nvim-lsp
-M.capabilities = require "cmp_nvim_lsp".default_capabilities()
-
+M.capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 return M

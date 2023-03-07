@@ -14,6 +14,7 @@ return {
       },
       "rcarriga/nvim-dap-ui",
     },
+    -- stylua: ignore
     keys = {
       { "<leader>db", function() require("dap").toggle_breakpoint() end, desc = "DAP Toggle Breakpoint" },
       {
@@ -23,11 +24,11 @@ return {
         end,
         desc = "DAP Set Conditional Breakpoint"
       },
-      { "<leader>dc", function() require("dap").continue() end,          desc = "DAP Continue" },
-      { "<leader>di", function() require("dap").step_into() end,         desc = "DAP Step Into" },
-      { "<leader>do", function() require("dap").step_over() end,         desc = "DAP Step Over" },
-      { "<leader>du", function() require("dap").step_out() end,          desc = "DAP Step Out" },
-      { "<leader>dq", function() require("dap").terminate() end,         desc = "DAP Quit" },
+      { "<leader>dc", function() require("dap").continue() end, desc = "DAP Continue" },
+      { "<leader>di", function() require("dap").step_into() end, desc = "DAP Step Into" },
+      { "<leader>do", function() require("dap").step_over() end, desc = "DAP Step Over" },
+      { "<leader>du", function() require("dap").step_out() end, desc = "DAP Step Out" },
+      { "<leader>dq", function() require("dap").terminate() end, desc = "DAP Quit" },
     },
     config = function()
       local dap = require("dap")

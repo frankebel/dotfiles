@@ -8,20 +8,20 @@ return {
     config = function()
       local ensure_installed = {
         -- Java
-        "jdtls",               -- LSP
-        "java-debug-adapter",  -- DAP
-        "java-test",           -- DAP
+        "jdtls", -- LSP
+        "java-debug-adapter", -- DAP
+        "java-test", -- DAP
         -- Lua
         "lua-language-server", -- LSP
-        "stylua",              -- formatter
+        "stylua", -- formatter
         -- Python
-        "pyright",             -- LSP
-        "debugpy",             -- DAP
-        "black",               -- formatter
-        "flake8",              -- linter
+        "pyright", -- LSP
+        "debugpy", -- DAP
+        "black", -- formatter
+        "flake8", -- linter
         -- Shell
-        "shellcheck",          -- linter
-        "shfmt",               -- formatter
+        "shellcheck", -- linter
+        "shfmt", -- formatter
       }
       require("mason").setup()
       local mr = require("mason-registry")

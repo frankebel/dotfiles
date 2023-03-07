@@ -14,5 +14,5 @@ return {
     config = function()
       vim.keymap.set("n", "<leader>md", "<cmd>MarkdownPreviewToggle<cr>", { desc = "Toggle markdown preview" })
     end,
-  }
+  },
 }

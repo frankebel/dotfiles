@@ -1,13 +1,11 @@
 -- Set up nvim-jdtls
 -- See https://github.com/mfussenegger/nvim-jdtls
 
-
-local jdtls = require "jdtls"
+local jdtls = require("jdtls")
 local lsp_conf = require("plugins.lsp.config")
 local home = os.getenv("HOME")
 local masondir = home .. "/.local/share/nvim/mason"
 local workspace_dir = home .. "/.cache/jdtls/" .. vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
-
 
 -- Debugger (via nvim-dap)
 local bundles = {
@@ -15,7 +13,6 @@ local bundles = {
 }
 vim.list_extend(bundles, vim.split(vim.fn.glob(masondir .. "/packages/java-test/extension/server/*.jar"), "\n"))
 local extendedClientCapabilities = jdtls.extendedClientCapabilities
-
 
 -- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
 local config = {
@@ -30,31 +27,34 @@ local config = {
     "-Dlog.level=ALL",
     "-Xms1g",
     "--add-modules=ALL-SYSTEM",
-    "--add-opens", "java.base/java.util=ALL-UNNAMED",
-    "--add-opens", "java.base/java.lang=ALL-UNNAMED",
-    "-jar", vim.fn.glob(masondir .. "/packages/jdtls/plugins/org.eclipse.equinox.launcher_*.jar"),
-    "-configuration", masondir .. "/packages/jdtls/config_linux",
-    "-data", workspace_dir
+    "--add-opens",
+    "java.base/java.util=ALL-UNNAMED",
+    "--add-opens",
+    "java.base/java.lang=ALL-UNNAMED",
+    "-jar",
+    vim.fn.glob(masondir .. "/packages/jdtls/plugins/org.eclipse.equinox.launcher_*.jar"),
+    "-configuration",
+    masondir .. "/packages/jdtls/config_linux",
+    "-data",
+    workspace_dir,
   },
   -- This is the default if not provided, you can remove it. Or adjust as needed.
-  root_dir = require "jdtls.setup".find_root({ ".git", "mvnw", "gradlew" }),
+  root_dir = require("jdtls.setup").find_root({ ".git", "mvnw", "gradlew" }),
   capabilities = lsp_conf.capabilities,
   -- Here you can configure eclipse.jdt.ls specific settings
   -- See https://github.com/eclipse/eclipse.jdt.ls/wiki/Running-the-JAVA-LS-server-from-the-command-line#initialize-request
   -- for a list of options
   settings = {
-    java = {
-    }
+    java = {},
   },
   -- See https://github.com/mfussenegger/nvim-jdtls#java-debug-installation
   init_options = {
     bundles = bundles,
-    extendedClientCapabilities = extendedClientCapabilities
+    extendedClientCapabilities = extendedClientCapabilities,
   },
   -- See https://github.com/mfussenegger/nvim-jdtls#nvim-dap-setup
-  on_attach = lsp_conf.on_attach
+  on_attach = lsp_conf.on_attach,
 }
-
 
 -- This starts a new client & server,
 -- or attaches to an existing client & server depending on the `root_dir`.

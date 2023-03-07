@@ -13,25 +13,25 @@ return {
         lazy = true,
         config = function()
           require("telescope").load_extension("fzf")
-        end
+        end,
       },
     },
     keys = {
       { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
-      { "<leader>fg", "<cmd>Telescope live_grep<cr>",  desc = "Live Grep" },
-      { "<leader>fb", "<cmd>Telescope buffers<cr>",    desc = "List Buffers" },
-      { "<leader>fh", "<cmd>Telescope help_tags<cr>",  desc = "Find Help" },
-      { "<leader>fk", "<cmd>Telescope keymaps<cr>",    desc = "Find Keymaps" },
-      { "<leader>fo", "<cmd>Telescope oldfiles<cr>",   desc = "Find Old Files" },
+      { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Live Grep" },
+      { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "List Buffers" },
+      { "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Find Help" },
+      { "<leader>fk", "<cmd>Telescope keymaps<cr>", desc = "Find Keymaps" },
+      { "<leader>fo", "<cmd>Telescope oldfiles<cr>", desc = "Find Old Files" },
       {
         "<leader>fdf",
         function()
-          require("telescope.builtin").find_files {
+          require("telescope.builtin").find_files({
             prompt_title = "Find Dotfiles",
             cwd = "~/.dotfiles",
-          }
+          })
         end,
-        desc = "Find Dotfiles"
+        desc = "Find Dotfiles",
       },
     },
     opts = {

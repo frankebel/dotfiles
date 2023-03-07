@@ -8,7 +8,7 @@ return {
     "neovim/nvim-lspconfig",
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
-      "mason.nvim"
+      "mason.nvim",
     },
     config = function()
       -- Keymaps
@@ -25,7 +25,7 @@ return {
       local lsp_conf = require("plugins.lsp.config")
 
       -- Lua
-      lspconfig.lua_ls.setup {
+      lspconfig.lua_ls.setup({
         settings = {
           Lua = {
             runtime = { version = "LuaJIT" },
@@ -49,14 +49,14 @@ return {
         capabilities = lsp_conf.capabilities,
         flags = lsp_conf.lsp_flags,
         on_attach = lsp_conf.on_attach,
-      }
+      })
 
       -- Python
-      lspconfig.pyright.setup {
+      lspconfig.pyright.setup({
         capabilities = lsp_conf.capabilities,
         flags = lsp_conf.lsp_flags,
         on_attach = lsp_conf.on_attach,
-      }
+      })
     end,
   },
   {
@@ -94,7 +94,7 @@ return {
           null_ls.builtins.formatting.black,
           -- sh
           null_ls.builtins.diagnostics.shellcheck,
-          null_ls.builtins.formatting.shfmt.with {
+          null_ls.builtins.formatting.shfmt.with({
             extra_args = {
               "--indent",
               "4",
@@ -102,7 +102,7 @@ return {
               "--case-indent",
               "--space-redirects",
             },
-          },
+          }),
         },
       }
     end,
