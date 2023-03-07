@@ -91,6 +91,7 @@ return {
               "E203",
             },
           }),
+          null_ls.builtins.diagnostics.mypy,
           null_ls.builtins.formatting.black,
           -- sh
           null_ls.builtins.diagnostics.shellcheck,

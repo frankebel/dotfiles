@@ -19,6 +19,7 @@ return {
         "debugpy", -- DAP
         "black", -- formatter
         "flake8", -- linter
+        "mypy", -- linter
         -- Shell
         "shellcheck", -- linter
         "shfmt", -- formatter
