@@ -1,14 +1,5 @@
 # Dotfiles
 
-## Table of Contents
-- [About](#about)
-- [Installation and Setup](#installation-and-setup)
-- [Software I use](#software-i-use)
-- [Dependencies](#dependencies)
-  - [Neovim](#neovim)
-  - [Newsboat](#newsboat)
-- [Explanation about software](#explanation-about-software)
-
 ## About
 This repository contains my personal configuration files (dotfiles) which I manage with
 [GNU Stow](https://www.gnu.org/software/stow/). Feel free to be inspired by them and use parts of it.
