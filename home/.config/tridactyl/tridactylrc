@@ -42,7 +42,7 @@ set searchurls.nyaa https://nyaa.si/?f=0&c=0_0&q=%s&s=seeders&o=desc
 set searchurls.osm https://www.openstreetmap.org/search?query=%s
 set searchurls.pkg https://archlinux.org/packages/?sort=&q=%s
 set searchurls.r https://libreddit.de/r/%s
-set searchurls.s https://search.rhscz.eu/search?q=%s
+set searchurls.s https://search.sapti.me/search?q=%s
 set searchurls.w https://en.wikipedia.org/w/index.php?search=%s
 set searchurls.wh https://www.willhaben.at/iad/kaufen-und-verkaufen/marktplatz?keyword=%s
 set searchurls.yt https://invidious.snopyta.org/search?q=%s
