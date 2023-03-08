@@ -1,15 +1,16 @@
 return {
   -- git decorations
   -- https://github.com/lewis6991/gitsigns.nvim
-  "lewis6991/gitsigns.nvim",
-  event = { "BufReadPre", "BufNewFile" },
-  opts = {
-    on_attach = function(bufnr)
-      local gs = package.loaded.gitsigns
+  {
+    "lewis6991/gitsigns.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    opts = {
+      on_attach = function(bufnr)
+        local gs = package.loaded.gitsigns
 
-      local function map(mode, l, r, desc)
-        vim.keymap.set(mode, l, r, { buffer = bufnr, desc = desc })
-      end
+        local function map(mode, l, r, desc)
+          vim.keymap.set(mode, l, r, { buffer = bufnr, desc = desc })
+        end
 
       -- stylua: ignore start
       map("n", "]h", gs.next_hunk, "Next Hunk")
@@ -19,8 +20,9 @@ return {
       map("n", "<leader>ghb", function() gs.blame_line({ full = true }) end, "Blame Line")
       map("n", "<leader>ghd", gs.diffthis, "Diff This")
       map("n", "<leader>ghD", function() gs.diffthis("~") end, "Diff This ~")
-      -- stylua: ignore end
-    end,
+        -- stylua: ignore end
+      end,
+    },
   },
 
   -- keymaps for commenting
