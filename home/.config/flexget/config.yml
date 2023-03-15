@@ -12,6 +12,7 @@ tasks:
     rss: https://subsplease.org/rss/?t&r=1080
     series:
       - Blue Lock
+      - Bofuri S2
       - Kage no Jitsuryokusha ni Naritakute!
       - Kubo-san wa Mob wo Yurusanai
       - Maou Gakuin no Futekigousha S2
@@ -21,16 +22,6 @@ tasks:
       - Tomo-chan wa Onnanoko!
       - Urusei Yatsura
       - Vinland Saga S2
-    transmission:
-      host: localhost
-      port: 9091
-      username: transmission
-      password: transmission
-  Erai:
-    rss: https://nyaa.si/?page=rss&u=Erai-raws
-    series:
-      - Itai no wa Iya nano de Bougyoryoku ni Kyokufuri Shitai to Omoimasu Season 2
-    quality: 1080p
     transmission:
       host: localhost
       port: 9091
