@@ -1,3 +1,7 @@
+-- Configuration for awesome window manager.
+-- Website: https://awesomewm.org/
+-- Docs: https://awesomewm.org/apidoc
+
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
@@ -182,10 +186,9 @@ awful.screen.connect_for_each_screen(function(s)
 end)
 -- }}}
 
--- Set keysmaps
+-- Set keymaps
 local keys = require("keys")
 root.keys(keys.globalkeys)
--- }}}
 
 -- {{{ Rules
 -- Rules to apply to new clients (through the "manage" signal).
