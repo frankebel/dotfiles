@@ -121,8 +121,6 @@ local widgets_right = {
   mysep,
   awful.widget.watch("bash -c " .. widgets_path .. "volume", 1),
   mysep,
-  awful.widget.watch("bash -c " .. widgets_path .. "kblayout", 1),
-  mysep,
   awful.widget.watch("bash -c " .. widgets_path .. "datetime", 1),
   widgetlast,
 }
