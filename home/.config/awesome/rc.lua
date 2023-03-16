@@ -10,7 +10,7 @@ local wibox = require("wibox")
 local beautiful = require("beautiful")
 
 -- Error handling
-require("errors")
+require("handling")
 
 -- Load custom theme
 require("themes")
