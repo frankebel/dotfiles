@@ -9,41 +9,40 @@ local dpi = xresources.apply_dpi
 local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
 
-local theme = {}
-
-dracula = {
-  ["Background"] = "#282a36",
-  ["Current Line"] = "#44475a",
-  ["Selection"] = "#44475a",
-  ["Foreground"] = "#f8f8f2",
-  ["Comment"] = "#6272a4",
-  ["Cyan"] = "#8be9fd",
-  ["Green"] = "#50fa7b",
-  ["Orange"] = "#ffb86c",
-  ["Pink"] = "#ff79c6",
-  ["Purple"] = "#bd93f9",
-  ["Red"] = "#ff5555",
-  ["Yellow"] = "#f1fa8c",
+local colors = {
+  background = "#282a36",
+  selection = "#44475a",
+  foreground = "#f8f8f2",
+  comment = "#6272a4",
+  cyan = "#8be9fd",
+  green = "#50fa7b",
+  orange = "#ffb86c",
+  pink = "#ff79c6",
+  purple = "#bd93f9",
+  red = "#ff5555",
+  yellow = "#f1fa8c",
 }
 
-theme.font = "Noto Sans Mono 12"
+local theme = {}
 
-theme.bg_normal = dracula["Background"]
-theme.bg_focus = dracula["Current Line"]
-theme.bg_urgent = dracula["Red"]
-theme.bg_minimize = dracula["Purple"]
+theme.font = "FiraCode Nerd Font 12"
+
+theme.bg_normal = colors.background
+theme.bg_focus = colors.selection
+theme.bg_urgent = colors.red
+theme.bg_minimize = colors.purple
 theme.bg_systray = theme.bg_normal
 
-theme.fg_normal = dracula["Purple"]
-theme.fg_focus = dracula["Purple"]
-theme.fg_urgent = dracula["Foreground"]
-theme.fg_minimize = dracula["Foreground"]
+theme.fg_normal = colors.purple
+theme.fg_focus = colors.purple
+theme.fg_urgent = colors.foreground
+theme.fg_minimize = colors.foreground
 
 theme.useless_gap = dpi(0)
 theme.border_width = dpi(2)
 theme.border_normal = "#000000"
-theme.border_focus = dracula["Purple"]
-theme.border_marked = dracula["Green"]
+theme.border_focus = colors.purple
+theme.border_marked = colors.green
 
 -- There are other variable sets
 -- overriding the default one when
@@ -136,5 +135,3 @@ theme.awesome_icon = theme_assets.awesome_icon(theme.menu_height, theme.bg_focus
 theme.icon_theme = nil
 
 return theme
-
--- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:textwidth=80

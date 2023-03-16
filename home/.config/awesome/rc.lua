@@ -12,6 +12,9 @@ local beautiful = require("beautiful")
 -- Error handling
 require("errors")
 
+-- Load custom theme
+require("themes")
+
 -- Function to get hostname
 local function gethostname()
   local f = assert(io.popen("uname -n", "r"))
@@ -30,10 +33,6 @@ local function is_laptop()
     return false
   end
 end
-
--- {{{ Variable definitions
--- Themes define colours, icons, font and wallpapers.
-beautiful.init("~/.config/awesome/theme.lua")
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
@@ -54,7 +53,6 @@ awful.layout.layouts = {
   -- awful.layout.suit.corner.sw,
   -- awful.layout.suit.corner.se,
 }
--- }}}
 
 -- {{{ Wibar
 -- Set path for custom widgets.
