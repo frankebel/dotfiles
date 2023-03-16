@@ -5,22 +5,15 @@
 -- Awesome library
 require("awful.autofocus") -- focus after closing window
 
--- Error handling
-require("handling")
-
--- Load custom theme
-require("themes")
-
--- List of layouts
-require("layouts")
+-- user files
+require("handling") -- Error handling
+require("themes") -- Load custom theme
+require("layouts") -- List of layouts
 
 -- Set keymaps
 local keys = require("keys")
 root.keys(keys.globalkeys)
 
--- Statubar
-require("wibar")
-
+require("wibar") -- statubar
 require("rules") -- window rules
-
-require("signals")
+require("signals") -- signals for window clients
