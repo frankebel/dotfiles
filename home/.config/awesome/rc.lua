@@ -2,17 +2,11 @@
 -- Website: https://awesomewm.org/
 -- Docs: https://awesomewm.org/apidoc
 
--- If LuaRocks is installed, make sure that packages installed through it are
--- found (e.g. lgi). If LuaRocks is not installed, do nothing.
-pcall(require, "luarocks.loader")
-
--- Standard awesome library
+-- Awesome libraries
 local gears = require("gears")
 local awful = require("awful")
-require("awful.autofocus")
--- Widget and layout library
+require("awful.autofocus") -- focus after closing window
 local wibox = require("wibox")
--- Theme handling library
 local beautiful = require("beautiful")
 
 -- Error handling
