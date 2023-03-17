@@ -1,7 +1,13 @@
 # https://starship.rs/config/
 
-[cmd_duration]
-disabled = true
+# prompt
+command_timeout = 2_000
 
-[line_break]
-disabled = true
+[cmd_duration]
+min_time = 8_000 # time in ms
+
+[lua]
+symbol = " "
+
+[python]
+symbol = "󰌠 "
