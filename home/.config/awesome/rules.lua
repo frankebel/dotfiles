@@ -7,7 +7,7 @@ local awful = require("awful")
 local beautiful = require("beautiful")
 
 -- custom keymaps
-local keys = require("keys")
+local keys = require("bindings.keys")
 
 -- Rules to apply to new clients (through the "manage" signal).
 awful.rules.rules = {
