@@ -6,7 +6,8 @@
 local awful = require("awful")
 local beautiful = require("beautiful")
 
--- custom keymaps
+-- custom bindings
+local clientkeys = require("bindings.client.keys")
 local keys = require("bindings.keys")
 
 -- Rules to apply to new clients (through the "manage" signal).
@@ -19,7 +20,7 @@ awful.rules.rules = {
       border_color = beautiful.border_normal,
       focus = awful.client.focus.filter,
       raise = true,
-      keys = keys.clientkeys,
+      keys = clientkeys,
       buttons = keys.clientbuttons,
       screen = awful.screen.preferred,
       placement = awful.placement.no_overlap + awful.placement.no_offscreen,
