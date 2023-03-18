@@ -7,31 +7,70 @@ local mod = require("bindings.modifiers") -- modifier keys
 
 client.connect_signal("request::default_keybindings", function()
   awful.keyboard.append_client_keybindings({
-    awful.key({ mod.super, mod.shift }, "f", function(c)
-      c.fullscreen = not c.fullscreen
-      c:raise()
-    end, { description = "toggle fullscreen", group = "client" }),
-    awful.key({ mod.super }, "q", function(c)
-      c:kill()
-    end, { description = "close", group = "client" }),
-    awful.key(
-      { mod.super, mod.ctrl },
-      "space",
-      awful.client.floating.toggle,
-      { description = "toggle floating", group = "client" }
-    ),
-    awful.key({ mod.super, mod.ctrl }, "Return", function(c)
-      c:swap(awful.client.getmaster())
-    end, { description = "move to master", group = "client" }),
-    awful.key({ mod.super }, "o", function(c)
-      c:move_to_screen()
-    end, { description = "move to screen", group = "client" }),
-    awful.key({ mod.super }, "t", function(c)
-      c.ontop = not c.ontop
-    end, { description = "toggle keep on top", group = "client" }),
-    awful.key({ mod.super }, "f", function(c)
-      c.maximized = not c.maximized
-      c:raise()
-    end, { description = "(un)maximize", group = "client" }),
+    awful.key({
+      modifiers = { mod.super, mod.shift },
+      key = "f",
+      description = "toggle fullscreen",
+      group = "client",
+      on_press = function(c)
+        c.fullscreen = not c.fullscreen
+        c:raise()
+      end,
+    }),
+    awful.key({
+      modifiers = { mod.super },
+      key = "q",
+      description = "close",
+      group = "client",
+      on_press = function(c)
+        c:kill()
+      end,
+    }),
+    awful.key({
+      modifiers = { mod.super, mod.ctrl },
+      key = "space",
+      description = "toggle floating",
+      group = "client",
+      on_press = function()
+        awful.client.floating.toggle()
+      end,
+    }),
+    awful.key({
+      modifiers = { mod.super, mod.ctrl },
+      key = "Return",
+      description = "move to master",
+      group = "client",
+      on_press = function(c)
+        c:swap(awful.client.getmaster())
+      end,
+    }),
+    awful.key({
+      modifiers = { mod.super },
+      key = "o",
+      description = "move to screen",
+      group = "client",
+      on_press = function(c)
+        c:move_to_screen()
+      end,
+    }),
+    awful.key({
+      modifiers = { mod.super },
+      key = "t",
+      description = "toggle keep on top",
+      group = "client",
+      on_press = function(c)
+        c.ontop = not c.ontop
+      end,
+    }),
+    awful.key({
+      modifiers = { mod.super },
+      key = "f",
+      description = "(un)maximize",
+      group = "client",
+      on_press = function(c)
+        c.maximized = not c.maximized
+        c:raise()
+      end,
+    }),
   })
 end)
