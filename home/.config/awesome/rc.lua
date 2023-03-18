@@ -1,6 +1,6 @@
 -- Configuration for awesome window manager.
 -- Website: https://awesomewm.org/
--- Docs: https://awesomewm.org/apidoc
+-- Docs: https://awesomewm.org/doc/api/
 
 -- Awesome library
 require("awful.autofocus") -- focus after closing window
