@@ -1,3 +1,3 @@
--- Set keymaps
-local keys = require("bindings.keys")
-root.keys(keys.globalkeys)
+-- Set global keymaps
+local globalkeys = require("bindings.global.keys")
+root.keys(globalkeys)
