@@ -1,4 +1,4 @@
--- Keymaps
+-- Client mousebindings. Only works on focused client.
 
 -- Required modules
 local awful = require("awful")
@@ -6,9 +6,7 @@ local gears = require("gears")
 
 local mod = require("bindings.modifiers") -- modifier keys
 
-local M = {}
-
-M.clientbuttons = gears.table.join(
+local M = gears.table.join(
   awful.button({}, 1, function(c)
     c:emit_signal("request::activate", "mouse_click", { raise = true })
   end),
