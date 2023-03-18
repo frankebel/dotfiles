@@ -1,6 +1,6 @@
 -- Configuration for awesome window manager.
 -- Website: https://awesomewm.org/
--- Docs: https://awesomewm.org/doc/api/
+-- Docs: https://awesomewm.org/apidoc
 
 -- Awesome library
 require("awful.autofocus") -- focus after closing window
@@ -9,7 +9,8 @@ require("awful.autofocus") -- focus after closing window
 require("handling") -- Error handling
 require("themes") -- Load custom theme
 require("layouts") -- List of layouts
-require("bindings") -- keybindings
 require("wibar") -- statubar
+require("bindings") -- keybindings
 require("rules") -- window rules
 require("signals") -- signals for window clients
+require("notifications") -- notifications

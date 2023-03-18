@@ -1,3 +1,6 @@
--- Set global keymaps
-local globalkeys = require("bindings.global.keys")
-root.keys(globalkeys)
+-- Global bindings
+require("bindings.global.keys")
+
+-- Client bindings
+require("bindings.client.keys")
+require("bindings.client.mouse")

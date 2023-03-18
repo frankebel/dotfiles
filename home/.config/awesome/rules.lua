@@ -1,34 +1,27 @@
--- Rules for window spawning
+-- Rules to apply to new clients.
 -- Use command "xprop WM_CLASS"
 -- First string will be the instance, second string the class.
 
 -- Awesome libraries
 local awful = require("awful")
-local beautiful = require("beautiful")
+local ruled = require("ruled")
 
--- custom bindings
-local clientkeys = require("bindings.client.keys")
-local clientbuttons = require("bindings.client.mouse")
-
--- Rules to apply to new clients (through the "manage" signal).
-awful.rules.rules = {
+ruled.client.connect_signal("request::rules", function()
   -- All clients will match this rule.
-  {
+  ruled.client.append_rule({
+    id = "gloal",
     rule = {},
     properties = {
-      border_width = beautiful.border_width,
-      border_color = beautiful.border_normal,
       focus = awful.client.focus.filter,
       raise = true,
-      keys = clientkeys,
-      buttons = clientbuttons,
       screen = awful.screen.preferred,
       placement = awful.placement.no_overlap + awful.placement.no_offscreen,
     },
-  },
+  })
 
   -- Floating clients.
-  {
+  ruled.client.append_rule({
+    id = "floating",
     rule_any = {
       instance = {
         "DTA", -- Firefox addon DownThemAll.
@@ -56,20 +49,24 @@ awful.rules.rules = {
       },
     },
     properties = { floating = true },
-  },
+  })
 
-  -- Fullscreen applications.
-  {
+  -- Fullscreen clients.
+  ruled.client.append_rule({
+    id = "fullscreen",
     rule_any = {
       class = {
         "mpv",
       },
     },
-    properties = { fullscreen = true },
-  },
+    properties = {
+      fullscreen = true,
+    },
+  })
 
   -- Games
-  {
+  ruled.client.append_rule({
+    id = "games",
     rule_any = {
       class = {
         "Minecraft* 1.18.2",
@@ -82,10 +79,11 @@ awful.rules.rules = {
       fullscreen = true,
       ontop = true,
     },
-  },
+  })
 
   -- Set Firefox to always map on the tag named "2" on screen 1.
-  -- { rule = { class = "Firefox" },
-  --   properties = { screen = 1, tag = "2" } },
-}
--- }}}
+  -- ruled.client.append_rule({
+  --   rule = { class = "Firefox" },
+  --   properties = { screen = 1, tag = "2" },
+  -- })
+end)

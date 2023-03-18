@@ -1,7 +1,6 @@
 -- Statusbar
 
 -- Awesome libraries
-local gears = require("gears")
 local awful = require("awful")
 require("awful.autofocus") -- focus after closing window
 local wibox = require("wibox")
@@ -62,29 +61,33 @@ if not is_laptop() then
   table.remove(widgets_right, 3)
 end
 
-awful.screen.connect_for_each_screen(function(s)
+screen.connect_signal("request::desktop_decoration", function(s)
   -- Each screen has its own tag table.
   awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
 
   -- Create a promptbox for each screen
   s.mypromptbox = awful.widget.prompt()
+
   -- Create an imagebox widget which will contain an icon indicating which layout we're using.
   -- We need one layoutbox per screen.
-  s.mylayoutbox = awful.widget.layoutbox(s)
-  s.mylayoutbox:buttons(gears.table.join(
-    awful.button({}, 1, function()
-      awful.layout.inc(1)
-    end),
-    awful.button({}, 3, function()
-      awful.layout.inc(-1)
-    end),
-    awful.button({}, 4, function()
-      awful.layout.inc(1)
-    end),
-    awful.button({}, 5, function()
-      awful.layout.inc(-1)
-    end)
-  ))
+  s.mylayoutbox = awful.widget.layoutbox({
+    screen = s,
+    buttons = {
+      awful.button({}, 1, function()
+        awful.layout.inc(1)
+      end),
+      awful.button({}, 3, function()
+        awful.layout.inc(-1)
+      end),
+      awful.button({}, 4, function()
+        awful.layout.inc(-1)
+      end),
+      awful.button({}, 5, function()
+        awful.layout.inc(1)
+      end),
+    },
+  })
+
   -- Create a taglist widget
   s.mytaglist = awful.widget.taglist({
     screen = s,
@@ -98,19 +101,25 @@ awful.screen.connect_for_each_screen(function(s)
   })
 
   -- Create the wibox
-  s.mywibox = awful.wibar({ position = "top", screen = s })
-
-  -- Add widgets to the wibox
-  s.mywibox:setup({
-    layout = wibox.layout.align.horizontal,
-    {
+  s.mywibox = awful.wibar({
+    position = "top",
+    screen = s,
+    widget = {
+      layout = wibox.layout.align.horizontal,
       -- Left widgets
-      layout = wibox.layout.fixed.horizontal,
-      s.mylayoutbox,
-      s.mytaglist,
-      s.mypromptbox,
+      {
+        layout = wibox.layout.fixed.horizontal,
+        s.mylayoutbox,
+        s.mytaglist,
+        s.mypromptbox,
+      },
+      -- Middle widget
+      s.mytasklist,
+      -- Right widgets
+      {
+        layout = wibox.layout.fixed.horizontal,
+        widgets_right,
+      },
     },
-    s.mytasklist, -- Middle widget
-    widgets_right,
   })
 end)

@@ -1,14 +1,14 @@
 -- Global keybindings which work all the time.
+-- TODO group keybinds
 
 -- Required modules
 local awful = require("awful")
-local gears = require("gears")
 local hotkeys_popup = require("awful.hotkeys_popup")
 
 local mod = require("bindings.modifiers") -- modifier keys
 local terminal = os.getenv("TERMINAL")
 
-local M = gears.table.join(
+awful.keyboard.append_global_keybindings({
   awful.key({ mod.super }, "F1", hotkeys_popup.show_help, { description = "show help", group = "awesome" }),
   awful.key({ mod.super }, "Left", awful.tag.viewprev, { description = "view previous", group = "tag" }),
   awful.key({ mod.super }, "Right", awful.tag.viewnext, { description = "view next", group = "tag" }),
@@ -34,7 +34,12 @@ local M = gears.table.join(
   awful.key({ mod.super }, "[", function()
     awful.screen.focus_relative(-1)
   end, { description = "focus the previous screen", group = "screen" }),
-  awful.key({ mod.super }, "u", awful.client.urgent.jumpto, { description = "jump to urgent client", group = "client" }),
+  awful.key(
+    { mod.super },
+    "u",
+    awful.client.urgent.jumpto,
+    { description = "jump to urgent client", group = "client" }
+  ),
 
   -- Standard program
   awful.key({ mod.super, mod.ctrl }, "r", awesome.restart, { description = "reload awesome", group = "awesome" }),
@@ -147,50 +152,74 @@ local M = gears.table.join(
   end, { description = "close all notifications", group = "notifications" }),
   awful.key({ mod.ctrl }, "`", function()
     awful.spawn("dunstctl history-pop")
-  end, { description = "open notification", group = "notifications" })
-)
+  end, { description = "open notification", group = "notifications" }),
+})
 
--- Bind all key numbers to tags.
--- Be careful: we use keycodes to make it work on any keyboard layout.
--- This should map on the top row of your keyboard, usually 1 to 9.
-for i = 1, 9 do
-  M = gears.table.join(
-    M,
-    -- View tag only.
-    awful.key({ mod.super }, "#" .. i + 9, function()
+awful.keyboard.append_global_keybindings({
+  awful.key({
+    modifiers = { mod.super },
+    keygroup = "numrow",
+    description = "view tag",
+    group = "tag",
+    on_press = function(index)
       local screen = awful.screen.focused()
-      local tag = screen.tags[i]
+      local tag = screen.tags[index]
       if tag then
         tag:view_only()
       end
-    end, { description = "view tag #" .. i, group = "tag" }),
-    -- Toggle tag display.
-    awful.key({ mod.super, mod.ctrl }, "#" .. i + 9, function()
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super, mod.ctrl },
+    keygroup = "numrow",
+    description = "toggle tag",
+    group = "tag",
+    on_press = function(index)
       local screen = awful.screen.focused()
-      local tag = screen.tags[i]
+      local tag = screen.tags[index]
       if tag then
         awful.tag.viewtoggle(tag)
       end
-    end, { description = "toggle tag #" .. i, group = "tag" }),
-    -- Move client to tag.
-    awful.key({ mod.super, mod.shift }, "#" .. i + 9, function()
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super, mod.shift },
+    keygroup = "numrow",
+    description = "move focused client to tag",
+    group = "tag",
+    on_press = function(index)
       if client.focus then
-        local tag = client.focus.screen.tags[i]
+        local tag = client.focus.screen.tags[index]
         if tag then
           client.focus:move_to_tag(tag)
         end
       end
-    end, { description = "move focused client to tag #" .. i, group = "tag" }),
-    -- Toggle tag on focused client.
-    awful.key({ mod.super, mod.ctrl, mod.shift }, "#" .. i + 9, function()
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super, mod.ctrl, mod.shift },
+    keygroup = "numrow",
+    description = "toggle focused client on tag",
+    group = "tag",
+    on_press = function(index)
       if client.focus then
-        local tag = client.focus.screen.tags[i]
+        local tag = client.focus.screen.tags[index]
         if tag then
           client.focus:toggle_tag(tag)
         end
       end
-    end, { description = "toggle focused client on tag #" .. i, group = "tag" })
-  )
-end
-
-return M
+    end,
+  }),
+  awful.key({
+    modifiers = { modkey },
+    keygroup = "numpad",
+    description = "select layout directly",
+    group = "layout",
+    on_press = function(index)
+      local t = awful.screen.focused().selected_tag
+      if t then
+        t.layout = t.layouts[index] or t.layout
+      end
+    end,
+  }),
+})
