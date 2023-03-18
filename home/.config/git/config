@@ -12,6 +12,7 @@
     cb = !git branch | grep -v '^*' | fzf --no-multi --preview 'git lo --color=always {1}' | xargs git checkout
     d = diff
     df = !git diff --name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs git diff
+    ds = diff --staged
     l = log
     lf = !fd --hidden . | fzf --preview 'bat --force-colorization {}' | xargs git log
     ln = log --name-only
