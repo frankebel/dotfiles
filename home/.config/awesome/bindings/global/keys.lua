@@ -1,5 +1,4 @@
--- Global keybindings which work all the time.
--- TODO group keybinds
+-- Global keybinds which work all the time.
 
 -- Required modules
 local awful = require("awful")
@@ -8,151 +7,400 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 local mod = require("bindings.modifiers") -- modifier keys
 local terminal = os.getenv("TERMINAL")
 
+-- awesome
 awful.keyboard.append_global_keybindings({
-  awful.key({ mod.super }, "F1", hotkeys_popup.show_help, { description = "show help", group = "awesome" }),
-  awful.key({ mod.super }, "Left", awful.tag.viewprev, { description = "view previous", group = "tag" }),
-  awful.key({ mod.super }, "Right", awful.tag.viewnext, { description = "view next", group = "tag" }),
-  awful.key({ mod.super }, "Escape", awful.tag.history.restore, { description = "go back", group = "tag" }),
+  awful.key({
+    modifiers = { mod.super, mod.ctrl },
+    key = "r",
+    description = "reload awesome",
+    group = "awesome",
+    on_press = function()
+      awesome.restart()
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super, mod.ctrl },
+    key = "q",
+    description = "quit awesome",
+    group = "awesome",
+    on_press = function()
+      awesome.quit()
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super },
+    key = "F1",
+    description = "show keybinds",
+    group = "awesome",
+    on_press = function()
+      hotkeys_popup.show_help()
+    end,
+  }),
+})
 
-  awful.key({ mod.super }, "j", function()
-    awful.client.focus.byidx(1)
-  end, { description = "focus next by index", group = "client" }),
-  awful.key({ mod.super }, "k", function()
-    awful.client.focus.byidx(-1)
-  end, { description = "focus previous by index", group = "client" }),
+-- tags
+awful.keyboard.append_global_keybindings({
+  awful.key({
+    modifiers = { mod.super },
+    key = "Left",
+    description = "view previous",
+    group = "tag",
+    on_press = function()
+      awful.tag.viewprev()
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super },
+    key = "Right",
+    description = "view next",
+    group = "tag",
+    on_press = function()
+      awful.tag.viewnext()
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super },
+    key = "Escape",
+    description = "go back",
+    group = "tag",
+    on_press = function()
+      awful.tag.history.restore()
+    end,
+  }),
+})
 
-  -- Layout manipulation
-  awful.key({ mod.super, mod.shift }, "j", function()
-    awful.client.swap.byidx(1)
-  end, { description = "swap with next client by index", group = "client" }),
-  awful.key({ mod.super, mod.shift }, "k", function()
-    awful.client.swap.byidx(-1)
-  end, { description = "swap with previous client by index", group = "client" }),
-  awful.key({ mod.super }, "]", function()
-    awful.screen.focus_relative(1)
-  end, { description = "focus the next screen", group = "screen" }),
-  awful.key({ mod.super }, "[", function()
-    awful.screen.focus_relative(-1)
-  end, { description = "focus the previous screen", group = "screen" }),
-  awful.key(
-    { mod.super },
-    "u",
-    awful.client.urgent.jumpto,
-    { description = "jump to urgent client", group = "client" }
-  ),
+-- focus
+awful.keyboard.append_global_keybindings({
+  awful.key({
+    modifiers = { mod.super },
+    key = "j",
+    description = "focus next by index",
+    group = "client",
+    on_press = function()
+      awful.client.focus.byidx(1)
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super },
+    key = "k",
+    description = "focus previous by index",
+    group = "client",
+    on_press = function()
+      awful.client.focus.byidx(-1)
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super },
+    key = "]",
+    description = "focus next screen",
+    group = "screen",
+    on_press = function()
+      awful.screen.focus_relative(1)
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super },
+    key = "[",
+    description = "focus previous screen",
+    group = "screen",
+    on_press = function()
+      awful.screen.focus_relative(-1)
+    end,
+  }),
+})
 
-  -- Standard program
-  awful.key({ mod.super, mod.ctrl }, "r", awesome.restart, { description = "reload awesome", group = "awesome" }),
-  awful.key({ mod.super, mod.ctrl }, "q", awesome.quit, { description = "quit awesome", group = "awesome" }),
-  awful.key({ mod.super }, "l", function()
-    awful.tag.incmwfact(0.05)
-  end, { description = "increase master width factor", group = "layout" }),
-  awful.key({ mod.super }, "h", function()
-    awful.tag.incmwfact(-0.05)
-  end, { description = "decrease master width factor", group = "layout" }),
-  awful.key({ mod.super, mod.shift }, "h", function()
-    awful.tag.incnmaster(1, nil, true)
-  end, { description = "increase the number of master clients", group = "layout" }),
-  awful.key({ mod.super, mod.shift }, "l", function()
-    awful.tag.incnmaster(-1, nil, true)
-  end, { description = "decrease the number of master clients", group = "layout" }),
-  awful.key({ mod.super, mod.ctrl }, "h", function()
-    awful.tag.incncol(1, nil, true)
-  end, { description = "increase the number of columns", group = "layout" }),
-  awful.key({ mod.super, mod.ctrl }, "l", function()
-    awful.tag.incncol(-1, nil, true)
-  end, { description = "decrease the number of columns", group = "layout" }),
-  awful.key({ mod.super }, "space", function()
-    awful.layout.inc(1)
-  end, { description = "select next", group = "layout" }),
-  awful.key({ mod.super, mod.shift }, "space", function()
-    awful.layout.inc(-1)
-  end, { description = "select previous", group = "layout" }),
+-- layout manipulation
+awful.keyboard.append_global_keybindings({
+  awful.key({
+    modifiers = { mod.super, mod.shift },
+    key = "j",
+    description = "swap with next client by index",
+    group = "client",
+    on_press = function()
+      awful.client.swap.byidx(1)
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super, mod.shift },
+    key = "k",
+    description = "swap with previous client by index",
+    group = "client",
+    on_press = function()
+      awful.client.swap.byidx(-1)
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super },
+    key = "u",
+    description = "jump to urgent client",
+    group = "client",
+    on_press = function()
+      awful.client.urgent.jumpto()
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super },
+    key = "l",
+    description = "increase master width factor",
+    group = "layout",
+    on_press = function()
+      awful.tag.incmwfact(0.05)
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super },
+    key = "h",
+    description = "decrease master width factor",
+    group = "layout",
+    on_press = function()
+      awful.tag.incmwfact(-0.05)
+    end,
+  }),
+})
 
-  -- Launch applications
-  awful.key({ mod.super }, "Return", function()
-    awful.spawn(terminal)
-  end, { description = "lauch terminal", group = "applications" }),
-  awful.key({ mod.super, mod.shift }, "Return", function()
-    awful.spawn("rofi -show run")
-  end, { description = "launch rofi", group = "applications" }),
-  awful.key({ mod.super }, "b", function()
-    awful.spawn(os.getenv("BROWSER"))
-  end, { description = "launch browser", group = "applications" }),
-  awful.key({ mod.super }, "i", function()
-    awful.spawn(terminal .. " start htop")
-  end, { description = "launch htop", group = "applications" }),
-  awful.key({ mod.super }, "m", function()
-    awful.spawn(terminal .. " start neomutt")
-  end, { description = "launch mail", group = "applications" }),
-  awful.key({ mod.super }, "n", function()
-    awful.spawn(terminal .. " start newsboat")
-  end, { description = "launch newsboat", group = "applications" }),
-  awful.key({ mod.super }, "p", function()
-    awful.spawn("rofi-pass")
-  end, { description = "launch pass", group = "applications" }),
-  awful.key({ mod.super }, "s", function()
-    awful.spawn("steam")
-  end, { description = "launch steam", group = "applications" }),
-  awful.key({ mod.super }, "v", function()
-    awful.spawn(terminal .. " start " .. os.getenv("EDITOR"))
-  end, { description = "launch editor", group = "applications" }),
-  awful.key({ mod.super }, "x", function()
-    awful.spawn("xournalpp")
-  end, { description = "launch xournalpp", group = "applications" }),
-  awful.key({}, "Print", function()
-    awful.spawn("flameshot gui")
-  end, { description = "launch flameshot gui", group = "applications" }),
-  awful.key({ mod.super }, "F12", function()
-    awful.spawn("i3lock --color=282a36 -u")
-  end, { description = "lock screen", group = "applications" }),
-  awful.key({ mod.super }, "z", function()
-    awful.spawn("kblayout")
-  end, { description = "change keyboard layout", group = "applications" }),
+-- launch applications
+awful.keyboard.append_global_keybindings({
+  awful.key({
+    modifiers = { mod.super },
+    key = "Return",
+    description = "terminal",
+    group = "applications",
+    on_press = function()
+      awful.spawn(terminal)
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super, mod.shift },
+    key = "Return",
+    description = "rofi",
+    group = "applications",
+    on_press = function()
+      awful.spawn("rofi -show run")
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super },
+    key = "b",
+    description = "browser",
+    group = "applications",
+    on_press = function()
+      awful.spawn(os.getenv("BROWSER"))
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super },
+    key = "i",
+    description = "htop",
+    group = "applications",
+    on_press = function()
+      awful.spawn(terminal .. " start htop")
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super },
+    key = "m",
+    description = "mail",
+    group = "applications",
+    on_press = function()
+      awful.spawn(terminal .. " start neomutt")
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super },
+    key = "n",
+    description = "newsboat",
+    group = "applications",
+    on_press = function()
+      awful.spawn(terminal .. " start newsboat")
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super },
+    key = "p",
+    description = "pass",
+    group = "applications",
+    on_press = function()
+      awful.spawn("rofi-pass")
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super },
+    key = "s",
+    description = "steam",
+    group = "applications",
+    on_press = function()
+      awful.spawn("steam")
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super },
+    key = "v",
+    description = "editor",
+    group = "applications",
+    on_press = function()
+      awful.spawn(terminal .. " start " .. os.getenv("EDITOR"))
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super },
+    key = "x",
+    description = "xournalpp",
+    group = "applications",
+    on_press = function()
+      awful.spawn("xournalpp")
+    end,
+  }),
+  awful.key({
+    modifiers = {},
+    key = "Print",
+    description = "flameshot",
+    group = "applications",
+    on_press = function()
+      awful.spawn("flameshot gui")
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super },
+    key = "F12",
+    description = "lock screen",
+    group = "applications",
+    on_press = function()
+      awful.spawn("i3lock --color=282a36 -u")
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super },
+    key = "z",
+    description = "change keyboard layout",
+    group = "applications",
+    on_press = function()
+      awful.spawn("kblayout")
+    end,
+  }),
+})
 
-  -- Volume keys
-  awful.key({}, "XF86AudioMute", function()
-    awful.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")
-  end, { description = "mute audio", group = "volume" }),
-  awful.key({}, "XF86AudioLowerVolume", function()
-    awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%")
-  end, { description = "lower volume", group = "volume" }),
-  awful.key({}, "XF86AudioRaiseVolume", function()
-    awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%")
-  end, { description = "raise volume", group = "volume" }),
-  awful.key({ mod.super }, "/", function()
-    awful.spawn("micmute")
-  end, { description = "toggle mic mute", group = "volume" }),
+-- volume control
+awful.keyboard.append_global_keybindings({
+  awful.key({
+    modifiers = {},
+    key = "XF86AudioMute",
+    description = "(un)mute audio",
+    group = "volume",
+    on_press = function()
+      awful.spawn("wpctl set-mute @DEFAULT_SINK@ toggle")
+    end,
+  }),
+  awful.key({
+    modifiers = {},
+    key = "XF86AudioLowerVolume",
+    description = "lower volume",
+    group = "volume",
+    on_press = function()
+      awful.spawn("wpctl set-volume @DEFAULT_SINK@ 5%-")
+    end,
+  }),
+  awful.key({
+    modifiers = {},
+    key = "XF86AudioRaiseVolume",
+    description = "raise volume",
+    group = "volume",
+    on_press = function()
+      awful.spawn("wpctl set-volume @DEFAULT_SINK@ 5%+")
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super },
+    key = "/",
+    description = "(un)mute mic",
+    group = "volume",
+    on_press = function()
+      awful.spawn("micmute")
+    end,
+  }),
+})
 
-  -- Brightness keys
-  awful.key({}, "XF86MonBrightnessDown", function()
-    awful.spawn("xbacklight -dec 10")
-  end, { description = "lower brightness", group = "brightness" }),
-  awful.key({}, "XF86MonBrightnessUp", function()
-    awful.spawn("xbacklight -inc 10")
-  end, { description = "raise brightness", group = "brightness" }),
+-- brightness control
+awful.keyboard.append_global_keybindings({
+  awful.key({
+    modifiers = {},
+    key = "XF86MonBrightnessDown",
+    on_press = function()
+      awful.spawn("xbacklight -dec 10")
+    end,
+    description = "lower brightness",
+    group = "brightness",
+  }),
+  awful.key({
+    modifiers = {},
+    key = "XF86MonBrightnessUp",
+    description = "raise brightness",
+    group = "brightness",
+    on_press = function()
+      awful.spawn("xbacklight -inc 10")
+    end,
+  }),
+})
 
-  -- Background processes
-  awful.key({ mod.super, mod.shift }, "r", function()
-    awful.spawn("gpg-connect-agent reloadagent /bye")
-  end, { description = "reload gpg agent", group = "background processes" }),
-  awful.key({ mod.super, mod.shift }, "s", function()
-    awful.spawn("backgroundstart")
-  end, { description = "start background processes", group = "background processes" }),
-  awful.key({ mod.super, mod.shift }, "q", function()
-    awful.spawn("backgroundstop")
-  end, { description = "stop background processes", group = "background processes" }),
+-- background processes
+awful.keyboard.append_global_keybindings({
+  awful.key({
+    modifiers = { mod.super, mod.shift },
+    key = "r",
+    description = "reload gpg agent",
+    group = "background processes",
+    on_press = function()
+      awful.spawn("gpg-connect-agent reloadagent /bye")
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super, mod.shift },
+    key = "s",
+    on_press = function()
+      awful.spawn("backgroundstart")
+    end,
+    description = "start background processes",
+    group = "background processes",
+  }),
+  awful.key({
+    modifiers = { mod.super, mod.shift },
+    key = "q",
+    on_press = function()
+      awful.spawn("backgroundstop")
+    end,
+    description = "stop background processes",
+    group = "background processes",
+  }),
+})
 
-  -- Notifications
-  awful.key({ mod.ctrl }, "space", function()
-    awful.spawn("dunstctl close")
-  end, { description = "close notification", group = "notifications" }),
-  awful.key({ mod.ctrl, mod.shift }, "space", function()
-    awful.spawn("dunstctl close-all")
-  end, { description = "close all notifications", group = "notifications" }),
-  awful.key({ mod.ctrl }, "`", function()
-    awful.spawn("dunstctl history-pop")
-  end, { description = "open notification", group = "notifications" }),
+-- notifications
+awful.keyboard.append_global_keybindings({
+  awful.key({
+    modifiers = { mod.super, mod.shift },
+    key = "d",
+    description = "close notification",
+    group = "notifications",
+    on_press = function()
+      awful.spawn("dunstctl close")
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.ctrl, mod.super },
+    key = "d",
+    description = "close all notifications",
+    group = "notifications",
+    on_press = function()
+      awful.spawn("dunstctl close-all")
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super },
+    key = "d",
+    description = "open notification",
+    group = "notifications",
+    on_press = function()
+      awful.spawn("dunstctl history-pop")
+    end,
+  }),
 })
 
 awful.keyboard.append_global_keybindings({
