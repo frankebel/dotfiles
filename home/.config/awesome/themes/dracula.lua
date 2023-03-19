@@ -44,6 +44,16 @@ theme.border_normal = "#000000"
 theme.border_focus = colors.purple
 theme.border_marked = colors.green
 
+theme.hotkeys_fg = colors.foreground
+theme.hotkeys_border_width = 6
+theme.hotkeys_border_color = colors.selection
+theme.hotkeys_modifiers_fg = colors.orange
+theme.hotkeys_label_fg = colors.background
+theme.hotkeys_label_bg = colors.red -- FIX this does not work
+theme.hotkeys_font = "FiraCode Nerd Font Bold 12"
+theme.hotkeys_description_font = "FiraCode Nerd Font 12"
+theme.hotkeys_group_margin = 30
+
 -- There are other variable sets
 -- overriding the default one when
 -- defined, the sets are:
