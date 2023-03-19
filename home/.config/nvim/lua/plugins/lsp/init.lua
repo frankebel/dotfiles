@@ -35,6 +35,7 @@ return {
                 "awesome",
                 "client",
                 "root",
+                "screen",
                 "tag",
                 -- neovim
                 "vim",
