@@ -251,6 +251,15 @@ awful.keyboard.append_global_keybindings({
     end,
   }),
   awful.key({
+    modifiers = { mod.super },
+    key = "z",
+    description = "change keyboard layout",
+    group = "applications",
+    on_press = function()
+      awful.spawn("kblayout")
+    end,
+  }),
+  awful.key({
     modifiers = {},
     key = "Print",
     description = "flameshot",
@@ -266,15 +275,6 @@ awful.keyboard.append_global_keybindings({
     group = "applications",
     on_press = function()
       awful.spawn("i3lock --color=282a36 -u")
-    end,
-  }),
-  awful.key({
-    modifiers = { mod.super },
-    key = "z",
-    description = "change keyboard layout",
-    group = "applications",
-    on_press = function()
-      awful.spawn("kblayout")
     end,
   }),
 })
