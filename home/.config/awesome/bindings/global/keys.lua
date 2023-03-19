@@ -252,6 +252,15 @@ awful.keyboard.append_global_keybindings({
   }),
   awful.key({
     modifiers = { mod.super },
+    key = "y",
+    description = "play clipboard in mpv",
+    group = "applications",
+    on_press = function()
+      awful.spawn.with_shell('mpv "$(xclip -selection c -out)"')
+    end,
+  }),
+  awful.key({
+    modifiers = { mod.super },
     key = "z",
     description = "change keyboard layout",
     group = "applications",
