@@ -2,7 +2,6 @@
 
 -- Awesome libraries
 local awful = require("awful")
-require("awful.autofocus") -- focus after closing window
 local wibox = require("wibox")
 
 -- Function to get hostname
