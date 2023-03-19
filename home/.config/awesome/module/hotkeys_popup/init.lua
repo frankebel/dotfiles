@@ -2,9 +2,11 @@
 -- Docs: https://awesomewm.org/apidoc/popups_and_bars/awful.hotkeys_popup.widget.html
 
 local beautiful = require("beautiful")
+local dpi = beautiful.xresources.apply_dpi
+
 local my_popup = require("awful.hotkeys_popup").widget.new({
-  width = 1600,
-  height = 900,
+  width = dpi(1600),
+  height = dpi(900),
   labels = {
     Control = "ctrl",
     Mod1 = "alt",
