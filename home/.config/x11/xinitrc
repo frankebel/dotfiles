@@ -12,7 +12,7 @@ xidlehook --not-when-audio --not-when-fullscreen --timer 1800 'systemctl suspend
 
 # Keyboard
 xset r 66 # caps lock
-xset r rate 150 50
+xset r rate 200 50
 setxkbmap us -variant colemak
 
 # X11
