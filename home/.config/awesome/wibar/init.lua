@@ -3,6 +3,8 @@
 -- Awesome libraries
 local awful = require("awful")
 local wibox = require("wibox")
+local xresources = require("beautiful.xresources")
+local dpi = xresources.apply_dpi
 
 -- Function to get hostname
 local function gethostname()
@@ -40,7 +42,6 @@ widgetlast.text = ""
 
 -- Right widgets
 local widgets_right = {
-  layout = wibox.layout.fixed.horizontal,
   wibox.widget.systray(),
   mysep,
   awful.widget.watch("bash -c " .. widgets_path .. "battery", 1),
@@ -53,6 +54,8 @@ local widgets_right = {
   mysep,
   awful.widget.watch("bash -c " .. widgets_path .. "datetime", 1),
   widgetlast,
+  layout = wibox.layout.fixed.horizontal,
+  spacing = dpi(8),
 }
 if not is_laptop() then
   -- Remove battery widget.
@@ -90,10 +93,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
       -- Middle widget
       s.mytasklist,
       -- Right widgets
-      {
-        layout = wibox.layout.fixed.horizontal,
-        widgets_right,
-      },
+      widgets_right,
     },
   })
 end)
