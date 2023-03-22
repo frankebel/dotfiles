@@ -54,6 +54,14 @@ theme.hotkeys_font = "FiraCode Nerd Font Bold 12"
 theme.hotkeys_description_font = "FiraCode Nerd Font 12"
 theme.hotkeys_group_margin = 30
 
+theme.widget_bg = colors.selection
+theme.widget_fg1 = colors.cyan
+theme.widget_fg2 = colors.green
+theme.widget_fg3 = colors.orange
+theme.widget_fg4 = colors.pink
+theme.widget_fg5 = colors.red
+theme.widget_fg6 = colors.yellow
+
 -- There are other variable sets
 -- overriding the default one when
 -- defined, the sets are:
