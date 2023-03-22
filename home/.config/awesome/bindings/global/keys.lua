@@ -32,7 +32,7 @@ awful.keyboard.append_global_keybindings({
     description = "show keybinds",
     group = "awesome",
     on_press = function()
-      local my_popup = require("module.hotkeys_popup")
+      local my_popup = require("widgets.hotkeys_popup")
       my_popup:show_help()
     end,
   }),
