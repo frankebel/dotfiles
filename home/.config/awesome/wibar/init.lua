@@ -38,11 +38,6 @@ local mysep = wibox.widget.separator({
 local mydate = require("widgets.date") -- date widget
 local myclock = require("widgets.clock") -- clock widget
 
--- Not sure why, but awful.widget.watch can't be last widget.
--- Need dummy widget as last widget.
-local widgetlast = wibox.widget.textbox()
-widgetlast.text = ""
-
 -- Right widgets
 local widgets_right = {
   wibox.widget.systray(),
@@ -57,7 +52,6 @@ local widgets_right = {
   mysep,
   mydate,
   myclock,
-  widgetlast,
   layout = wibox.layout.fixed.horizontal,
   spacing = dpi(8),
 }
