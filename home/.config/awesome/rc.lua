@@ -80,6 +80,24 @@ tag.connect_signal("request::default_layouts", function()
 end)
 
 -- Wibar
+-- Create base template for wibar widgets.
+local function create_wibar_widget(widget, color_fg)
+  return wibox.widget({
+    {
+      {
+        widget = widget,
+      },
+      left = dpi(8),
+      right = dpi(8),
+      widget = wibox.container.margin,
+    },
+    shape = gears.shape.rounded_bar,
+    bg = beautiful.widget_bg,
+    fg = color_fg,
+    widget = wibox.container.background,
+  })
+end
+
 -- Set path for custom widgets.
 local widgets_path = "~/.local/bin/statusbar/"
 
