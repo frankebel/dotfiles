@@ -109,22 +109,7 @@ local mysep = wibox.widget.separator({
 })
 
 -- Create a clock widget
-local myclock = wibox.widget({
-  {
-    {
-      format = " %T",
-      refresh = 1,
-      widget = wibox.widget.textclock,
-    },
-    left = dpi(8),
-    right = dpi(8),
-    widget = wibox.container.margin,
-  },
-  shape = gears.shape.rounded_bar,
-  bg = beautiful.widget_bg,
-  fg = beautiful.widget_fg2,
-  widget = wibox.container.background,
-})
+local clock_text = wibox.widget.textclock(" %T", 1)
 
 -- Create a date widget
 local mydate = wibox.widget({
@@ -157,7 +142,7 @@ local widgets_right = {
   awful.widget.watch("bash -c " .. widgets_path .. "volume", 1),
   mysep,
   mydate,
-  myclock,
+  create_wibar_widget(clock_text, beautiful.widget_fg2),
   layout = wibox.layout.fixed.horizontal,
   spacing = dpi(8),
 }
