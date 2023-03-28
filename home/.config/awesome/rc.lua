@@ -108,6 +108,10 @@ local mysep = wibox.widget.separator({
   forced_width = 10,
 })
 
+-- Create a microphone widget
+local microphone_text, microphone_timer =
+  awful.widget.watch(gears.filesystem.get_configuration_dir() .. "scripts/microphone.sh", 60)
+
 -- Create a volume widget
 local volume_text, volume_timer =
   awful.widget.watch(gears.filesystem.get_configuration_dir() .. "scripts/volume.sh", 60)
@@ -126,8 +130,7 @@ local widgets_right = {
   mysep,
   awful.widget.watch("bash -c " .. widgets_path .. "mail", 1),
   mysep,
-  awful.widget.watch("bash -c " .. widgets_path .. "volumemic", 1),
-  mysep,
+  create_wibar_widget(microphone_text, beautiful.widget_fg4),
   create_wibar_widget(volume_text, beautiful.widget_fg3),
   create_wibar_widget(date_text, beautiful.widget_fg1),
   create_wibar_widget(clock_text, beautiful.widget_fg2),
@@ -574,7 +577,11 @@ awful.keyboard.append_global_keybindings({
     description = "(un)mute mic",
     group = "volume",
     on_press = function()
-      awful.spawn("micmute")
+      awful.spawn.with_line_callback("micmute", {
+        exit = function()
+          microphone_timer:emit_signal("timeout")
+        end,
+      })
     end,
   }),
 })
