@@ -3,6 +3,8 @@
 -- Docs: https://awesomewm.org/apidoc
 
 -- awesome libraries
+local beautiful = require("beautiful")
+local gears = require("gears")
 local naughty = require("naughty")
 require("awful.autofocus") -- focus after closing window
 
@@ -17,8 +19,22 @@ naughty.connect_signal("request::display_error", function(message, startup)
   })
 end)
 
+-- Variable definitions
+-- Themes define colours, icons, font and wallpapers.
+beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/dracula.lua")
+
+-- This is used later as the default terminal and editor to run.
+local terminal = os.getenv("TERMINAL")
+-- Modifier keys.
+local mod = {
+  alt = "Mod1",
+  super = "Mod4",
+  altgr = "Mod5",
+  shift = "Shift",
+  ctrl = "Control",
+}
+
 -- user files
-require("themes") -- Load custom theme
 require("layouts") -- List of layouts
 require("wibar") -- statubar
 require("bindings") -- keybindings
