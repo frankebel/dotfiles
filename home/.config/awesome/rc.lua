@@ -108,6 +108,9 @@ local mysep = wibox.widget.separator({
   forced_width = 10,
 })
 
+-- Create a battery widget
+local battery_text = awful.widget.watch(gears.filesystem.get_configuration_dir() .. "scripts/battery.sh", 10)
+
 -- Create a mail widget
 local mail_text = awful.widget.watch(gears.filesystem.get_configuration_dir() .. "scripts/mail.sh", 60)
 
@@ -128,9 +131,7 @@ local date_text = wibox.widget.textclock(" %F (%a)", 3600)
 -- Right widgets
 local widgets_right = {
   wibox.widget.systray(),
-  mysep,
-  awful.widget.watch("bash -c " .. widgets_path .. "battery", 1),
-  mysep,
+  create_wibar_widget(battery_text, beautiful.widget_fg6),
   create_wibar_widget(mail_text, beautiful.widget_fg5),
   create_wibar_widget(microphone_text, beautiful.widget_fg4),
   create_wibar_widget(volume_text, beautiful.widget_fg3),
