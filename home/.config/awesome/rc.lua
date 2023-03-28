@@ -108,6 +108,10 @@ local mysep = wibox.widget.separator({
   forced_width = 10,
 })
 
+-- Create a volume widget
+local volume_text, volume_timer =
+  awful.widget.watch(gears.filesystem.get_configuration_dir() .. "scripts/volume.sh", 60)
+
 -- Create a clock widget
 local clock_text = wibox.widget.textclock(" %T", 1)
 
@@ -124,8 +128,7 @@ local widgets_right = {
   mysep,
   awful.widget.watch("bash -c " .. widgets_path .. "volumemic", 1),
   mysep,
-  awful.widget.watch("bash -c " .. widgets_path .. "volume", 1),
-  mysep,
+  create_wibar_widget(volume_text, beautiful.widget_fg3),
   create_wibar_widget(date_text, beautiful.widget_fg1),
   create_wibar_widget(clock_text, beautiful.widget_fg2),
   layout = wibox.layout.fixed.horizontal,
@@ -532,7 +535,11 @@ awful.keyboard.append_global_keybindings({
     description = "(un)mute audio",
     group = "volume",
     on_press = function()
-      awful.spawn("wpctl set-mute @DEFAULT_SINK@ toggle")
+      awful.spawn.with_line_callback("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle", {
+        exit = function()
+          volume_timer:emit_signal("timeout")
+        end,
+      })
     end,
   }),
   awful.key({
@@ -541,7 +548,11 @@ awful.keyboard.append_global_keybindings({
     description = "lower volume",
     group = "volume",
     on_press = function()
-      awful.spawn("wpctl set-volume @DEFAULT_SINK@ 5%-")
+      awful.spawn.with_line_callback("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-", {
+        exit = function()
+          volume_timer:emit_signal("timeout")
+        end,
+      })
     end,
   }),
   awful.key({
@@ -550,7 +561,11 @@ awful.keyboard.append_global_keybindings({
     description = "raise volume",
     group = "volume",
     on_press = function()
-      awful.spawn("wpctl set-volume @DEFAULT_SINK@ 5%+")
+      awful.spawn.with_line_callback("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+", {
+        exit = function()
+          volume_timer:emit_signal("timeout")
+        end,
+      })
     end,
   }),
   awful.key({
