@@ -49,7 +49,6 @@ alias cdf='cd "$DOTDIR"; l'
 alias cm='cd "$MASTERDIR"; l'
 alias cmc='cd "$MASTERDIR/2023s"; l'
 alias cpr='cd "$PROGRAMMINGDIR"; l'
-alias cs='cd "$MASTERDIR/2020w/strömungslehre"'
 alias ct='cd "$TEMPDIR"; l'
 alias ctor='cd "$TORRENTDIR"; l'
 
