@@ -2,11 +2,22 @@
 -- Website: https://awesomewm.org/
 -- Docs: https://awesomewm.org/apidoc
 
--- Awesome library
+-- awesome libraries
+local naughty = require("naughty")
 require("awful.autofocus") -- focus after closing window
 
+-- Error handling
+-- Check if awesome encountered an error during startup and fall back to
+-- another config (This code will only ever execute for the fallback config)
+naughty.connect_signal("request::display_error", function(message, startup)
+  naughty.notification({
+    urgency = "critical",
+    title = "Oops, an error happened" .. (startup and " during startup!" or "!"),
+    message = message,
+  })
+end)
+
 -- user files
-require("handling") -- Error handling
 require("themes") -- Load custom theme
 require("layouts") -- List of layouts
 require("wibar") -- statubar
