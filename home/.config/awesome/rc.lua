@@ -3,6 +3,7 @@
 -- Docs: https://awesomewm.org/apidoc
 
 -- awesome libraries
+local awful = require("awful")
 local beautiful = require("beautiful")
 local gears = require("gears")
 local naughty = require("naughty")
@@ -34,8 +35,30 @@ local mod = {
   ctrl = "Control",
 }
 
+-- Tag layout
+-- Table of layouts to cover with awful.layout.inc, order matters.
+tag.connect_signal("request::default_layouts", function()
+  awful.layout.append_default_layouts({
+    -- awful.layout.suit.floating,
+    awful.layout.suit.tile,
+    -- awful.layout.suit.tile.left,
+    -- awful.layout.suit.tile.bottom,
+    -- awful.layout.suit.tile.top,
+    -- awful.layout.suit.fair,
+    -- awful.layout.suit.fair.horizontal,
+    -- awful.layout.suit.spiral,
+    -- awful.layout.suit.spiral.dwindle,
+    -- awful.layout.suit.max,
+    -- awful.layout.suit.max.fullscreen,
+    -- awful.layout.suit.magnifier,
+    -- awful.layout.suit.corner.nw,
+    -- awful.layout.suit.corner.ne,
+    -- awful.layout.suit.corner.sw,
+    -- awful.layout.suit.corner.se,
+  })
+end)
+
 -- user files
-require("layouts") -- List of layouts
 require("wibar") -- statubar
 require("bindings") -- keybindings
 require("rules") -- window rules
