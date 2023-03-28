@@ -142,8 +142,7 @@ local widgets_right = {
 }
 if not is_laptop() then
   -- Remove battery widget.
-  table.remove(widgets_right, 3)
-  table.remove(widgets_right, 3)
+  table.remove(widgets_right, 2)
 end
 
 screen.connect_signal("request::desktop_decoration", function(s)
