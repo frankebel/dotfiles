@@ -98,16 +98,6 @@ local function create_wibar_widget(widget, color_fg)
   })
 end
 
--- Set path for custom widgets.
-local widgets_path = "~/.local/bin/statusbar/"
-
--- Create a separator widget
-local mysep = wibox.widget.separator({
-  orientation = "vertical",
-  span_ratio = 0.9,
-  forced_width = 10,
-})
-
 -- Create a battery widget
 local battery_text = awful.widget.watch(gears.filesystem.get_configuration_dir() .. "scripts/battery.sh", 10)
 
