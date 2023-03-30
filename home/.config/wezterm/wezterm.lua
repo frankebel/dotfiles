@@ -28,4 +28,5 @@ return {
     { key = "+", mods = "SHIFT|CTRL", action = wezterm.action.IncreaseFontSize },
     { key = "=", mods = "CTRL", action = wezterm.action.ResetFontSize },
   },
+  window_close_confirmation = "NeverPrompt",
 }
