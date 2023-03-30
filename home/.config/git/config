@@ -33,14 +33,26 @@
     gpgSign = true
     verbose = true
 
+[core]
+    pager = delta
+
 [credential]
     helper = cache --timeout 86400
+
+[delta]
+    light = false
+    line-numbers = true
+    navigate = true
+    syntax-theme = Dracula
 
 [diff]
     colorMoved = default
 
 [init]
     defaultBranch = main
+
+[interactive]
+    diffFilter = delta --color-only
 
 [log]
     date = iso8601-strict
