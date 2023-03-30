@@ -1,9 +1,9 @@
 [alias]
     a = add
-    af = !git diff --name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs git add
+    af = !git diff --name-only | fzf --preview 'git diff {} | delta' | xargs git add
     afn = !git ls-files --others --exclude-standard | fzf --preview 'bat --force-colorization {}' | xargs git add
     afni = !git ls-files --others --exclude-standard | fzf --preview 'bat --force-colorization {}' | xargs git add --intent-to-add
-    afp = !git diff --name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs -ro git add --patch
+    afp = !git diff --name-only | fzf --preview 'git diff {} | delta' | xargs -ro git add --patch
     alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
     b = branch
     ba = branch -a
@@ -11,17 +11,17 @@
     can = commit --amend --no-edit
     cb = !git branch | grep -v '^*' | fzf --no-multi --preview 'git lo --color=always {1}' | xargs git checkout
     d = diff
-    df = !git diff --name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs git diff
+    df = !git diff --name-only | fzf --preview 'git diff {} | delta' | xargs git diff
     ds = diff --staged
     l = log
-    lf = !fd --hidden . | fzf --preview 'bat --force-colorization {}' | xargs git log
+    lf = !fd --hidden . | fzf --preview 'git {} | delta' | xargs git log
     ln = log --name-only
     lo = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     pl = pull
     ps = push
     rc = rebase --continue
-    rf = !git diff --name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs git restore
-    rfp = !git diff --name-only | fzf --preview 'bat --diff --force-colorization {}' | xargs -ro git restore --patch
+    rf = !git diff --name-only | fzf --preview 'git diff {} | delta' | xargs git restore
+    rfp = !git diff --name-only | fzf --preview 'git diff {} | delta' | xargs -ro git restore --patch
     ri = rebase --interactive HEAD~10
     rmf = !git ls-files | fzf --preview 'bat --force-colorization {}' | xargs git rm
     s = status
