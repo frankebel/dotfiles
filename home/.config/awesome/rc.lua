@@ -112,11 +112,8 @@ local microphone_text, microphone_timer =
 local volume_text, volume_timer =
   awful.widget.watch(gears.filesystem.get_configuration_dir() .. "scripts/volume.sh", 60)
 
--- Create a clock widget
-local clock_text = wibox.widget.textclock(" %T", 1)
-
--- Create a date widget
-local date_text = wibox.widget.textclock(" %F (%a)", 3600)
+-- Create a clock widget to show date and time
+local clock_text = wibox.widget.textclock("%F (%a) %T", 1)
 
 -- Right widgets
 local widgets_right = {
@@ -125,7 +122,6 @@ local widgets_right = {
   create_wibar_widget(mail_text, beautiful.widget_fg5),
   create_wibar_widget(microphone_text, beautiful.widget_fg4),
   create_wibar_widget(volume_text, beautiful.widget_fg3),
-  create_wibar_widget(date_text, beautiful.widget_fg1),
   create_wibar_widget(clock_text, beautiful.widget_fg2),
   layout = wibox.layout.fixed.horizontal,
   spacing = dpi(8),
