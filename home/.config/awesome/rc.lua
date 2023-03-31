@@ -145,12 +145,6 @@ screen.connect_signal("request::desktop_decoration", function(s)
     filter = awful.widget.taglist.filter.all,
   })
 
-  -- Create a tasklist widget
-  s.mytasklist = awful.widget.tasklist({
-    screen = s,
-    filter = awful.widget.tasklist.filter.currenttags,
-  })
-
   -- Create the wibox
   s.mywibox = awful.wibar({
     position = "top",
@@ -163,7 +157,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
         s.mytaglist,
       },
       -- Middle widget
-      s.mytasklist,
+      nil,
       -- Right widgets
       widgets_right,
     },
