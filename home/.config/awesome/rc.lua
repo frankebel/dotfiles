@@ -91,7 +91,7 @@ local function create_wibar_widget(widget, color_fg)
       right = dpi(8),
       widget = wibox.container.margin,
     },
-    shape = gears.shape.rounded_bar,
+    shape = gears.shape.rounded_rect,
     bg = beautiful.widget_bg,
     fg = color_fg,
     widget = wibox.container.background,
