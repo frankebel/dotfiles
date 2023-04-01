@@ -559,7 +559,7 @@ awful.keyboard.append_global_keybindings({
     description = "(un)mute mic",
     group = "volume",
     on_press = function()
-      awful.spawn.with_line_callback("micmute", {
+      awful.spawn.with_line_callback("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle", {
         exit = function()
           microphone_timer:emit_signal("timeout")
         end,
