@@ -85,6 +85,7 @@ eval "$(starship init zsh)" # Starship
 plugindir='/usr/share/zsh/plugins'
 source "$plugindir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$plugindir/zsh-autosuggestions/zsh-autosuggestions.zsh"
+bindkey "^y" autosuggest-accept
 unset plugindir
 
 # Uncategorized
