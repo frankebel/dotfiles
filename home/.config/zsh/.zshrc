@@ -73,10 +73,6 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 export KEYTIMEOUT=1
 
-# Prompt TODO 
-# https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html
-# man zshmisc
-
 # Application Specific Settings
 export GPG_TTY=$(tty) # GnuPG pinentry
 eval "$(starship init zsh)" # Starship
