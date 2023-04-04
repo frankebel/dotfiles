@@ -1,0 +1,89 @@
+// vim: ft=jsonc
+// See https://github.com/Alexays/Waybar
+
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30, // Remove for auto height
+    "spacing": 4, // Gaps between modules (4px)
+    "modules-left": [
+        "wlr/workspaces",
+    ],
+    // "modules-center": [],
+    "modules-right": [
+        "tray",
+        "pulseaudio",
+        "network",
+        "battery",
+        "clock",
+    ],
+    // Modules configuration
+    // "wlr/workspaces": {
+    //     "disable-scroll": true,
+    //     "all-outputs": true,
+    //     "format": "{name}: {icon}",
+    //     "format-icons": {
+    //         "1": "",
+    //         "2": "",
+    //         "3": "",
+    //         "4": "",
+    //         "5": "",
+    //         "urgent": "",
+    //         "focused": "",
+    //         "default": ""
+    //     }
+    // },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10,
+    },
+    "clock": {
+        "interval": 1,
+        "format": "{:%F (%a) %T}",
+        "locale": "en_GB.UTF-8", // Monday first day of week
+        "tooltip": true,
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+            "mode-mon-col": 3,
+            "on-scroll": 1,
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-scroll-up": "shift_down",
+            "on-scroll-down": "shift_up",
+        },
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15,
+        },
+        "format": "{icon} {capacity} %",
+        "format-full": "{icon}",
+        "format-time": "{H}:{m}",
+        "format-icons": [" ", " ", " ", " ", " "],
+    },
+    "network": {
+        "format-ethernet": "", // No icon on ethernet
+        "format-wifi": "󰖩 {signalStrength} %",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "󰖪 ",
+        "tooltip-format-wifi": "{essid}",
+        "tooltip-format-disconnected": "no connection",
+    },
+    "pulseaudio": {
+        "format": "<big>{icon}</big> {volume} % | {format_source}",
+        "format-muted": "<big>󰖁</big> | {format_source}",
+        "format-source": "<big>󰍬</big> {volume} %",
+        "format-source-muted": "<big>󰍭</big>",
+        "format-icons": {
+            "default": "󰕾",
+        },
+        "scroll-step": 5,
+        "on-click": "pavucontrol",
+        "ignored-sinks": [
+            "Easy Effects Sink",
+        ],
+    },
+}
