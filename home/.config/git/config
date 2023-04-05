@@ -66,6 +66,9 @@
 [push]
     gpgSign = if-asked
 
+[rebase]
+    autoStash = true
+
 [status]
     showUntrackedFiles = all
 
