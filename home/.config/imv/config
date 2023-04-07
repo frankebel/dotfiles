@@ -1,0 +1,10 @@
+# vim: ft=toml
+# See `man 5 imv`
+
+[options]
+overlay = true
+overlay_font = Monospace:14
+
+[binds]
+n = next
+p = prev
