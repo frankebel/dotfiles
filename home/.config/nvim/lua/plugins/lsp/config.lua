@@ -22,16 +22,16 @@ M.on_attach = function(client, bufnr)
   nmap("gD", vim.lsp.buf.declaration, "Go to declaration")
   nmap("gT", vim.lsp.buf.type_definition, "Type definition")
 
-  nmap("<space>rn", vim.lsp.buf.rename, "Rename")
-  nmap("<space>ca", vim.lsp.buf.code_action, "Code action")
+  nmap("<leader>rn", vim.lsp.buf.rename, "Rename")
+  nmap("<leader>ca", vim.lsp.buf.code_action, "Code action")
 
   nmap("K", vim.lsp.buf.hover, "Hover documentation")
   nmap("gi", vim.lsp.buf.implementation, "Go to implementation")
   nmap("<C-k>", vim.lsp.buf.signature_help, "Signature documentation")
 
-  nmap("<space>wa", vim.lsp.buf.add_workspace_folder, "Workspace add folder")
-  nmap("<space>wr", vim.lsp.buf.remove_workspace_folder, "Workspace remove folder")
-  nmap("<space>wl", function()
+  nmap("<leader>wa", vim.lsp.buf.add_workspace_folder, "Workspace add folder")
+  nmap("<leader>wr", vim.lsp.buf.remove_workspace_folder, "Workspace remove folder")
+  nmap("<leader>wl", function()
     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
   end, "Workspace list folders")
 
