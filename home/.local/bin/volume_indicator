@@ -1,0 +1,17 @@
+#!/bin/sh
+# Show notification with volume indicator
+
+app_name="changevolume"
+timeout=2000
+id=4528 # Random, but unique
+
+case "$(wpctl get-volume @DEFAULT_AUDIO_SINK@)" in
+    *MUTED*)
+        notify-send -a "$app_name" -t "$timeout" -r "$id" "󰖁"
+        ;;
+    *)
+        volume="$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -Po '\d\.\d+')"
+        volume="$(echo "$volume" | awk '{printf "%.0f", $1 * 100}')" # Convert to percentage
+        notify-send -a "$app_name" -t "$timeout" -r "$id" -h int:value:"$volume" "󰕾 $volume %"
+        ;;
+esac

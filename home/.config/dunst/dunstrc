@@ -39,3 +39,7 @@
     highlight = "#f8f8f2"
     frame_color = "#f8f8f2"
     timeout = 0
+
+[changevolume]
+    appname = changevolume
+    history_ignore = true
