@@ -40,6 +40,10 @@
     frame_color = "#f8f8f2"
     timeout = 0
 
+[changebrighness]
+    appname = changebrighness
+    history_ignore = true
+
 [changevolume]
     appname = changevolume
     history_ignore = true

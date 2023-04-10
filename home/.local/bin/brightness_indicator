@@ -1,0 +1,9 @@
+#!/bin/sh
+# Show notification with brightness indicator
+
+app_name="changebrightness"
+timeout=2000
+id=7014 # Random, but unique
+
+brightness="$(brightnessctl -m | grep -oP '\d+(?=%)')"
+notify-send -a "$app_name" -t "$timeout" -r "$id" -h int:value:"$brightness" " $brightness %"
