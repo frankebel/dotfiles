@@ -4,13 +4,13 @@
 # Suffix alias
 # man zshbuiltins
 alias -s git='git clone'
-alias -s jpg=sxiv
+alias -s jpg=imv
 alias -s lua='$EDITOR'
 alias -s mkv=mpv
 alias -s mp4=mpv
 alias -s ods=localc
 alias -s pdf='$READER'
-alias -s png=sxiv
+alias -s png=imv
 alias -s py='$EDITOR'
 alias -s tex='$EDITOR'
 alias -s webm=mpv
@@ -77,11 +77,10 @@ tsmr() {
 
 # Uncategorized
 alias cal='cal -m'
-alias cb='xclip -selection clipboard'
-alias cdcb='cd "$(xclip -selection clipboard -o)"'
+alias cdcb='cd "$(wl-paste)"'
 alias fd='fd --follow --hidden'
 alias ftree='fd | tree --fromfile'
-alias i='sxiv'
+alias i='imv'
 alias l='ls -lAh --time-style=long-iso'
 alias m='neomutt'
 alias mpvcb='mpv "$(xclip -selection clipboard -o)"'
