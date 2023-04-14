@@ -65,6 +65,10 @@ return {
     "jose-elias-alvarez/null-ls.nvim",
     event = { "BufReadPre", "BufNewFile" },
     dependencies = { "nvim-lua/plenary.nvim" },
+    keys = {
+      -- stylua: ignore
+      { "<leader>lf", function() vim.lsp.buf.format({ async = true }) end, "Format current buffer" },
+    },
     opts = function()
       local null_ls = require("null-ls")
       return {
