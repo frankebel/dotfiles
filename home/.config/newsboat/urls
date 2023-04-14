@@ -1,44 +1,44 @@
 "query:Unread Articles:unread = \"yes\""
 
 "query:---Hardware---:tags # \"hardware\""
-https://invidious.snopyta.org/feed/channel/UCGsaijjOJshS2_ZmMNZgS-g "~der8auer" hardware videos
-https://invidious.snopyta.org/feed/channel/UChIs72whgZI9w6d6FhwGGHA "~Gamers Nexus" hardware videos
-https://invidious.snopyta.org/feed/channel/UCgeS8J9W62B-uLBgzp14BtQ "~GN Extras" hardware videos
-https://invidious.snopyta.org/feed/channel/UCI8iQa1hv7oV_Z8D35vVuSg "~Hardware Unboxed" hardware videos
-https://invidious.snopyta.org/feed/channel/UCDKLZBNM9XZ7pHPZF9D8xDQ "~Monitors Unboxed" hardware videos
-https://invidious.snopyta.org/feed/channel/UCRPdsCVuH53rcbTcEkuY4uQ "~Moores Law is dead" hardware videos
+https://yewtu.be/feed/channel/UCGsaijjOJshS2_ZmMNZgS-g "~der8auer" hardware videos
+https://yewtu.be/feed/channel/UChIs72whgZI9w6d6FhwGGHA "~Gamers Nexus" hardware videos
+https://yewtu.be/feed/channel/UCgeS8J9W62B-uLBgzp14BtQ "~GN Extras" hardware videos
+https://yewtu.be/feed/channel/UCI8iQa1hv7oV_Z8D35vVuSg "~Hardware Unboxed" hardware videos
+https://yewtu.be/feed/channel/UCDKLZBNM9XZ7pHPZF9D8xDQ "~Monitors Unboxed" hardware videos
+https://yewtu.be/feed/channel/UCRPdsCVuH53rcbTcEkuY4uQ "~Moores Law is dead" hardware videos
 
 "query:---Linux---:tags # \"linux\""
 https://www.archlinux.org/feeds/news/ linux
-https://invidious.snopyta.org/feed/channel/UCld68syR8Wi-GY_n4CaoJGA "~Brodie Robertson" linux videos
-https://invidious.snopyta.org/feed/channel/UC7YOGHUfC1Tb6E4pudI9STA "~Mental Outlaw" linux videos
-https://invidious.snopyta.org/feed/channel/UC8ENHE5xdFSwx71u3fDH5Xw "~The Primeagen" linux videos
-https://invidious.snopyta.org/feed/channel/UCd3dNckv1Za2coSaHGHl5aA "~TJ DeVries" linux videos
+https://yewtu.be/feed/channel/UCld68syR8Wi-GY_n4CaoJGA "~Brodie Robertson" linux videos
+https://yewtu.be/feed/channel/UC7YOGHUfC1Tb6E4pudI9STA "~Mental Outlaw" linux videos
+https://yewtu.be/feed/channel/UC8ENHE5xdFSwx71u3fDH5Xw "~The Primeagen" linux videos
+https://yewtu.be/feed/channel/UCd3dNckv1Za2coSaHGHl5aA "~TJ DeVries" linux videos
 
 "query:---Blogs---:tags # \"blogs\""
 https://thevaluable.dev/index.xml "~The Valuable Dev" blogs
 
 "query:---Games---:tags # \"games\""
-https://invidious.snopyta.org/feed/channel/UCsrxrOtjmWnH5FJhJnkTRBg "~Cubicmetre" games videos
-https://invidious.snopyta.org/feed/channel/UCqJ-Xo29CKyLTjn6z2XwYAw "~Game Maker's Toolkit" games videos
-https://invidious.snopyta.org/feed/channel/UCHSI8erNrN6hs3sUK6oONLA "~Ilmango" games videos
-https://invidious.snopyta.org/feed/channel/UCsvn_Po0SmunchJYOWpOxMg "~Videogamedunkey" games videos
+https://yewtu.be/feed/channel/UCsrxrOtjmWnH5FJhJnkTRBg "~Cubicmetre" games videos
+https://yewtu.be/feed/channel/UCqJ-Xo29CKyLTjn6z2XwYAw "~Game Maker's Toolkit" games videos
+https://yewtu.be/feed/channel/UCHSI8erNrN6hs3sUK6oONLA "~Ilmango" games videos
+https://yewtu.be/feed/channel/UCsvn_Po0SmunchJYOWpOxMg "~Videogamedunkey" games videos
 
 "query:---Videos---:tags # \"videos\""
-https://invidious.snopyta.org/feed/channel/UCYO_jab_esuFRV4b17AJtAw "~3Blue1Brown" videos
-https://invidious.snopyta.org/feed/channel/UC9-y-6csu5WGm29I7JiwpnA "~Computerphile" videos
-https://invidious.snopyta.org/feed/channel/UCR1D15p_vdP3HkrH8wgjQRw "~Internet Historian" videos
-https://invidious.snopyta.org/feed/channel/UCsXVk37bltHxD1rDPwtNM8Q "~Kurzgesagt" videos
-https://invidious.snopyta.org/feed/channel/UCoxcjq-8xIDTYp3uz647V5A "~Numberphile" videos
-https://invidious.snopyta.org/feed/channel/UCyp1gCHZJU_fGWFf2rtMkCg "~Numberphile2" videos
-https://invidious.snopyta.org/feed/channel/UCtwKon9qMt5YLVgQt1tvJKg "~Objectivity" videos
-https://invidious.snopyta.org/feed/channel/UC1yNl2E66ZzKApQdRuTQ4tw "~Sabine Hossenfelder" videos
-https://invidious.snopyta.org/feed/channel/UC6107grRI4m0o2-emgoDnAA "~Smarter every day" videos
-https://invidious.snopyta.org/feed/channel/UC8VkNBOwvsTlFjoSnNSMmxw "~Smarter every day 2" videos
-https://invidious.snopyta.org/feed/channel/UCSju5G2aFaWMqn-_0YBtq5A "~Stand-up Maths" videos
-https://invidious.snopyta.org/feed/channel/UCEIwxahdLz7bap-VDs9h35A "~Steve Mould" videos
-https://invidious.snopyta.org/feed/channel/UCj1VqrHhDte54oLgPG4xpuQ "~Stuff made here" videos
-https://invidious.snopyta.org/feed/channel/UCy0tKL1T7wFoYcxCe0xjN6Q "~Technology Connections" videos
-https://invidious.snopyta.org/feed/channel/UCBa659QWEk1AI4Tg--mrJ2A "~Tom Scott" videos
-https://invidious.snopyta.org/feed/channel/UCcmxOGYGF51T1XsqQLewGtQ "~Trash Taste" videos
-https://invidious.snopyta.org/feed/channel/UCHnyfMqiRRG1u-2MsSQLbXA "~Veritasium" videos
+https://yewtu.be/feed/channel/UCYO_jab_esuFRV4b17AJtAw "~3Blue1Brown" videos
+https://yewtu.be/feed/channel/UC9-y-6csu5WGm29I7JiwpnA "~Computerphile" videos
+https://yewtu.be/feed/channel/UCR1D15p_vdP3HkrH8wgjQRw "~Internet Historian" videos
+https://yewtu.be/feed/channel/UCsXVk37bltHxD1rDPwtNM8Q "~Kurzgesagt" videos
+https://yewtu.be/feed/channel/UCoxcjq-8xIDTYp3uz647V5A "~Numberphile" videos
+https://yewtu.be/feed/channel/UCyp1gCHZJU_fGWFf2rtMkCg "~Numberphile2" videos
+https://yewtu.be/feed/channel/UCtwKon9qMt5YLVgQt1tvJKg "~Objectivity" videos
+https://yewtu.be/feed/channel/UC1yNl2E66ZzKApQdRuTQ4tw "~Sabine Hossenfelder" videos
+https://yewtu.be/feed/channel/UC6107grRI4m0o2-emgoDnAA "~Smarter every day" videos
+https://yewtu.be/feed/channel/UC8VkNBOwvsTlFjoSnNSMmxw "~Smarter every day 2" videos
+https://yewtu.be/feed/channel/UCSju5G2aFaWMqn-_0YBtq5A "~Stand-up Maths" videos
+https://yewtu.be/feed/channel/UCEIwxahdLz7bap-VDs9h35A "~Steve Mould" videos
+https://yewtu.be/feed/channel/UCj1VqrHhDte54oLgPG4xpuQ "~Stuff made here" videos
+https://yewtu.be/feed/channel/UCy0tKL1T7wFoYcxCe0xjN6Q "~Technology Connections" videos
+https://yewtu.be/feed/channel/UCBa659QWEk1AI4Tg--mrJ2A "~Tom Scott" videos
+https://yewtu.be/feed/channel/UCcmxOGYGF51T1XsqQLewGtQ "~Trash Taste" videos
+https://yewtu.be/feed/channel/UCHnyfMqiRRG1u-2MsSQLbXA "~Veritasium" videos
