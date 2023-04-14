@@ -15,7 +15,7 @@
     icon_theme = Adwaita
     sticky_history = false
     dmenu = /usr/bin/wofi --show dmenu
-    mouse_left_click = do_action, open_url, context
+    mouse_left_click = do_action
     mouse_middle_click = context
     mouse_right_click = close_current
 
