@@ -9,8 +9,7 @@ set spoolfile = +INBOX
 set postponed = +Drafts
 set record = +Sent
 set trash = +Trash
-mailboxes =INBOX =Drafts =Junk =Sent =Trash
-mailboxes =Archive =Archive/2023 =Archive/2022 =Archive/2021 =Archive/2020 =Archive/201x
+mailboxes =INBOX =Drafts =Junk =Sent =Trash =Archive
 
 # SMTP
 set smtp_url = "smtps://frank.ebel@mailbox.org@smtp.mailbox.org:465"
@@ -23,7 +22,7 @@ set ssl_force_tls
 # options
 set realname = "Frank Ebel"
 alternates "@ebel.page" "@personalmail.page"
-set my_archive_folder="=Archive/2023"
+set my_archive_folder="=Archive"
 
 # reload keybinds
 source keybinds
