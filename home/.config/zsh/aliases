@@ -49,6 +49,7 @@ alias cm='cd "$MASTERDIR"; l'
 alias cmc='cd "$MASTERDIR/2023s"; l'
 alias cpr='cd "$PROGRAMMINGDIR"; l'
 alias ct='cd "$TEMPDIR"; l'
+alias ctd='cd "$MASTERDIR/2018w/tdide_vo"'
 alias ctor='cd "$TORRENTDIR"; l'
 
 # Pacman
