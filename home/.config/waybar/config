@@ -81,7 +81,7 @@
         "format-icons": {
             "default": "󰕾",
         },
-        "scroll-step": 5,
+        "scroll-step": 2,
         "on-click": "pavucontrol",
         "ignored-sinks": [
             "Easy Effects Sink",
