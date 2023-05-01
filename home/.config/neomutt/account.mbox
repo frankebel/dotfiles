@@ -15,7 +15,7 @@ mailboxes =INBOX =Drafts =Junk =Sent =Trash =Archive
 set smtp_url = "smtps://frank.ebel@mailbox.org@smtp.mailbox.org:465"
 set smtp_pass = `pass show mail/mailbox_pwd`
 set my_name = "Frank Ebel"
-set from = "@"
+set from = "frank@ebel.page"
 set ssl_starttls
 set ssl_force_tls
 
