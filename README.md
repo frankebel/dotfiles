@@ -23,17 +23,17 @@ stow laptop
 | Type | Name | Repository | Files & Directories |
 |---|---|---|---|
 | Operating System | [Arch Linux](https://archlinux.org/) | [GitLab](https://gitlab.archlinux.org/archlinux) | |
-| Display Server | [Xorg](https://www.x.org/wiki/) | | [x11](home/.config/x11) |
-| Window Manager | [Awesome](https://awesomewm.org/) | [GitHub](https://github.com/awesomeWM/awesome/) | [awesome](home/.config/awesome) |
+| Display Server | [Wayland](https://wayland.freedesktop.org) | [GitLab](https://gitlab.freedesktop.org/wayland/wayland) | |
+| Compositor | [Hyprland](https://hyprland.org) | [GitHub](https://github.com/hyprwm/Hyprland) | [hypr](home/.config/hypr) |
 | Shell | [Zsh](https://www.zsh.org/) | [GitHub](https://github.com/zsh-users/zsh) | [zsh](home/.config/zsh) |
 | Shell Prompt | [Starship](https://starship.rs/) | [GitHub](https://github.com/starship/starship) | [starship](home/.config/starship) |
 | Terminal Emulator | [Alacritty](https://alacritty.org/) | [GitHub](https://github.com/alacritty/alacritty) | [alacritty](home/.config/alacritty) |
-| Application Launcher | Rofi | [GitHub](https://github.com/davatorium/rofi) | [rofi](home/.config/rofi) |
+| Application Launcher | Wofi | [sourcehut](https://hg.sr.ht/~scoopta/wofi) | [wofi](home/.config/wofi) |
 | Color Scheme | [dracula](https://draculatheme.com/) | [GitHub](https://github.com/dracula/dracula-theme) | |
 | Browser | [Firefox](https://www.mozilla.org/en-US/firefox/new/) | | |
 | Editor | [Neovim](https://neovim.io/) | [GitHub](https://github.com/neovim/neovim) | [nvim](home/.config/nvim) |
 | Font | [Noto Sans Mono](https://fonts.google.com/noto/specimen/Noto+Sans+Mono) | [GitHub](https://github.com/notofonts/noto-fonts) | |
-| Image Viewer | [nsxiv](https://nsxiv.codeberg.page/) | [Codeberg](https://codeberg.org/nsxiv/nsxiv) | |
+| Image Viewer | imv | [sourcehut](https://sr.ht/~exec64/imv/) | [imv](home/.config/imv) |
 | Mail | [Neomutt](https://neomutt.org/) | [GitHub](https://github.com/neomutt/neomutt) | [neomutt](home/.config/neomutt) |
 | Mailbox Synchronization | [Isync](https://isync.sourceforge.io/) | | [isync](home/.config/isync) |
 | Media Player | [mpv](https://mpv.io/) | [GitHub](https://github.com/mpv-player/mpv) | [mpv](home/.config/mpv) |
@@ -42,7 +42,7 @@ stow laptop
 | Encryption | [GnuPG](https://gnupg.org/) | | [gnupg](home/.local/share/gnupg) |
 | Password Manager | [pass](https://www.passwordstore.org/) | [Repo](https://git.zx2c4.com/password-store/) | |
 | RSS Reader | [Newsboat](https://newsboat.org/) | | [newsboat](home/.config/newsboat) |
-| Screenshots | [Flameshot](https://flameshot.org/) | [GitHub](https://github.com/flameshot-org/flameshot) | [flameshot](home/.config/flameshot) |
+| Screenshots | grim | [sourcehut](https://git.sr.ht/~emersion/grim) | |
 
 ## Dependencies
 The following programs are necessary to use my dotfiles fully:
@@ -66,14 +66,14 @@ If possible I try to follow the
 [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html).
 For software which does not follow it, I try to export the environment variables in my [.zshenv](home/.config/zsh/.zshenv).
 
-### Awesome
-As my window manager (WM) I use [awesome](https://awesomewm.org/).
-The help menu can be opened with the key combination `super + F1`.
-For the statusbar I have scripts running which are located in [.local/bin/statusbar](home/.local/bin/statusbar).
-
 ### GnuPG
 I use [GnuPG](https://gnupg.org/) for encryption. I have a gpg-agent in the background running which caches my
 password for 24 h. The settings are under [.local/share/gnupg](home/.local/share/gnupg).
+
+### Hyprland
+Since I like the tiling workflow, I use [Hyprland](https://hyprland.org) as my
+wayland compositor.
+For the statusbar I run [Waybar](https://github.com/Alexays/Waybar).
 
 ### Isync
 I use [isync](https://isync.sourceforge.io/) to synchronize my local mailbox using IMAP.
@@ -110,4 +110,3 @@ To quickly retrieve and enter my credentials, I use [rofi-pass](https://github.c
 
 ### Scripts
 Scripts I use are in [.local/bin](home/.local/bin).
-The directory [statusbar](home/.local/bin/statusbar) contains short scripts I use within [awesome](#awesome).
