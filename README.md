@@ -27,12 +27,12 @@ stow laptop
 | Compositor | [Hyprland](https://hyprland.org) | [GitHub](https://github.com/hyprwm/Hyprland) | [hypr](home/.config/hypr) |
 | Shell | [Zsh](https://www.zsh.org/) | [GitHub](https://github.com/zsh-users/zsh) | [zsh](home/.config/zsh) |
 | Shell Prompt | [Starship](https://starship.rs/) | [GitHub](https://github.com/starship/starship) | [starship](home/.config/starship) |
-| Terminal Emulator | [Alacritty](https://alacritty.org/) | [GitHub](https://github.com/alacritty/alacritty) | [alacritty](home/.config/alacritty) |
+| Terminal Emulator | [WezTerm](https://wezfurlong.org/wezterm/index.html) | [GitHub](https://github.com/wez/wezterm) | [wezterm](home/.config/wezterm) |
 | Application Launcher | Wofi | [sourcehut](https://hg.sr.ht/~scoopta/wofi) | [wofi](home/.config/wofi) |
 | Color Scheme | [dracula](https://draculatheme.com/) | [GitHub](https://github.com/dracula/dracula-theme) | |
 | Browser | [Firefox](https://www.mozilla.org/en-US/firefox/new/) | | |
 | Editor | [Neovim](https://neovim.io/) | [GitHub](https://github.com/neovim/neovim) | [nvim](home/.config/nvim) |
-| Font | [Noto Sans Mono](https://fonts.google.com/noto/specimen/Noto+Sans+Mono) | [GitHub](https://github.com/notofonts/noto-fonts) | |
+| Font | FiraCode | [GitHub](https://github.com/tonsky/FiraCode) | |
 | Image Viewer | imv | [sourcehut](https://sr.ht/~exec64/imv/) | [imv](home/.config/imv) |
 | Mail | [Neomutt](https://neomutt.org/) | [GitHub](https://github.com/neomutt/neomutt) | [neomutt](home/.config/neomutt) |
 | Mailbox Synchronization | [Isync](https://isync.sourceforge.io/) | | [isync](home/.config/isync) |
