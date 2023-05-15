@@ -5,6 +5,9 @@
 .config-lock
 db-config*
 
+# gtk
+gtkfilechooser.ini
+
 # mpv
 watch_later
 
