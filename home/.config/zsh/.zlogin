@@ -3,7 +3,6 @@
 
 if [ "$(tty)" = "/dev/tty1" ]; then
     # Startup of programs which are independent of window manager.
-    easyeffects --gapplication-service &
     transmission-daemon &
     udiskie &
     case "$(hostnamectl hostname)" in
