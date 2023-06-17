@@ -8,3 +8,4 @@ overlay_font = Monospace:14
 [binds]
 n = next
 p = prev
+t = exec trash $imv_current_file
