@@ -1,22 +1,26 @@
 # Dotfiles
 
 ## About
-This repository contains my personal configuration files (dotfiles) which I manage with
+This repository contains my personal configuration files (dotfiles) which I mainly manage with
 [GNU Stow](https://www.gnu.org/software/stow/). Feel free to be inspired by them and use parts of it.
-The color scheme I use is [dracula](https://draculatheme.com/).
+The color scheme I use is [dracula](https://draculatheme.com).
 
 - [home](home) contains dotfiles for my home directory.
-- [laptop](laptop) contains dotfiles specific for my laptop setup.
 
 ## Installation and Setup
 ```sh
 git clone https://github.com/frankebel/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-stow home
+./install.sh
 ```
-optional:
+Suggestions when asked for packages:
+- jack: `pipewire-jack`
+- pipewire-session-manager: `wireplumber`
+- vulkan-driver: on AMD use `vulkan-radeon`
+
+update dotfiles in home directory after basic installation:
 ```sh
-stow laptop
+stow home
 ```
 
 ## Software I use
@@ -106,7 +110,7 @@ I created an install script [archinstall](https://github.com/frankebel/archinsta
 I use [pass](https://www.passwordstore.org/) and [pass-otp](https://github.com/tadfisher/pass-otp) to store
 and manage my passwords. It is set up as a git repository and each account lives inside an `gpg` encrypted file
 (see [gnupg](#gnupg)) which makes version control very easy.
-To quickly retrieve and enter my credentials, I use [rofi-pass](https://github.com/carnager/rofi-pass).
+To quickly retrieve and enter my credentials, I use [tessen](https://github.com/ayushnix/tessen).
 
 ### Scripts
 Scripts I use are in [.local/bin](home/.local/bin).
