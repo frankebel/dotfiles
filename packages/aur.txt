@@ -1,0 +1,9 @@
+dracula-gtk-theme
+firefox-tridactyl-native
+mullvad-vpn
+pandoc-bin
+paru
+shellcheck-bin
+tessen
+vscodium-bin
+waybar-hyprland

@@ -1,0 +1,2 @@
+libva-mesa-driver
+mesa-vdpau
