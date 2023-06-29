@@ -53,7 +53,7 @@ alias ctor='cd "$TORRENTDIR"; l'
 
 # Pacman
 alias aurs='paru -Slq | fzf --preview "paru -Si {}" | xargs -ro paru -S'
-alias explicit-installed='pacman -Qqen | grep -vx "$(pacman -Qqg texlive-most)"'
+alias explicit-installed='pacman -Qqen | grep -vx "$(pacman -Qqg texlive)"'
 alias pacq='pacman -Qq | fzf --preview "pacman -Qi {}" | xargs -ro pacman -Qi'
 alias pacr='pacman -Qqe | fzf --preview "pacman -Qi {}" | xargs -ro sudo pacman -Rns'
 alias pacs='pacman -Slq | fzf --preview "pacman -Si {}" | xargs -ro sudo pacman -S'
