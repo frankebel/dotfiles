@@ -5,7 +5,8 @@ This repository contains my personal configuration files (dotfiles) which I main
 [GNU Stow](https://www.gnu.org/software/stow/). Feel free to be inspired by them and use parts of it.
 The color scheme I use is [dracula](https://draculatheme.com).
 
-- [home](home) contains dotfiles for my home directory.
+- [home](home) contains dotfiles for my `$HOME` directory.
+- [etc](etc) contains dotfiles for my `/etc` directory.
 
 ## Installation and Setup
 ```sh
@@ -18,8 +19,9 @@ Suggestions when asked for packages:
 - pipewire-session-manager: `wireplumber`
 - vulkan-driver: on AMD use `vulkan-radeon`
 
-update dotfiles in home directory after basic installation:
+### Only update home dotfiles
 ```sh
+cd ~/.dotfiles
 stow home
 ```
 
@@ -94,8 +96,7 @@ For authentication I use [pass](#pass).
 
 ### Newsboat
 [Newsboat](https://newsboat.org/) is my terminal RSS Reader of choice.
-With `, + b` I can open links inside my browser;
-with `, + v` inside my video player [mpv](https://mpv.io/).
+With `, + v` I can open links inside my video player [mpv](https://mpv.io).
 
 ### Neovim
 I use [Neovim](https://neovim.io/) as my text editor.
