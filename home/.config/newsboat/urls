@@ -1,49 +1,49 @@
 "query:Unread Articles:unread = \"yes\""
 
 # blogs
-https://thevaluable.dev/index.xml "~The Valuable Dev" blogs
+https://thevaluable.dev/index.xml blogs # The Valuable Dev
 
 # games
-https://www.youtube.com/feeds/videos.xml?channel_id=UCsrxrOtjmWnH5FJhJnkTRBg "~Cubicmetre" games videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCqJ-Xo29CKyLTjn6z2XwYAw "~Game Maker's Toolkit" games videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCHSI8erNrN6hs3sUK6oONLA "~Ilmango" games videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCsvn_Po0SmunchJYOWpOxMg "~Videogamedunkey" games videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsrxrOtjmWnH5FJhJnkTRBg games videos # cubicmetre
+https://www.youtube.com/feeds/videos.xml?channel_id=UCqJ-Xo29CKyLTjn6z2XwYAw games videos # Game Maker's Toolkit
+https://www.youtube.com/feeds/videos.xml?channel_id=UCHSI8erNrN6hs3sUK6oONLA games videos # ilmango
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsvn_Po0SmunchJYOWpOxMg games videos # Videogamedunkey
 
 # hardware
-https://www.youtube.com/feeds/videos.xml?channel_id=UCGsaijjOJshS2_ZmMNZgS-g "~der8auer" hardware videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UChIs72whgZI9w6d6FhwGGHA "~Gamers Nexus" hardware videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCgeS8J9W62B-uLBgzp14BtQ "~GN Extras" hardware videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCI8iQa1hv7oV_Z8D35vVuSg "~Hardware Unboxed" hardware videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCDKLZBNM9XZ7pHPZF9D8xDQ "~Monitors Unboxed" hardware videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCRPdsCVuH53rcbTcEkuY4uQ "~Moores Law is dead" hardware videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UCGsaijjOJshS2_ZmMNZgS-g hardware videos # der8auer
+https://www.youtube.com/feeds/videos.xml?channel_id=UChIs72whgZI9w6d6FhwGGHA hardware videos # Gamers Nexus
+https://www.youtube.com/feeds/videos.xml?channel_id=UCgeS8J9W62B-uLBgzp14BtQ hardware videos # GN Extras
+https://www.youtube.com/feeds/videos.xml?channel_id=UCI8iQa1hv7oV_Z8D35vVuSg hardware videos # Hardware Unboxed
+https://www.youtube.com/feeds/videos.xml?channel_id=UCDKLZBNM9XZ7pHPZF9D8xDQ hardware videos # Monitors Unboxed
+https://www.youtube.com/feeds/videos.xml?channel_id=UCRPdsCVuH53rcbTcEkuY4uQ hardware videos # Moore's Law is dead
 
 # linux
 https://www.archlinux.org/feeds/news/ linux
-https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA "~Brodie Robertson" linux videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA "~Mental Outlaw" linux videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UC8ENHE5xdFSwx71u3fDH5Xw "~The Primeagen" linux videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCd3dNckv1Za2coSaHGHl5aA "~TJ DeVries" linux videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA linux videos # Brodie Robertson
+https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA linux videos # Mental Outlaw
+https://www.youtube.com/feeds/videos.xml?channel_id=UC8ENHE5xdFSwx71u3fDH5Xw linux videos # The Primeagen
+https://www.youtube.com/feeds/videos.xml?channel_id=UCd3dNckv1Za2coSaHGHl5aA linux videos # TJ DeVries
 
 # otaku
-https://www.youtube.com/feeds/videos.xml?channel_id=UCRdyjE3lE7dtCOxU4rTsXVA "Tekking101" otaku videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCcmxOGYGF51T1XsqQLewGtQ "~Trash Taste" otaku videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UCRdyjE3lE7dtCOxU4rTsXVA otaku videos # Tekking101
+https://www.youtube.com/feeds/videos.xml?channel_id=UCcmxOGYGF51T1XsqQLewGtQ otaku videos # Trash Taste
 
 # videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw "~3Blue1Brown" videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UC9-y-6csu5WGm29I7JiwpnA "~Computerphile" videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCR1D15p_vdP3HkrH8wgjQRw "~Internet Historian" videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCsXVk37bltHxD1rDPwtNM8Q "~Kurzgesagt" videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCoxcjq-8xIDTYp3uz647V5A "~Numberphile" videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCyp1gCHZJU_fGWFf2rtMkCg "~Numberphile2" videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCtwKon9qMt5YLVgQt1tvJKg "~Objectivity" videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UC1yNl2E66ZzKApQdRuTQ4tw "~Sabine Hossenfelder" videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UC6107grRI4m0o2-emgoDnAA "~Smarter every day" videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UC8VkNBOwvsTlFjoSnNSMmxw "~Smarter every day 2" videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCCWeRTgd79JL0ilH0ZywSJA "~AlphaPhoenix" videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCSju5G2aFaWMqn-_0YBtq5A "~Stand-up Maths" videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCEIwxahdLz7bap-VDs9h35A "~Steve Mould" videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCj1VqrHhDte54oLgPG4xpuQ "~Stuff made here" videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCy0tKL1T7wFoYcxCe0xjN6Q "~Technology Connections" videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCBa659QWEk1AI4Tg--mrJ2A "~Tom Scott" videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCHnyfMqiRRG1u-2MsSQLbXA "~Veritasium" videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCMOqf8ab-42UUQIdVoKwjlQ "~Practical Engineering" videos
+https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw videos # 3Blue1Brown
+https://www.youtube.com/feeds/videos.xml?channel_id=UC9-y-6csu5WGm29I7JiwpnA videos # Computerphile
+https://www.youtube.com/feeds/videos.xml?channel_id=UCoxcjq-8xIDTYp3uz647V5A videos # Numberphile
+https://www.youtube.com/feeds/videos.xml?channel_id=UCyp1gCHZJU_fGWFf2rtMkCg videos # Numberphile2
+https://www.youtube.com/feeds/videos.xml?channel_id=UCtwKon9qMt5YLVgQt1tvJKg videos # Objectivity
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsXVk37bltHxD1rDPwtNM8Q videos # Kurzgesagt
+https://www.youtube.com/feeds/videos.xml?channel_id=UC1yNl2E66ZzKApQdRuTQ4tw videos # Sabine Hossenfelder
+https://www.youtube.com/feeds/videos.xml?channel_id=UC6107grRI4m0o2-emgoDnAA videos # Smarter Every Day
+https://www.youtube.com/feeds/videos.xml?channel_id=UC8VkNBOwvsTlFjoSnNSMmxw videos # Smarter Every Day 2
+https://www.youtube.com/feeds/videos.xml?channel_id=UCCWeRTgd79JL0ilH0ZywSJA videos # AlphaPhoenix
+https://www.youtube.com/feeds/videos.xml?channel_id=UCSju5G2aFaWMqn-_0YBtq5A videos # Stand-up Maths
+https://www.youtube.com/feeds/videos.xml?channel_id=UCEIwxahdLz7bap-VDs9h35A videos # Steve Mould
+https://www.youtube.com/feeds/videos.xml?channel_id=UCj1VqrHhDte54oLgPG4xpuQ videos # Stuff Made Here
+https://www.youtube.com/feeds/videos.xml?channel_id=UCy0tKL1T7wFoYcxCe0xjN6Q videos # Technology Connections
+https://www.youtube.com/feeds/videos.xml?channel_id=UCBa659QWEk1AI4Tg--mrJ2A videos # Tom Scott
+https://www.youtube.com/feeds/videos.xml?channel_id=UCHnyfMqiRRG1u-2MsSQLbXA videos # Veritasium
+https://www.youtube.com/feeds/videos.xml?channel_id=UCMOqf8ab-42UUQIdVoKwjlQ videos # Practical Engineering
+https://www.youtube.com/feeds/videos.xml?channel_id=UCR1D15p_vdP3HkrH8wgjQRw videos # Internet Historian
