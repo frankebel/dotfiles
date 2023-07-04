@@ -1,5 +1,6 @@
 -- Completion engine
 -- https://github.com/hrsh7th/nvim-cmp
+-- https://github.com/L3MON4D3/LuaSnip
 
 return {
   "hrsh7th/nvim-cmp",

@@ -29,7 +29,6 @@ vim.opt.splitbelow = true -- Splitting window below current one
 vim.opt.splitright = true -- Splitting window right of current one
 vim.opt.tabstop = 4 -- Number of spaces <Tab> counts for
 vim.opt.termguicolors = true -- Enable 24-bit RGB color
-vim.opt.timeoutlen = 300 -- Time in ms to wait for mapped sequence to complete
 vim.opt.undofile = true -- Save undo history
 vim.opt.wildmode = "longest:full,full" -- Completion mode
 vim.opt.wrap = false -- Line wrap

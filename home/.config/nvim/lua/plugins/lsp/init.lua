@@ -31,12 +31,6 @@ return {
             runtime = { version = "LuaJIT" },
             diagnostics = {
               globals = {
-                -- awesomewm
-                "awesome",
-                "client",
-                "root",
-                "screen",
-                "tag",
                 -- neovim
                 "vim",
               },
