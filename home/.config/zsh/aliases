@@ -78,6 +78,7 @@ tsmr() {
 alias cal='cal -m'
 alias cdcb='cd "$(wl-paste)"'
 alias fd='fd --follow --hidden'
+alias flexget='~/data/.environments/flexget/bin/flexget'
 alias ftree='fd | tree --fromfile'
 alias i='imv'
 alias l='ls -lAh --time-style=long-iso'
