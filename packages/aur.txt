@@ -1,6 +1,6 @@
 dracula-gtk-theme
 firefox-tridactyl-native
-mullvad-vpn
+mullvad-vpn-bin
 pandoc-bin
 paru
 shellcheck-bin
