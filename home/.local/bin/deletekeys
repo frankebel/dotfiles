@@ -2,9 +2,9 @@
 # Delete private keys which should not stay on device.
 
 # List of keys I want to delete.
-git_certificate='FE4A577C1915B918A1ABC5239F3A7537D173DEBF.key'
-git_desktop='E83F60B78755DBFE469AAA1DC7C1CA450B842274.key'
-git_laptop='28B8E38CEC834526F05470522FD9DA69091AAB8D.key'
+frank_certificate='FE4A577C1915B918A1ABC5239F3A7537D173DEBF.key'
+frank_desktop='E83F60B78755DBFE469AAA1DC7C1CA450B842274.key'
+frank_laptop='28B8E38CEC834526F05470522FD9DA69091AAB8D.key'
 pass_certificate='7C551C488C40E71141061D7AC9C4C2F2FC54D08E.key'
 
 check_and_delete() {
@@ -15,14 +15,14 @@ check_and_delete() {
 }
 
 cd "$GNUPGHOME/private-keys-v1.d" || exit
-check_and_delete "$git_certificate"
+check_and_delete "$frank_certificate"
 check_and_delete "$pass_certificate"
 case $(hostnamectl hostname) in
     *desktop*)
-        check_and_delete "$git_laptop"
+        check_and_delete "$frank_laptop"
         ;;
     *laptop*)
-        check_and_delete "$git_desktop"
+        check_and_delete "$frank_desktop"
         ;;
 esac
-ls -l
+gpg --list-secret-keys
