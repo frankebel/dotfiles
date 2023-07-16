@@ -8,7 +8,7 @@
   "cmp_luasnip": { "branch": "master", "commit": "18095520391186d634a0045dacaa346291096566" },
   "dracula.nvim": { "branch": "main", "commit": "9db13329e205aaee089e25be8113bd1faeca674e" },
   "gitsigns.nvim": { "branch": "main", "commit": "5a04466685008f29c71fa5ec25d421deb1c83fea" },
-  "indent-blankline.nvim": { "branch": "master", "commit": "73640233cca0da8e01aced8c1f9e63fd892128b7" },
+  "indent-blankline.nvim": { "branch": "master", "commit": "b7aa0aed55887edfaece23f7b46ab22232fc8741" },
   "lazy.nvim": { "branch": "main", "commit": "14d76aac4bd3ff07c1fca074c210f28f766a931e" },
   "lspkind.nvim": { "branch": "master", "commit": "57610d5ab560c073c465d6faf0c19f200cb67e6e" },
   "lualine.nvim": { "branch": "master", "commit": "05d78e9fd0cdfb4545974a5aa14b1be95a86e9c9" },
