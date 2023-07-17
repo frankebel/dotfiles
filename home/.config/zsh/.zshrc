@@ -20,20 +20,20 @@ zle-line-init() {
 zle -N zle-keymap-select
 zle -N zle-line-init
 
-# Directory stack
+# Changing Directories
 # View stack with `dirs -v`.
 # Navigate with `cd -n` with "n" being the number.
 DIRSTACKSIZE="20"
-setopt autopushd
-setopt pushdignoredups
-setopt pushdminus
-setopt pushdsilent
-setopt pushdtohome
+setopt AUTO_CD
+setopt AUTO_PUSHD
+setopt PUSHD_IGNORE_DUPS
+setopt PUSHD_MINUS
+setopt PUSHD_SILENT
+setopt PUSHD_TO_HOME
 
 # Completion
 autoload -U compinit
-setopt automenu
-setopt magicequalsubst
+setopt AUTO_MENU
 zmodload zsh/complist
 zstyle ':completion:*' menu select
  # order of completion
@@ -49,19 +49,27 @@ zstyle ':completion:*:*:*:*:warnings' format ' %F{red}-- no matches found --%f'
 compinit
 _comp_options+=(globdots) # include hidden files
 
-# Editor
-# Edit directly in "$EDITOR" by pressing 'v' in normal mode.
-autoload -Uz edit-command-line
-zle -N edit-command-line
-bindkey -M vicmd 'v' edit-command-line
+# Expansion and Globbing
+setopt MAGIC_EQUAL_SUBST
 
 # History
 [ -d "$XDG_STATE_HOME/zsh" ] || mkdir "$XDG_STATE_HOME/zsh"
 HISTFILE="$XDG_STATE_HOME/zsh/history"
 HISTSIZE=10000
 SAVEHIST=10000
-setopt incappendhistory
-setopt histignoredups
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+zshaddhistory() { whence ${${(z)1}[1]} >| /dev/null || return 1 } # `man zshmisc`
+
+# Zle
+setopt NO_BEEP
+
+# Editor
+# Edit directly in "$EDITOR" by pressing 'v' in normal mode.
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd 'v' edit-command-line
 
 # Keybinds
 bindkey -v # vi mode
@@ -83,10 +91,6 @@ source "$plugindir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$plugindir/zsh-autosuggestions/zsh-autosuggestions.zsh"
 bindkey "^y" autosuggest-accept
 unset plugindir
-
-# Uncategorized
-setopt nobeep
-setopt autocd
 
 # fzf
 source '/usr/share/fzf/completion.zsh'
