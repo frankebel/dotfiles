@@ -10,6 +10,7 @@
     c = commit
     can = commit --amend --no-edit
     cb = !git branch | grep -v '^*' | fzf --no-multi --preview 'git lo --color=always {1}' | xargs git checkout
+    conf = !git config -l | grep -v '^alias'
     d = diff
     df = !git diff --name-only | fzf --preview 'git diff {} | delta' | xargs git diff
     ds = diff --staged
@@ -17,6 +18,7 @@
     lf = !fd --hidden . | fzf --preview 'git {} | delta' | xargs git log
     ln = log --name-only
     lo = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    logp = log --patch
     pl = pull
     ps = push
     rc = rebase --continue
