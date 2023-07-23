@@ -1,8 +1,9 @@
 #!/bin/sh
 # Aliases for often used commands.
 
-# Suffix alias
 # man zshbuiltins
+alias -g C='| wl-copy'
+alias -g P='"$(wl-paste)"'
 alias -s git='git clone'
 alias -s jpg=imv
 alias -s lua='$EDITOR'
@@ -77,7 +78,7 @@ tsmr() {
 
 # Uncategorized
 alias cal='cal -m'
-alias cdcb='cd "$(wl-paste)"'
+alias cdp='cd P'
 alias fd='fd --follow --hidden'
 alias flexget='~/data/.environments/flexget/bin/flexget'
 alias ftree='fd | tree --fromfile'
@@ -86,6 +87,7 @@ alias l='ls -lAh --time-style=long-iso'
 alias m='neomutt'
 alias ms='mailsync'
 alias msl='while true; do mailsync; sleep 1; done'
+alias pwdc='pwd C'
 alias shck='shellcheck'
 alias tree='tree -a -I .git' # ignore .git directory
 alias uumount='udiskie-umount'
