@@ -96,7 +96,7 @@ For authentication I use [pass](#pass).
 
 ### Newsboat
 [Newsboat](https://newsboat.org/) is my terminal RSS Reader of choice.
-With `, + v` I can open links inside my video player [mpv](https://mpv.io).
+With `macro + v` I can open links inside my video player [mpv](https://mpv.io).
 
 ### Neovim
 I use [Neovim](https://neovim.io/) as my text editor.
