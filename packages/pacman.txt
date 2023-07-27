@@ -31,7 +31,6 @@ lynx
 man-db
 mpv
 ncdu
-neofetch
 neomutt
 neovim
 networkmanager
