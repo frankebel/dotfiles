@@ -7,6 +7,9 @@
 " Theme
 set theme dark
 
+" Options
+set newtab about:blank
+
 " Set search engines
 set searchurls.aur https://aur.archlinux.org/packages?K=%s
 set searchurls.aw https://wiki.archlinux.org/index.php?title=Special%3ASearch&search=%s
