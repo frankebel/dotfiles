@@ -2,6 +2,15 @@ local function map(mode, lhs, rhs, desc)
   vim.keymap.set(mode, lhs, rhs, { desc = desc })
 end
 
+local function toggle_colorcolumn()
+  local value = vim.inspect(vim.opt.colorcolumn:get())
+  if value == "{}" then
+    vim.opt.colorcolumn = { "80", "100", "120" }
+  else
+    vim.opt.colorcolumn = {}
+  end
+end
+
 -- Navigate buffers
 map("n", "<S-l>", "<cmd>bnext<cr>", "Next buffer")
 map("n", "<S-h>", "<cmd>bprevious<cr>", "Previous buffer")
@@ -41,6 +50,7 @@ map("v", "p", '"_dP', "Paste without yanking")
 map("n", "<leader>bd", "<cmd>bn<cr><cmd>bd#<cr>", "Delete current buffer")
 
 -- Toggle options
+map("n", "<leader>oc", toggle_colorcolumn, "Toggle colorcolumn")
 map("n", "<leader>or", "<cmd>set invrelativenumber<cr>", "Toggle relativenumber")
 map("n", "<leader>os", "<cmd>set invspell<cr>", "Toggle spell")
 map("n", "<leader>ow", "<cmd>set invwrap<cr>", "Toggle wrap")
