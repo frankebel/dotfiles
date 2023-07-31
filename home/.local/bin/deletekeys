@@ -5,6 +5,7 @@
 frank_certificate='FE4A577C1915B918A1ABC5239F3A7537D173DEBF.key'
 frank_desktop='E83F60B78755DBFE469AAA1DC7C1CA450B842274.key'
 frank_laptop='28B8E38CEC834526F05470522FD9DA69091AAB8D.key'
+frank_uni='F3BEE7381F7B95146098B22FBF27F264A152A2AA.key'
 pass_certificate='7C551C488C40E71141061D7AC9C4C2F2FC54D08E.key'
 
 check_and_delete() {
@@ -20,9 +21,15 @@ check_and_delete "$pass_certificate"
 case $(hostnamectl hostname) in
     *desktop*)
         check_and_delete "$frank_laptop"
+        check_and_delete "$frank_uni"
         ;;
     *laptop*)
         check_and_delete "$frank_desktop"
+        check_and_delete "$frank_uni"
+        ;;
+    *tuwien*)
+        check_and_delete "$frank_desktop"
+        check_and_delete "$frank_laptop"
         ;;
 esac
 gpg --list-secret-keys
