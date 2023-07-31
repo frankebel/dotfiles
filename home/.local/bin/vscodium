@@ -1,4 +1,0 @@
-#!/bin/sh
-# Launch vscodium without cluttering HOME
-HOME="$XDG_DATA_HOME"
-exec /usr/bin/vscodium "$@"

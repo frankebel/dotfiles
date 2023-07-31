@@ -1,0 +1,4 @@
+#!/bin/sh
+# Launch VSCode without cluttering HOME
+HOME="$XDG_DATA_HOME"
+exec /usr/bin/code "$@"

@@ -6,5 +6,4 @@ pandoc-bin
 paru
 shellcheck-bin
 tessen
-vscodium-bin
 waybar-hyprland
