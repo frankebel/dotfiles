@@ -13,6 +13,7 @@ return {
     "hrsh7th/cmp-nvim-lua",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
+    "kdheepak/cmp-latex-symbols",
     "saadparwaiz1/cmp_luasnip",
     -- pictograms
     "onsails/lspkind.nvim",
@@ -46,6 +47,7 @@ return {
             nvim_lsp = "[LSP]",
             nvim_lua = "[LUA]",
             luasnip = "[SNIP]",
+            latex_symbols = "[GREEK]",
             buffer = "[BUF]",
             path = "[PATH]",
           },
@@ -55,6 +57,7 @@ return {
         { name = "nvim_lsp" },
         { name = "nvim_lua" },
         { name = "luasnip" },
+        { name = "latex_symbols" },
         { name = "buffer" },
         { name = "path" },
       },
