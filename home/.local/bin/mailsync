@@ -12,7 +12,7 @@ if [ ! -d "$(dirname "$lastrun")" ]; then
 fi
 
 # Sync mail.
-mbsync -c "$config" -a
+mbsync -c "$config" mailbox
 
 # Check for new mails and send notification if appropiate.
 for account in "$maildir"/*; do
