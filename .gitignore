@@ -8,6 +8,9 @@ db-config*
 # gtk
 gtkfilechooser.ini
 
+# Julia
+julia-release
+
 # mpv
 watch_later
 

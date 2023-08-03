@@ -1,9 +1,12 @@
 #!/bin/sh
 # vim: filetype=sh
 
-# Add `$HOME/.local/bin` to `PATH`
-[ "${PATH#"$HOME/.local/bin"}" = "$PATH" ] \
-    && export PATH="$HOME/.local/bin:$PATH"
+# Set PATH by editing `path` variable.
+# See <https://zsh.sourceforge.io/Guide/zshguide02.html#l24>.
+# shellcheck disable=SC3044
+typeset -U path
+# shellcheck disable=SC2206,SC3030
+path=(~/.local/bin ~/data/.environments/juliaup/bin $path)
 
 # XDG Base Directory Specification
 # https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
