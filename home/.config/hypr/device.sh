@@ -8,7 +8,7 @@ case "$(hostnamectl hostname)" in
         blueman-applet &
         ;;
     *tuwien*)
-        hyprctl keyword input:kb_layout us,us
-        hyprctl keyword input:kb_variant colemak,altgr-intl
+        hyprctl keyword input:kb_layout us,de
+        hyprctl keyword input:kb_variant colemak,
         ;;
 esac
