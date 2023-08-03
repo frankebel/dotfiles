@@ -24,6 +24,13 @@ return {
       local lspconfig = require("lspconfig")
       local lsp_conf = require("plugins.lsp.config")
 
+      -- Julia
+      lspconfig.julials.setup({
+        capabilities = lsp_conf.capabilities,
+        flags = lsp_conf.lsp_flags,
+        on_attach = lsp_conf.on_attach,
+      })
+
       -- Lua
       lspconfig.lua_ls.setup({
         settings = {
