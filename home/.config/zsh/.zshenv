@@ -62,6 +62,10 @@ export FZF_CTRL_T_OPTS="--preview '[ -f {} ] \
 export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND --type d"
 export FZF_ALT_C_OPTS="--preview 'tree -a --gitignore -C -L 1 {}'"
 
+# Julia
+JULIA_NUM_THREADS="$(nproc)"
+export JULIA_NUM_THREADS
+
 # Uncategorized
 export MANPAGER='nvim +Man!'        # use neovim as manpager
 export QT_QPA_PLATFORMTHEME="qt5ct" # Configure Qt 5 applications without DE
