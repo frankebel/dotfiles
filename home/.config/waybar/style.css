@@ -18,11 +18,10 @@ button {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: @selection;
+    color: @purple;
 }
 
 #workspaces button.active {
-    color: @purple;
     background-color: @selection;
 }
 
@@ -37,7 +36,6 @@ button {
 
 #battery,
 #clock,
-#network,
 #pulseaudio,
 #tray,
 #workspaces {

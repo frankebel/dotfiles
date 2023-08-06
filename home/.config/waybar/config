@@ -9,30 +9,17 @@
     "modules-left": [
         "wlr/workspaces",
     ],
-    // "modules-center": [],
+    "modules-center": [
+        "clock",
+    ],
     "modules-right": [
         "tray",
         "pulseaudio",
-        "network",
         "battery",
-        "clock",
     ],
-    // Modules configuration
-    // "wlr/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+    "wlr/workspaces": {
+        "all-outputs": true,
+    },
     "tray": {
         // "icon-size": 21,
         "spacing": 10,
@@ -64,14 +51,6 @@
         "format-full": "{icon}",
         "format-time": "{H}:{m}",
         "format-icons": [" ", " ", " ", " ", " "],
-    },
-    "network": {
-        "format-ethernet": "", // No icon on ethernet
-        "format-wifi": "󰖩 {signalStrength} %",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "󰖪 ",
-        "tooltip-format-wifi": "{essid}",
-        "tooltip-format-disconnected": "no connection",
     },
     "pulseaudio": {
         "format": "<big>{icon}</big> {volume} % | {format_source}",
