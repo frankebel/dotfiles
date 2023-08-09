@@ -23,6 +23,11 @@ alias grep='grep --color=auto'
 alias ip='ip -color=auto'
 alias ls='ls --color=auto'
 
+# fd
+alias fd1='fd --exact-depth 1'
+alias fd='fd --follow --hidden'
+alias ftree='fd | tree --fromfile'
+
 # Git
 alias g='git'
 alias grt='cd "$(git rev-parse --show-toplevel)"'
@@ -81,9 +86,7 @@ tsmr() {
 # Uncategorized
 alias cal='cal -m'
 alias cdp='cd P'
-alias fd='fd --follow --hidden'
 alias flexget='~/data/.environments/flexget/bin/flexget'
-alias ftree='fd | tree --fromfile'
 alias i='imv'
 alias l='ls -lAh --time-style=long-iso'
 alias m='neomutt'
