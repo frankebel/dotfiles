@@ -53,8 +53,8 @@
         "format-icons": [" ", " ", " ", " ", " "],
     },
     "pulseaudio": {
-        "format": "<big>{icon}</big> {volume} % | {format_source}",
-        "format-muted": "<big>󰖁</big> | {format_source}",
+        "format": "{format_source} | <big>{icon}</big> {volume} %",
+        "format-muted": "{format_source} | <big>󰖁</big>",
         "format-source": "<big>󰍬</big> {volume} %",
         "format-source-muted": "<big>󰍭</big>",
         "format-icons": {
