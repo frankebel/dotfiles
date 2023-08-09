@@ -23,6 +23,18 @@ alias grep='grep --color=auto'
 alias ip='ip -color=auto'
 alias ls='ls --color=auto'
 
+# Often used directories
+alias cadv='cd $PROGRAMMINGDIR/advent-of-code-2022'
+alias cda='cd "$DATADIR"; l'
+alias cdf='cd "$DOTDIR"; l'
+alias cf='cd "$MASTERDIR/projektarbeit2/fermions"; l'
+alias cm='cd "$MASTERDIR"; l'
+alias cmc='cd "$MASTERDIR/2023s"; l'
+alias cpr='cd "$PROGRAMMINGDIR"; l'
+alias cpro='cd "$MASTERDIR/projektarbeit2/projectwork"; l'
+alias ct='cd "$TEMPDIR"; l'
+alias ctor='cd "$TORRENTDIR"; l'
+
 # fd
 alias fd1='fd --exact-depth 1'
 alias fd='fd --follow --hidden'
@@ -46,18 +58,6 @@ alias rm='rm -Iv'
 # Neovim
 alias sv='sudoedit'
 alias v='$EDITOR'
-
-# Often used directories
-alias cadv='cd $PROGRAMMINGDIR/advent-of-code-2022'
-alias cda='cd "$DATADIR"; l'
-alias cdf='cd "$DOTDIR"; l'
-alias cf='cd "$MASTERDIR/projektarbeit2/fermions"; l'
-alias cm='cd "$MASTERDIR"; l'
-alias cmc='cd "$MASTERDIR/2023s"; l'
-alias cpr='cd "$PROGRAMMINGDIR"; l'
-alias cpro='cd "$MASTERDIR/projektarbeit2/projectwork"; l'
-alias ct='cd "$TEMPDIR"; l'
-alias ctor='cd "$TORRENTDIR"; l'
 
 # Pacman
 alias aurs='paru -Slq | fzf --preview "paru -Si {}" | xargs -ro paru -S'
