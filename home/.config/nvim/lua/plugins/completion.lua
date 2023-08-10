@@ -55,7 +55,7 @@ return {
             nvim_lsp = "[LSP]",
             nvim_lua = "[LUA]",
             luasnip = "[SNIP]",
-            latex_symbols = "[GREEK]",
+            latex_symbols = "[LATEX]",
             buffer = "[BUF]",
             path = "[PATH]",
           },
