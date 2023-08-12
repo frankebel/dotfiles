@@ -1,4 +1,4 @@
--- Telescope
+-- Telescope is a highly extendable fuzzy finder over lists.
 -- https://github.com/nvim-telescope/telescope.nvim
 
 return {

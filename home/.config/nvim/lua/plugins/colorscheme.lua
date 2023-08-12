@@ -1,4 +1,4 @@
--- Colorscheme dracula
+-- Colorscheme dracula.
 -- https://github.com/Mofiqul/dracula.nvim
 
 return {

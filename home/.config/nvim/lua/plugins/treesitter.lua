@@ -1,4 +1,6 @@
--- Treesitter
+-- Tree-sitter is a parser generator tool and an incremental parsing library.
+-- It can build a concrete syntax tree for a source file and efficiently update
+-- the syntax tree as the source file is edited.
 -- https://github.com/nvim-treesitter/nvim-treesitter
 
 return {
