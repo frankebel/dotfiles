@@ -8,21 +8,28 @@ schedules:
     interval:
       minutes: 5
 tasks:
-  Anime:
+  subsplease:
     rss: https://subsplease.org/rss/?t&r=1080
     series:
-      - Birdie Wing - Golf Girls' Story
-      - Jigokuraku
-      - Kimetsu no Yaiba - Katanakaji no Sato-hen
-      - Kono Subarashii Sekai ni Bakuen wo!
-      - Kubo-san wa Mob wo Yurusanai
-      - Mashle
-      - Mobile Suit Gundam - The Witch from Mercury
-      - Oshi no Ko
-      - Ousama Ranking - Yuuki no Takarabako
-      - Skip to Loafer
-      - Vinland Saga S2
-      - Yamada-kun to Lv999 no Koi wo Suru
+      - Dark Gathering
+      - Helck
+      - Horimiya - Piece
+      - Jujutsu Kaisen
+      - Masamune-kun no Revenge S2
+      - Mushoku Tensei S2
+      - Nanatsu no Maken ga Shihai suru
+      - Ryza no Atelier
+      - Undead Girl Murder Farce
+      - Zom 100 - Zombie ni Naru made ni Shitai 100 no Koto
+    transmission:
+      host: localhost
+      port: 9091
+      username: transmission
+      password: transmission
+  erai-raws:
+    rss: https://nyaa.si/?page=rss&q=1080p&c=0_0&f=0&u=Erai-raws
+    series:
+      - Watashi no Shiawase na Kekkon
     transmission:
       host: localhost
       port: 9091
