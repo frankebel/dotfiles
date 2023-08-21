@@ -1,0 +1,22 @@
+#!/bin/sh
+# If a workspace is active on a different monitor when changing to it,
+# move it to current monitor.
+
+monitor_focused="$(hyprctl -j monitors \
+    | jq -r '.[] | select(.focused == true).name')"
+monitor_workspace="$(hyprctl -j workspaces \
+    | jq -r --arg workspace "$1" \
+        '.[] | select(.id == ($workspace|tonumber)).monitor')"
+workspace_other_monitor="$(hyprctl -j monitors \
+    | jq -r --arg monitor "$monitor_workspace" \
+        '.[] | select(.name == $monitor).activeWorkspace.id')"
+
+if [ "$monitor_focused" != "$monitor_workspace" ] \
+    && [ "$workspace_other_monitor" = "$1" ]; then
+    hyprctl dispatch swapactiveworkspaces "$monitor_focused" "$monitor_workspace"
+    # Not sure why, but necessary for correct focus.
+    hyprctl dispatch focusmonitor "$monitor_workspace"
+    hyprctl dispatch focusmonitor "$monitor_focused"
+fi
+hyprctl dispatch moveworkspacetomonitor "$1" "$monitor_focused"
+hyprctl dispatch workspace "$1"

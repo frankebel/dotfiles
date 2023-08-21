@@ -24,6 +24,7 @@ hyprland
 imv
 isync
 jdk-openjdk
+jq
 libreoffice-fresh
 linux
 linux-firmware

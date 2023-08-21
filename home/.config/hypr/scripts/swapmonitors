@@ -1,0 +1,6 @@
+#!/bin/sh
+# Swap workspaces between monitors.
+
+hyprctl dispatch -- swapactiveworkspaces "$1" "$2"
+hyprctl dispatch -- focusmonitor -1
+hyprctl dispatch -- focusmonitor +1
