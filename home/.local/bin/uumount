@@ -1,0 +1,13 @@
+#!/bin/sh
+# Unmount devices with udiskie-umount.
+
+drives="$(find "/run/media/$USER" -mindepth 1 -maxdepth 1 | sed 's|.*/||')"
+
+if [ "$drives" ]; then
+    # Select drives and eject them
+    echo "$drives" \
+        | fzf --prompt="Select drives to eject:" \
+        | xargs -r -I {} udiskie-umount "/run/media/$USER/{}"
+else
+    printf "No drive mounted.\n"
+fi
