@@ -21,6 +21,7 @@ set searchurls.mal https://myanimelist.net/search/all?q=%s&cat=all
 set searchurls.mangadex https://mangadex.org/search?q=%s
 set searchurls.nyaa https://nyaa.si/?f=0&c=0_0&q=%s&s=seeders&o=desc
 set searchurls.osm https://www.openstreetmap.org/search?query=%s
+set searchurls.pcgamingwiki https://www.pcgamingwiki.com/w/index.php?search=%s
 set searchurls.pkg https://archlinux.org/packages/?sort=&q=%s
 set searchurls.protondb https://www.protondb.com/search?q=%s
 set searchurls.r http://localhost:8080/r/%s
@@ -28,7 +29,8 @@ set searchurls.s https://northboot.xyz/search?q=%s
 set searchurls.w https://en.wikipedia.org/w/index.php?search=%s
 set searchurls.wde https://de.wikipedia.org/w/index.php?search=%s
 set searchurls.wh https://www.willhaben.at/iad/kaufen-und-verkaufen/marktplatz?keyword=%s
-set searchurls.yt https://invidious.tiekoetter.com/search?q=%s
+set searchurls.yt https://vid.puffyan.us/search?q=%s
+setnull searchurls.github
 
 " Tabs
 bind > tabmove +1
