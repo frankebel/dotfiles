@@ -12,7 +12,6 @@ case "$(hostnamectl hostname)" in
         nm-applet &
         ;;
     *tuwien*)
-        hyprctl keyword input:kb_layout us,de
-        hyprctl keyword input:kb_variant colemak,
+        hyprctl keyword input:kb_layout de,
         ;;
 esac
