@@ -55,6 +55,10 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -Iv'
 
+# lsd
+alias l='lsd --long --almost-all'
+alias lt='lsd --tree --almost-all'
+
 # Neovim
 alias sv='sudoedit'
 alias v='$EDITOR'
@@ -88,7 +92,6 @@ alias cal='cal -m'
 alias cdp='cd P'
 alias flexget='~/data/.environments/flexget/bin/flexget'
 alias i='imv'
-alias l='ls -lAh --time-style=long-iso'
 alias m='neomutt'
 alias ms='mailsync'
 alias msl='while true; do mailsync; sleep 1; done'

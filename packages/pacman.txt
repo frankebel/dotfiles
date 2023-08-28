@@ -28,6 +28,7 @@ jq
 libreoffice-fresh
 linux
 linux-firmware
+lsd
 lxappearance-gtk3
 lynx
 man-db

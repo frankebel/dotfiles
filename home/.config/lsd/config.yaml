@@ -1,0 +1,20 @@
+# Configuration file for LSDeluxe (lsd).
+# See <https://github.com/lsd-rs/lsd>.
+
+blocks:
+  - permission
+  - user
+  - group
+  - size
+  - date
+  - git
+  - name
+color:
+  theme: custom
+date: '+%F %T'
+display: almost-all
+ignore-globs:
+  - .build
+  - .git
+sorting:
+  dir-grouping: first
