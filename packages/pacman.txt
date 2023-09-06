@@ -8,7 +8,7 @@ cups
 dunst
 easyeffects
 efibootmgr
-espeakup
+espeak-ng
 exfatprogs
 fd
 firefox
@@ -25,6 +25,7 @@ imv
 isync
 jdk-openjdk
 jq
+jupyter-notebook
 libreoffice-fresh
 linux
 linux-firmware
