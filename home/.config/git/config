@@ -1,5 +1,4 @@
 [alias]
-    a = add
     af = !git diff --name-only | fzf --preview 'git diff {} | delta' | xargs git add
     afn = !git ls-files --others --exclude-standard | fzf --preview 'bat --force-colorization {}' | xargs git add
     afni = !git ls-files --others --exclude-standard | fzf --preview 'bat --force-colorization {}' | xargs git add --intent-to-add
@@ -8,6 +7,7 @@
     b = branch
     ba = branch -a
     c = commit
+    ca = commit --amend
     can = commit --amend --no-edit
     cb = !git branch | grep -v '^*' | fzf --no-multi --preview 'git lo --color=always {1}' | xargs git checkout
     conf = !git config -l | grep -v '^alias'
