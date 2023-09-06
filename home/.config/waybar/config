@@ -7,7 +7,7 @@
     "height": 30, // Remove for auto height
     "spacing": 4, // Gaps between modules (4px)
     "modules-left": [
-        "wlr/workspaces",
+        "hyprland/workspaces",
     ],
     "modules-center": [
         "clock",
