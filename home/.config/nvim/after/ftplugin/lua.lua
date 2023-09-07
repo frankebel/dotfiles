@@ -1,6 +1,5 @@
 -- Formatoptions
-vim.opt.formatoptions:remove("o")
-vim.opt.formatoptions:remove("r")
+vim.opt.formatoptions:remove({ "r", "o" })
 
 -- Tabs and indents
 vim.opt.shiftwidth = 2
