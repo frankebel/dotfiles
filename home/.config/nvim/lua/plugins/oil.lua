@@ -7,7 +7,7 @@ return {
   version = "*",
   cmd = "Oil",
   keys = {
-    { "<leader>e", "<cmd>Oil<cr>", desc = "Toggle file manager" },
+    { "<leader>e", "<cmd>Oil<cr>", desc = "OIL Toggle file manager" },
   },
   opts = {
     view_options = { show_hidden = true },

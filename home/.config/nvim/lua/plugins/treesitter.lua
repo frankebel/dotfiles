@@ -67,22 +67,22 @@ return {
           enable = true,
           set_jumps = true, -- whether to set jumps in the jumplist
           goto_next_start = {
-            ["]p"] = { query = "@parameter.inner", desc = "Jump to next parameter" },
-            ["]f"] = { query = "@function.outer", desc = "Jump to next function start" },
-            ["]c"] = { query = "@class.outer", desc = "Jump to next class start" },
+            ["]p"] = { query = "@parameter.inner", desc = "TS Jump to next parameter" },
+            ["]f"] = { query = "@function.outer", desc = "TS Jump to next function start" },
+            ["]c"] = { query = "@class.outer", desc = "TS Jump to next class start" },
           },
           goto_next_end = {
-            ["]F"] = { query = "@function.outer", desc = "Jump to next function end" },
-            ["]C"] = { query = "@class.outer", desc = "Jump to next class end" },
+            ["]F"] = { query = "@function.outer", desc = "TS Jump to next function end" },
+            ["]C"] = { query = "@class.outer", desc = "TS Jump to next class end" },
           },
           goto_previous_start = {
-            ["[p"] = { query = "@parameter.inner", desc = "Jump to previous parameter" },
-            ["[f"] = { query = "@function.outer", desc = "Jump to previous function start" },
-            ["[c"] = { query = "@class.outer", desc = "Jump to previous class start" },
+            ["[p"] = { query = "@parameter.inner", desc = "TS Jump to previous parameter" },
+            ["[f"] = { query = "@function.outer", desc = "TS Jump to previous function start" },
+            ["[c"] = { query = "@class.outer", desc = "TS Jump to previous class start" },
           },
           goto_previous_end = {
-            ["[F"] = { query = "@function.outer", desc = "Jump to previous function end" },
-            ["[C"] = { query = "@class.outer", desc = "Jump to previous class end" },
+            ["[F"] = { query = "@function.outer", desc = "TS Jump to previous function end" },
+            ["[C"] = { query = "@class.outer", desc = "TS Jump to previous class end" },
           },
         },
         select = {
@@ -90,23 +90,23 @@ return {
           lookahead = true,
           keymaps = {
             -- You can use the capture groups defined in textobjects.scm
-            ["af"] = { query = "@function.outer", desc = "Select around function" },
-            ["if"] = { query = "@function.inner", desc = "Select inside function" },
-            ["ic"] = { query = "@class.inner", desc = "Select inside class" },
-            ["ac"] = { query = "@class.outer", desc = "Select around class" },
+            ["af"] = { query = "@function.outer", desc = "TS Select around function" },
+            ["if"] = { query = "@function.inner", desc = "TS Select inside function" },
+            ["ic"] = { query = "@class.inner", desc = "TS Select inside class" },
+            ["ac"] = { query = "@class.outer", desc = "TS Select around class" },
           },
         },
         swap = {
           enable = true,
           swap_next = {
-            ["<leader>spn"] = { query = "@parameter.inner", desc = "Swap parameter next" },
-            ["<leader>sfn"] = { query = "@function.outer", desc = "Swap function next" },
-            ["<leader>scn"] = { query = "@class.outer", desc = "Swap class next" },
+            ["<leader>spn"] = { query = "@parameter.inner", desc = "TS Swap parameter next" },
+            ["<leader>sfn"] = { query = "@function.outer", desc = "TS Swap function next" },
+            ["<leader>scn"] = { query = "@class.outer", desc = "TS Swap class next" },
           },
           swap_previous = {
-            ["<leader>spp"] = { query = "@parameter.inner", desc = "Swap parameter previous" },
-            ["<leader>sfp"] = { query = "@function.outer", desc = "Swap function previous" },
-            ["<leader>scp"] = { query = "@class.outer", desc = "Swap class previous" },
+            ["<leader>spp"] = { query = "@parameter.inner", desc = "TS Swap parameter previous" },
+            ["<leader>sfp"] = { query = "@function.outer", desc = "TS Swap function previous" },
+            ["<leader>scp"] = { query = "@class.outer", desc = "TS Swap class previous" },
           },
         },
       },

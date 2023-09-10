@@ -16,10 +16,10 @@ return {
       local function nmap(lhs, rhs, desc)
         vim.keymap.set("n", lhs, rhs, { desc = desc })
       end
-      nmap("<leader>ld", vim.diagnostic.open_float, "Diagnostic open float")
-      nmap("[d", vim.diagnostic.goto_prev, "Prev Diagnostic")
-      nmap("]d", vim.diagnostic.goto_next, "Next Diagnostic")
-      nmap("<leader>q", vim.diagnostic.setloclist, "Diagnostic set loclist")
+      nmap("<leader>ld", vim.diagnostic.open_float, "LSP Diagnostic open float")
+      nmap("[d", vim.diagnostic.goto_prev, "LSP Prev Diagnostic")
+      nmap("]d", vim.diagnostic.goto_next, "LSP Next Diagnostic")
+      nmap("<leader>q", vim.diagnostic.setloclist, "LSP Diagnostic set loclist")
 
       local lspconfig = require("lspconfig")
       local lsp_conf = require("plugins.lsp.config")
@@ -68,7 +68,7 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     keys = {
       -- stylua: ignore
-      { "<leader>lf", function() vim.lsp.buf.format({ async = true }) end, "Format current buffer" },
+      { "<leader>lf", function() vim.lsp.buf.format({ async = true }) end, "NULL-LS Format current buffer" },
     },
     opts = function()
       local null_ls = require("null-ls")

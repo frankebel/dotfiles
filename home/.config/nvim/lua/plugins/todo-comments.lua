@@ -9,8 +9,8 @@ return {
   config = true,
     -- stylua: ignore
     keys = {
-      { "]t", function() require("todo-comments").jump_next() end, desc = "Next TODO" },
-      { "[t", function() require("todo-comments").jump_prev() end, desc = "Prev TODO" },
-      { "<leader>ft", "<cmd>TodoTelescope<cr>", desc = "Todo" },
+      { "]t", function() require("todo-comments").jump_next() end, desc = "TODO Next" },
+      { "[t", function() require("todo-comments").jump_prev() end, desc = "TODO Prev" },
+      { "<leader>ft", "<cmd>TodoTelescope<cr>", desc = "TODO list" },
     },
 }

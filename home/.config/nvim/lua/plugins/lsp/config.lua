@@ -18,41 +18,41 @@ M.on_attach = function(client, bufnr)
     vim.keymap.set("v", keys, func, { buffer = bufnr, desc = desc })
   end
 
-  nmap("gd", vim.lsp.buf.definition, "Go to definition")
-  nmap("gD", vim.lsp.buf.declaration, "Go to declaration")
-  nmap("gT", vim.lsp.buf.type_definition, "Type definition")
+  nmap("gd", vim.lsp.buf.definition, "LSP Go to definition")
+  nmap("gD", vim.lsp.buf.declaration, "LSP Go to declaration")
+  nmap("gT", vim.lsp.buf.type_definition, "LSP Type definition")
 
-  nmap("<leader>rn", vim.lsp.buf.rename, "Rename")
-  nmap("<leader>ca", vim.lsp.buf.code_action, "Code action")
+  nmap("<leader>rn", vim.lsp.buf.rename, "LSP Rename")
+  nmap("<leader>ca", vim.lsp.buf.code_action, "LSP Code action")
 
-  nmap("K", vim.lsp.buf.hover, "Hover documentation")
-  nmap("gi", vim.lsp.buf.implementation, "Go to implementation")
-  nmap("<C-k>", vim.lsp.buf.signature_help, "Signature documentation")
+  nmap("K", vim.lsp.buf.hover, "LSP Hover documentation")
+  nmap("gi", vim.lsp.buf.implementation, "LSP Go to implementation")
+  nmap("<C-k>", vim.lsp.buf.signature_help, "LSP Signature documentation")
 
-  nmap("<leader>wa", vim.lsp.buf.add_workspace_folder, "Workspace add folder")
-  nmap("<leader>wr", vim.lsp.buf.remove_workspace_folder, "Workspace remove folder")
+  nmap("<leader>wa", vim.lsp.buf.add_workspace_folder, "LSP Workspace add folder")
+  nmap("<leader>wr", vim.lsp.buf.remove_workspace_folder, "LSP Workspace remove folder")
   nmap("<leader>wl", function()
     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-  end, "Workspace list folders")
+  end, "LSP Workspace list folders")
 
-  nmap("gr", vim.lsp.buf.references, "List references")
+  nmap("gr", vim.lsp.buf.references, "LSP List references")
 
   -- Prepend lsp keymaps with "<leader>l"
   -- stylua: ignore
-  nmap("<leader>lf", function() vim.lsp.buf.format { async = true } end, "Format current buffer")
+  nmap("<leader>lf", function() vim.lsp.buf.format { async = true } end, "LSP Format current buffer")
 
   if client.name == "jdtls" then
     -- See https://github.com/mfussenegger/nvim-jdtls
     local jdtls = require("jdtls")
     -- Additional mappings
-    nmap("<A-o>", jdtls.organize_imports, "Organize imports")
-    nmap("crv", jdtls.extract_variable, "Extract variable")
-    nmap("crc", jdtls.extract_constant, "Extract constant")
-    vmap("crv", [[<Esc><Cmd>lua require('jdtls').extract_variable(true)<CR>]], "Extract variable")
-    vmap("crc", [[<Esc><Cmd>lua require('jdtls').extract_constant(true)<CR>]], "Extract constant")
-    vmap("crm", [[<Esc><Cmd>lua require('jdtls').extract_method(true)<CR>]], "Extract method")
-    nmap("<leader>df", jdtls.test_class, "Test class")
-    nmap("<leader>dn", jdtls.test_nearest_method, "Test method")
+    nmap("<A-o>", jdtls.organize_imports, "LSP Organize imports")
+    nmap("crv", jdtls.extract_variable, "LSP Extract variable")
+    nmap("crc", jdtls.extract_constant, "LSP Extract constant")
+    vmap("crv", [[<Esc><Cmd>lua require('jdtls').extract_variable(true)<CR>]], "LSP Extract variable")
+    vmap("crc", [[<Esc><Cmd>lua require('jdtls').extract_constant(true)<CR>]], "LSP Extract constant")
+    vmap("crm", [[<Esc><Cmd>lua require('jdtls').extract_method(true)<CR>]], "LSP Extract method")
+    nmap("<leader>df", jdtls.test_class, "LSP Test class")
+    nmap("<leader>dn", jdtls.test_nearest_method, "LSP Test method")
 
     -- With `hotcodereplace = 'auto' the debug adapter will try to apply code changes
     -- you make during a debug session immediately.
