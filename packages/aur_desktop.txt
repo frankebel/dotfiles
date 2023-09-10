@@ -1,2 +1,1 @@
-amdgpu-fan
 nodejs-hueadm
