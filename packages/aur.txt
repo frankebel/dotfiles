@@ -1,6 +1,6 @@
 dracula-gtk-theme
 firefox-tridactyl-native
-libreddit-git
+libreddit
 mullvad-vpn-bin
 pandoc-bin
 paru
