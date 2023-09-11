@@ -2,14 +2,6 @@
 -- https://github.com/hrsh7th/nvim-cmp
 -- https://github.com/L3MON4D3/LuaSnip
 
-local function latex_completion()
-  if vim.bo.filetype == "tex" then
-    return 2
-  else
-    return 0
-  end
-end
-
 return {
   "hrsh7th/nvim-cmp",
   event = "InsertEnter",
@@ -65,13 +57,7 @@ return {
         { name = "nvim_lsp" },
         { name = "nvim_lua" },
         { name = "luasnip" },
-        {
-          name = "latex_symbols",
-          option = {
-            -- TODO: elegant solution to set strategy
-            strategy = latex_completion(),
-          },
-        },
+        { name = "latex_symbols" },
         { name = "buffer" },
         { name = "path" },
       },
