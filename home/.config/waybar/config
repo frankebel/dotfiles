@@ -14,6 +14,7 @@
     ],
     "modules-right": [
         "tray",
+        "idle_inhibitor",
         "pulseaudio",
         "battery",
     ],
@@ -51,6 +52,13 @@
         "format-full": "{icon}",
         "format-time": "{H}:{m}",
         "format-icons": [" ", " ", " ", " ", " "],
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
     },
     "pulseaudio": {
         "format": "{format_source} | <big>{icon}</big> {volume} %",
