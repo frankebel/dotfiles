@@ -1,0 +1,32 @@
+#!/bin/sh
+# Create an encrypted backup.
+
+DEST_DIR="$TEMPDIR/$(date '+%F')"
+SRC_DIR="$DATADIR"
+
+# Check if backup exists.
+if [ -d "$DEST_DIR" ]; then
+    printf "Backup already exists.\n"
+    exit
+else
+    mkdir "$DEST_DIR"
+fi
+
+cd "$SRC_DIR" || exit 1
+for i in *; do
+    # Ignore the following directories.
+    [ "$i" = "iso" ] && continue
+    [ "$i" = "music" ] && continue
+    [ "$i" = "programming" ] && continue
+    [ "$i" = "shared" ] && continue
+    [ "$i" = "videos" ] && continue
+    [ "$i" = "virtualization" ] && continue
+    # Create encrypted tarball.
+    printf "Encrypting %s.\n" "$i"
+    tar -czf - "$i" \
+        | gpg --encrypt --recipient BCCE722BD83CC643E1DF8DA86DAF5CC9ECB2A203 \
+            > "$i.tar.gz.gpg" \
+        && mv "$i.tar.gz.gpg" "$DEST_DIR"
+done
+
+printf "Backup finished.\n"
