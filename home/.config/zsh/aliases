@@ -70,6 +70,7 @@ alias mirror='sudo reflector --verbose --latest 8 --sort rate --protocol https -
 alias pacq='pacman -Qq | fzf --preview "pacman -Qi {}" | xargs -ro pacman -Qi'
 alias pacr='pacman -Qqe | fzf --preview "pacman -Qi {}" | xargs -ro sudo pacman -Rns'
 alias pacs='pacman -Slq | fzf --preview "pacman -Si {}" | xargs -ro sudo pacman -S'
+alias pacsi='pacman -Slq | fzf --preview "pacman -Si {}" | xargs -ro pacman -Si'
 
 # Transmission
 alias t='watch -n 0.1 transmission-remote -l'
@@ -92,6 +93,7 @@ alias cal='cal -m'
 alias cdp='cd P'
 alias flexget='~/data/.environments/flexget/bin/flexget'
 alias i='imv'
+alias ll='ls --almost-all --human-readable -l'
 alias m='neomutt'
 alias ms='mailsync'
 alias msl='while true; do mailsync; sleep 1; done'
