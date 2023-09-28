@@ -107,6 +107,8 @@ return {
         sources = {
           -- lua
           null_ls.builtins.formatting.stylua,
+          -- Markdown
+          null_ls.builtins.formatting.prettierd,
           -- python
           null_ls.builtins.diagnostics.flake8.with({
             extra_args = {

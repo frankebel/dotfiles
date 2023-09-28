@@ -15,6 +15,8 @@ return {
         -- Lua
         "lua-language-server", -- LSP
         "stylua", -- formatter
+        -- Markdown
+        "prettierd", -- formatter
         -- Python
         "pyright", -- LSP
         "debugpy", -- DAP
