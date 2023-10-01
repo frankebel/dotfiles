@@ -3,12 +3,14 @@
 -- GitHub: https://github.com/wez/wezterm
 
 local wezterm = require("wezterm")
+local act = wezterm.action
 
 return {
   adjust_window_size_when_changing_font_size = false,
   check_for_updates = false,
+  command_palette_bg_color = "#44475a",
+  command_palette_fg_color = "#bd93f9",
   color_scheme = "Dracula (Official)",
-  default_prog = { os.getenv("SHELL") }, -- Don't append `-l` as in default
   disable_default_key_bindings = true,
   enable_tab_bar = false,
   font = wezterm.font_with_fallback({
@@ -19,14 +21,29 @@ return {
   }),
   font_size = 13,
   max_fps = 144,
+  -- List all keys with `wezterm show-keys --lua`.
   keys = {
     -- Copy/Paste
-    { key = "C", mods = "SHIFT|CTRL", action = wezterm.action.CopyTo("Clipboard") },
-    { key = "V", mods = "SHIFT|CTRL", action = wezterm.action.PasteFrom("Clipboard") },
-    -- Change font size
-    { key = "-", mods = "CTRL", action = wezterm.action.DecreaseFontSize },
-    { key = "+", mods = "SHIFT|CTRL", action = wezterm.action.IncreaseFontSize },
-    { key = "=", mods = "CTRL", action = wezterm.action.ResetFontSize },
+    { key = "c", mods = "SHIFT|CTRL", action = act.CopyTo("Clipboard") },
+    { key = "v", mods = "SHIFT|CTRL", action = act.PasteFrom("Clipboard") },
+    { key = "Insert", mods = "SHIFT", action = act.PasteFrom("PrimarySelection") },
+    -- Copymode
+    { key = "x", mods = "SHIFT|CTRL", action = act.ActivateCopyMode },
+    -- Debug
+    { key = "d", mods = "SHIFT|CTRL", action = act.ShowDebugOverlay },
+    -- Font size
+    { key = "-", mods = "CTRL", action = act.DecreaseFontSize },
+    { key = "+", mods = "SHIFT|CTRL", action = act.IncreaseFontSize },
+    { key = "=", mods = "CTRL", action = act.ResetFontSize },
+    -- Help
+    { key = "h", mods = "SHIFT|CTRL", action = act.ActivateCommandPalette },
+    -- Quickselect
+    { key = "Space", mods = "SHIFT|CTRL", action = act.QuickSelect },
+    -- Scrollback
+    { key = "PageUp", action = act.ScrollByPage(-0.5) },
+    { key = "PageDown", action = act.ScrollByPage(0.5) },
+    -- Search
+    { key = "Slash", mods = "SHIFT|CTRL", action = act.Search("CurrentSelectionOrEmptyString") },
   },
   window_close_confirmation = "NeverPrompt",
 }
