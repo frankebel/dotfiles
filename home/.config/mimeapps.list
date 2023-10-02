@@ -1,12 +1,9 @@
 [Default Applications]
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
+application/x-bittorrent=transmission.desktop
+image/jpeg=imv.desktop
+image/png=imv.desktop
 text/html=firefox.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
-x-scheme-handler/magnet=torrent.desktop
-application/x-bittorrent=torrent.desktop
-image/jpeg=sxiv.desktop
-application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
-
-[Added Associations]
-image/jpeg=sxiv.desktop;
-application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
+x-scheme-handler/magnet=transmission.desktop
