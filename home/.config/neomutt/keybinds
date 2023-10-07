@@ -13,8 +13,8 @@ bind pager G bottom
 bind attach,index gg first-entry
 bind attach,index G last-entry
 
-bind index,pager \Ck sidebar-prev
-bind index,pager \Cj sidebar-next
+bind index,pager \Cp sidebar-prev
+bind index,pager \Cn sidebar-next
 bind index,pager \Co sidebar-open
 bind index,pager B sidebar-toggle-visible
 
@@ -24,16 +24,16 @@ macro index,pager <f3> '<sync-mailbox><enter-command>source $XDG_CONFIG_HOME/neo
 macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
 macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
 
-macro index,pager ga "<change-folder>$my_archive_folder<Enter>" "change to folder $my_archive_folder"
-macro index,pager gd "<change-folder>=Drafts<Enter>" "change to folder Drafts"
-macro index,pager gi "<change-folder>=INBOX<Enter>" "change to folder Inbox"
-macro index,pager gj "<change-folder>=Junk<Enter>" "change to folder Junk"
-macro index,pager gs "<change-folder>=Sent<Enter>" "change to folder Sent"
-macro index,pager gt "<change-folder>=Trash<Enter>" "change to folder Trash"
+macro index,pager ga "<change-folder>=Archive<Enter>" "go to Archive"
+macro index,pager gd "<change-folder>=Drafts<Enter>" "go to Drafts"
+macro index,pager gi "<change-folder>=INBOX<Enter>" "go to Inbox"
+macro index,pager gj "<change-folder>=Junk<Enter>" "go to Junk"
+macro index,pager gs "<change-folder>=Sent<Enter>" "go to Sent"
+macro index,pager gt "<change-folder>=Trash<Enter>" "go to Trash"
 
-macro index,pager Ma "<save-message>$my_archive_folder<Enter>" "save to $my_archive_folder"
-macro index,pager Md "<save-message>=Drafts<Enter>" "move mail to Drafts"
-macro index,pager Mi "<save-message>=INBOX<Enter>" "move mail to Inbox"
-macro index,pager Mj "<save-message>=Junk<Enter>" "move mail to Junk"
-macro index,pager Ms "<save-message>=Sent<Enter>" "move mail to Sent"
-macro index,pager Mt "<save-message>=Trash<Enter>" "move mail to Trash"
+macro index,pager Ma "<save-message>=Archive<Enter>" "move to Archive"
+macro index,pager Md "<save-message>=Drafts<Enter>" "move to Drafts"
+macro index,pager Mi "<save-message>=INBOX<Enter>" "move to Inbox"
+macro index,pager Mj "<save-message>=Junk<Enter>" "move to Junk"
+macro index,pager Ms "<save-message>=Sent<Enter>" "move to Sent"
+macro index,pager Mt "<save-message>=Trash<Enter>" "move to Trash"
