@@ -22,11 +22,12 @@ SyncState *
 
 # TUW
 IMAPStore tuw-remote
-Host mail.student.tuwien.ac.at
+Host outlook.office365.com
 Port 993
-User e1429282
-PassCmd "pass show tuw/mail"
+User e1429282@student.tuwien.ac.at
+PassCmd "$XDG_CONFIG_HOME/neomutt/mutt_oauth2.py $XDG_CONFIG_HOME/neomutt/token"
 SSLType IMAPS
+AuthMechs XOAUTH2
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 MaildirStore tuw-local
@@ -39,5 +40,5 @@ Far :tuw-remote:
 Near :tuw-local:
 Create Both
 Expunge Both
-Patterns *
+Patterns Archive "Deleted Items" Drafts INBOX "Junk Email" "Sent Items"
 SyncState *

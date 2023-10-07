@@ -8,6 +8,9 @@ db-config*
 # gtk
 gtkfilechooser.ini
 
+# neomutt
+token
+
 # python
 __pycache__
 

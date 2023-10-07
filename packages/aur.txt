@@ -1,3 +1,4 @@
+cyrus-sasl-xoauth2-git
 dracula-gtk-theme
 firefox-tridactyl-native
 libreddit
