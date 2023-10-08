@@ -18,6 +18,7 @@ return {
     "Fira Code",
     "Noto Sans Math",
     "Noto Sans Symbols 2",
+    "Noto Sans Mono CJK JP",
   }),
   font_size = 13,
   max_fps = 144,
