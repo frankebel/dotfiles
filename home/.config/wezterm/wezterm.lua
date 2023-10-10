@@ -43,6 +43,14 @@ return {
     -- Scrollback
     { key = "PageUp", action = act.ScrollByPage(-0.5) },
     { key = "PageDown", action = act.ScrollByPage(0.5) },
+    {
+      key = "k",
+      mods = "SHIFT|CTRL",
+      action = act.Multiple({
+        act.ClearScrollback("ScrollbackAndViewport"),
+        act.SendKey({ key = "l", mods = "CTRL" }),
+      }),
+    },
     -- Search
     { key = "Slash", mods = "SHIFT|CTRL", action = act.Search("CurrentSelectionOrEmptyString") },
   },
