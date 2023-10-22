@@ -84,31 +84,10 @@ return {
     "jose-elias-alvarez/null-ls.nvim",
     event = { "BufReadPre", "BufNewFile" },
     dependencies = { "nvim-lua/plenary.nvim" },
-    keys = {
-      -- stylua: ignore
-      { "<leader>lf", function() vim.lsp.buf.format({ async = true }) end, "NULL-LS Format current buffer" },
-    },
     opts = function()
       local null_ls = require("null-ls")
       return {
-        on_attach = function(client, bufnr)
-          if client.supports_method("textDocument/formatting") then
-            local augroup = vim.api.nvim_create_augroup("LspFromatting", { clear = true })
-            vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-            vim.api.nvim_create_autocmd("BufWritePre", {
-              group = augroup,
-              buffer = bufnr,
-              callback = function()
-                vim.lsp.buf.format({ async = false })
-              end,
-            })
-          end
-        end,
         sources = {
-          -- lua
-          null_ls.builtins.formatting.stylua,
-          -- Markdown
-          null_ls.builtins.formatting.prettierd,
           -- python
           null_ls.builtins.diagnostics.flake8.with({
             extra_args = {
@@ -119,18 +98,8 @@ return {
             },
           }),
           null_ls.builtins.diagnostics.mypy,
-          null_ls.builtins.formatting.black,
           -- sh
           null_ls.builtins.diagnostics.shellcheck,
-          null_ls.builtins.formatting.shfmt.with({
-            extra_args = {
-              "--indent",
-              "4",
-              "--binary-next-line",
-              "--case-indent",
-              "--space-redirects",
-            },
-          }),
         },
       }
     end,
