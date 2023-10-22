@@ -1,6 +1,5 @@
 -- Language Server Protocol LSP
 -- https://github.com/neovim/nvim-lspconfig
--- https://github.com/jose-elias-alvarez/null-ls.nvim
 -- https://github.com/mfussenegger/nvim-jdtls
 
 return {
@@ -78,30 +77,6 @@ return {
         opts.border = opts.border or border
         return orig_util_open_floating_preview(contents, syntax, opts, ...)
       end
-    end,
-  },
-  {
-    "jose-elias-alvarez/null-ls.nvim",
-    event = { "BufReadPre", "BufNewFile" },
-    dependencies = { "nvim-lua/plenary.nvim" },
-    opts = function()
-      local null_ls = require("null-ls")
-      return {
-        sources = {
-          -- python
-          null_ls.builtins.diagnostics.flake8.with({
-            extra_args = {
-              "--max-line-length",
-              "88",
-              "--extend-ignore",
-              "E203",
-            },
-          }),
-          null_ls.builtins.diagnostics.mypy,
-          -- sh
-          null_ls.builtins.diagnostics.shellcheck,
-        },
-      }
     end,
   },
   {
