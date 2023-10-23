@@ -6,7 +6,6 @@ chromium
 code
 cups
 dunst
-easyeffects
 efibootmgr
 espeak-ng
 exfatprogs
