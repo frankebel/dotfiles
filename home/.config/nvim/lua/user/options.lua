@@ -27,6 +27,7 @@ vim.opt.smartcase = true -- Overwrite 'ignorecase' with upper case characters
 vim.opt.smartindent = true -- Smart autoindent when starting a new line
 vim.opt.softtabstop = 4 -- Number of spaces <Tab> counts for while performing editing operations
 vim.opt.spelllang = { "en", "de" } -- Spellcheck for these languages
+vim.opt.spelloptions = { "camel" } -- camel case treated as separate word
 vim.opt.splitbelow = true -- Splitting window below current one
 vim.opt.splitright = true -- Splitting window right of current one
 vim.opt.tabstop = 4 -- Number of spaces <Tab> counts for
