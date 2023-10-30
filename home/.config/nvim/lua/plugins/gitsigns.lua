@@ -15,11 +15,10 @@ return {
       -- stylua: ignore start
       map("n", "]g", gs.next_hunk, "GITSIGNS next hunk")
       map("n", "[g", gs.prev_hunk, "GITSIGNS prev hunk")
-      map({ "n", "v" }, "<leader>ghr", "<cmd>Gitsigns reset_hunk<cr>", "GITSIGNS reset hunk")
-      map("n", "<leader>ghp", gs.preview_hunk, "GITSIGNS Preview Hunk")
-      map("n", "<leader>ghb", function() gs.blame_line({ full = true }) end, "GITSIGNS blame line")
-      map("n", "<leader>ghd", gs.diffthis, "GITSIGNS diff this")
-      map("n", "<leader>ghD", function() gs.diffthis("~") end, "GITSIGNS diff this ~")
+      map("n", "<leader>gr", gs.reset_hunk, "GITSIGNS reset hunk")
+      map("n", "<leader>gp", gs.preview_hunk, "GITSIGNS preview hunk")
+      map("n", "<leader>gb", function() gs.blame_line({ full = true }) end, "GITSIGNS blame line")
+      map("n", "<leader>gd", gs.diffthis, "GITSIGNS diff this")
       -- stylua: ignore end
     end,
   },
