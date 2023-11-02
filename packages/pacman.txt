@@ -67,7 +67,6 @@ slurp
 starship
 steam
 stow
-swaybg
 swayidle
 swaylock
 syncthing
