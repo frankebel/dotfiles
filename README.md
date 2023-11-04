@@ -6,8 +6,10 @@ This repository contains my personal configuration files (dotfiles) which I main
 [GNU Stow](https://www.gnu.org/software/stow/). Feel free to be inspired by them and use parts of it.
 The color scheme I use is [dracula](https://draculatheme.com).
 
-- [home](home) contains dotfiles for my `$HOME` directory.
-- [etc](etc) contains dotfiles for my `/etc` directory.
+- [etc](./etc/) contains dotfiles for my `/etc` directory.
+- [home](./home/) contains dotfiles for my `$HOME` directory.
+- [packages](./packages/) contains a list of my installed packages.
+- [scripts](./scripts/) contains scripts for this repository.
 
 ## Installation and Setup
 
