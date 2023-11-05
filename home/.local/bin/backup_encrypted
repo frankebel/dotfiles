@@ -1,8 +1,11 @@
 #!/bin/sh
 # Create an encrypted backup.
+# Recursively go down "SRC_DIR" until directory size is smaller than THRESHOLD
+# and create a encrypted tarball of each directory.
 
 DEST_DIR="$TEMPDIR/$(date '+%F')"
 SRC_DIR="$DATADIR"
+THRESHOLD=4000000 # size in KiB
 
 # Check if backup exists.
 if [ -d "$DEST_DIR" ]; then
@@ -12,21 +15,42 @@ else
     mkdir "$DEST_DIR"
 fi
 
-cd "$SRC_DIR" || exit 1
-for i in *; do
-    # Ignore the following directories.
-    [ "$i" = "iso" ] && continue
-    [ "$i" = "music" ] && continue
-    [ "$i" = "programming" ] && continue
-    [ "$i" = "shared" ] && continue
-    [ "$i" = "videos" ] && continue
-    [ "$i" = "virtualization" ] && continue
-    # Create encrypted tarball.
-    printf "Encrypting %s.\n" "$i"
-    tar -czf - "$i" \
+tar_and_encrypt() {
+    name="$1"
+    dest="$2"
+    printf "Encrypting %s\n" "$(realpath "$name")"
+    tar -cf - "$name" \
         | gpg --encrypt --recipient BCCE722BD83CC643E1DF8DA86DAF5CC9ECB2A203 \
-            > "$i.tar.gz.gpg" \
-        && mv "$i.tar.gz.gpg" "$DEST_DIR"
-done
+            > "$dest/$name.tar.gpg"
+}
+
+traverse() {
+    src_dir="$1"
+    dest_dir="$2"
+    cd "$src_dir" || exit 1
+    for i in *; do
+        # Ignore the following directories.
+        [ "$(realpath "$i")" = "$SRC_DIR/iso" ] && continue
+        [ "$(realpath "$i")" = "$SRC_DIR/programming" ] && continue
+        [ "$(realpath "$i")" = "$SRC_DIR/shared" ] && continue
+        [ "$(realpath "$i")" = "$SRC_DIR/videos" ] && continue
+        [ "$(realpath "$i")" = "$SRC_DIR/virtualization" ] && continue
+        # Only encrypt if smaller than "THRESHOLD".
+        if [ "$(du -s "$i" | cut -f1)" -lt "$THRESHOLD" ]; then
+            tar_and_encrypt "$i" "$dest_dir"
+        elif [ -d "$i" ]; then
+            # Recur into directory.
+            mkdir "$dest_dir/$i"
+            traverse "$i" "$dest_dir/$i"
+        else
+            printf "Ignoring %s\n" "$(realpath "$i")"
+        fi
+    done
+    src_dir="$(dirname "$src_dir")"
+    dest_dir="$(dirname "$dest_dir")"
+    cd .. || exit 1
+}
+
+traverse "$SRC_DIR" "$DEST_DIR"
 
 printf "Backup finished.\n"
