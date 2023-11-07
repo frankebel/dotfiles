@@ -8,6 +8,10 @@ db-config*
 # gtk
 gtkfilechooser.ini
 
+# Julia
+Manifest.toml
+v1.10
+
 # neomutt
 token
 
