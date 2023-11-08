@@ -50,6 +50,10 @@
 [diff]
     colorMoved = default
 
+[diff "gpg"]
+    binary = true
+    textconv = gpg --decrypt --quiet --yes --no-encrypt-to --batch
+
 [fetch]
     prune = true
 
