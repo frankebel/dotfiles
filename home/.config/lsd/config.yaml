@@ -16,5 +16,6 @@ display: almost-all
 ignore-globs:
   - .build
   - .git
+  - .mypy_cache
 sorting:
   dir-grouping: first
