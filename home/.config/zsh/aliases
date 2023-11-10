@@ -24,7 +24,7 @@ alias ls='ls --color=auto'
 alias cadv='cd $PROGRAMMINGDIR/advent-of-code-2022'
 alias cda='cd "$DATADIR"; l'
 alias cdf='cd "$DOTDIR"; l'
-alias cf='cd "$MASTERDIR/projektarbeit2/fermions"; l'
+alias cf='cd "$MASTERDIR/projektarbeit2/fermions/Fermions.jl/"; l'
 alias cm='cd "$MASTERDIR"; l'
 alias cmc='cd "$MASTERDIR/2023s"; l'
 alias cn='cd "$DATADIR/notes"; l'
@@ -57,6 +57,9 @@ alias rm='rm -Iv'
 
 # lsd
 alias l='lsd --long --almost-all'
+alias lt1='lsd --tree --almost-all --depth 1'
+alias lt2='lsd --tree --almost-all --depth 2'
+alias lt3='lsd --tree --almost-all --depth 3'
 alias lt='lsd --tree --almost-all'
 
 # Neovim
