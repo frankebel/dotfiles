@@ -31,6 +31,9 @@
     su = stash -u
     undo = reset --mixed HEAD^
 
+[blame]
+    ignoreRevsFile = .git-blame-ignore-revs
+
 [commit]
     gpgSign = true
     verbose = true
