@@ -5,6 +5,7 @@ bat
 chromium
 code
 cups
+dosfstools
 dunst
 efibootmgr
 espeak-ng
