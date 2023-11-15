@@ -13,5 +13,6 @@ case "$(hostnamectl hostname)" in
         ;;
     *tuwien*)
         hyprctl keyword input:kb_layout de,
+        hyprctl keyword input:kb_variant nodeadkeys,
         ;;
 esac
