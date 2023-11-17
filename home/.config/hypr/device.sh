@@ -3,6 +3,8 @@
 
 case "$(hostnamectl hostname)" in
     *desktop*)
+        hyprctl keyword monitor DP-1,preferred,2560x0,auto
+        hyprctl keyword monitor DP-2,preferred,0x0,auto
         ~/data/.environments/flexget/bin/flexget daemon start -d &
         ;;
     *laptop*)
@@ -12,6 +14,8 @@ case "$(hostnamectl hostname)" in
         nm-applet &
         ;;
     *tuwien*)
+        hyprctl keyword monitor DP-1,preferred,1920x0,auto
+        hyprctl keyword monitor HDMI-A-3,preferred,0x0,auto
         hyprctl keyword input:kb_layout de,
         hyprctl keyword input:kb_variant nodeadkeys,
         ;;
