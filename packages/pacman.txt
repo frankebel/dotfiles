@@ -17,6 +17,7 @@ gammastep
 gimp
 git
 git-delta
+goimapnotify
 grim
 hplip
 htop
