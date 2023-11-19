@@ -14,6 +14,7 @@ return {
       },
       "rcarriga/nvim-dap-ui",
     },
+    version = "*",
     -- stylua: ignore
     keys = {
       { "<leader>db", function() require("dap").toggle_breakpoint() end, desc = "DAP Toggle Breakpoint" },
