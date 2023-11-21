@@ -1,6 +1,7 @@
 cyrus-sasl-xoauth2-git
 dracula-gtk-theme
 firefox-tridactyl-native
+juliaup
 libreddit
 mullvad-vpn-bin
 pandoc-bin

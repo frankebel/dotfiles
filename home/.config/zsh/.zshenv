@@ -6,7 +6,7 @@
 # shellcheck disable=SC3044
 typeset -U path
 # shellcheck disable=SC2206,SC3030
-path=(~/.local/bin ~/data/.environments/juliaup/bin $path)
+path=(~/.local/bin $path)
 
 # XDG Base Directory Specification
 # https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
