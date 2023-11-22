@@ -4,7 +4,7 @@
 # Test execution
 # flexget --test execute
 schedules:
-  - tasks: '*'
+  - tasks: "*"
     interval:
       minutes: 5
 tasks:
@@ -12,24 +12,29 @@ tasks:
     rss: https://subsplease.org/rss/?t&r=1080
     series:
       - Dark Gathering
+      - Goblin Slayer S2
       - Helck
-      - Horimiya - Piece
+      - Hyakkano
       - Jujutsu Kaisen
-      - Masamune-kun no Revenge S2
-      - Mushoku Tensei S2
-      - Nanatsu no Maken ga Shihai suru
-      - Ryza no Atelier
-      - Undead Girl Murder Farce
-      - Zom 100 - Zombie ni Naru made ni Shitai 100 no Koto
+      - Kage no Jitsuryokusha ni Naritakute! S2
+      - Kikansha no Mahou wa Tokubetsu desu
+      - Kusuriya no Hitorigoto
+      - Shangri-La Frontier
+      - Sousou no Frieren
+      - Spy x Family
+      - Tearmoon Teikoku Monogatari
+      - Uma Musume - Pretty Derby S3
+      - Under Ninja
+      - Watashi no Oshi wa Akuyaku Reijou
     transmission:
       host: localhost
       port: 9091
       username: transmission
       password: transmission
-  erai-raws:
-    rss: https://nyaa.si/?page=rss&q=1080p&c=0_0&f=0&u=Erai-raws
+  ember:
+    rss: https://nyaa.si/?page=rss&q=1080p+ember&c=0_0&f=0&u=Ember_Encodes
     series:
-      - Watashi no Shiawase na Kekkon
+      - Undead Unluck
     transmission:
       host: localhost
       port: 9091
