@@ -51,11 +51,6 @@ cd ..
 # systemd
 sudo timedatectl set-ntp true
 sudo systemctl enable cups.socket
-case "$host" in
-    *desktop*)
-        sudo systemctl enable amdgpu-fan.service
-        ;;
-esac
 
 # User config
 
