@@ -28,8 +28,6 @@ export TORRENTDIR="$XDG_DATA_HOME/torrents"
 export BROWSER="firefox"
 export EDITOR="nvim"
 export READER="zathura"
-export TERM="wezterm"
-export TERMINAL="wezterm"
 export VISUAL="nvim"
 
 # Manually set environment variables
