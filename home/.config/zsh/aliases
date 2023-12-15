@@ -67,6 +67,10 @@ alias lt='lsd --tree --almost-all'
 alias sv='sudoedit'
 alias v='$EDITOR'
 
+# openconnect
+alias vpntuw='sudo openconnect --background --user "$(pass show tuw/openconnect)" vpn.tuwien.ac.at'
+alias vpnoff='sudo killall --quiet -SIGINT openconnect'
+
 # Pacman
 alias aurs='paru -Slq | fzf --preview "paru -Si {}" | xargs -ro paru -S'
 alias explicit-installed='pacman -Qqen | grep -vx "$(pacman -Qqg texlive)"'

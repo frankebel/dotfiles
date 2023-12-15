@@ -48,6 +48,7 @@ noto-fonts-emoji
 noto-fonts-extra
 npm
 obs-studio
+openconnect
 openssh
 pacman-contrib
 pass
