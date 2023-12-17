@@ -7,3 +7,4 @@ pandoc-bin
 paru
 shellcheck-bin
 tessen
+wezterm-git
