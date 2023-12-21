@@ -1,5 +1,5 @@
 # Aliases
-source "$ZDOTDIR/aliases"
+. ~/.dotfiles/home/.config/shell/alias
 
 # Cursor shape
 # Set shape depending on mode.
