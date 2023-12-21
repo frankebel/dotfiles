@@ -2,17 +2,19 @@
 # Aliases for often used commands.
 
 # man zshbuiltins
-alias -g C='| wl-copy'
-alias -g P='"$(wl-paste)"'
-alias -s git='git clone'
-alias -s jpg=imv
-alias -s mkv=mpv
-alias -s mp4=mpv
-alias -s ods=localc
-alias -s pdf='$READER'
-alias -s png=imv
-alias -s webm=mpv
-alias -s xopp=xournalpp
+if [ "$SHELL" = "/bin/zsh" ]; then
+    alias -g C='| wl-copy'
+    alias -g P='"$(wl-paste)"'
+    alias -s git='git clone'
+    alias -s jpg=imv
+    alias -s mkv=mpv
+    alias -s mp4=mpv
+    alias -s ods=localc
+    alias -s pdf='$READER'
+    alias -s png=imv
+    alias -s webm=mpv
+    alias -s xopp=xournalpp
+fi
 
 # Color automatically
 alias diff='diff --color=auto'
