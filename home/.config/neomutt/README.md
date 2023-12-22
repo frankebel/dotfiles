@@ -1,18 +1,21 @@
 # OAuth 2.0 Setup
 
-[Microsoft 365](https://www.office.com/) uses [OAuth 2.0](https://en.wikipedia.org/wiki/OAuth)
-for IMAP and SMTP authentication which does not work natively in isync and neomutt.
+[Microsoft 365](https://www.office.com/) uses
+[OAuth 2.0](https://en.wikipedia.org/wiki/OAuth) for IMAP and SMTP
+authentication which does not work natively in isync and neomutt.
 
 ## NeoMutt
 
 Follow the official
 [guide](https://neomutt.org/guide/optionalfeatures#6-%C2%A0oauthbearer-and-xoauth2-support).
-It suggest to download [mutt_oauth2.py](https://github.com/neomutt/neomutt/tree/main/contrib/oauth2)
+It suggest to download
+[mutt_oauth2.py](https://github.com/neomutt/neomutt/tree/main/contrib/oauth2)
 from GitHub.
 
 ### mutt_oauth2.py
 
-Information can be accessed in the accompanying README. The following is a summary.
+Information can be accessed in the accompanying README. The following is a
+summary.
 
 Run the following command and follow its instructions:
 
@@ -40,6 +43,5 @@ gpg --decrypt token | jq
 ## isync
 
 Follow the guide on the
-[ArchWiki](https://wiki.archlinux.org/title/Isync#Using_XOAUTH2)
-by installing
+[ArchWiki](https://wiki.archlinux.org/title/Isync#Using_XOAUTH2) by installing
 [cyrus-sasl-xoauth2-git](https://aur.archlinux.org/packages/cyrus-sasl-xoauth2-git).
