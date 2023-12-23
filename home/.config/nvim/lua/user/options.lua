@@ -40,5 +40,6 @@ vim.opt.splitright = true -- Splitting window right of current one
 vim.opt.tabstop = 4 -- Number of spaces <Tab> counts for
 vim.opt.termguicolors = true -- Enable 24-bit RGB color
 vim.opt.undofile = true -- Save undo history
+vim.opt.virtualedit = { "block" } -- Cursor can by anywhere in visual block mode
 vim.opt.wildmode = "longest:full,full" -- Completion mode
 vim.opt.wrap = false -- Line wrap

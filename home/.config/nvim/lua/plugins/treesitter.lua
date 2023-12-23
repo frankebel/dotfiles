@@ -27,6 +27,7 @@ return {
       -- A list of parser names, or "all"
       ensure_installed = {
         "bash",
+        "c",
         "comment",
         "diff",
         "git_rebase",
