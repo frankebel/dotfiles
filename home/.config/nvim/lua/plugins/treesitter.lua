@@ -35,7 +35,6 @@ return {
         "gitignore",
         "java",
         "json",
-        "latex",
         "lua",
         "markdown",
         "markdown_inline",
@@ -48,6 +47,10 @@ return {
       },
       sync_install = false,
       auto_install = true,
+      ignore_install = {
+        -- vimtex does not recommend treesitter
+        "latex",
+      },
       highlight = {
         enable = true,
         additional_vim_regex_highlighting = false,
