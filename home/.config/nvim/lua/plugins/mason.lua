@@ -12,6 +12,8 @@ return {
         "jdtls", -- LSP
         "java-debug-adapter", -- DAP
         "java-test", -- DAP
+        -- LaTeX
+        "latexindent",
         -- Lua
         "lua-language-server", -- LSP
         "stylua", -- formatter

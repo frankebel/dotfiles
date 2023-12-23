@@ -22,8 +22,14 @@ return {
       markdown = { "prettierd" },
       python = { "black" },
       sh = { "shfmt" },
+      tex = { "latexindent" },
     },
     formatters = {
+      latexindent = {
+        prepend_args = {
+          "-l",
+        },
+      },
       shfmt = {
         prepend_args = {
           "--indent",
