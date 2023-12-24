@@ -22,7 +22,7 @@ return {
       },
       "nvim-treesitter/nvim-treesitter-textobjects",
     },
-    version = "*",
+    -- version = "*", too old
     opts = {
       -- A list of parser names, or "all"
       ensure_installed = {
