@@ -19,6 +19,10 @@ Manifest.toml
 # neomutt
 token
 
+# neovim
+*.spl
+*.sug
+
 # python
 __pycache__
 

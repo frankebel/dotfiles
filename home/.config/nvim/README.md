@@ -24,8 +24,7 @@ The configuration is modular as can be seen from the file tree:
 │       ├──  lazy.lua
 │       └──  options.lua
 ├──  spell
-│   ├──  de
-│   └──  en
+│   └──  en.utf-8.add
 ├──  init.lua
 └──  lazy-lock.json
 ```
@@ -52,4 +51,13 @@ If I want file type specific options or plugins I set them under
 
 ## Spell check
 
-Spellcheck is configured for German and English.
+Spellcheck is configured for German and English. To add my custom word list to
+the spell checker run:
+
+```sh
+cd ~/.config/nvim/spell
+nvim en.utf-8.add
+:mkspell! %.spl %
+```
+
+More information under `:help spell`.
