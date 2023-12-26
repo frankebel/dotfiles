@@ -1,13 +1,25 @@
 -- Language Server Protocol LSP
 -- https://github.com/neovim/nvim-lspconfig
 -- https://github.com/mfussenegger/nvim-jdtls
+-- https://github.com/barreiroleo/ltex_extra.nvim
+
+-- Read spell file for LTeX
+local function words()
+  local result = {}
+  local path = vim.fn.stdpath("config") .. "/spell/en.utf-8.add"
+  for word in io.open(path, "r"):lines() do
+    table.insert(result, word)
+  end
+  return result
+end
 
 return {
   {
     "neovim/nvim-lspconfig",
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
-      "mason.nvim",
+      "williamboman/mason.nvim",
+      "barreiroleo/ltex_extra.nvim",
     },
     config = function()
       -- Keymaps
@@ -25,6 +37,23 @@ return {
 
       -- Julia
       lspconfig.julials.setup({
+        capabilities = lsp_conf.capabilities,
+        flags = lsp_conf.lsp_flags,
+        on_attach = lsp_conf.on_attach,
+      })
+
+      -- LaTeX, LTeX
+      lspconfig.ltex.setup({
+        settings = {
+          ltex = {
+            language = "en-US",
+            dictionary = {
+              -- Want it like next line but does not work.
+              -- ["en-US"] = { ":~/.config/nvim/spell/en.utf-8.add" },
+              ["en-US"] = words() or {},
+            },
+          },
+        },
         capabilities = lsp_conf.capabilities,
         flags = lsp_conf.lsp_flags,
         on_attach = lsp_conf.on_attach,

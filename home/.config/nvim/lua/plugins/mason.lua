@@ -14,6 +14,7 @@ return {
         "java-test", -- DAP
         -- LaTeX
         "latexindent",
+        "ltex-ls",
         -- Lua
         "lua-language-server", -- LSP
         "stylua", -- formatter

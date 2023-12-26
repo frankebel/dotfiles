@@ -62,6 +62,13 @@ M.on_attach = function(client, bufnr)
     require("jdtls.dap").setup_dap_main_class_configs()
   end
 
+  if client.name == "ltex" then
+    require("ltex_extra").setup({
+      load_langs = { "en-US" },
+      path = ".vscode", -- be nice to other people
+    })
+  end
+
   if client.supports_method("textDocument/formatting") then
     vim.api.nvim_clear_autocmds({ group = group, buffer = bufnr })
     vim.api.nvim_create_autocmd("BufWritePre", {
