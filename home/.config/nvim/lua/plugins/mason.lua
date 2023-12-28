@@ -15,6 +15,7 @@ return {
         -- LaTeX
         "latexindent",
         "ltex-ls",
+        "texlab",
         -- Lua
         "lua-language-server", -- LSP
         "stylua", -- formatter

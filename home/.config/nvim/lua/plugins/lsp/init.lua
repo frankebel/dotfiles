@@ -58,6 +58,11 @@ return {
         flags = lsp_conf.lsp_flags,
         on_attach = lsp_conf.on_attach,
       })
+      lspconfig.texlab.setup({
+        capabilities = lsp_conf.capabilities,
+        flags = lsp_conf.lsp_flags,
+        on_attach = lsp_conf.on_attach,
+      })
 
       -- Lua
       lspconfig.lua_ls.setup({
