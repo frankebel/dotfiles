@@ -19,7 +19,7 @@ return {
     end
 
     -- compilation
-    map("n", "<localleader>tt", "<cmd>VimtexToCOpen<cr>", "VTEX open table of contents ToC")
+    map("n", "<localleader>tt", "<cmd>VimtexTocOpen<cr>", "VTEX open table of contents ToC")
     map("n", "<localleader>tv", "<cmd>VimtexView<cr>", "VTEX view in pdf")
     map("n", "<localleader>tc", "<cmd>VimtexCompile<cr>", "VTEX compile")
     -- Need to start command with `:` otherwise lines are not taken
