@@ -14,6 +14,7 @@ set newtab about:blank
 set searchurls.aur https://aur.archlinux.org/packages?K=%s
 set searchurls.aw https://wiki.archlinux.org/index.php?title=Special%3ASearch&search=%s
 set searchurls.az https://www.amazon.de/s?k=%s
+set searchurls.ctan https://ctan.org/search?phrase=%s
 set searchurls.geizhals https://geizhals.at/?fs=%s&hloc=at
 set searchurls.gh https://github.com/search?q=%s
 set searchurls.gr https://github.com/%s
