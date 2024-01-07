@@ -1,3 +1,6 @@
+-- options
+vim.opt_local.colorcolumn = { "80", "100", "120" }
+
 -- Completion
 local cmp = require("cmp")
 local sources = cmp.get_config().sources
