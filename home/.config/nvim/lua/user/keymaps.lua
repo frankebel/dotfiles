@@ -5,7 +5,7 @@ end
 local function toggle_colorcolumn()
   local value = vim.inspect(vim.opt.colorcolumn:get())
   if value == "{}" then
-    vim.opt.colorcolumn = { "80", "100", "120" }
+    vim.opt.colorcolumn = { "80", "100" }
   else
     vim.opt.colorcolumn = {}
   end
