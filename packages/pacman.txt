@@ -2,6 +2,7 @@ alsa-utils
 base
 base-devel
 bat
+biber
 chromium
 code
 cups
