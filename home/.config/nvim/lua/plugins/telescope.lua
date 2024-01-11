@@ -36,7 +36,10 @@ return {
     },
     opts = {
       defaults = {
-        layout_config = { prompt_position = "top" },
+        layout_config = {
+          prompt_position = "top",
+          width = 0.9,
+        },
         prompt_prefix = "> ",
         selection_caret = "> ",
         sorting_strategy = "ascending",
