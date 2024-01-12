@@ -11,6 +11,9 @@ return {
       aux_dir = "build",
       out_dir = "",
     }
+    vim.g.vimtex_toc_config = {
+      hide_line_numbers = 0,
+    }
     -- Custom keymaps.
     -- See `:help vimtex-default-mappings`
     vim.g.vimtex_mappings_enabled = 0
