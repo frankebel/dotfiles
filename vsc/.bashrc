@@ -14,3 +14,6 @@ alias lt1='tree -L 1'
 alias lt2='tree -L 2'
 alias lt3='tree -L 3'
 alias lt='tree'
+
+GPG_TTY="$(tty)"
+export GPG_TTY
