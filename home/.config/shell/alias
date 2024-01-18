@@ -99,6 +99,11 @@ tsmr() {
         | xargs -I {} transmission-remote -t '{}' --remove-and-delete
 }
 
+# VSC
+alias sq='squeue -o "%.18i %.10Q %.9P %.8j %.8u %.2t %.10M %.6D %R" -u $USER'
+# shellcheck disable=SC1003
+alias sqw='watch -n 0.1 $(alias sq | cut -d\'\'' -f2)'
+
 # Uncategorized
 alias cal='cal -m' # Monday first day of week.
 alias cdp='cd P'
