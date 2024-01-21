@@ -16,6 +16,7 @@ set searchurls.aw https://wiki.archlinux.org/index.php?title=Special%3ASearch&se
 set searchurls.az https://www.amazon.de/s?k=%s
 set searchurls.ctan https://ctan.org/pkg/%s
 set searchurls.ctans https://ctan.org/search?phrase=%s
+set searchurls.dict https://www.dict.cc/?s=%s
 set searchurls.geizhals https://geizhals.at/?fs=%s&hloc=at
 set searchurls.gh https://github.com/search?q=%s
 set searchurls.gr https://github.com/%s
@@ -28,6 +29,7 @@ set searchurls.pkg https://archlinux.org/packages/?sort=&q=%s
 set searchurls.protondb https://www.protondb.com/search?q=%s
 set searchurls.r http://localhost:8080/r/%s
 set searchurls.s https://paulgo.io/search?q=%s
+set searchurls.thesaurus https://www.thesaurus.com/browse/%s
 set searchurls.w https://en.wikipedia.org/w/index.php?search=%s
 set searchurls.wde https://de.wikipedia.org/w/index.php?search=%s
 set searchurls.wh https://www.willhaben.at/iad/kaufen-und-verkaufen/marktplatz?keyword=%s
