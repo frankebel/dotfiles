@@ -89,6 +89,7 @@ unzip
 urlscan
 virt-manager
 waybar
+wezterm
 wget
 wl-clipboard
 wofi
