@@ -8,6 +8,3 @@ if vim.fn.filereadable(file) == 0 and vim.fn.executable("julia") == 1 then
     "julia" .. " --project=~/.julia/environments/nvim-lspconfig" .. " -e 'using Pkg; Pkg.add(\"LanguageServer\")'"
   )
 end
-
--- On 1.10.0-rc1 get wrong INFO about "Possible method call error.".
-vim.diagnostic.config({ virtual_text = { severity = { min = vim.diagnostic.severity.WARN } } })
