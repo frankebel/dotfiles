@@ -1,1 +1,2 @@
 qt5ct.conf filter=ignore_geometry
+*.gpg diff=gpg

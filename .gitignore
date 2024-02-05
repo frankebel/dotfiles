@@ -8,6 +8,7 @@
 
 # flexget
 .config-lock
+**/flexget/config.yml
 db-config*
 
 # gtk
