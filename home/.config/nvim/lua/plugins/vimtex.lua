@@ -13,6 +13,12 @@ return {
     }
     vim.g.vimtex_toc_config = {
       hide_line_numbers = 0,
+      layer_status = {
+        content = 1,
+        label = 0,
+        todo = 0,
+        include = 0,
+      },
     }
     -- Custom keymaps.
     -- See `:help vimtex-default-mappings`
