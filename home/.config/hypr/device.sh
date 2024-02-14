@@ -8,8 +8,8 @@ case "$(hostnamectl hostname)" in
         ~/data/.environments/flexget/bin/flexget daemon start -d &
         ;;
     *laptop*)
-        hyprctl keyword input:kb_layout us,us
-        hyprctl keyword input:kb_variant colemak,altgr-intl
+        hyprctl keyword input:kb_layout us,de
+        hyprctl keyword input:kb_variant colemak,
         blueman-applet &
         nm-applet &
         ;;
