@@ -1,3 +1,6 @@
+source_if_exists() {
+    [ -f "$1" ] && . "$1"
+}
 # Aliases
 . ~/.dotfiles/home/.config/shell/alias
 
@@ -87,11 +90,11 @@ eval "$(starship init zsh)" # Starship
 
 # Plugins
 plugindir='/usr/share/zsh/plugins'
-source "$plugindir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-source "$plugindir/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source_if_exists "$plugindir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source_if_exists "$plugindir/zsh-autosuggestions/zsh-autosuggestions.zsh"
 bindkey "^y" autosuggest-accept
 unset plugindir
 
 # fzf
-source '/usr/share/fzf/completion.zsh'
-source '/usr/share/fzf/key-bindings.zsh'
+source_if_exists '/usr/share/fzf/completion.zsh'
+source_if_exists '/usr/share/fzf/key-bindings.zsh'
