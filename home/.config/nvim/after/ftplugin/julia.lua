@@ -1,4 +1,5 @@
 -- Formatoptions
+vim.opt.colorcolumn = { "92" }
 vim.opt.formatoptions:remove({ "r", "o" })
 
 -- Install LSP automatically.
