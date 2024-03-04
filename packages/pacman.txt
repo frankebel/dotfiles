@@ -96,6 +96,7 @@ wofi
 wtype
 xdg-desktop-portal-hyprland
 xdg-user-dirs
+xorg-xauth
 xorg-xev
 xournalpp
 yarn
