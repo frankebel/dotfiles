@@ -24,6 +24,15 @@ return {
       { "<leader>fk", "<cmd>Telescope keymaps<cr>", desc = "TELESCOPE Find Keymaps" },
       { "<leader>fo", "<cmd>Telescope oldfiles<cr>", desc = "TELESCOPE Find Old Files" },
       {
+        "<leader>faf",
+        function()
+          require("telescope.builtin").find_files({
+            find_command = { "fd", "--type", "f", "--follow", "--hidden", "--no-ignore" },
+          })
+        end,
+        desc = "TELESCOPE Find all Files",
+      },
+      {
         "<leader>fdf",
         function()
           require("telescope.builtin").find_files({
