@@ -65,3 +65,5 @@ export MANPAGER='nvim +Man!'        # use neovim as manpager
 export QT_QPA_PLATFORMTHEME="qt5ct" # Configure Qt 5 applications without DE
 # `ssh-agent` setup with systemd user unit
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+TODAY="$(date +%F)"
+export TODAY
