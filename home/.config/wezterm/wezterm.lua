@@ -13,6 +13,7 @@ return {
   color_scheme = "Dracula (Official)",
   disable_default_key_bindings = true,
   enable_tab_bar = false,
+  enable_wayland = false,
   font = wezterm.font_with_fallback({
     "FiraCode Nerd Font",
     "Fira Code",
