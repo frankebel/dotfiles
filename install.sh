@@ -7,6 +7,7 @@ host="$(hostnamectl hostname)" # get hostname
 # Global config
 
 # Copy /etc files
+rm /etc/security/pam_env.conf
 sudo cp -r etc /
 
 # Install packages
