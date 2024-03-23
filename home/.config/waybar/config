@@ -61,10 +61,10 @@
         }
     },
     "pulseaudio": {
-        "format": "{format_source} | <big>{icon}</big> {volume} %",
-        "format-muted": "{format_source} | <big>󰖁</big>",
-        "format-source": "<big>󰍬</big> {volume} %",
-        "format-source-muted": "<big>󰍭</big>",
+        "format": "{format_source} | {icon} {volume} %",
+        "format-muted": "{format_source} | 󰖁",
+        "format-source": "󰍬 {volume} %",
+        "format-source-muted": "󰍭",
         "format-icons": {
             "default": "󰕾",
         },

@@ -82,8 +82,8 @@ tldr
 torbrowser-launcher
 transmission-cli
 trash-cli
-ttf-fira-code
-ttf-firacode-nerd
+ttf-jetbrains-mono
+ttf-jetbrains-mono-nerd
 udiskie
 unzip
 urlscan
