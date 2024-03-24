@@ -43,6 +43,10 @@ alias fd='fd --follow --hidden'
 alias fd1='fd --exact-depth 1'
 alias ftree='fd | tree --fromfile'
 
+# kitty
+alias icat='kitty icat'
+[ "$TERM" = 'xterm-kitty' ] && alias ssh='kitten ssh'
+
 # Git
 alias g='git'
 alias grt='cd "$(git rev-parse --show-toplevel)"'
