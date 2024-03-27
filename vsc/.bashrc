@@ -2,6 +2,8 @@
 
 # shellcheck source=/dev/null
 [ -f /etc/bashrc ] && . /etc/bashrc
+. ~/.config/bash/completion.bash
+. ~/.config/bash/key-bindings.bash
 
 # Aliases
 . ~/.config/shell/alias
