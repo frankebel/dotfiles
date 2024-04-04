@@ -24,7 +24,8 @@
     rc = rebase --continue
     rf = !git diff --name-only | fzf --preview 'git diff {} | delta' | xargs git restore
     rfp = !git diff --name-only | fzf --preview 'git diff {} | delta' | xargs -ro git restore --patch
-    ri = rebase --interactive HEAD~10
+    ri = rebase --interactive
+    ric = "!f() { git rebase --interactive HEAD~${1:-10}; }; f"
     rmf = !git ls-files | fzf --preview 'bat --force-colorization {}' | xargs git rm
     s = status
     sp = stash pop
