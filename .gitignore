@@ -16,7 +16,7 @@ db-config*
 gtkfilechooser.ini
 
 # Julia
-Manifest.toml
+Manifest*.toml
 
 # neomutt
 token
