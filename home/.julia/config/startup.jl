@@ -10,7 +10,7 @@ if isinteractive()
         @warn "Error initializing Revise" exception = (e, catch_backtrace())
     end
     # Automatically activate environment
-    if isfile("Project.toml") && isfile("Manifest.toml")
+    if isfile("Project.toml")
         using Pkg
         Pkg.activate(".")
     end
