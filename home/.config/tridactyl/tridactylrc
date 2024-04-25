@@ -33,7 +33,7 @@ set searchurls.thesaurus https://www.thesaurus.com/browse/%s
 set searchurls.w https://en.wikipedia.org/w/index.php?search=%s
 set searchurls.wde https://de.wikipedia.org/w/index.php?search=%s
 set searchurls.wh https://www.willhaben.at/iad/kaufen-und-verkaufen/marktplatz?keyword=%s
-set searchurls.yt https://invidious.protokolla.fi/search?q=%s
+set searchurls.yt https://www.youtube.com/results?search_query=%s
 setnull searchurls.github
 
 " Tabs
