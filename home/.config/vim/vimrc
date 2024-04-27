@@ -1,0 +1,36 @@
+filetype on
+filetype plugin on
+filetype indent on
+syntax enable
+
+let mapleader=" "
+let maplocalleader=" "
+
+set nocompatible " needs to be set first
+
+set colorcolumn="80,100"
+set cursorline
+set expandtab
+set hlsearch
+set ignorecase
+set incsearch
+set number
+set relativenumber
+set scrolloff=8
+set shiftwidth=4
+set shortmess+=I
+set sidescrolloff=8
+set smartcase
+set smartindent
+set softtabstop=4
+set splitbelow
+set splitright
+set tabstop=4
+set termguicolors
+set undofile
+set virtualedit="block"
+set wildmenu
+set wildmode="longest:full,full"
+set nowrap
+
+colorscheme industry
