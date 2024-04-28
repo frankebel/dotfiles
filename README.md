@@ -52,7 +52,7 @@ stow home
 | Compositor              | [Hyprland](https://hyprland.org)                      | [GitHub](https://github.com/hyprwm/Hyprland)         | [`hypr`](home/.config/hypr)         |
 | Shell                   | [Zsh](https://www.zsh.org/)                           | [GitHub](https://github.com/zsh-users/zsh)           | [`zsh`](home/.config/zsh)           |
 | Shell Prompt            | [Starship](https://starship.rs/)                      | [GitHub](https://github.com/starship/starship)       | [`starship`](home/.config/starship) |
-| Terminal Emulator       | [WezTerm](https://wezfurlong.org/wezterm/index.html)  | [GitHub](https://github.com/wez/wezterm)             | [`wezterm`](home/.config/wezterm)   |
+| Terminal Emulator       | [kitty](https://sw.kovidgoyal.net/kitty/)             | [GitHub](https://github.com/kovidgoyal/kitty)        | [`kitty`](home/.config/kitty)       |
 | Application Launcher    | Wofi                                                  | [sourcehut](https://hg.sr.ht/~scoopta/wofi)          | [`wofi`](home/.config/wofi)         |
 | Color Scheme            | [dracula](https://draculatheme.com/)                  | [GitHub](https://github.com/dracula/dracula-theme)   |                                     |
 | Browser                 | [Firefox](https://www.mozilla.org/en-US/firefox/new/) |                                                      |                                     |
