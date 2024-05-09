@@ -5,7 +5,7 @@ return {
   "stevearc/oil.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   version = "*",
-  cmd = "Oil",
+  lazy = false,
   keys = {
     { "<leader>e", "<cmd>Oil<cr>", desc = "OIL Toggle file manager" },
   },

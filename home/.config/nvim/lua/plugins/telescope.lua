@@ -18,6 +18,16 @@ return {
     cmd = "Telescope",
     keys = {
       { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "TELESCOPE Find Files" },
+      {
+        "<leader>fd",
+        function()
+          require("telescope.builtin").find_files({
+            prompt_title = "Find Directories",
+            find_command = { "fd", "--type", "d", "--follow", "--hidden" },
+          })
+        end,
+        desc = "TELESCOPE Find Directories",
+      },
       { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "TELESCOPE Live Grep" },
       { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "TELESCOPE List Buffers" },
       { "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "TELESCOPE Find Help" },
@@ -33,14 +43,14 @@ return {
         desc = "TELESCOPE Find all Files",
       },
       {
-        "<leader>fdf",
+        "<leader>fad",
         function()
           require("telescope.builtin").find_files({
-            prompt_title = "Find Dotfiles",
-            cwd = "~/.dotfiles",
+            prompt_title = "Find all Directories",
+            find_command = { "fd", "--type", "d", "--follow", "--hidden", "--no-ignore" },
           })
         end,
-        desc = "TELESCOPE Find Dotfiles",
+        desc = "TELESCOPE Find all Directories",
       },
     },
     opts = {
