@@ -65,7 +65,7 @@ button {
     }
 }
 
-#battery.charging, #battery.plugged {
+#battery.charging, battery.plugged {
     color: @green;
     background-color: @background;
 }
