@@ -1,9 +1,10 @@
 "query:Unread Articles:unread = \"yes\""
 
+# get youtube channel ID with query "https://www.youtube.com/channel/"
+
 # linux
 https://www.archlinux.org/feeds/news/
 https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA linux videos # Brodie Robertson
-https://www.youtube.com/feeds/videos.xml?channel_id=UC8ENHE5xdFSwx71u3fDH5Xw linux videos # The Primeagen
 https://www.youtube.com/feeds/videos.xml?channel_id=UCd3dNckv1Za2coSaHGHl5aA linux videos # TJ DeVries
 
 # blogs
@@ -22,6 +23,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCgeS8J9W62B-uLBgzp14BtQ har
 https://www.youtube.com/feeds/videos.xml?channel_id=UCI8iQa1hv7oV_Z8D35vVuSg hardware videos # Hardware Unboxed
 https://www.youtube.com/feeds/videos.xml?channel_id=UCDKLZBNM9XZ7pHPZF9D8xDQ hardware videos # Monitors Unboxed
 https://www.youtube.com/feeds/videos.xml?channel_id=UCRPdsCVuH53rcbTcEkuY4uQ hardware videos # Moore's Law is dead
+https://www.youtube.com/feeds/videos.xml?channel_id=UCRYOj4DmyxhBVrdvbsUwmAA hardware videos # optimumtech
 https://www.youtube.com/feeds/videos.xml?channel_id=UCqT8Vb3jweH6_tj2SarErfw hardware videos # The Hardware Unboxed Podcast
 
 # otaku
@@ -46,4 +48,5 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UC8VkNBOwvsTlFjoSnNSMmxw vid
 https://www.youtube.com/feeds/videos.xml?channel_id=UCSju5G2aFaWMqn-_0YBtq5A videos # Stand-up Maths
 https://www.youtube.com/feeds/videos.xml?channel_id=UCj1VqrHhDte54oLgPG4xpuQ videos # Stuff Made Here
 https://www.youtube.com/feeds/videos.xml?channel_id=UCy0tKL1T7wFoYcxCe0xjN6Q videos # Technology Connections
+https://www.youtube.com/feeds/videos.xml?channel_id=UCmb8hO2ilV9vRa8cilis88A videos # Thunderf00t
 https://www.youtube.com/feeds/videos.xml?channel_id=UCHnyfMqiRRG1u-2MsSQLbXA videos # Veritasium
