@@ -1,6 +1,6 @@
 -- Formatoptions
-vim.opt.colorcolumn = { "92" }
-vim.opt.formatoptions:remove({ "r", "o" })
+vim.opt_local.colorcolumn = { "92" }
+vim.opt.formatoptions:remove({ "o", "r" })
 
 -- Install LSP automatically.
 local file = vim.fn.expand("~/.julia/environments/nvim-lspconfig/Manifest.toml")
