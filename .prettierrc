@@ -1,6 +1,0 @@
-overrides:
-  - files: "*.md"
-    options:
-      proseWrap: always
-
-# vim: ft=yaml
