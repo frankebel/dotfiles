@@ -1,9 +1,5 @@
 -- Options
 
--- Special Characters
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
 -- filetype
 vim.g.tex_flavor = "latex" -- `:help ft-tex-plugin`
 
@@ -22,6 +18,7 @@ vim.opt.cursorline = true -- Highlight text line of cursor line
 vim.opt.expandtab = true -- Expand tabs into spaces
 vim.opt.formatoptions = "tcqnj" -- Default "tcqj"
 vim.opt.ignorecase = true -- Ignore case in search
+vim.opt.inccommand = "split" -- preview substitutions
 vim.opt.mouse = "a" -- Enable mouse support
 vim.opt.number = true -- Print line number
 vim.opt.relativenumber = true -- Show relative line number

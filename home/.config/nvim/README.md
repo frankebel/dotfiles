@@ -7,42 +7,44 @@ instead of Vimscript.
 The configuration is modular as can be seen from the file tree:
 
 ```
- .
-├──  after
-│   └──  ftplugin
-│       ├──  filetype.lua
+.
+├── after
+│   └── ftplugin
+│       ├── filetype1.lua
+│       ├── filetype2.lua
 │       ⋮
-├──  lua
-│   ├──  plugins
-│   │   ├──  plugin1.lua
-│   │   ├──  plugin2.lua
-│   │   ⋮
-│   └──  user
-│       ├──  autocmds.lua
-│       ├──  init.lua
-│       ├──  keymaps.lua
-│       ├──  lazy.lua
-│       └──  options.lua
-├──  spell
-│   └──  en.utf-8.add
-├──  init.lua
-└──  lazy-lock.json
+├── lua
+│   └── plugins
+│       ├── plugin1.lua
+│       ├── plugin2.lua
+│       ⋮
+├── plugin
+│   ├── file1.lua
+│   ├── file2.lua
+│   ⋮
+├── spell
+│   └── en.utf-8.add
+├── init.lua
+└── lazy-lock.json
 ```
 
 ## Main file
 
-[`init.lua`](./init.lua) is held very simple.
+[`init.lua`](./init.lua) sets up the plugin manager
+[lazy.nvim](https://github.com/folke/lazy.nvim).
 
 ## Basic configuration
 
-The basic configuration is done within the [`user`](./lua/user/) directory.
+The basic configuration is done within the [`plugin`](./plugin) directory.
+As this is in the runtimepath (`:help runtimepath`),
+files will be sourced automatically.
 
 ## Plugins
 
 I use [lazy.nvim](https://github.com/folke/lazy.nvim) as my plugin manager.
-Plugins themselves are configured in the [`plugin`](./lua/plugins/) directory
-with mostly one file per plugin. [`lazy-lock.json`](./lazy-lock.json) lists all
-plugins I currently use.
+Plugins themselves are configured in the [`lua/plugins`](./lua/plugins/)
+directory with mostly one file per plugin.
+[`lazy-lock.json`](./lazy-lock.json) lists all plugins I currently use.
 
 ## File specific configuration
 
