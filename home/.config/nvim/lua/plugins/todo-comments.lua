@@ -2,8 +2,8 @@
 -- https://github.com/folke/todo-comments.nvim
 return {
   "folke/todo-comments.nvim",
-  dependencies = { "nvim-lua/plenary.nvim" },
   version = "*",
+  dependencies = { "nvim-lua/plenary.nvim" },
   cmd = { "TodoTrouble", "TodoTelescope" },
   event = { "BufReadPost", "BufNewFile" },
   config = true,

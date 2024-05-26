@@ -7,14 +7,17 @@
 return {
   {
     "mfussenegger/nvim-dap",
+    version = "*",
     dependencies = {
       {
         "theHamsta/nvim-dap-virtual-text",
         config = true,
       },
-      "rcarriga/nvim-dap-ui",
+      {
+        "rcarriga/nvim-dap-ui",
+        version = "*",
+      },
     },
-    version = "*",
     -- stylua: ignore
     keys = {
       { "<leader>db", function() require("dap").toggle_breakpoint() end, desc = "DAP Toggle Breakpoint" },

@@ -3,6 +3,7 @@
 
 return {
   "lewis6991/gitsigns.nvim",
+  version = "*",
   event = { "BufReadPre", "BufNewFile" },
   opts = {
     on_attach = function(bufnr)
