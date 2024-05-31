@@ -1,13 +1,13 @@
 -- Options
 
 -- filetype
-vim.g.tex_flavor = "latex" -- `:help ft-tex-plugin`
+vim.g.tex_flavor = "latex"
 
--- providers
-vim.g.loaded_python3_provider = 0 -- `:help provider-python`
-vim.g.loaded_ruby_provider = 0 -- `:help provider-ruby`
-vim.g.loaded_perl_provider = 0 -- `:help provider-perl`
-vim.g.loaded_node_provider = 0 -- `:help provider-nodejs`
+-- provider
+vim.g.loaded_python3_provider = 0
+vim.g.loaded_ruby_provider = 0
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_node_provider = 0
 
 -- `:help options`
 -- Compact list under `:help option-list`
