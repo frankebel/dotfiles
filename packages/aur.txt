@@ -2,8 +2,8 @@ cyrus-sasl-xoauth2-git
 dracula-gtk-theme
 firefox-tridactyl-native
 juliaup
-libreddit
 pandoc-bin
 paru
+redlib
 shellcheck-bin
 tessen

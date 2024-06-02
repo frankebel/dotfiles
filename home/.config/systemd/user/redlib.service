@@ -1,9 +1,9 @@
 [Unit]
-Description=libreddit daemon
+Description=redlib daemon
 After=network.service
 
 [Service]
-ExecStart=/usr/bin/libreddit
+ExecStart=/usr/bin/redlib
 
 [Install]
 WantedBy=default.target
