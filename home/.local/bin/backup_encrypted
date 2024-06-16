@@ -1,11 +1,8 @@
 #!/bin/sh
 # Create an encrypted backup.
-# Recursively go down "SRC_DIR" until directory size is smaller than THRESHOLD
-# and create a encrypted tarball of each directory.
+# For each specified directory create an encrypted tarball.
 
-DEST_DIR="$TEMPDIR/$(date '+%F')"
-SRC_DIR="$DATADIR"
-THRESHOLD=4000000 # size in KiB
+DEST_DIR="$TEMPDIR/$(date --iso-8601)"
 
 # Check if backup exists.
 if [ -d "$DEST_DIR" ]; then
@@ -16,41 +13,23 @@ else
 fi
 
 tar_and_encrypt() {
-    name="$1"
-    dest="$2"
-    printf "Encrypting %s\n" "$(realpath "$name")"
-    tar -cf - "$name" \
+    # create directories if name is not simple directory
+    dir="$(dirname "$1")"
+    [ "$dir" = "." ] || mkdir -p "$DEST_DIR/$dir"
+    # encrypted tarball
+    printf "Encrypting %s\n" "$1"
+    tar -cf - "$1" \
         | gpg --encrypt --recipient BCCE722BD83CC643E1DF8DA86DAF5CC9ECB2A203 \
-            > "$dest/$name.tar.gpg"
+            > "$DEST_DIR/$1.tar.gpg"
 }
 
-traverse() {
-    src_dir="$1"
-    dest_dir="$2"
-    cd "$src_dir" || exit 1
-    for i in *; do
-        # Ignore the following directories.
-        [ "$(realpath "$i")" = "$SRC_DIR/iso" ] && continue
-        [ "$(realpath "$i")" = "$SRC_DIR/programming" ] && continue
-        [ "$(realpath "$i")" = "$SRC_DIR/shared" ] && continue
-        [ "$(realpath "$i")" = "$SRC_DIR/videos" ] && continue
-        [ "$(realpath "$i")" = "$SRC_DIR/virtualization" ] && continue
-        # Only encrypt if smaller than "THRESHOLD".
-        if [ "$(du -s "$i" | cut -f1)" -lt "$THRESHOLD" ]; then
-            tar_and_encrypt "$i" "$dest_dir"
-        elif [ -d "$i" ]; then
-            # Recur into directory.
-            mkdir "$dest_dir/$i"
-            traverse "$i" "$dest_dir/$i"
-        else
-            printf "Ignoring %s\n" "$(realpath "$i")"
-        fi
-    done
-    src_dir="$(dirname "$src_dir")"
-    dest_dir="$(dirname "$dest_dir")"
-    cd .. || exit 1
-}
-
-traverse "$SRC_DIR" "$DEST_DIR"
+cd "$DATADIR" || exit
+tar_and_encrypt "documents"
+tar_and_encrypt "education/master"
+tar_and_encrypt "finance"
+tar_and_encrypt "games"
+tar_and_encrypt "manuals"
+tar_and_encrypt "nachhilfe"
+tar_and_encrypt "notes"
 
 printf "Backup finished.\n"
