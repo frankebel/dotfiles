@@ -1,5 +1,5 @@
 #!/bin/sh
-# Start background processes.
+# Stop background processes.
 
 dunstctl set-paused true
 flexget daemon stop
