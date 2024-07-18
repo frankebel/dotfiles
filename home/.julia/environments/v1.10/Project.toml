@@ -1,6 +1,7 @@
 [deps]
 BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
 CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
+Coverage = "a2441757-f6aa-5fb2-8edb-039e3f45d037"
 Cthulhu = "f68482b8-f384-11e8-15f7-abe071a5a75f"
 Debugger = "31a5f54b-26ea-5ae9-a837-f05ce5417438"
 IJulia = "7073ff75-c697-5162-941a-fcdaad2a7d2a"
