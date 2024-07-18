@@ -28,6 +28,7 @@ isync
 jdk-openjdk
 jq
 jupyter-notebook
+kitty
 libreoffice-fresh
 linux
 linux-firmware
@@ -82,8 +83,7 @@ tldr
 torbrowser-launcher
 transmission-cli
 trash-cli
-ttf-jetbrains-mono
-ttf-jetbrains-mono-nerd
+ttf-firacode-nerd
 udiskie
 unzip
 urlscan

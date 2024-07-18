@@ -15,7 +15,7 @@ return {
   enable_tab_bar = false,
   enable_wayland = false,
   font = wezterm.font_with_fallback({
-    "JetBrainsMono Nerd Font",
+    "FiraCode Nerd Font",
     "Noto Sans Math",
     "Noto Sans Symbols 2",
     "Noto Sans Mono CJK JP",
