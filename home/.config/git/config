@@ -18,6 +18,7 @@
     lf = !fd --hidden . | fzf --preview 'git {} | delta' | xargs git log
     ln = log --name-only
     lo = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    loa = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
     logp = log --patch
     pl = pull
     ps = push
