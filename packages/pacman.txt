@@ -53,6 +53,7 @@ obs-studio
 openconnect
 openssh
 pacman-contrib
+pandoc-cli
 pass
 pass-otp
 pavucontrol
@@ -89,7 +90,6 @@ unzip
 urlscan
 virt-manager
 waybar
-wezterm
 wget
 wl-clipboard
 wofi
