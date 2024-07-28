@@ -8,10 +8,6 @@ return {
     cmd = "Mason",
     opts = {
       ensure_installed = {
-        -- Java
-        "jdtls", -- LSP
-        "java-debug-adapter", -- DAP
-        "java-test", -- DAP
         -- LaTeX
         "latexindent",
         "ltex-ls",

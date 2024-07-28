@@ -33,7 +33,6 @@ return {
         "git_rebase",
         "gitcommit",
         "gitignore",
-        "java",
         "json",
         "lua",
         "markdown",
