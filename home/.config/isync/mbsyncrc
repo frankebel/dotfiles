@@ -4,7 +4,7 @@ Host imap.mailbox.org
 Port 993
 User frank.ebel@mailbox.org
 PassCmd "pass show mail/mailbox_pwd"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 MaildirStore mailbox-local
@@ -26,7 +26,7 @@ Host outlook.office365.com
 Port 993
 User e1429282@student.tuwien.ac.at
 PassCmd "$XDG_CONFIG_HOME/neomutt/mutt_oauth2.py $XDG_CONFIG_HOME/neomutt/token"
-SSLType IMAPS
+TLSType IMAPS
 AuthMechs XOAUTH2
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
