@@ -16,6 +16,10 @@ return {
       {
         "rcarriga/nvim-dap-ui",
         version = "*",
+        dependencies = {
+          "nvim-neotest/nvim-nio",
+          version = "*",
+        },
       },
     },
     -- stylua: ignore
