@@ -130,3 +130,8 @@ alias shck='shellcheck'
 alias tree='tree -a -I .git' # ignore .git directory
 alias z='zathura'
 alias zzz='systemctl suspend'
+
+# Functions
+today() {
+    date --iso-8601
+}
