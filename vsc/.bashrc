@@ -23,4 +23,4 @@ alias lt='tree'
 # Application Specific Settings
 GPG_TTY="$(tty)"
 export GPG_TTY
-export JULIA_NUM_THREADS="1"
+export JULIA_NUM_THREADS="10"
