@@ -36,6 +36,7 @@ button {
 
 #battery,
 #clock,
+#custom-mail,
 #idle_inhibitor,
 #pulseaudio,
 #tray,
@@ -75,7 +76,8 @@ button {
     background-color: @green;
 }
 
-#battery.warning:not(.charging) {
+#battery.warning:not(.charging),
+#custom-mail {
     background-color: @red;
     color: @background;
 }
