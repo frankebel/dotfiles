@@ -11,7 +11,7 @@ vim.g.loaded_node_provider = 0
 
 -- `:help options`
 -- Compact list under `:help option-list`
-vim.opt.clipboard = "unnamedplus" -- Use system clipboard
+vim.opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus" -- Use `clipboard-osc52` or system clipboard
 vim.opt.colorcolumn = { "80", "100" }
 vim.opt.completeopt = { "menuone", "noselect" } -- Insert mode comlete options
 vim.opt.cursorline = true -- Highlight text line of cursor line
