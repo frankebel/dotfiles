@@ -130,7 +130,7 @@ alias pwdc='pwd C'
 alias shck='shellcheck'
 alias tree='tree -a -I .git' # ignore .git directory
 alias z='zathura'
-alias zzz='systemctl suspend'
+alias zzz='hibernate_if_laptop'
 
 # Functions
 today() {
