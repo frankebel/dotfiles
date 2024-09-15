@@ -1,0 +1,12 @@
+configurations:
+  - host: imap.mailbox.org
+    port: 993
+    tls: true
+    tlsOptions:
+      rejectUnauthorized: false
+    username: frank.ebel@mailbox.org
+    passwordCMD: 'pass show mail/mailbox_pwd'
+    boxes:
+      - mailbox: INBOX
+        onNewMail: 'mbsync -c "$XDG_CONFIG_HOME/isync/mbsyncrc" mailbox'
+        onNewMailPost: 'notify-send "  mailbox"'
