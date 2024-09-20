@@ -60,6 +60,7 @@ export FZF_ALT_C_OPTS="--preview 'tree -a --gitignore -C -L 1 {}'"
 JULIA_NUM_THREADS="$(nproc)"
 export JULIA_NUM_THREADS
 export OPENBLAS_NUM_THREADS="1"
+export TMPDIR="/tmp"
 
 # Uncategorized
 export MANPAGER='nvim +Man!'        # use neovim as manpager
