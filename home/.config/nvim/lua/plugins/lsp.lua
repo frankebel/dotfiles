@@ -15,7 +15,7 @@ return {
       local lspconfig = require("lspconfig")
       local servers = {
         -- Julia
-        julials = true,
+        julials = {},
         -- LaTeX
         ltex = {
           settings = {
@@ -24,7 +24,7 @@ return {
             },
           },
         },
-        texlab = true,
+        texlab = {},
         -- Lua
         lua_ls = {
           settings = {
@@ -38,13 +38,10 @@ return {
           },
         },
         -- Python
-        pyright = true,
+        pyright = {},
       }
 
       for name, config in pairs(servers) do
-        if config == true then
-          config = {}
-        end
         config = vim.tbl_deep_extend("force", {}, {
           capabilities = capabilities,
         }, config)
