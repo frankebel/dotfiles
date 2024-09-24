@@ -11,7 +11,7 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export DATADIR="$HOME/data"
 export DOTDIR="$HOME/.dotfiles"
 export MASTERDIR="$DATADIR/education/master"
-export PROGRAMMINGDIR="$DATADIR/programming"
+export PROJECTDIR="$DATADIR/projects"
 export TEMPDIR="$XDG_STATE_HOME/temp"
 export TORRENTDIR="$XDG_DATA_HOME/torrents"
 

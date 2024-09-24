@@ -23,11 +23,11 @@ alias ip='ip -color=auto'
 alias ls='ls --color=auto'
 
 # Often used directories
-alias cadv='cd $PROGRAMMINGDIR/advent-of-code-2022'
+alias cadv='cd $PROJECTDIR/advent-of-code-2022'
 alias cda='cd "$DATADIR"; l'
 alias cdf='cd "$DOTDIR"; l'
 alias cn='cd "$DATADIR/notes"; l'
-alias cpr='cd "$PROGRAMMINGDIR"; l'
+alias cpr='cd "$PROJECTDIR"; l'
 alias ct='cd "$TEMPDIR"; l'
 alias ctor='cd "$TORRENTDIR"; l'
 alias vdf='cd "$DOTDIR"; $EDITOR'
