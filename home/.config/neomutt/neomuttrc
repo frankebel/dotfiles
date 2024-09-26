@@ -2,6 +2,7 @@
 set index_format = "%4C %Z %{%FT%R} %-15.15L %s"
 set date_format = "!%FT%R"
 set sort = reverse-date
+set mark_old = no
 set markers = no
 set reverse_name
 auto_view text/html
