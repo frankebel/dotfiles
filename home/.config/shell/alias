@@ -109,8 +109,8 @@ tsmr() {
 }
 
 # VSC
-alias sq='squeue -o "%.18i %.10Q %.9P %.18j %.8u %.2t %.10M %.6D %R" -u $USER'
-alias sqa='squeue -o "%.18i %.10Q %.9P %.18j %.8u %.2t %.10M %.6D %R"'
+alias sq='squeue -o "%.18i %.10Q %.9P %.28j %.8u %.2t %.10M %.6D %R" -u $USER'
+alias sqa='squeue -o "%.18i %.10Q %.9P %.28j %.8u %.2t %.10M %.6D %R"'
 # shellcheck disable=SC1003
 alias sqw='watch -n 0.1 $(alias sq | cut -d\'\'' -f2)'
 
