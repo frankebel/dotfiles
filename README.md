@@ -13,6 +13,7 @@ external links are written like [this]().
 - [`etc`](./etc/) contains dotfiles for my `/etc` directory.
 - [`home`](./home/) contains dotfiles for my `$HOME` directory.
 - [`packages`](./packages/) contains a list of my installed packages.
+- [`laptop`](./laptop/) contains dotfiles for my laptop.
 - [`scripts`](./scripts/) contains scripts for this repository.
 - [`vsc`](./vsc/) contains dotfiles for the
   [Vienna Scientific Cluster](https://www.vsc.ac.at) (server)

@@ -9,6 +9,11 @@ host="$(hostnamectl hostname)" # get hostname
 # Copy /etc files
 rm /etc/security/pam_env.conf
 sudo cp -r etc /
+case "$host" in
+    *laptop*)
+        sudo cp -r laptop/etc /
+        ;;
+esac
 
 # Install packages
 # pacman
