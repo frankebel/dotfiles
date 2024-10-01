@@ -11,6 +11,7 @@ set theme dark
 set newtab about:blank
 
 " Set search engines
+set searchurls.arxiv https://www.arxiv.org/search/?query=%s&searchtype=all
 set searchurls.aur https://aur.archlinux.org/packages?K=%s
 set searchurls.aw https://wiki.archlinux.org/index.php?title=Special%3ASearch&search=%s
 set searchurls.az https://www.amazon.de/s?k=%s
