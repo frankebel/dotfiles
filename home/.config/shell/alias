@@ -133,6 +133,14 @@ alias z='zathura'
 alias zzz='systemctl suspend-then-hibernate || systemctl suspend'
 
 # Functions
+yesterday() {
+    date -d 'yesterday' --iso-8601
+}
+
 today() {
     date --iso-8601
+}
+
+tomorrow() {
+    date -d 'tomorrow' --iso-8601
 }
