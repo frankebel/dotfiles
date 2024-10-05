@@ -57,8 +57,7 @@ export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND --type d"
 export FZF_ALT_C_OPTS="--preview 'tree -a --gitignore -C -L 1 {}'"
 
 # Julia
-JULIA_NUM_THREADS="$(nproc)"
-export JULIA_NUM_THREADS
+export JULIA_NUM_THREADS=$(($(nproc) < 10 ? $(nproc) : 10)) # at most 10 threads
 export OPENBLAS_NUM_THREADS="1"
 export TMPDIR="/tmp"
 
