@@ -56,3 +56,7 @@ map("n", "<leader>ow", "<cmd>set invwrap<cr>", "Toggle wrap")
 map("n", "<leader>id", "<cmd>put =strftime('%F')<cr>kJA", "Insert date")
 map("n", "<leader>is", "<cmd>put =strftime('%FT%T')<cr>kJA", "Insert timestamp")
 map("n", "<leader>it", "<cmd>put =strftime('%T')<cr>kJA", "Insert time")
+
+-- Go line by line with `wrap` unless count (e.g. 4j) is given
+vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
