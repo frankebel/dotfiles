@@ -3,8 +3,8 @@ base
 base-devel
 bat
 biber
+btop
 chromium
-code
 cups
 dosfstools
 dunst
@@ -24,6 +24,7 @@ hplip
 htop
 hyprland
 imv
+inkscape
 isync
 jdk-openjdk
 jq
@@ -69,6 +70,7 @@ qt5ct
 reflector
 ripgrep
 rsync
+shellcheck
 slurp
 starship
 steam
@@ -79,6 +81,7 @@ syncthing
 system-config-printer
 termdown
 texlive
+texlive-doc
 thunderbird
 tldr
 torbrowser-launcher

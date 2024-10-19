@@ -4,5 +4,4 @@ firefox-tridactyl-native
 juliaup
 paru
 redlib
-shellcheck-bin
 tessen
