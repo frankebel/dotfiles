@@ -1,5 +1,7 @@
 #!/bin/sh
 
+HISTSIZE=10000
+
 # shellcheck source=/dev/null
 [ -f /etc/bashrc ] && . /etc/bashrc
 . ~/.config/bash/completion.bash
