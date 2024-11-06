@@ -1,0 +1,13 @@
+configurations:
+  - host: outlook.office365.com
+    port: 993
+    tls: true
+    tlsOptions:
+      rejectUnauthorized: false
+    username: e1429282@student.tuwien.ac.at
+    passwordCMD: '$XDG_CONFIG_HOME/neomutt/mutt_oauth2.py $XDG_CONFIG_HOME/neomutt/token'
+    xoAuth2: true
+    boxes:
+      - mailbox: INBOX
+        onNewMail: 'mbsync -c "$XDG_CONFIG_HOME/isync/mbsyncrc" tuw'
+        onNewMailPost: 'notify-send "  tuw"'
