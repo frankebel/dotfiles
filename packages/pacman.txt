@@ -23,6 +23,7 @@ grim
 hplip
 htop
 hyprland
+hyprlock
 imv
 inkscape
 isync
