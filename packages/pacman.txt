@@ -22,6 +22,7 @@ goimapnotify
 grim
 hplip
 htop
+hypridle
 hyprland
 hyprlock
 imv
