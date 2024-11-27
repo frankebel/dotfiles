@@ -77,8 +77,6 @@ slurp
 starship
 steam
 stow
-swayidle
-swaylock
 syncthing
 system-config-printer
 termdown
