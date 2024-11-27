@@ -10,19 +10,19 @@ The color scheme I use is [dracula](https://draculatheme.com).
 Links to my files within this repository are written like [`this`](),
 while external links are written like [this]().
 
-- [`etc`](./etc/) contains dotfiles for my `/etc` directory.
-- [`home`](./home/) contains dotfiles for my `$HOME` directory.
-- [`packages`](./packages/) contains a list of my installed packages.
-- [`laptop`](./laptop/) contains dotfiles for my laptop.
-- [`scripts`](./scripts/) contains scripts for this repository.
-- [`vsc`](./vsc/) contains dotfiles for the
+- [`etc`](etc/) contains dotfiles for my `/etc` directory.
+- [`home`](home/) contains dotfiles for my `$HOME` directory.
+- [`packages`](packages/) contains a list of my installed packages.
+- [`laptop`](laptop/) contains dotfiles for my laptop.
+- [`scripts`](scripts/) contains scripts for this repository.
+- [`vsc`](vsc/) contains dotfiles for the
   [Vienna Scientific Cluster](https://www.vsc.ac.at) (server)
 
-![](./images/window_single.png)
+![](images/window_single.png)
 
-![](./images/window_multi.png)
+![](images/window_multi.png)
 
-![](./images/neovim.png)
+![](images/neovim.png)
 
 ## Installation and Setup
 
@@ -88,7 +88,7 @@ sudo pacman -S fd ripgrep
 If possible I try to follow the
 [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html).
 For software which does not follow it, I try to export the environment variables in
-[`environment`](./home/.config/shell/environment).
+[`environment`](home/.config/shell/environment).
 
 ### Compositor
 
@@ -114,7 +114,7 @@ I use [Neovim](https://neovim.io/) as my text editor.
 As I use [lazy.nvim](https://github.com/folke/lazy.nvim) as my package manager,
 the list of installed plugins can be viewed in
 [`lazy-lock.json`](home/.config/nvim/lazy-lock.json).
-Further information can be read [`here`](./home/.config/nvim/README.md).
+Further information can be read [`here`](home/.config/nvim/README.md).
 
 ### Operating System
 
