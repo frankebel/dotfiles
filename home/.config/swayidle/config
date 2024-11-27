@@ -1,3 +1,0 @@
-timeout 1200 'swaylock --daemonize'
-timeout 1800 'systemctl suspend-then-hibernate || systemctl suspend'
-before-sleep 'swaylock --daemonize'
