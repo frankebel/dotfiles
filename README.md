@@ -3,12 +3,12 @@
 ## About
 
 This repository contains my personal configuration files (dotfiles) which I
-mainly manage with [GNU Stow](https://www.gnu.org/software/stow/). Feel free to
-be inspired by them and use parts of it. The color scheme I use is
-[dracula](https://draculatheme.com).
+mainly manage with [GNU Stow](https://www.gnu.org/software/stow/).
+Feel free to be inspired by them and use parts of it.
+The color scheme I use is [dracula](https://draculatheme.com).
 
-Links to my files within this repository are written like [`this`](), while
-external links are written like [this]().
+Links to my files within this repository are written like [`this`](),
+while external links are written like [this]().
 
 - [`etc`](./etc/) contains dotfiles for my `/etc` directory.
 - [`home`](./home/) contains dotfiles for my `$HOME` directory.
@@ -87,49 +87,48 @@ sudo pacman -S fd ripgrep
 
 If possible I try to follow the
 [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html).
-For software which does not follow it, I try to export the environment variables
-in [`environment`](./home/.config/shell/environment).
+For software which does not follow it, I try to export the environment variables in
+[`environment`](./home/.config/shell/environment).
 
 ### Compositor
 
-Since I like the tiling workflow and want to use
-[Wayland](https://wayland.freedesktop.org/), [Hyprland](https://hyprland.org) is
-my wayland compositor of choice. For the statusbar I run
-[Waybar](https://github.com/Alexays/Waybar).
+Since I like the tiling workflow and want to use [Wayland](https://wayland.freedesktop.org/),
+[Hyprland](https://hyprland.org) is my Wayland compositor of choice.
+For the status bar I run [Waybar](https://github.com/Alexays/Waybar).
 
 ### Mail
 
 I use [isync](https://isync.sourceforge.io/) to synchronize my local mailbox.
 [Go IMAP notify](https://gitlab.com/shackra/goimapnotify) is running in the
-background using IMAP IDLE. To read mails in the command line
-[neomutt](https://neomutt.org/) is used.
+background using IMAP IDLE.
+To read mails in the command line [neomutt](https://neomutt.org/) is used.
 
 ### RSS
 
-[Newsboat](https://newsboat.org/) is my terminal RSS Reader of choice. Videos
-can be directly viewed with [mpv](https://mpv.io).
+[Newsboat](https://newsboat.org/) is my terminal RSS Reader of choice.
+Videos can be directly viewed with [mpv](https://mpv.io).
 
 ### Editor
 
-I use [Neovim](https://neovim.io/) as my text editor. As I use
-[lazy.nvim](https://github.com/folke/lazy.nvim) as my package manager, the list
-of installed plugins can be viewed in
-[`lazy-lock.json`](home/.config/nvim/lazy-lock.json). Further information can be
-read [`here`](./home/.config/nvim/README.md).
+I use [Neovim](https://neovim.io/) as my text editor.
+As I use [lazy.nvim](https://github.com/folke/lazy.nvim) as my package manager,
+the list of installed plugins can be viewed in
+[`lazy-lock.json`](home/.config/nvim/lazy-lock.json).
+Further information can be read [`here`](./home/.config/nvim/README.md).
 
 ### Operating System
 
 I use [Arch Linux](https://archlinux.org/) for my operating system as I like
-their simple and pragmatic approach. I created an install script
-[archinstall](https://github.com/frankebel/archinstall) for faster setup.
+their simple and pragmatic approach.
+I created an installation script [archinstall](https://github.com/frankebel/archinstall)
+for faster setup.
 
 ### Password Management
 
 I use [pass](https://www.passwordstore.org/) and
-[pass-otp](https://github.com/tadfisher/pass-otp) to store and manage my
-passwords. It is set up as a git repository containing `*.gpg` files which makes
-version control very easy. To quickly retrieve and enter my credentials, I use
-[tessen](https://github.com/ayushnix/tessen).
+[pass-otp](https://github.com/tadfisher/pass-otp) to store and manage my passwords.
+It is set up as a git repository containing `*.gpg` files which makes version control very easy.
+To quickly retrieve and enter my credentials, I use [tessen](https://github.com/ayushnix/tessen).
 
 ### Scripts
 
