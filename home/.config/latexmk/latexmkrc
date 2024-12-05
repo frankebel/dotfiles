@@ -1,4 +1,0 @@
-# https://www.manpagez.com/man/1/latexmk/
-$pdf_mode = 1;
-$aux_dir = 'build';
-$out_dir = '';
