@@ -13,7 +13,7 @@ case "$(hostnamectl hostname)" in
         blueman-applet &
         nm-applet &
         ;;
-    *tuwien*)
+    mint22)
         hyprctl keyword monitor DP-1,preferred,1920x0,auto
         hyprctl keyword monitor HDMI-A-2,preferred,0x0,auto
         hyprctl keyword input:kb_layout de,
