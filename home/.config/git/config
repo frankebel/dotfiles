@@ -28,6 +28,7 @@
     ri = rebase --interactive
     ric = "!f() { git rebase --interactive HEAD~${1:-10}; }; f"
     rmf = !git ls-files | fzf --preview 'bat --force-colorization {}' | xargs git rm
+    rs = restore --staged .
     s = status
     sp = stash pop
     su = stash -u
