@@ -27,7 +27,7 @@ case $(hostnamectl hostname) in
         check_and_delete "$frank_desktop"
         check_and_delete "$frank_uni"
         ;;
-    *tuwien*)
+    *mint*)
         check_and_delete "$frank_desktop"
         check_and_delete "$frank_laptop"
         ;;
