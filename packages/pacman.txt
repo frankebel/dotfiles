@@ -11,6 +11,7 @@ dunst
 efibootmgr
 espeak-ng
 exfatprogs
+fastfetch
 fd
 firefox
 fzf
@@ -91,6 +92,7 @@ ttf-firacode-nerd
 udiskie
 unzip
 urlscan
+uv
 virt-manager
 waybar
 wget
