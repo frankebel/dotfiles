@@ -15,7 +15,7 @@ case "$(hostnamectl hostname)" in
         ;;
     mint22)
         hyprctl keyword monitor DP-1,preferred,1920x0,auto
-        hyprctl keyword monitor HDMI-A-2,preferred,0x0,auto
+        hyprctl keyword monitor HDMI-A-1,preferred,0x0,auto
         hyprctl keyword input:kb_layout de,
         hyprctl keyword input:kb_variant nodeadkeys,
         ;;
