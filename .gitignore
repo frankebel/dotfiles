@@ -7,11 +7,6 @@
 */.local/bin/nvim
 */.local/bin/rg
 
-# flexget
-.config-lock
-**/flexget/config.yml
-db-config*
-
 # gtk
 gtkfilechooser.ini
 
