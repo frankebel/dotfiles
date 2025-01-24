@@ -24,23 +24,24 @@ return {
       { "<leader>fk", "<cmd>Telescope keymaps<cr>", desc = "TELESCOPE Find Keymaps" },
       { "<leader>fo", "<cmd>Telescope oldfiles<cr>", desc = "TELESCOPE Find Old Files" },
       {
-        "<leader>faf",
+        "<leader>fd",
+        function()
+          require("telescope.builtin").find_files({
+            find_command = { "fd", "--type", "directory", "--follow", "--hidden" },
+            prompt_title = "Find Directories",
+          })
+        end,
+        desc = "TELESCOPE Find Directories",
+      },
+      {
+        "<leader>fa",
         function()
           require("telescope.builtin").find_files({
             find_command = { "fd", "--follow", "--hidden", "--no-ignore" },
+            prompt_title = "Find All",
           })
         end,
-        desc = "TELESCOPE Find all Files",
-      },
-      {
-        "<leader>fdf",
-        function()
-          require("telescope.builtin").find_files({
-            prompt_title = "Find Dotfiles",
-            cwd = "~/.dotfiles/",
-          })
-        end,
-        desc = "TELESCOPE Find Dotfiles",
+        desc = "TELESCOPE Find All",
       },
     },
     opts = {
@@ -55,7 +56,7 @@ return {
       },
       pickers = {
         find_files = {
-          find_command = { "fd", "--follow", "--hidden" },
+          find_command = { "fd", "--type", "file", "--follow", "--hidden" },
         },
       },
     },
