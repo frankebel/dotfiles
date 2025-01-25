@@ -72,19 +72,6 @@ stow home
 | RSS Reader              | [Newsboat](https://newsboat.org/)                     |                                                    | [`newsboat`](home/.config/newsboat) |
 | Screenshots             | grim                                                  | [sourcehut](https://git.sr.ht/~emersion/grim)      |                                     |
 
-## Dependencies
-
-The following programs are necessary to use my dotfiles fully:
-
-### Neovim
-
-- [fd](https://github.com/sharkdp/fd)
-- [ripgrep](https://github.com/BurntSushi/ripgrep)
-
-```sh
-sudo pacman -S fd ripgrep
-```
-
 ## Explanation about software
 
 If possible I try to follow the
