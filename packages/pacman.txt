@@ -1,4 +1,5 @@
 alsa-utils
+android-tools
 base
 base-devel
 bat
@@ -73,6 +74,7 @@ qt5ct
 reflector
 ripgrep
 rsync
+rust
 shellcheck
 slurp
 starship
