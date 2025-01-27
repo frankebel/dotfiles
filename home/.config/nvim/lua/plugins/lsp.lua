@@ -9,6 +9,10 @@ return {
     event = { "BufReadPost", "BufNewFile", "BufWritePre" },
     dependencies = {
       "williamboman/mason.nvim",
+      {
+        "barreiroleo/ltex_extra.nvim",
+        version = "*",
+      },
     },
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -97,13 +101,5 @@ return {
         end,
       })
     end,
-  },
-  {
-    "barreiroleo/ltex_extra.nvim",
-    branch = "dev",
-    event = { "BufReadPre", "BufNewFile" },
-    opts = {
-      load_langs = { "en-US" },
-    },
   },
 }
