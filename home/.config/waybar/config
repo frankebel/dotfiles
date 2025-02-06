@@ -19,7 +19,7 @@
         "pulseaudio",
         "battery",
     ],
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
         "all-outputs": true,
     },
     "tray": {
