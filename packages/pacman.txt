@@ -54,6 +54,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 npm
+nvtop
 obs-studio
 openconnect
 openssh
