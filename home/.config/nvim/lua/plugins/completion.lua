@@ -1,70 +1,65 @@
 -- Completion engine.
--- https://github.com/hrsh7th/nvim-cmp
--- https://github.com/L3MON4D3/LuaSnip
+-- https://github.com/Saghen/blink.cmp
+-- https://github.com/rafamadriz/friendly-snippets
 
 return {
-  "hrsh7th/nvim-cmp",
+  "saghen/blink.cmp",
+  version = "*",
   event = "InsertEnter",
   dependencies = {
-    -- luasnip
-    { "L3MON4D3/LuaSnip", version = "*" },
-    -- completion plugins
-    "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-nvim-lua",
-    "hrsh7th/cmp-buffer",
-    "hrsh7th/cmp-path",
+    {
+      "saghen/blink.compat",
+      version = "*",
+      lazy = true,
+      opts = {},
+    },
     "kdheepak/cmp-latex-symbols",
-    "saadparwaiz1/cmp_luasnip",
-    -- pictograms
-    "onsails/lspkind.nvim",
+    "rafamadriz/friendly-snippets",
   },
-  opts = function()
-    local cmp = require("cmp")
-    return {
-      snippet = {
-        expand = function(args)
-          require("luasnip").lsp_expand(args.body)
-        end,
+  opts = {
+    appearance = {
+      nerd_font_variant = "mono",
+    },
+    completion = {
+      documentation = {
+        auto_show = true,
+        window = {
+          border = "single",
+        },
       },
+      ghost_text = {
+        enabled = true,
+      },
+      list = {
+        selection = {
+          auto_insert = false,
+        },
+      },
+    },
+    keymap = {
+      preset = "default",
+    },
+    signature = {
+      enabled = true,
       window = {
-        -- completion = cmp.config.window.bordered(),
-        documentation = cmp.config.window.bordered(),
+        border = "single",
       },
-      mapping = {
-        -- ":help ins-completion"
-        ["<c-p>"] = cmp.mapping.select_prev_item(),
-        ["<c-n>"] = cmp.mapping.select_next_item(),
-        ["<c-b>"] = cmp.mapping.scroll_docs(-4),
-        ["<c-f>"] = cmp.mapping.scroll_docs(4),
-        ["<c-c>"] = cmp.mapping.complete(),
-        ["<c-e>"] = cmp.mapping.abort(),
-        ["<c-y>"] = cmp.mapping.confirm({ select = true }),
+    },
+    sources = {
+      default = {
+        "lsp",
+        "path",
+        "snippets",
+        "buffer",
+        "latex_symbols",
       },
-      formatting = {
-        format = require("lspkind").cmp_format({
-          with_text = true,
-          menu = {
-            nvim_lsp = "[LSP]",
-            nvim_lua = "[LUA]",
-            luasnip = "[SNIP]",
-            latex_symbols = "[LATEX]",
-            buffer = "[BUF]",
-            path = "[PATH]",
-          },
-        }),
+      providers = {
+        -- custom providers
+        latex_symbols = {
+          name = "latex_symbols",
+          module = "blink.compat.source",
+        },
       },
-      sources = {
-        { name = "nvim_lsp" },
-        { name = "nvim_lua" },
-        { name = "luasnip" },
-        { name = "latex_symbols" },
-        { name = "buffer" },
-        { name = "path" },
-      },
-      confirm_opts = {
-        behavior = cmp.ConfirmBehavior.Replace,
-        select = false,
-      },
-    }
-  end,
+    },
+  },
 }

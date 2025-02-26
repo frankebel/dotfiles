@@ -8,6 +8,7 @@ return {
     version = "*",
     event = { "BufReadPost", "BufNewFile", "BufWritePre" },
     dependencies = {
+      "saghen/blink.cmp",
       "williamboman/mason.nvim",
       {
         "barreiroleo/ltex_extra.nvim",
@@ -15,7 +16,7 @@ return {
       },
     },
     config = function()
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+      local capabilities = require("blink.cmp").get_lsp_capabilities()
       local lspconfig = require("lspconfig")
       local servers = {
         -- Julia
