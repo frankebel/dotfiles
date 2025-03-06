@@ -2,10 +2,7 @@
 *.old
 
 # binaries
-*/.local/bin/fd
-*/.local/bin/fzf
-*/.local/bin/nvim
-*/.local/bin/rg
+*/.local/bin
 
 # gtk
 gtkfilechooser.ini
