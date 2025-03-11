@@ -3,11 +3,19 @@
 
 drives="$(find "/run/media/$USER" -mindepth 1 -maxdepth 1 | sed 's|.*/||')"
 
-if [ "$drives" ]; then
-    # Select drives and eject them
-    echo "$drives" \
-        | fzf --prompt="Select drives to eject:" \
-        | xargs -r -I {} udiskie-umount "/run/media/$USER/{}"
-else
+# no drives installed
+if ! [ "$drives" ]; then
     printf "No drive mounted.\n"
+    exit 0
 fi
+
+# ecject only drive
+if [ "$(printf "%s\n" "$drives" | wc -l)" = 1 ]; then
+    udiskie-umount "/run/media/$USER/$drives"
+    exit 0
+fi
+
+# select drives and eject them
+echo "$drives" \
+    | fzf --prompt="Select drives to eject:" \
+    | xargs -r -I {} udiskie-umount "/run/media/$USER/{}"
