@@ -7,6 +7,7 @@ biber
 btop
 chromium
 cups
+discord
 dosfstools
 dunst
 efibootmgr
@@ -30,7 +31,7 @@ hyprlock
 imv
 inkscape
 isync
-jdk-openjdk
+jdk21-openjdk
 jq
 jupyter-notebook
 kitty
