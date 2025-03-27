@@ -84,11 +84,11 @@ steam
 stow
 syncthing
 system-config-printer
+tealdeer
 termdown
 texlive
 texlive-doc
 thunderbird
-tldr
 torbrowser-launcher
 transmission-cli
 trash-cli
