@@ -92,6 +92,7 @@ thunderbird
 torbrowser-launcher
 transmission-cli
 trash-cli
+tree-sitter-cli
 ttf-firacode-nerd
 udiskie
 unzip
