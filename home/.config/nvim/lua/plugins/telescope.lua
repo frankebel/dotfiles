@@ -46,6 +46,7 @@ return {
     },
     opts = {
       defaults = {
+        border = false,
         layout_config = {
           prompt_position = "top",
           width = 0.9,
