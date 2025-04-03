@@ -66,27 +66,12 @@ return {
 
           -- Keymaps
           -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-          local builtin = require("telescope.builtin")
           local function nmap(lhs, rhs, desc)
             vim.keymap.set("n", lhs, rhs, { desc = desc, buffer = 0 })
           end
           vim.opt_local.omnifunc = "v:lua.vim.lsp.omnifunc"
-          nmap("gd", builtin.lsp_definitions, "LSP Go to definition")
-          nmap("gr", builtin.lsp_references, "LSP List references")
           nmap("gD", vim.lsp.buf.declaration, "LSP Go to declaration")
           nmap("gT", vim.lsp.buf.type_definition, "LSP Type definition")
-          nmap("K", vim.lsp.buf.hover, "LSP Hover documentation")
-
-          nmap("<leader>rn", vim.lsp.buf.rename, "LSP Rename")
-          nmap("<leader>ca", vim.lsp.buf.code_action, "LSP Code action")
-
-          nmap("gi", vim.lsp.buf.implementation, "LSP Go to implementation")
-          nmap("<C-k>", vim.lsp.buf.signature_help, "LSP Signature documentation")
-
-          nmap("<leader>ld", vim.diagnostic.open_float, "LSP Diagnostic open float")
-          nmap("[d", vim.diagnostic.goto_prev, "LSP Prev Diagnostic")
-          nmap("]d", vim.diagnostic.goto_next, "LSP Next Diagnostic")
-          nmap("<leader>q", vim.diagnostic.setloclist, "LSP Diagnostic set loclist")
 
           -- Override server capabilities
           if settings.server_capabilities then

@@ -55,3 +55,7 @@ map("n", "<leader>ow", "<cmd>set invwrap<cr>", "Toggle wrap")
 -- Go line by line with `wrap` unless count (e.g. 4j) is given
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+
+-- LSP
+map("n", "<leader>q", vim.diagnostic.setloclist, "Diagnostic set loclist")
+map("n", "gd", vim.lsp.buf.definition, "LSP go to defition")

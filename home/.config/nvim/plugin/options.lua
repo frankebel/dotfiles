@@ -42,3 +42,6 @@ vim.opt.virtualedit = { "block" } -- Cursor can by anywhere in visual block mode
 vim.opt.wildmode = "longest:full,full" -- Completion mode
 vim.opt.winborder = "rounded" -- Style of floating windows
 vim.opt.wrap = false -- Line wrap
+
+-- `:help diagnostic.txt`
+vim.diagnostic.config({ virtual_lines = { current_line = true } })
