@@ -11,6 +11,7 @@ LiveServer = "16fef848-5104-11e9-1b77-fb7a48bbb589"
 PkgTemplates = "14b8a8f1-9102-5b29-a752-f990bacb7fe1"
 ProfileCanvas = "efd6af41-a80b-495e-886c-e51b0c7d77a3"
 Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
+UnicodePlots = "b8865327-cd53-5732-bb35-84acbb429228"
 
 [compat]
 JuliaFormatter = "1.0.0"
