@@ -10,7 +10,7 @@ return {
   check_for_updates = false,
   command_palette_bg_color = "#44475a",
   command_palette_fg_color = "#bd93f9",
-  color_scheme = "Dracula (Official)",
+  color_scheme = "Catppuccin Mocha",
   disable_default_key_bindings = true,
   enable_tab_bar = false,
   enable_wayland = false,

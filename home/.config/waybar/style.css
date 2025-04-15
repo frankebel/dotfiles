@@ -1,4 +1,4 @@
-@import "./dracula.css";
+@import "mocha.css";
 
 * {
     font-family: FiraCode Nerd Font;
@@ -18,11 +18,11 @@ button {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: @purple;
+    color: @mauve;
 }
 
 #workspaces button.active {
-    background-color: @selection;
+    background-color: @surface0;
 }
 
 #workspaces button:hover {
@@ -43,8 +43,8 @@ button {
 #workspaces {
     margin: 2px 0px 4px; /* top, left/right, bottom */
     border-radius: 0.75em;
-    background: @background;
-    color: @purple;
+    background: @base;
+    color: @mauve;
     padding-right: 1rem;
     padding-left: 1rem;
 }
@@ -61,30 +61,30 @@ button {
 
 @keyframes blink {
     to {
-        background-color: @background;
-        color: @purple;
+        background-color: @base;
+        color: @mauve;
     }
 }
 
 #battery.charging, battery.plugged {
     color: @green;
-    background-color: @background;
+    background-color: @base;
 }
 
 #battery.full {
-    color: @background;
+    color: @base;
     background-color: @green;
 }
 
 #battery.warning:not(.charging),
 #custom-mail {
     background-color: @red;
-    color: @background;
+    color: @base;
 }
 
 #battery.critical:not(.charging) {
     background-color: @red;
-    color: @background;
+    color: @base;
     animation-name: blink;
     animation-duration: 1s;
     animation-timing-function: linear;
@@ -105,5 +105,5 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+    background-color: @subtext0;
 }

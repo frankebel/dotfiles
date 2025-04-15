@@ -5,7 +5,7 @@
 This repository contains my personal configuration files (dotfiles) which I
 mainly manage with [GNU Stow](https://www.gnu.org/software/stow/).
 Feel free to be inspired by them and use parts of it.
-The color scheme I use is [dracula](https://draculatheme.com).
+The color scheme I use is [Catppuccin Mocha](https://catppuccin.com).
 
 Links to my files within this repository are written like [`this`](),
 while external links are written like [this]().
@@ -49,28 +49,28 @@ stow home
 
 ## Software I use
 
-| Type                    | Name                                                  | Repository                                         | Config                              |
-| :---------------------- | :---------------------------------------------------- | :------------------------------------------------- | :---------------------------------- |
-| Operating System        | [Arch Linux](https://archlinux.org/)                  | [GitLab](https://gitlab.archlinux.org/archlinux)   |                                     |
-| Compositor              | [Hyprland](https://hyprland.org)                      | [GitHub](https://github.com/hyprwm/Hyprland)       | [`hypr`](home/.config/hypr)         |
-| Shell                   | [Zsh](https://www.zsh.org/)                           | [GitHub](https://github.com/zsh-users/zsh)         | [`zsh`](home/.config/zsh)           |
-| Shell Prompt            | [Starship](https://starship.rs/)                      | [GitHub](https://github.com/starship/starship)     | [`starship`](home/.config/starship) |
-| Terminal Emulator       | [kitty](https://sw.kovidgoyal.net/kitty/)             | [GitHub](https://github.com/kovidgoyal/kitty)      | [`kitty`](home/.config/kitty)       |
-| Application Launcher    | Wofi                                                  | [sourcehut](https://hg.sr.ht/~scoopta/wofi)        | [`wofi`](home/.config/wofi)         |
-| Color Scheme            | [dracula](https://draculatheme.com/)                  | [GitHub](https://github.com/dracula/dracula-theme) |                                     |
-| Browser                 | [Firefox](https://www.mozilla.org/en-US/firefox/new/) |                                                    |                                     |
-| Editor                  | [Neovim](https://neovim.io/)                          | [GitHub](https://github.com/neovim/neovim)         | [`nvim`](home/.config/nvim)         |
-| Font                    | Fira Code                                             | [GitHub](https://github.com/tonsky/FiraCode)       |                                     |
-| Image Viewer            | imv                                                   | [sourcehut](https://sr.ht/~exec64/imv/)            | [`imv`](home/.config/imv)           |
-| Mail                    | [Neomutt](https://neomutt.org/)                       | [GitHub](https://github.com/neomutt/neomutt)       | [`neomutt`](home/.config/neomutt)   |
-| Mailbox Synchronization | [isync](https://isync.sourceforge.io/)                |                                                    | [`isync`](home/.config/isync)       |
-| Media Player            | [mpv](https://mpv.io/)                                | [GitHub](https://github.com/mpv-player/mpv)        | [`mpv`](home/.config/mpv)           |
-| Notifications           | [dunst](https://dunst-project.org/)                   | [GitHub](https://github.com/dunst-project/dunst)   | [`dunst`](home/.config/dunst)       |
-| PDF Viewer              | [zathura](https://pwmt.org/projects/zathura/)         | [GitLab](https://git.pwmt.org/pwmt/zathura)        | [`zathura`](home/.config/zathura)   |
-| Encryption              | [GnuPG](https://gnupg.org/)                           |                                                    | [`gnupg`](home/.local/share/gnupg)  |
-| Password Manager        | [pass](https://www.passwordstore.org/)                | [Repo](https://git.zx2c4.com/password-store/)      |                                     |
-| RSS Reader              | [Newsboat](https://newsboat.org/)                     |                                                    | [`newsboat`](home/.config/newsboat) |
-| Screenshots             | grim                                                  | [sourcehut](https://git.sr.ht/~emersion/grim)      |                                     |
+| Type                    | Name                                                  | Repository                                       | Config                              |
+| :---------------------- | :---------------------------------------------------- | :----------------------------------------------- | :---------------------------------- |
+| Operating System        | [Arch Linux](https://archlinux.org/)                  | [GitLab](https://gitlab.archlinux.org/archlinux) |                                     |
+| Compositor              | [Hyprland](https://hyprland.org)                      | [GitHub](https://github.com/hyprwm/Hyprland)     | [`hypr`](home/.config/hypr)         |
+| Shell                   | [Zsh](https://www.zsh.org/)                           | [GitHub](https://github.com/zsh-users/zsh)       | [`zsh`](home/.config/zsh)           |
+| Shell Prompt            | [Starship](https://starship.rs/)                      | [GitHub](https://github.com/starship/starship)   | [`starship`](home/.config/starship) |
+| Terminal Emulator       | [kitty](https://sw.kovidgoyal.net/kitty/)             | [GitHub](https://github.com/kovidgoyal/kitty)    | [`kitty`](home/.config/kitty)       |
+| Application Launcher    | Wofi                                                  | [sourcehut](https://hg.sr.ht/~scoopta/wofi)      | [`wofi`](home/.config/wofi)         |
+| Color Scheme            | [Catppuccin Mocha](https://catppuccin.com)            | [GitHub](https://github.com/catppuccin)          |                                     |
+| Browser                 | [Firefox](https://www.mozilla.org/en-US/firefox/new/) |                                                  |                                     |
+| Editor                  | [Neovim](https://neovim.io/)                          | [GitHub](https://github.com/neovim/neovim)       | [`nvim`](home/.config/nvim)         |
+| Font                    | Fira Code                                             | [GitHub](https://github.com/tonsky/FiraCode)     |                                     |
+| Image Viewer            | imv                                                   | [sourcehut](https://sr.ht/~exec64/imv/)          | [`imv`](home/.config/imv)           |
+| Mail                    | [Neomutt](https://neomutt.org/)                       | [GitHub](https://github.com/neomutt/neomutt)     | [`neomutt`](home/.config/neomutt)   |
+| Mailbox Synchronization | [isync](https://isync.sourceforge.io/)                |                                                  | [`isync`](home/.config/isync)       |
+| Media Player            | [mpv](https://mpv.io/)                                | [GitHub](https://github.com/mpv-player/mpv)      | [`mpv`](home/.config/mpv)           |
+| Notifications           | [dunst](https://dunst-project.org/)                   | [GitHub](https://github.com/dunst-project/dunst) | [`dunst`](home/.config/dunst)       |
+| PDF Viewer              | [zathura](https://pwmt.org/projects/zathura/)         | [GitLab](https://git.pwmt.org/pwmt/zathura)      | [`zathura`](home/.config/zathura)   |
+| Encryption              | [GnuPG](https://gnupg.org/)                           |                                                  | [`gnupg`](home/.local/share/gnupg)  |
+| Password Manager        | [pass](https://www.passwordstore.org/)                | [Repo](https://git.zx2c4.com/password-store/)    |                                     |
+| RSS Reader              | [Newsboat](https://newsboat.org/)                     |                                                  | [`newsboat`](home/.config/newsboat) |
+| Screenshots             | grim                                                  | [sourcehut](https://git.sr.ht/~emersion/grim)    |                                     |
 
 ## Explanation about software
 

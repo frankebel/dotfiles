@@ -20,4 +20,4 @@ set sidebar_indent_string="    "
 source "account.mbox"
 
 # color theme
-source dracula.muttrc
+source catppuccin.muttrc
