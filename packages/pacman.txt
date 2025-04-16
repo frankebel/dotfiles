@@ -89,6 +89,7 @@ termdown
 texlive
 texlive-doc
 thunderbird
+tokei
 torbrowser-launcher
 transmission-cli
 trash-cli
