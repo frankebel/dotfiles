@@ -4,9 +4,6 @@
 # binaries
 */.local/bin
 
-# gtk
-gtkfilechooser.ini
-
 # Julia
 Manifest*.toml
 
