@@ -18,12 +18,6 @@ while external links are written like [this]().
 - [`vsc`](vsc/) contains dotfiles for the
   [Vienna Scientific Cluster](https://www.vsc.ac.at) (server)
 
-![](images/window_single.png)
-
-![](images/window_multi.png)
-
-![](images/neovim.png)
-
 ## Installation and Setup
 
 ```sh
