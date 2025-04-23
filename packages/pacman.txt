@@ -64,7 +64,9 @@ pandoc-cli
 pass
 pass-otp
 pavucontrol
+perl-file-homedir
 perl-rename
+perl-yaml-tiny
 piper
 pipewire
 pipewire-pulse
@@ -88,6 +90,7 @@ tealdeer
 termdown
 texlive
 texlive-doc
+texlive-langgerman
 thunderbird
 tokei
 torbrowser-launcher
