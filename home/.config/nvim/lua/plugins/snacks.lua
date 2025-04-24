@@ -5,7 +5,23 @@ return {
   "folke/snacks.nvim",
   version = false,
   priority = 1000,
+  keys = {
+    {
+      "K",
+      function()
+        Snacks.image.hover()
+      end,
+      desc = "SNACKS hover image",
+    },
+  },
   opts = {
-    image = { enabled = true },
+    image = {
+      doc = {
+        enabled = true,
+        -- do not render automatically
+        inline = false,
+        float = false,
+      },
+    },
   },
 }
