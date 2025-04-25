@@ -69,7 +69,7 @@ alias mv='mv -iv'
 alias rm='rm -Iv'
 
 # lsd
-alias l='lsd --long --almost-all'
+alias l='lsd --long --almost-all --ignore-glob ""' # don't ignore anything
 alias lt1='lsd --tree --almost-all --depth 1'
 alias lt2='lsd --tree --almost-all --depth 2'
 alias lt3='lsd --tree --almost-all --depth 3'
