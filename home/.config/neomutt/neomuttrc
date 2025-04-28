@@ -21,3 +21,10 @@ source "account.mbox"
 
 # color theme
 source catppuccin.muttrc
+
+# encryption
+set crypt_use_gpgme = yes
+set postpone_encrypt = yes
+set pgp_self_encrypt = yes
+set crypt_autopgp = yes
+set pgp_default_key = BCCE722BD83CC643E1DF8DA86DAF5CC9ECB2A203
