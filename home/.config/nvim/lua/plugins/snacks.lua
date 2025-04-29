@@ -7,7 +7,7 @@ return {
   priority = 1000,
   keys = {
     {
-      "K",
+      "<leader>K",
       function()
         Snacks.image.hover()
       end,
