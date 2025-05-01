@@ -7,7 +7,7 @@ set mbox_type = Maildir
 set folder = "~/.local/share/isync/tuw"
 set spoolfile = +INBOX
 set postponed = +Drafts
-set record = +"Sent Items"
+unset record
 set trash = +"Deleted Items"
 mailboxes =INBOX =Drafts ="Junk Email" ="Sent Items" ="Deleted Items" =Archive
 
