@@ -79,6 +79,10 @@ Since I like the tiling workflow and want to use [Wayland](https://wayland.freed
 [Hyprland](https://hyprland.org) is my Wayland compositor of choice.
 For the status bar I run [Waybar](https://github.com/Alexays/Waybar).
 
+### Contacts
+
+I use [pimsync](https://pimsync.whynothugo.nl/) to sync my contact list.
+
 ### Mail
 
 I use [isync](https://isync.sourceforge.io/) to synchronize my local mailbox.

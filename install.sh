@@ -77,6 +77,8 @@ mkdir -p ~/.local/share/applications
 mkdir -p ~/.local/share/gnupg
 mkdir -p ~/.local/share/isync/mailbox
 mkdir -p ~/.local/share/isync/tuw
+mkdir -p ~/.local/share/pimsync/contacts
+mkdir -p ~/.local/share/pimsync/status
 mkdir -p ~/.local/share/torrents
 mkdir -p ~/.local/state/temp
 mkdir -p ~/.ssh

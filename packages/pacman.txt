@@ -67,6 +67,7 @@ pavucontrol
 perl-file-homedir
 perl-rename
 perl-yaml-tiny
+pimsync
 piper
 pipewire
 pipewire-pulse
