@@ -82,6 +82,7 @@ For the status bar I run [Waybar](https://github.com/Alexays/Waybar).
 ### Contacts
 
 I use [pimsync](https://pimsync.whynothugo.nl/) to sync my contact list.
+Contacts are accessed with [khard](https://github.com/lucc/khard).
 
 ### Mail
 

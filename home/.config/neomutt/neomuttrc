@@ -7,6 +7,7 @@ set markers = no
 set reverse_name
 auto_view text/html
 set mailcap_path = "$XDG_CONFIG_HOME/neomutt/mailcap"
+set query_command = "khard email --parsable %s"
 
 # sidebar settings
 set sidebar_visible
