@@ -34,6 +34,7 @@ isync
 jdk21-openjdk
 jq
 jupyter-notebook
+khal
 khard
 kitty
 libreoffice-fresh

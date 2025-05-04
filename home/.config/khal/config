@@ -1,0 +1,31 @@
+# vim: ft=ini
+# https://khal.readthedocs.io/en/latest/configure.html
+
+[calendars]
+
+[[main]]
+path = ~/.local/share/pimsync/calendars/Y2FsOi8vMC80NA/
+
+[[tuw]]
+path = ~/.local/share/pimsync/calendars/Y2FsOi8vMC80Mw/
+
+[[important]]
+path = ~/.local/share/pimsync/calendars/Y2FsOi8vMC80NQ/
+
+[[birthdays]]
+path = ~/.local/share/pimsync/calendars/Y2FsOi8vMS8w/
+readonly = true
+
+[default]
+default_calendar = main
+show_all_days = true
+timedelta = 7d
+
+[locale]
+dateformat = %Y-%m-%d
+datetimeformat = %Y-%m-%d %H:%M
+firstweekday = 0
+timeformat = %H:%M
+longdateformat = %Y-%m-%d
+longdatetimeformat = %Y-%m-%d %H:%M
+weeknumbers = left
