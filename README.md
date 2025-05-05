@@ -82,7 +82,7 @@ For the status bar I run [Waybar](https://github.com/Alexays/Waybar).
 ### Calendar and contacts
 
 I use [pimsync](https://pimsync.whynothugo.nl/) to sync my calendar and contacts.
-The calnendar is accessed with [khal](https://github.com/pimutils/khal)
+The calendar is accessed with [khal](https://github.com/pimutils/khal)
 while contacts are accessed with [khard](https://github.com/lucc/khard).
 
 ### Mail
