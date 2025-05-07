@@ -17,5 +17,6 @@ ignore-globs:
   - .build
   - .git
   - .mypy_cache
+  - build
 sorting:
   dir-grouping: first
