@@ -1,9 +1,9 @@
 -- Use Mason as package manager for LSP, DAP, linters, formatters.
--- https://github.com/williamboman/mason.nvim
+-- https://github.com/mason-org/mason.nvim
 
 return {
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     version = "*",
     cmd = "Mason",
     opts = {
