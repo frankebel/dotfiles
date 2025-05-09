@@ -1,5 +1,7 @@
+DMFT
 Hyprland
 LSP
+Lanczos
 Neomutt
 Neovim
 Newsboat
@@ -8,6 +10,8 @@ Rebase
 TODO
 XDG
 config
+diagonalization
+discretization
 docstring
 docstrings
 dotfiles
@@ -21,8 +25,12 @@ neomutt
 nvim
 otp
 py
+renormalization
 ripgrep
+struct
 subkey
 systemd
+tridiagonal
+tridiagonalization
 worktree
 μs
