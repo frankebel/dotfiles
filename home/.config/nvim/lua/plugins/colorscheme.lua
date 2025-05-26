@@ -3,7 +3,7 @@
 
 return {
   "catppuccin/nvim",
-  -- version = "*", lastest one from 2024-08-10
+  version = "*",
   lazy = false,
   name = "catppuccin",
   priority = 1000,
