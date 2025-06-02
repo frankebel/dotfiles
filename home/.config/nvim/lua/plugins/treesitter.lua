@@ -6,7 +6,7 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    -- version = "*",
+    branch = "master",
     build = ":TSUpdate",
     event = { "BufReadPost", "BufNewFile" },
     dependencies = {
@@ -19,6 +19,7 @@ return {
       {
         -- https://github.com/nvim-treesitter/nvim-treesitter-context
         "nvim-treesitter/nvim-treesitter-context",
+        version = "*",
         config = true,
       },
       "nvim-treesitter/nvim-treesitter-textobjects",
