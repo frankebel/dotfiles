@@ -6,22 +6,17 @@ return {
   version = "*",
   lazy = false,
   priority = 1000,
-  keys = {
-    {
-      "<leader>K",
-      function()
-        Snacks.image.hover()
-      end,
-      desc = "SNACKS hover image",
-    },
-  },
   opts = {
     image = {
       doc = {
         enabled = true,
-        -- do not render automatically
-        inline = false,
-        float = false,
+        max_width = 100,
+        max_height = 100,
+      },
+      math = {
+        latex = {
+          font_size = "large",
+        },
       },
     },
   },
