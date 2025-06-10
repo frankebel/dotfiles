@@ -19,5 +19,10 @@ return {
         },
       },
     },
+    indent = {
+      animate = {
+        enabled = false,
+      },
+    },
   },
 }
