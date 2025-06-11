@@ -6,6 +6,9 @@ return {
   version = "*",
   lazy = false,
   priority = 1000,
+  dependencies = {
+    "folke/todo-comments.nvim",
+  },
   opts = {
     image = {
       doc = {
@@ -260,6 +263,13 @@ return {
         Snacks.picker.resume()
       end,
       desc = "SNACKS Resume last Picker",
+    },
+    {
+      "<leader>st",
+      function()
+        Snacks.picker.todo_comments()
+      end,
+      desc = "SNACKS Search TODO",
     },
     {
       "<leader>su",
