@@ -75,7 +75,6 @@ return {
             vim.keymap.set("n", lhs, rhs, { desc = desc, buffer = 0 })
           end
           vim.opt_local.omnifunc = "v:lua.vim.lsp.omnifunc"
-          nmap("gD", vim.lsp.buf.declaration, "LSP Go to declaration")
           nmap("gT", vim.lsp.buf.type_definition, "LSP Type definition")
 
           -- Override server capabilities

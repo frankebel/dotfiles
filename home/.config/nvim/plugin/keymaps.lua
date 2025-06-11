@@ -58,4 +58,3 @@ vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = tr
 
 -- LSP
 map("n", "<leader>q", vim.diagnostic.setloclist, "Diagnostic set loclist")
-map("n", "gd", vim.lsp.buf.definition, "LSP go to defition")
