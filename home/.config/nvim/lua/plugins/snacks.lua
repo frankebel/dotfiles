@@ -53,6 +53,14 @@ return {
     },
   },
   keys = {
+    -- bufdelete
+    {
+      "<leader>bd",
+      function()
+        Snacks.bufdelete()
+      end,
+      "Delete current buffer",
+    },
     -- Top Pickers
     {
       "<leader><space>",

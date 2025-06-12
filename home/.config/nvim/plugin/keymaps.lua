@@ -43,9 +43,6 @@ map({ "n", "x" }, "gw", "*N", "Search word under cursor")
 map("x", "K", ":move '<-2<CR>gv-gv", "Move lines up")
 map("x", "J", ":move '>+1<CR>gv-gv", "Move lines down")
 
--- Delete current buffer and move to next
-map("n", "<leader>bd", "<cmd>bn<cr><cmd>bd#<cr>", "Delete current buffer")
-
 -- Toggle options
 map("n", "<leader>oc", toggle_colorcolumn, "Toggle colorcolumn")
 map("n", "<leader>or", "<cmd>set invrelativenumber<cr>", "Toggle relativenumber")
