@@ -10,6 +10,7 @@ return {
     "folke/todo-comments.nvim",
   },
   opts = {
+    bigfile = {},
     image = {
       doc = {
         enabled = true,
