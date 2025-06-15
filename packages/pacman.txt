@@ -116,7 +116,6 @@ xdg-user-dirs
 xorg-xauth
 xorg-xev
 xournalpp
-yarn
 yt-dlp
 zathura
 zathura-pdf-mupdf
