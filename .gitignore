@@ -10,6 +10,9 @@ Manifest*.toml
 # neomutt
 token
 
+# newsboad
+urls
+
 # neovim
 *.spl
 *.sug
