@@ -71,7 +71,6 @@ alias sv='sudoedit'
 alias v='$EDITOR'
 
 # openconnect
-alias vpntuw='sudo openconnect --background --user "$(pass show tuw/openconnect)" vpn.tuwien.ac.at'
 alias vpnoff='sudo killall --quiet -SIGINT openconnect'
 
 # Pacman
