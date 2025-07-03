@@ -69,7 +69,7 @@
       "parseParticles": true,
       "patchDates": "dateadded=dateAdded, date-added=dateAdded, datemodified=dateModified, date-modified=dateModified",
       "platform": "lin",
-      "postscript": "",
+      "postscript": "if (Translator.BetterTeX && tex.has.title) {\n  tex.add({ name: 'title', value: zotero.title.replace(/(\\$.*?\\$)/g, '<script>{$1}</script>') });\n}",
       "postscriptOverride": "",
       "preferencesOverride": "",
       "qualityReport": false,
