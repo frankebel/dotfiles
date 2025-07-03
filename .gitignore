@@ -1,9 +1,6 @@
 *.log
 *.old
 
-# binaries
-*/.local/bin
-
 # Julia
 Manifest*.toml
 

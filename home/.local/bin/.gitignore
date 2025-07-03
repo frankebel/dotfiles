@@ -1,0 +1,7 @@
+# ignore manually installed binaries
+
+delta
+fd
+fzf
+nvim
+rg
