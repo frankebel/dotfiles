@@ -1,0 +1,5 @@
+blueman
+bluez
+bluez-utils
+intel-ucode
+ollama-rocm

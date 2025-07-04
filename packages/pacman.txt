@@ -37,6 +37,7 @@ jupyter-notebook
 khal
 khard
 kitty
+libreoffice-extension-texmaths
 libreoffice-fresh
 linux
 linux-firmware
