@@ -20,6 +20,7 @@ vim.opt.formatoptions = "tcqnj" -- Default "tcqj"
 vim.opt.ignorecase = true -- Ignore case in search
 vim.opt.inccommand = "split" -- preview substitutions
 vim.opt.mouse = "a" -- Enable mouse support
+vim.opt.nrformats:append({ "blank" }) -- what to treat as number
 vim.opt.number = true -- Print line number
 vim.opt.relativenumber = true -- Show relative line number
 vim.opt.scrolloff = 8 -- Minimal number of lines to keep around cursor
