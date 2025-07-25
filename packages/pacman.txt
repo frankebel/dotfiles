@@ -18,6 +18,7 @@ fd
 firefox
 fzf
 gammastep
+gdu
 gimp
 git
 git-delta
@@ -47,7 +48,6 @@ lxsession
 lynx
 man-db
 mpv
-ncdu
 neomutt
 neovim
 networkmanager
