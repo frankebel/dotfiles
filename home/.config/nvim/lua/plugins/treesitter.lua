@@ -11,12 +11,6 @@ return {
     event = { "BufReadPost", "BufNewFile" },
     dependencies = {
       {
-        -- https://github.com/nvim-treesitter/playground
-        "nvim-treesitter/playground",
-        build = ":TSInstall query",
-        cmd = "TSPlaygroundToggle",
-      },
-      {
         -- https://github.com/nvim-treesitter/nvim-treesitter-context
         "nvim-treesitter/nvim-treesitter-context",
         version = "*",
