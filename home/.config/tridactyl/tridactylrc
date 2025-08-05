@@ -1,4 +1,3 @@
-" vim: set filetype=tridactyl
 " Delete settings with `:sanitise tridactyllocal`
 " Export settings with `:mktridactylrc -f ~/.config/tridactyl/tridactylrc`
 " Source settings with `:source`
