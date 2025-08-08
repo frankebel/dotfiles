@@ -1,14 +1,15 @@
 -- Tree-sitter is a parser generator tool and an incremental parsing library.
 -- It can build a concrete syntax tree for a source file and efficiently update
 -- the syntax tree as the source file is edited.
--- https://github.com/nvim-treesitter/nvim-treesitter
 
 return {
   {
+    -- https://github.com/nvim-treesitter/nvim-treesitter
     "nvim-treesitter/nvim-treesitter",
-    branch = "master",
+    branch = "main",
     build = ":TSUpdate",
     event = { "BufReadPost", "BufNewFile" },
+    cmd = { "TSInstall", "TSUpdate", "TSUninstall" },
     dependencies = {
       {
         -- https://github.com/nvim-treesitter/nvim-treesitter-context
@@ -16,10 +17,13 @@ return {
         version = "*",
         config = true,
       },
-      "nvim-treesitter/nvim-treesitter-textobjects",
+      {
+        -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+        "nvim-treesitter/nvim-treesitter-textobjects",
+        branch = "main",
+      },
     },
     opts = {
-      -- A list of parser names, or "all"
       ensure_installed = {
         "bash",
         "c",
@@ -29,6 +33,7 @@ return {
         "gitcommit",
         "gitignore",
         "json",
+        "julia",
         "latex",
         "lua",
         "markdown",
@@ -40,94 +45,79 @@ return {
         "vimdoc",
         "yaml",
       },
-      sync_install = false,
-      auto_install = true,
-      highlight = {
-        enable = true,
-        additional_vim_regex_highlighting = false,
-        disable = {
-          "latex",
-        },
-      },
-      incremental_selection = {
-        enable = true,
-        keymaps = {
-          init_selection = "<c-space>",
-          node_incremental = "<c-space>",
-          scope_incremental = "grc",
-          node_decremental = "<bs>",
-        },
-      },
-
-      -- nvim-treesiter-textobjects
-      -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
-      textobjects = {
-        move = {
-          enable = true,
-          set_jumps = true, -- whether to set jumps in the jumplist
-          goto_next_start = {
-            ["]p"] = { query = "@parameter.inner", desc = "TS Jump to next parameter" },
-            ["]i"] = { query = "@conditional.outer", desc = "TS Jump to next conditional start" },
-            ["]l"] = { query = "@loop.outer", desc = "TS Jump to next loop start" },
-            ["]f"] = { query = "@function.outer", desc = "TS Jump to next function start" },
-            ["]c"] = { query = "@class.outer", desc = "TS Jump to next class start" },
-          },
-          goto_next_end = {
-            ["]I"] = { query = "@conditional.outer", desc = "TS Jump to next conditional end" },
-            ["]L"] = { query = "@loop.outer", desc = "TS Jump to next loop end" },
-            ["]F"] = { query = "@function.outer", desc = "TS Jump to next function end" },
-            ["]C"] = { query = "@class.outer", desc = "TS Jump to next class end" },
-          },
-          goto_previous_start = {
-            ["[p"] = { query = "@parameter.inner", desc = "TS Jump to previous parameter" },
-            ["[i"] = { query = "@conditional.outer", desc = "TS Jump to previous conditional start" },
-            ["[l"] = { query = "@loop.outer", desc = "TS Jump to previous loop start" },
-            ["[f"] = { query = "@function.outer", desc = "TS Jump to previous function start" },
-            ["[c"] = { query = "@class.outer", desc = "TS Jump to previous class start" },
-          },
-          goto_previous_end = {
-            ["[I"] = { query = "@conditional.outer", desc = "TS Jump to previous conditional end" },
-            ["[L"] = { query = "@loop.outer", desc = "TS Jump to previous loop end" },
-            ["[F"] = { query = "@function.outer", desc = "TS Jump to previous function end" },
-            ["[C"] = { query = "@class.outer", desc = "TS Jump to previous class end" },
-          },
-        },
-        select = {
-          enable = true,
-          lookahead = true,
-          keymaps = {
-            -- You can use the capture groups defined in textobjects.scm
-            ["a="] = { query = "@assginment.outer", desc = "TS Select around assginment" },
-            ["i="] = { query = "@assignment.inner", desc = "TS Select inside assignment" },
-            ["l="] = { query = "@assignment.lhs", desc = "TS Select left side assignment" },
-            ["r="] = { query = "@assignment.rhs", desc = "TS Select right side assignment" },
-            ["ai"] = { query = "@conditional.outer", desc = "TS Select around conditional" },
-            ["ii"] = { query = "@conditional.inner", desc = "TS Select inner conditional" },
-            ["al"] = { query = "@loop.outer", desc = "TS Select outer loop" },
-            ["il"] = { query = "@loop.inner", desc = "TS Select inner loop" },
-            ["af"] = { query = "@function.outer", desc = "TS Select around function" },
-            ["if"] = { query = "@function.inner", desc = "TS Select inside function" },
-            ["ic"] = { query = "@class.inner", desc = "TS Select inside class" },
-            ["ac"] = { query = "@class.outer", desc = "TS Select around class" },
-          },
-        },
-        swap = {
-          enable = true,
-          swap_next = {
-            ["<leader>spn"] = { query = "@parameter.inner", desc = "TS Swap parameter next" },
-            ["<leader>sfn"] = { query = "@function.outer", desc = "TS Swap function next" },
-            ["<leader>scn"] = { query = "@class.outer", desc = "TS Swap class next" },
-          },
-          swap_previous = {
-            ["<leader>spp"] = { query = "@parameter.inner", desc = "TS Swap parameter previous" },
-            ["<leader>sfp"] = { query = "@function.outer", desc = "TS Swap function previous" },
-            ["<leader>scp"] = { query = "@class.outer", desc = "TS Swap class previous" },
-          },
-        },
-      },
     },
     config = function(_, opts)
-      require("nvim-treesitter.configs").setup(opts)
+      -- install languages
+      require("nvim-treesitter").install(opts.ensure_installed)
+
+      -- highlighting
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = require("nvim-treesitter").get_installed(),
+        callback = function()
+          vim.treesitter.start()
+        end,
+      })
+
+      -- setup textobjects
+      require("nvim-treesitter-textobjects").setup({
+        select = {
+          lookahead = true,
+        },
+      })
+
+      -- text objects: move
+      local function move_next_start(lhs, obj, desc)
+        vim.keymap.set({ "n", "x", "o" }, lhs, function()
+          require("nvim-treesitter-textobjects.move").goto_next_start(obj, "textobjects")
+        end, { desc = desc })
+      end
+      move_next_start("]c", "@class.outer", "TS Jump to next class start")
+      move_next_start("]f", "@function.outer", "TS Jump to next function start")
+      move_next_start("]p", "@parameter.inner", "TS Jump to next parameter start")
+
+      local function move_next_end(lhs, obj, desc)
+        vim.keymap.set({ "n", "x", "o" }, lhs, function()
+          require("nvim-treesitter-textobjects.move").goto_next_end(obj, "textobjects")
+        end, { desc = desc })
+      end
+      move_next_end("]C", "@class.outer", "TS Jump to next class end")
+      move_next_end("]F", "@function.outer", "TS Jump to next function end")
+
+      local function move_previous_start(lhs, obj, desc)
+        vim.keymap.set({ "n", "x", "o" }, lhs, function()
+          require("nvim-treesitter-textobjects.move").goto_previous_start(obj, "textobjects")
+        end, { desc = desc })
+      end
+      move_previous_start("[c", "@class.outer", "TS Jump to previous class start")
+      move_previous_start("[f", "@function.outer", "TS Jump to previous function start")
+      move_previous_start("[p", "@parameter.inner", "TS Jump to previous parameter start")
+
+      local function move_previous_end(lhs, obj, desc)
+        vim.keymap.set({ "n", "x", "o" }, lhs, function()
+          require("nvim-treesitter-textobjects.move").goto_previous_end(obj, "textobjects")
+        end, { desc = desc })
+      end
+      move_previous_end("[C", "@class.outer", "TS Jump to previous class end")
+      move_previous_end("[F", "@function.outer", "TS Jump to previous function end")
+
+      -- text objects: select
+      local function sel(lhs, obj, desc)
+        vim.keymap.set({ "x", "o" }, lhs, function()
+          require("nvim-treesitter-textobjects.select").select_textobject(obj, "textobjects")
+        end, { desc = desc })
+      end
+      sel("ac", "@class.outer", "TS Select around class")
+      sel("af", "@function.outer", "TS Select around function")
+      sel("ic", "@class.inner", "TS Select inside class")
+      sel("if", "@function.inner", "TS Select inside function")
+
+      -- text objects: swap
+      vim.keymap.set("n", "<leader>spn", function()
+        require("nvim-treesitter-textobjects.swap").swap_next("@parameter.inner")
+      end, { desc = "TS Swap parameter next" })
+      vim.keymap.set("n", "<leader>spp", function()
+        require("nvim-treesitter-textobjects.swap").swap_previous("@parameter.inner")
+      end, { desc = "TS Swap parameter previous" })
     end,
   },
 }
