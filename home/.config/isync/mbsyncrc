@@ -5,6 +5,7 @@ Port 993
 User frank.ebel@mailbox.org
 PassCmd "pass show mail/mailbox_pwd"
 TLSType IMAPS
+AuthMechs LOGIN PLAIN
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 MaildirStore mailbox-local
