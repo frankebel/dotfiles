@@ -17,6 +17,8 @@ ignore-globs:
   - .build
   - .git
   - .mypy_cache
+  - .venv
   - build
+  - venv
 sorting:
   dir-grouping: first
