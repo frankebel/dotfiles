@@ -39,3 +39,5 @@ set highlight-active-color     rgba(245,194,231,0.5)
 
 # Startup options
 set adjust-open width
+
+set selection-clipboard clipboard
