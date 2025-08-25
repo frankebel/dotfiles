@@ -13,8 +13,8 @@ case "$(hostnamectl hostname)" in
         blueman-applet &
         nm-applet &
         ;;
-    ifpwinder)
-        hyprctl keyword monitor HDMI-A-1,preferred,1920x0,auto
-        hyprctl keyword monitor HDMI-A-2,preferred,0x0,auto
+    *tuw*)
+        hyprctl keyword monitor DP-1,preferred,1920x0,auto
+        hyprctl keyword monitor HDMI-A-1,preferred,0x0,auto
         ;;
 esac
