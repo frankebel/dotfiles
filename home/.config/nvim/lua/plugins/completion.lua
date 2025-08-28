@@ -7,13 +7,7 @@ return {
   version = "*",
   event = "InsertEnter",
   dependencies = {
-    {
-      "saghen/blink.compat",
-      version = "*",
-      lazy = true,
-      opts = {},
-    },
-    "kdheepak/cmp-latex-symbols",
+    "erooke/blink-cmp-latex",
     "rafamadriz/friendly-snippets",
   },
   opts = {
@@ -51,13 +45,24 @@ return {
         "path",
         "snippets",
         "buffer",
-        "latex_symbols",
+        "latex",
       },
       providers = {
-        -- custom providers
-        latex_symbols = {
-          name = "latex_symbols",
-          module = "blink.compat.source",
+        latex = {
+          name = "Latex",
+          module = "blink-cmp-latex",
+          opts = {
+            insert_command = function(ctx)
+              local ft = vim.api.nvim_get_option_value("filetype", {
+                scope = "local",
+                buf = ctx.bufnr,
+              })
+              if ft == "tex" then
+                return true
+              end
+              return false
+            end,
+          },
         },
       },
     },
