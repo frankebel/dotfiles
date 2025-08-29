@@ -1,5 +1,5 @@
+amd-ucode
 blueman
 bluez
 bluez-utils
-intel-ucode
 ollama-rocm

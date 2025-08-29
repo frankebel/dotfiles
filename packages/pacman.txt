@@ -102,6 +102,7 @@ transmission-cli
 trash-cli
 tree-sitter-cli
 ttf-firacode-nerd
+typos
 udiskie
 unzip
 urlscan
