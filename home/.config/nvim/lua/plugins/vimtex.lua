@@ -7,9 +7,6 @@ return {
   lazy = false, -- not recommended to lazy load
   init = function()
     vim.g.vimtex_view_method = "zathura_simple" -- no `xdotool` on Wayland
-    vim.g.vimtex_compiler_latexmk = {
-      out_dir = ".build",
-    }
     vim.g.vimtex_toc_config = {
       hide_line_numbers = 0,
       layer_status = {
