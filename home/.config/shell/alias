@@ -32,6 +32,7 @@ alias cmd='cd "$MASTERDIR/masters_thesis/data"; l'
 alias cmm='cd "$MASTERDIR/masters_thesis"; l'
 alias cs='cd "$PROJECTDIR/masters_scripts"; l'
 alias ctt='cd "$PROJECTDIR/thesis_master"; l'
+alias cpo='cd "$PROJECTDIR/poster_juelich_2025"; l'
 alias vjo='cd "$PROJECTDIR/dmft_journal"; $EDITOR'
 
 # fd
