@@ -1,7 +1,10 @@
 cyrus-sasl-xoauth2-git
 firefox-tridactyl-native
 juliaup
+pandoc-bin
 paru
 redlib
+shellcheck-bin
 tessen
+ventoy-bin
 zotero-bin

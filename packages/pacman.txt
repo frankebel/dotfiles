@@ -52,7 +52,6 @@ neomutt
 neovim
 networkmanager
 newsboat
-nodejs
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
@@ -63,7 +62,6 @@ obs-studio
 openconnect
 openssh
 pacman-contrib
-pandoc-cli
 pass
 pass-otp
 pavucontrol
@@ -83,7 +81,6 @@ reflector
 ripgrep
 rsync
 rust
-shellcheck
 slurp
 starship
 steam
