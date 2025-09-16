@@ -77,7 +77,7 @@ alias vpnoff='sudo killall --quiet -SIGINT openconnect'
 # Pacman
 alias aurs='paru -Slq | fzf --preview "paru -Si {}" | xargs -ro paru -S'
 alias aursi='paru -Slq | fzf --preview "paru -Si {}" | xargs -ro paru -Si'
-alias explicit-installed='pacman -Qqen | grep -vx "$(pacman -Qqg texlive)"'
+alias explicit-installed='pacman -Qqe | grep -vx "$(pacman -Qqg texlive)"'
 alias mirror='sudo reflector --verbose --latest 8 --sort rate --protocol https --save /etc/pacman.d/mirrorlist'
 alias pacq='pacman -Qq | fzf --preview "pacman -Qi {}" | xargs -ro pacman -Qi'
 alias pacr='pacman -Qqe | fzf --preview "pacman -Qi {}" | xargs -ro sudo pacman -Rns'
