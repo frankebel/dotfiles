@@ -10,4 +10,3 @@ configurations:
     boxes:
       - mailbox: INBOX
         onNewMail: 'mbsync -c "$XDG_CONFIG_HOME/isync/mbsyncrc" tuw'
-        onNewMailPost: 'notify-send "  tuw"'

@@ -9,4 +9,3 @@ configurations:
     boxes:
       - mailbox: INBOX
         onNewMail: 'mbsync -c "$XDG_CONFIG_HOME/isync/mbsyncrc" mailbox'
-        onNewMailPost: 'notify-send "  mailbox"'
