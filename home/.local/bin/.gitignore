@@ -1,6 +1,7 @@
 # ignore manually installed binaries
 
 Quanty
+bat
 delta
 fd
 fzf
