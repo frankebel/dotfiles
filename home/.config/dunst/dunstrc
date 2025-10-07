@@ -8,7 +8,7 @@
     height = (0,300)
     origin = top-center
     offset = (0,10)
-    font = FiraCode Nerd Font 10
+    font = Noto Sans Mono 10
     format = "<b>%s</b>\n%b"
     stack_duplicates = true
     enable_recursive_icon_lookup = true
