@@ -2,6 +2,7 @@ blueman
 bluez
 bluez-utils
 brightnessctl
+hplip
 intel-media-driver
 intel-ucode
 network-manager-applet

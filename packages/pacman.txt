@@ -1,5 +1,4 @@
 alsa-utils
-android-tools
 base
 base-devel
 bat
@@ -11,7 +10,6 @@ discord
 dosfstools
 dunst
 efibootmgr
-espeak-ng
 exfatprogs
 fastfetch
 fd
@@ -24,7 +22,6 @@ git
 git-delta
 goimapnotify
 grim
-hplip
 htop
 hypridle
 hyprland
@@ -69,7 +66,6 @@ perl-file-homedir
 perl-rename
 perl-yaml-tiny
 pimsync
-piper
 pipewire
 pipewire-pulse
 pkgstats
@@ -88,7 +84,6 @@ stow
 syncthing
 system-config-printer
 tealdeer
-termdown
 texlive
 texlive-doc
 texlive-langgerman
@@ -98,7 +93,6 @@ torbrowser-launcher
 transmission-cli
 trash-cli
 tree-sitter-cli
-ttf-firacode-nerd
 typos
 udiskie
 unzip
