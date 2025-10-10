@@ -13,62 +13,59 @@ return {
       {
         "barreiroleo/ltex_extra.nvim",
         version = "*",
+        branch = "dev",
       },
     },
     config = function()
-      local capabilities = require("blink.cmp").get_lsp_capabilities()
-      local lspconfig = require("lspconfig")
-      local servers = {
-        -- Julia
-        julials = {},
-        -- LaTeX
-        ltex = {
-          settings = {
-            ltex = {
-              language = "en-US",
+      -- Julia
+      vim.lsp.enable("julials")
+
+      -- LaTeX
+      vim.lsp.config("ltex", {
+        settings = {
+          ltex = {
+            language = "en-US",
+            additionalRules = {
+              enablePickyRules = true,
             },
           },
         },
-        texlab = {},
-        -- Lua
-        lua_ls = {
-          settings = {
-            Lua = {
-              runtime = { version = "LuaJIT" },
-              diagnostics = {
-                globals = {
-                  "Snacks",
-                  "vim",
-                },
+        on_attach = function()
+          require("ltex_extra").setup({
+            load_langs = { "en-US" },
+            path = ".ltex",
+          })
+        end,
+      })
+      vim.lsp.enable({
+        "ltex",
+        "texlab",
+      })
+
+      -- Lua
+      vim.lsp.config("lua_ls", {
+        settings = {
+          Lua = {
+            runtime = { version = "LuaJIT" },
+            diagnostics = {
+              globals = {
+                "Snacks",
+                "vim",
               },
-              format = { enable = false },
-              workspace = { checkThirdParty = false },
-              telemetry = { enable = false },
             },
+            format = { enable = false },
+            workspace = { checkThirdParty = false },
+            telemetry = { enable = false },
           },
         },
-        -- Python
-        pyright = {},
-      }
+      })
+      vim.lsp.enable("lua_ls")
 
-      for name, config in pairs(servers) do
-        config = vim.tbl_deep_extend("force", {}, {
-          capabilities = capabilities,
-        }, config)
-
-        lspconfig[name].setup(config)
-      end
+      -- Python
+      vim.lsp.enable("pyright")
 
       vim.api.nvim_create_autocmd("LspAttach", {
-        callback = function(args)
-          local bufnr = args.buf
-          local client = assert(vim.lsp.get_client_by_id(args.data.client_id), "must have valid client")
-
-          local settings = servers[client.name]
-          if type(settings) ~= "table" then
-            settings = {}
-          end
-
+        callback = function()
           -- Keymaps
           -- See `:help vim.diagnostic.*` for documentation on any of the below functions
           local function nmap(lhs, rhs, desc)
@@ -76,18 +73,6 @@ return {
           end
           vim.opt_local.omnifunc = "v:lua.vim.lsp.omnifunc"
           nmap("gT", vim.lsp.buf.type_definition, "LSP Type definition")
-
-          -- Override server capabilities
-          if settings.server_capabilities then
-            for k, v in pairs(settings.server_capabilities) do
-              if v == vim.NIL then
-                ---@diagnostic disable-next-line: cast-local-type
-                v = nil
-              end
-
-              client.server_capabilities[k] = v
-            end
-          end
         end,
       })
     end,

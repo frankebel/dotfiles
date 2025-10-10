@@ -8,7 +8,7 @@
   "hererocks": { "branch": "master", "commit": "160228946bed9998f5e3b168bd0b66ba2690f8f3" },
   "kitty-scrollback.nvim": { "branch": "main", "commit": "2ca6956b9c99cc2d5df0ef1be537b54ccbb7b3d9" },
   "lazy.nvim": { "branch": "main", "commit": "59334064f8604ca073791c25dcc5c9698865406e" },
-  "ltex_extra.nvim": { "branch": "master", "commit": "a34d7a32f004bf65aa78a0f7ed64012fe88dcc34" },
+  "ltex_extra.nvim": { "branch": "dev", "commit": "a34d7a32f004bf65aa78a0f7ed64012fe88dcc34" },
   "lualine.nvim": { "branch": "master", "commit": "b8c23159c0161f4b89196f74ee3a6d02cdc3a955" },
   "mason.nvim": { "branch": "main", "commit": "ad7146aa61dcaeb54fa900144d768f040090bff0" },
   "nvim-dap": { "branch": "master", "commit": "6a5bba0ddea5d419a783e170c20988046376090d" },
