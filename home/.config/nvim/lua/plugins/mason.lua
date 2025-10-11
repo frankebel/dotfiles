@@ -10,7 +10,7 @@ return {
       ensure_installed = {
         -- LaTeX
         "latexindent",
-        "ltex-ls",
+        "ltex-ls-plus",
         "texlab",
         -- Lua
         "lua-language-server", -- LSP

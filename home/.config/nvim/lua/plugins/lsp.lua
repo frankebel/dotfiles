@@ -12,8 +12,13 @@ return {
       "williamboman/mason.nvim",
       {
         "barreiroleo/ltex_extra.nvim",
-        version = "*",
         branch = "dev",
+        config = function()
+          require("ltex_extra").setup({
+            load_langs = { "en-US" },
+            path = ".ltex",
+          })
+        end,
       },
     },
     config = function()
@@ -21,7 +26,7 @@ return {
       vim.lsp.enable("julials")
 
       -- LaTeX
-      vim.lsp.config("ltex", {
+      vim.lsp.config("ltex_plus", {
         settings = {
           ltex = {
             language = "en-US",
@@ -30,15 +35,9 @@ return {
             },
           },
         },
-        on_attach = function()
-          require("ltex_extra").setup({
-            load_langs = { "en-US" },
-            path = ".ltex",
-          })
-        end,
       })
       vim.lsp.enable({
-        "ltex",
+        "ltex_plus",
         "texlab",
       })
 
