@@ -3,7 +3,6 @@
 
 return {
   "stevearc/conform.nvim",
-  dependencies = { "mason.nvim" },
   version = "*",
   cmd = "ConformInfo",
   event = { "BufWritePre" },
@@ -19,7 +18,7 @@ return {
   opts = {
     formatters_by_ft = {
       lua = { "stylua" },
-      markdown = { "prettierd" },
+      markdown = { "prettier" },
       python = { "black" },
       sh = { "shfmt" },
     },

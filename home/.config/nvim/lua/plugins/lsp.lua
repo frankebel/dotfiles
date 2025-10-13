@@ -9,7 +9,6 @@ return {
     -- event = { "BufReadPost", "BufNewFile", "BufWritePre" },
     dependencies = {
       "saghen/blink.cmp",
-      "williamboman/mason.nvim",
       {
         "barreiroleo/ltex_extra.nvim",
         branch = "dev",
