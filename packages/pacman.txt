@@ -103,6 +103,7 @@ torbrowser-launcher
 transmission-cli
 trash-cli
 tree-sitter-cli
+ttf-noto-nerd
 typos
 udiskie
 unzip
