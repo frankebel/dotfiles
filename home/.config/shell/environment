@@ -63,6 +63,16 @@ export JULIA_NUM_THREADS=$(($(nproc) < 8 ? $(nproc) : 8)) # at most 8 threads
 export OPENBLAS_NUM_THREADS="1"
 export TMPDIR="/tmp"
 
+# device
+case "$(hostnamectl hostname)" in
+    *laptop*)
+        export SUSPEND_COMMAND="systemctl suspend-then-hibernate"
+        ;;
+    *desktop*)
+        export SUSPEND_COMMAND="systemctl suspend"
+        ;;
+esac
+
 # Uncategorized
 export MANPAGER='nvim +Man!'        # use neovim as manpager
 export QT_QPA_PLATFORMTHEME="qt5ct" # Configure Qt 5 applications without DE
