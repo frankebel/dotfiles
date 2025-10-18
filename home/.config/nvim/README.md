@@ -30,26 +30,26 @@ The configuration is modular as can be seen from the file tree:
 
 ## Main file
 
-[`init.lua`](./init.lua) sets up the plugin manager
+[`init.lua`](init.lua) sets up the plugin manager
 [lazy.nvim](https://github.com/folke/lazy.nvim).
 
 ## Basic configuration
 
-The basic configuration is done within the [`plugin`](./plugin) directory.
+The basic configuration is done within the [`plugin`](plugin) directory.
 As this is in the runtimepath (`:help runtimepath`),
 files will be sourced automatically.
 
 ## Plugins
 
 I use [lazy.nvim](https://github.com/folke/lazy.nvim) as my plugin manager.
-Plugins themselves are configured in the [`lua/plugins`](./lua/plugins/)
+Plugins themselves are configured in the [`lua/plugins`](lua/plugins/)
 directory with mostly one file per plugin.
-[`lazy-lock.json`](./lazy-lock.json) lists all plugins I currently use.
+[`lazy-lock.json`](lazy-lock.json) lists all plugins I currently use.
 
 ## File specific configuration
 
 If I want file type specific options or plugins I set them under
-[`after/ftplugin`](./after/ftplugin/).
+[`after/ftplugin`](after/ftplugin/).
 
 ## Spell check
 
