@@ -35,6 +35,10 @@ alias ctt='cd "$PROJECTDIR/thesis_master"; l'
 alias cpo='cd "$PROJECTDIR/poster_juelich_2025"; l'
 alias vjo='cd "$PROJECTDIR/dmft_journal"; $EDITOR'
 
+# ASC
+alias sq='squeue -o "%.18i %.10Q %.12P %.40j %.8u %.2t %.10M %.6D %R" -u $USER'
+alias sqa='squeue -o "%.18i %.10Q %.12P %.40j %.8u %.2t %.10M %.6D %R"'
+
 # fd
 alias fd='fd --follow --hidden'
 alias fd1='fd --exact-depth 1'
@@ -99,12 +103,6 @@ tsmr() {
         | awk '{print $1}' \
         | xargs -I {} transmission-remote -t '{}' --remove-and-delete
 }
-
-# VSC
-alias sq='squeue -o "%.18i %.10Q %.9P %.40j %.8u %.2t %.10M %.6D %R" -u $USER'
-alias sqa='squeue -o "%.18i %.10Q %.9P %.40j %.8u %.2t %.10M %.6D %R"'
-# shellcheck disable=SC1003
-alias sqw='watch -n 0.1 $(alias sq | cut -d\'\'' -f2)'
 
 # Uncategorized
 alias cal='cal -m' # Monday first day of week.
