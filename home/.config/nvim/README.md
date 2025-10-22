@@ -4,7 +4,10 @@ My main text editor which I use to edit text files. Images are shown in the main
 [README](../../../README.md). If possible [Lua](https://www.lua.org/) was used
 instead of Vimscript.
 
-The configuration is modular as can be seen from the file tree:
+The configuration is modular as can be seen from the file tree.
+Most of the settings live in [`plugin`](plugin) with numbers determining loading order.
+
+- 10: basic settings
 
 ```
 .
