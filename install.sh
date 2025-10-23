@@ -61,10 +61,10 @@ sudo systemctl enable cups.socket
 # User config
 
 # flexget inside virtual environment
-mkdir -p ~/data/.environments
-uv venv ~/data/.environments/flexget
+mkdir -p ~/data/environments
+uv venv ~/data/environments/flexget
 # shellcheck disable=SC1090
-. ~/data/.environments/flexget/bin/activate
+. ~/data/environments/flexget/bin/activate
 uv pip install flexget transmission-rpc
 
 # User and group management

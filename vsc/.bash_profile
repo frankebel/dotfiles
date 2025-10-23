@@ -9,7 +9,7 @@
 case "$PATH" in
     *juliaup/bin*) ;;
     *)
-        PATH="$HOME/data/.environments/juliaup/bin:${PATH}"
+        PATH="$HOME/data/environments/juliaup/bin:${PATH}"
         ;;
 esac
 # ~/.local/bin
