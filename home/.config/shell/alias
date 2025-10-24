@@ -108,7 +108,6 @@ tsmr() {
 alias cal='cal -m' # Monday first day of week.
 alias cdp='cd P'
 alias ff='firefox'
-alias flexget='~/data/.environments/flexget/bin/flexget'
 alias i='imv'
 alias j='julia'
 alias ll='ls --almost-all --human-readable -l'

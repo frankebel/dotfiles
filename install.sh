@@ -66,6 +66,7 @@ uv venv ~/data/environments/flexget
 # shellcheck disable=SC1090
 . ~/data/environments/flexget/bin/activate
 uv pip install flexget transmission-rpc
+ln -s ~/data/environments/flexget/bin/flexget ~/.local/bin/flexget
 
 # User and group management
 sudo usermod -s /bin/zsh "$USER"
@@ -73,12 +74,13 @@ sudo usermod -aG libvirt "$USER"
 
 # Create directories
 mkdir -p ~/.config
+mkdir -p ~/.local/bin
 mkdir -p ~/.local/share/applications
 mkdir -p ~/.local/share/gnupg
 mkdir -p ~/.local/share/isync/mailbox
 mkdir -p ~/.local/share/isync/tuw
-mkdir -p ~/.local/share/pimsync/contacts
 mkdir -p ~/.local/share/pimsync/calendars
+mkdir -p ~/.local/share/pimsync/contacts
 mkdir -p ~/.local/share/pimsync/status
 mkdir -p ~/.local/share/torrents
 mkdir -p ~/.local/state/temp
