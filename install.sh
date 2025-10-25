@@ -68,6 +68,9 @@ uv venv ~/data/environments/flexget
 uv pip install flexget transmission-rpc
 ln -s ~/data/environments/flexget/bin/flexget ~/.local/bin/flexget
 
+# juliaup
+juliaup config channelsymlinks false
+
 # User and group management
 sudo usermod -s /bin/zsh "$USER"
 sudo usermod -aG libvirt "$USER"
