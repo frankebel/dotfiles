@@ -18,7 +18,125 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("plugins", {
+require("lazy").setup({
+  spec = {
+    {
+      "neovim/nvim-lspconfig",
+      version = "*",
+      -- event = { "BufReadPost", "BufNewFile", "BufWritePre" },
+      dependencies = {
+        "saghen/blink.cmp",
+        {
+          "barreiroleo/ltex_extra.nvim",
+          branch = "dev",
+        },
+      },
+    },
+    {
+      "mfussenegger/nvim-dap",
+      version = "*",
+      dependencies = {
+        {
+          "theHamsta/nvim-dap-virtual-text",
+          config = true,
+        },
+        {
+          "rcarriga/nvim-dap-ui",
+          dependencies = {
+            "nvim-neotest/nvim-nio",
+            version = "*",
+          },
+        },
+      },
+    },
+    {
+      "mfussenegger/nvim-dap-python",
+    },
+    {
+      "saghen/blink.cmp",
+      version = "*",
+      dependencies = {
+        "erooke/blink-cmp-latex",
+        "rafamadriz/friendly-snippets",
+      },
+    },
+    {
+      "mfussenegger/nvim-lint",
+    },
+    {
+      "folke/snacks.nvim",
+      version = "*",
+      lazy = false,
+      dependencies = {
+        "folke/todo-comments.nvim",
+      },
+    },
+    {
+      "catppuccin/nvim",
+      version = "*",
+      name = "catppuccin",
+    },
+    {
+      "stevearc/conform.nvim",
+      version = "*",
+    },
+    {
+      "lewis6991/gitsigns.nvim",
+      version = "*",
+    },
+    {
+      "nvim-lualine/lualine.nvim",
+      dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
+    {
+      "mikesmithgh/kitty-scrollback.nvim",
+      version = "*",
+    },
+    {
+      "stevearc/oil.nvim",
+      version = "*",
+      dependencies = { "nvim-tree/nvim-web-devicons" },
+      lazy = false,
+    },
+    {
+      "MeanderingProgrammer/render-markdown.nvim",
+      version = "*",
+      dependencies = {
+        "nvim-treesitter/nvim-treesitter",
+        "nvim-tree/nvim-web-devicons",
+      },
+    },
+    {
+      "folke/todo-comments.nvim",
+      dependencies = { "nvim-lua/plenary.nvim" },
+    },
+    {
+      -- https://github.com/nvim-treesitter/nvim-treesitter
+      "nvim-treesitter/nvim-treesitter",
+      branch = "main",
+      build = ":TSUpdate",
+      cmd = { "TSInstall", "TSUpdate", "TSUninstall" },
+      dependencies = {
+        {
+          -- https://github.com/nvim-treesitter/nvim-treesitter-context
+          "nvim-treesitter/nvim-treesitter-context",
+          version = "*",
+          config = true,
+        },
+        {
+          -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+          "nvim-treesitter/nvim-treesitter-textobjects",
+          branch = "main",
+        },
+      },
+    },
+    { "RRethy/vim-illuminate" },
+    {
+      "lervag/vimtex",
+      version = "*",
+      lazy = false, -- not recommended to lazy load
+    },
+  },
   change_detection = { enabled = false },
   install = { colorscheme = { "dracula" } },
   performance = {

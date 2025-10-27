@@ -1,13 +1,12 @@
 # Neovim Config
 
-My main text editor which I use to edit text files. Images are shown in the main
-[README](../../../README.md). If possible [Lua](https://www.lua.org/) was used
-instead of Vimscript.
+My main text editor which I use to edit text files.
+If possible [Lua](https://www.lua.org/) was used instead of Vimscript.
 
 The configuration is modular as can be seen from the file tree.
-Most of the settings live in [`plugin`](plugin) with numbers determining loading order.
-
-- 10: basic settings
+Most settings are written in files inside the [`plugin`](plugin) directory
+with numbers determining loading order.
+They will be sourced automatically (`:help runtimepath`).
 
 ```
 .
@@ -16,14 +15,9 @@ Most of the settings live in [`plugin`](plugin) with numbers determining loading
 │       ├── filetype1.lua
 │       ├── filetype2.lua
 │       ⋮
-├── lua
-│   └── plugins
-│       ├── plugin1.lua
-│       ├── plugin2.lua
-│       ⋮
 ├── plugin
-│   ├── file1.lua
-│   ├── file2.lua
+│   ├── 1_file.lua
+│   ├── 2_file.lua
 │   ⋮
 ├── spell
 │   └── en.utf-8.add
@@ -36,23 +30,15 @@ Most of the settings live in [`plugin`](plugin) with numbers determining loading
 [`init.lua`](init.lua) sets up the plugin manager
 [lazy.nvim](https://github.com/folke/lazy.nvim).
 
-## Basic configuration
-
-The basic configuration is done within the [`plugin`](plugin) directory.
-As this is in the runtimepath (`:help runtimepath`),
-files will be sourced automatically.
-
 ## Plugins
 
 I use [lazy.nvim](https://github.com/folke/lazy.nvim) as my plugin manager.
-Plugins themselves are configured in the [`lua/plugins`](lua/plugins/)
-directory with mostly one file per plugin.
 [`lazy-lock.json`](lazy-lock.json) lists all plugins I currently use.
 
 ## File specific configuration
 
-If I want file type specific options or plugins I set them under
-[`after/ftplugin`](after/ftplugin/).
+If I want to set something only for a specific file type,
+I set them under [`after/ftplugin`](after/ftplugin/).
 
 ## Spell check
 
