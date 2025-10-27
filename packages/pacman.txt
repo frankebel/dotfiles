@@ -93,6 +93,7 @@ stylua
 syncthing
 system-config-printer
 tealdeer
+tectonic
 texlab
 texlive
 texlive-doc

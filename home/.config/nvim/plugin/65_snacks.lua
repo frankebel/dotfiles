@@ -12,6 +12,12 @@ require("snacks").setup({
     math = {
       latex = {
         font_size = "large",
+        packages = {
+          "amsmath",
+          "amssymb",
+          "mathtools",
+          "unicode-math",
+        },
       },
     },
   },
