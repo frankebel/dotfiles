@@ -1,6 +1,5 @@
 -- Completion engine.
 -- https://github.com/Saghen/blink.cmp
--- https://github.com/rafamadriz/friendly-snippets
 
 require("blink-cmp").setup({
   appearance = {

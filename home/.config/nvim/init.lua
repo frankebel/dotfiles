@@ -57,7 +57,6 @@ require("lazy").setup({
       version = "*",
       dependencies = {
         "erooke/blink-cmp-latex",
-        "rafamadriz/friendly-snippets",
       },
     },
     {
