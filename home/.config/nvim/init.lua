@@ -130,7 +130,6 @@ require("lazy").setup({
         },
       },
     },
-    { "RRethy/vim-illuminate" },
     {
       "lervag/vimtex",
       version = "*",
