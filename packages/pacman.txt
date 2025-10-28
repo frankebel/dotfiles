@@ -41,7 +41,7 @@ linux
 linux-firmware
 lsd
 lua-language-server
-lxappearance-gtk3
+lxappearance
 lxsession
 lynx
 man-db
@@ -77,7 +77,6 @@ python
 python-black
 python-debugpy
 python-flake8
-qemu-desktop
 qmk
 qt5ct
 reflector
@@ -110,7 +109,6 @@ udiskie
 unzip
 urlscan
 uv
-virt-manager
 waybar
 wget
 wl-clipboard
