@@ -1,47 +1,17 @@
 -- Language Server Protocol LSP
--- https://github.com/neovim/nvim-lspconfig
--- https://github.com/barreiroleo/ltex_extra.nvim
+-- https://microsoft.github.io/language-server-protocol/
+-- `:help lsp`
 
 -- Julia
 vim.lsp.enable("julials")
 
 -- LaTeX
-require("ltex_extra").setup({
-  load_langs = { "en-US" },
-  path = ".ltex",
-})
-vim.lsp.config("ltex_plus", {
-  settings = {
-    ltex = {
-      language = "en-US",
-      additionalRules = {
-        enablePickyRules = true,
-      },
-    },
-  },
-})
 vim.lsp.enable({
   "ltex_plus",
   "texlab",
 })
 
 -- Lua
-vim.lsp.config("lua_ls", {
-  settings = {
-    Lua = {
-      runtime = { version = "LuaJIT" },
-      diagnostics = {
-        globals = {
-          "Snacks",
-          "vim",
-        },
-      },
-      format = { enable = false },
-      workspace = { checkThirdParty = false },
-      telemetry = { enable = false },
-    },
-  },
-})
 vim.lsp.enable("lua_ls")
 
 -- Python

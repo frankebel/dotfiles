@@ -21,15 +21,10 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     {
-      "neovim/nvim-lspconfig",
-      version = "*",
-      -- event = { "BufReadPost", "BufNewFile", "BufWritePre" },
-      dependencies = {
-        "saghen/blink.cmp",
-        {
-          "barreiroleo/ltex_extra.nvim",
-          branch = "dev",
-        },
+      "saghen/blink.cmp",
+      {
+        "barreiroleo/ltex_extra.nvim",
+        branch = "dev",
       },
     },
     {
