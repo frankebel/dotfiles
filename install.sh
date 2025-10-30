@@ -68,8 +68,10 @@ uv venv ~/data/environments/flexget
 uv pip install flexget transmission-rpc
 ln -s ~/data/environments/flexget/bin/flexget ~/.local/bin/flexget
 
-# juliaup
+# Julia
 juliaup config channelsymlinks false
+juliaup add release
+julia -e 'using Pkg; Pkg.Apps.add("Runic")'
 
 # User and group management
 sudo usermod -s /bin/zsh "$USER"

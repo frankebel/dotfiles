@@ -6,7 +6,7 @@
 # shellcheck disable=SC3044
 typeset -U path
 # shellcheck disable=SC2206,SC3030
-path=(~/.local/bin $path)
+path=(~/.local/bin ~/.julia/bin $path)
 
 # Load environment variables
 # shellcheck source=/dev/null
