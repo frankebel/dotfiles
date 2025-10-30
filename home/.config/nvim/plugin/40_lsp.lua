@@ -2,20 +2,17 @@
 -- https://microsoft.github.io/language-server-protocol/
 -- `:help lsp`
 
--- Julia
-vim.lsp.enable("julials")
-
--- LaTeX
 vim.lsp.enable({
+  -- Julia
+  "jetls",
+  -- LaTeX
   "ltex_plus",
   "texlab",
+  -- Lua
+  "lua_ls",
+  -- Python
+  "pyright",
 })
-
--- Lua
-vim.lsp.enable("lua_ls")
-
--- Python
-vim.lsp.enable("pyright")
 
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function()
