@@ -21,6 +21,10 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     {
+      "nvim-mini/mini.nvim",
+      version = false,
+    },
+    {
       "saghen/blink.cmp",
       {
         "barreiroleo/ltex_extra.nvim",
@@ -80,7 +84,6 @@ require("lazy").setup({
     },
     {
       "nvim-lualine/lualine.nvim",
-      dependencies = { "nvim-tree/nvim-web-devicons" },
     },
     {
       "mikesmithgh/kitty-scrollback.nvim",
@@ -89,7 +92,6 @@ require("lazy").setup({
     {
       "stevearc/oil.nvim",
       version = "*",
-      dependencies = { "nvim-tree/nvim-web-devicons" },
       lazy = false,
     },
     {
@@ -97,7 +99,6 @@ require("lazy").setup({
       version = "*",
       dependencies = {
         "nvim-treesitter/nvim-treesitter",
-        "nvim-tree/nvim-web-devicons",
       },
     },
     {
