@@ -79,10 +79,6 @@ require("lazy").setup({
       version = "*",
     },
     {
-      "lewis6991/gitsigns.nvim",
-      version = "*",
-    },
-    {
       "nvim-lualine/lualine.nvim",
     },
     {
