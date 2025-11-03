@@ -32,26 +32,6 @@ require("lazy").setup({
       },
     },
     {
-      "mfussenegger/nvim-dap",
-      version = "*",
-      dependencies = {
-        {
-          "theHamsta/nvim-dap-virtual-text",
-          config = true,
-        },
-        {
-          "rcarriga/nvim-dap-ui",
-          dependencies = {
-            "nvim-neotest/nvim-nio",
-            version = "*",
-          },
-        },
-      },
-    },
-    {
-      "mfussenegger/nvim-dap-python",
-    },
-    {
       "saghen/blink.cmp",
       version = "*",
       dependencies = {
