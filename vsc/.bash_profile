@@ -12,6 +12,13 @@ case "$PATH" in
         PATH="$HOME/data/environments/juliaup/bin:${PATH}"
         ;;
 esac
+# ~/.julia/bin
+case "$PATH" in
+    *.julia/bin*) ;;
+    *)
+        PATH="$HOME/.julia/bin:${PATH}"
+        ;;
+esac
 # ~/.local/bin
 case "$PATH" in
     *.local/bin*) ;;
