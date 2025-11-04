@@ -59,9 +59,6 @@ require("lazy").setup({
       version = "*",
     },
     {
-      "nvim-lualine/lualine.nvim",
-    },
-    {
       "mikesmithgh/kitty-scrollback.nvim",
       version = "*",
     },

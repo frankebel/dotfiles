@@ -22,4 +22,3 @@ require("mini.git").setup()
 
 -- Appearance
 require("mini.icons").setup()
-MiniIcons.mock_nvim_web_devicons()
