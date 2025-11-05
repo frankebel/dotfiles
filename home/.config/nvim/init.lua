@@ -45,9 +45,6 @@ require("lazy").setup({
       "folke/snacks.nvim",
       version = "*",
       lazy = false,
-      dependencies = {
-        "folke/todo-comments.nvim",
-      },
     },
     {
       "catppuccin/nvim",
@@ -73,10 +70,6 @@ require("lazy").setup({
       dependencies = {
         "nvim-treesitter/nvim-treesitter",
       },
-    },
-    {
-      "folke/todo-comments.nvim",
-      dependencies = { "nvim-lua/plenary.nvim" },
     },
     {
       -- https://github.com/nvim-treesitter/nvim-treesitter
