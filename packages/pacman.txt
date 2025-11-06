@@ -1,6 +1,7 @@
 alsa-utils
 base
 base-devel
+basedpyright
 bat
 biber
 btop
@@ -46,7 +47,6 @@ lxsession
 lynx
 man-db
 mpv
-mypy
 neomutt
 neovim
 networkmanager
@@ -72,16 +72,14 @@ pipewire
 pipewire-pulse
 pkgstats
 prettier
-pyright
 python
-python-black
 python-debugpy
-python-flake8
 qmk
 qt5ct
 reflector
 ripgrep
 rsync
+ruff
 rust
 shfmt
 slurp

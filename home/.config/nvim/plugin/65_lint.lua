@@ -4,17 +4,7 @@
 local lint = require("lint")
 
 lint.linters_by_ft = {
-  python = { "flake8", "mypy" },
   sh = { "shellcheck" },
-}
-
--- Customize built-in linter parameters
-local flake8 = lint.linters.flake8
-flake8.args = {
-  "--max-line-length",
-  "88",
-  "--extend-ignore",
-  "E203",
 }
 
 -- Autocmd to trigger linting
