@@ -1,11 +1,8 @@
 [alias]
     af = !git diff --name-only | fzf --preview 'git diff {} | delta' | xargs git add
     afn = !git ls-files --others --exclude-standard | fzf --preview 'bat --force-colorization {}' | xargs git add
-    afni = !git ls-files --others --exclude-standard | fzf --preview 'bat --force-colorization {}' | xargs git add --intent-to-add
     afp = !git diff --name-only | fzf --preview 'git diff {} | delta' | xargs -ro git add --patch
     alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
-    b = branch
-    ba = branch -a
     c = commit
     ca = commit --amend
     can = commit --amend --no-edit
@@ -16,7 +13,6 @@
     ds = diff --staged
     l = log
     lf = !fd --hidden . | fzf --preview 'git {} | delta' | xargs git log
-    ln = log --name-only
     lo = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     loa = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
     logp = log --patch
@@ -32,7 +28,6 @@
     s = status
     sp = stash pop
     su = stash -u
-    undo = reset --mixed HEAD^
 
 [commit]
     gpgSign = true
