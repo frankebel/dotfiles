@@ -16,7 +16,6 @@ fastfetch
 fd
 firefox
 fzf
-gammastep
 gdu
 gimp
 git
@@ -27,6 +26,7 @@ htop
 hypridle
 hyprland
 hyprlock
+hyprsunset
 imv
 inkscape
 isync
