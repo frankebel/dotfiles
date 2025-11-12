@@ -55,3 +55,6 @@ vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = tr
 
 -- LSP
 map("n", "<leader>q", vim.diagnostic.setloclist, "Diagnostic set loclist")
+
+-- text
+map("n", "<leader>id", "<cmd>put =strftime('%F')<cr>kJA", "Insert date")
