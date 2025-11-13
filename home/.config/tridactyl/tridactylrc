@@ -30,6 +30,7 @@ set searchurls.pcgamingwiki https://www.pcgamingwiki.com/w/index.php?search=%s
 set searchurls.pkg https://archlinux.org/packages/?sort=&q=%s
 set searchurls.protondb https://www.protondb.com/search?q=%s
 set searchurls.r http://localhost:8080/r/%s
+set searchurls.rr http://localhost:8080
 set searchurls.s https://duckduckgo.com/?q=%s
 set searchurls.thesaurus https://www.thesaurus.com/browse/%s
 set searchurls.w https://en.wikipedia.org/w/index.php?search=%s
