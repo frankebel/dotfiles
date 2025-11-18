@@ -73,7 +73,6 @@ pipewire-pulse
 pkgstats
 prettier
 python
-python-debugpy
 qmk
 qt5ct
 reflector
