@@ -66,6 +66,7 @@ uv venv ~/data/environments/flexget
 # shellcheck disable=SC1090
 . ~/data/environments/flexget/bin/activate
 uv pip install flexget transmission-rpc
+deactivate
 ln -s ~/data/environments/flexget/bin/flexget ~/.local/bin/flexget
 
 # Julia
