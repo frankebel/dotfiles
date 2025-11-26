@@ -72,6 +72,7 @@ ln -s ~/data/environments/flexget/bin/flexget ~/.local/bin/flexget
 # Julia
 juliaup config channelsymlinks false
 juliaup add release
+julia -e 'using Pkg; Pkg.Apps.add(url="https://github.com/aviatesk/JETLS.jl", rev="release")'
 julia -e 'using Pkg; Pkg.Apps.add("Runic")'
 julia -e 'using Pkg; Pkg.Apps.add(url="https://github.com/aviatesk/TestRunner.jl")'
 

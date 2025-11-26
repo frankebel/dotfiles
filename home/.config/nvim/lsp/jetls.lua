@@ -2,12 +2,9 @@
 
 return {
   cmd = {
-    "julia",
-    "--startup-file=no",
-    "--history-file=no",
-    "--project=~/.julia/environments/jetls/",
+    "jetls",
     "--threads=auto",
-    os.getenv("HOME") .. "/.julia/environments/jetls/runserver.jl",
+    "--",
   },
   filetypes = { "julia" },
   root_markers = {
