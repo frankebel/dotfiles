@@ -3,7 +3,5 @@ blueman
 bluez
 bluez-utils
 bottom
-mathematica
-ollama-rocm
 openmpi
 tmux

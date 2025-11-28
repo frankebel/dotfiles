@@ -40,6 +40,7 @@ libreoffice-extension-texmaths
 libreoffice-fresh
 linux
 linux-firmware
+lostfiles
 lsd
 lua-language-server
 lxappearance
@@ -119,6 +120,7 @@ xournalpp
 yt-dlp
 zathura
 zathura-pdf-mupdf
+zathura-ps
 zbar
 zip
 zsh
