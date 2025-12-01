@@ -15,6 +15,10 @@ They will be sourced automatically (`:help runtimepath`).
 │       ├── filetype1.lua
 │       ├── filetype2.lua
 │       ⋮
+├── lsp
+│   ├── language1.lua
+│   ├── language2.lua
+│   ⋮
 ├── plugin
 │   ├── 1_file.lua
 │   ├── 2_file.lua
@@ -22,18 +26,13 @@ They will be sourced automatically (`:help runtimepath`).
 ├── spell
 │   └── en.utf-8.add
 ├── init.lua
-└── lazy-lock.json
+└── nvim-pack-lock.json
 ```
-
-## Main file
-
-[`init.lua`](init.lua) sets up the plugin manager
-[lazy.nvim](https://github.com/folke/lazy.nvim).
 
 ## Plugins
 
-I use [lazy.nvim](https://github.com/folke/lazy.nvim) as my plugin manager.
-[`lazy-lock.json`](lazy-lock.json) lists all plugins I currently use.
+I use `vim.pack` as my plugin manager.
+[`nvim-pack-lock.json`](nvim-pack-lock.json) lists all plugins I currently use.
 
 ## File specific configuration
 

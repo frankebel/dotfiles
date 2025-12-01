@@ -1,4 +1,12 @@
--- https://github.com/nvim-mini/mini.nvim
+-- Library of 40+ independent Lua modules
+
+vim.pack.add({
+  {
+    src = "https://github.com/nvim-mini/mini.nvim",
+    version = "main",
+  },
+})
+
 local function nmap(lhs, rhs, desc)
   vim.keymap.set("n", lhs, rhs, { desc = desc, buffer = 0 })
 end

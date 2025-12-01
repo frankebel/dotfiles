@@ -1,5 +1,14 @@
 -- Completion engine.
--- https://github.com/Saghen/blink.cmp
+
+vim.pack.add({
+  {
+    src = "https://github.com/Saghen/blink.cmp",
+    version = vim.version.range("*"),
+  },
+  {
+    src = "https://github.com/erooke/blink-cmp-latex",
+  },
+})
 
 require("blink-cmp").setup({
   appearance = {

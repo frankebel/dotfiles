@@ -2,6 +2,13 @@
 -- https://microsoft.github.io/language-server-protocol/
 -- `:help lsp`
 
+vim.pack.add({
+  {
+    src = "https://github.com/barreiroleo/ltex_extra.nvim",
+    version = "dev",
+  },
+})
+
 vim.lsp.enable({
   -- Julia
   "jetls",

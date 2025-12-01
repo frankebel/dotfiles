@@ -2,29 +2,51 @@
 -- It can build a concrete syntax tree for a source file and efficiently update
 -- the syntax tree as the source file is edited.
 
+vim.pack.add({
+  {
+    src = "https://github.com/nvim-treesitter/nvim-treesitter",
+    version = "main",
+  },
+  {
+    src = "https://github.com/nvim-treesitter/nvim-treesitter-context",
+    version = vim.version.range("*"),
+  },
+  {
+    src = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
+    version = "main",
+  },
+})
+
+vim.api.nvim_create_autocmd("PackChanged", {
+  group = vim.api.nvim_create_augroup("myconfig.treesitter", { clear = true }),
+  pattern = { "nvim-treesitter" },
+  callback = function()
+    vim.notify("Updating treesitter parsers", vim.log.levels.INFO)
+    require("nvim-treesitter").update({ summary = true }):wait(30 * 1000) -- wait at most 30 s
+  end,
+})
+
 -- install languages
 require("nvim-treesitter").install({
-  ensure_installed = {
-    "bash",
-    "c",
-    "comment",
-    "diff",
-    "git_rebase",
-    "gitcommit",
-    "gitignore",
-    "json",
-    "julia",
-    "latex",
-    "lua",
-    "markdown",
-    "markdown_inline",
-    "python",
-    "query",
-    "regex",
-    "vim",
-    "vimdoc",
-    "yaml",
-  },
+  "bash",
+  "c",
+  "comment",
+  "diff",
+  "git_rebase",
+  "gitcommit",
+  "gitignore",
+  "json",
+  "julia",
+  "latex",
+  "lua",
+  "markdown",
+  "markdown_inline",
+  "python",
+  "query",
+  "regex",
+  "vim",
+  "vimdoc",
+  "yaml",
 })
 
 -- enable treesitter

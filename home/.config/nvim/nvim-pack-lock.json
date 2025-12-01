@@ -1,0 +1,77 @@
+{
+  "plugins": {
+    "blink-cmp-latex": {
+      "rev": "3a958361e275bb5996e8393e7b2595b2f40c15ca",
+      "src": "https://github.com/erooke/blink-cmp-latex"
+    },
+    "blink.cmp": {
+      "rev": "b19413d214068f316c78978b08264ed1c41830ec",
+      "src": "https://github.com/Saghen/blink.cmp",
+      "version": ">=0.0.0"
+    },
+    "catppuccin": {
+      "rev": "cb5665990a797b102715188e73c44c3931b3b42e",
+      "src": "https://github.com/catppuccin/nvim",
+      "version": ">=0.0.0"
+    },
+    "conform.nvim": {
+      "rev": "3543d000dafbc41cc7761d860cfdb24e82154f75",
+      "src": "https://github.com/stevearc/conform.nvim",
+      "version": ">=0.0.0"
+    },
+    "kitty-scrollback.nvim": {
+      "rev": "2ca6956b9c99cc2d5df0ef1be537b54ccbb7b3d9",
+      "src": "https://github.com/mikesmithgh/kitty-scrollback.nvim",
+      "version": ">=0.0.0"
+    },
+    "ltex_extra.nvim": {
+      "rev": "7b2d27828308aacf30bff94e63cc8f8eb6c85de2",
+      "src": "https://github.com/barreiroleo/ltex_extra.nvim",
+      "version": "'dev'"
+    },
+    "mini.nvim": {
+      "rev": "dca98843fab66d080779cd973e7139e258ff164c",
+      "src": "https://github.com/nvim-mini/mini.nvim",
+      "version": "'main'"
+    },
+    "nvim-lint": {
+      "rev": "d1118791070d090777398792a73032a0ca5c79ff",
+      "src": "https://github.com/mfussenegger/nvim-lint"
+    },
+    "nvim-treesitter": {
+      "rev": "00c906abb9550e72bc0c640545b5499b9525bb40",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter",
+      "version": "'main'"
+    },
+    "nvim-treesitter-context": {
+      "rev": "ed1cf48d5af252248c55f50b9427e8ce883a2c6b",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter-context",
+      "version": ">=0.0.0"
+    },
+    "nvim-treesitter-textobjects": {
+      "rev": "63c4dce4a56312ef1bdeafd16bdefa008fcc950a",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
+      "version": "'main'"
+    },
+    "oil.nvim": {
+      "rev": "975a77cce3c8cb742bc1b3629f4328f5ca977dad",
+      "src": "https://github.com/stevearc/oil.nvim",
+      "version": ">=0.0.0"
+    },
+    "render-markdown.nvim": {
+      "rev": "6a744f0d14fd1d0fa8e3f446ac7825ec1e351d55",
+      "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
+      "version": ">=0.0.0"
+    },
+    "snacks.nvim": {
+      "rev": "a4e46becca45eb65c73a388634b1ce8aad629ae0",
+      "src": "https://github.com/folke/snacks.nvim",
+      "version": ">=0.0.0"
+    },
+    "vimtex": {
+      "rev": "2e1bbabeb2c34bb17d7bc8cfdf8f95b16dd0db0c",
+      "src": "https://github.com/lervag/vimtex",
+      "version": ">=0.0.0"
+    }
+  }
+}

@@ -1,5 +1,11 @@
 -- File explorer that lets you edit your filesystem like a normal Neovim buffer.
--- https://github.com/stevearc/oil.nvim
+
+vim.pack.add({
+  {
+    src = "https://github.com/stevearc/oil.nvim",
+    version = vim.version.range("*"),
+  },
+})
 
 require("oil").setup({
   view_options = {

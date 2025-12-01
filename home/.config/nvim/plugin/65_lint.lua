@@ -1,5 +1,10 @@
 -- An asynchronous linter plugin for Neovim complementary to the built-in Language Server Protocol support.
--- https://github.com/mfussenegger/nvim-lint
+
+vim.pack.add({
+  {
+    src = "https://github.com/mfussenegger/nvim-lint",
+  },
+})
 
 local lint = require("lint")
 

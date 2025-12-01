@@ -1,5 +1,11 @@
 -- Filetype and syntax plugin for LaTeX.
--- https://github.com/lervag/vimtex
+
+vim.pack.add({
+  {
+    src = "https://github.com/lervag/vimtex",
+    version = vim.version.range("*"),
+  },
+})
 
 vim.g.vimtex_view_method = "zathura_simple" -- no `xdotool` on Wayland
 vim.g.vimtex_toc_config = {

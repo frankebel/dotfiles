@@ -1,5 +1,11 @@
 -- A collection of small QoL plugins for Neovim.
--- https://github.com/folke/snacks.nvim
+
+vim.pack.add({
+  {
+    src = "https://github.com/folke/snacks.nvim",
+    version = vim.version.range("*"),
+  },
+})
 
 require("snacks").setup({
   bigfile = {},
