@@ -24,7 +24,7 @@ alias ctor='cd "$TORRENTDIR"; l'
 alias vdf='cd "$DOTDIR"; $EDITOR'
 # university
 alias cf='cd "$PROJECTDIR/Fermions.jl"; l'
-alias cj='cd "$PROJECTDIR/DMFT.jl"; l'
+alias cj='cd "$PROJECTDIR/RAS_DMFT.jl"; l'
 alias cjo='cd "$PROJECTDIR/dmft_journal"; l'
 alias cm='cd "$MASTERDIR"; l'
 alias cmc='cd "$MASTERDIR/2024w"; l'
