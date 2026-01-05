@@ -47,6 +47,7 @@ require("nvim-treesitter").install({
   "vim",
   "vimdoc",
   "yaml",
+  "zsh",
 })
 
 -- enable treesitter
