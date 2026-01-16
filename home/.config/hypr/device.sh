@@ -14,7 +14,7 @@ case "$(hostnamectl hostname)" in
         nm-applet &
         ;;
     *tuw*)
-        hyprctl keyword monitor DP-1,preferred,1920x0,auto
-        hyprctl keyword monitor HDMI-A-1,preferred,0x0,auto
+        hyprctl keyword monitor DP-1,preferred,0x0,auto
+        hyprctl keyword monitor HDMI-A-1,preferred,2560x0,auto
         ;;
 esac
