@@ -4,7 +4,7 @@ juliaup
 ltex-ls-plus-bin
 pandoc-bin
 paru
-redlib
+redlib-git
 shellcheck-bin
 tessen
 ventoy-bin

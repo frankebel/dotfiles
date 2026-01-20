@@ -3,5 +3,8 @@ blueman
 bluez
 bluez-utils
 bottom
+chezmoi
+eza
+git-lfs
 openmpi
 tmux

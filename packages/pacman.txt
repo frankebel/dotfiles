@@ -80,7 +80,7 @@ reflector
 ripgrep
 rsync
 ruff
-rust
+rustup
 shfmt
 slurp
 starship
