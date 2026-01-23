@@ -2,7 +2,7 @@
     af = !git diff --name-only | fzf --preview 'git diff {} | delta' | xargs git add
     afn = !git ls-files --others --exclude-standard | fzf --preview 'bat --force-colorization {}' | xargs git add
     afp = !git diff --name-only | fzf --preview 'git diff {} | delta' | xargs -ro git add --patch
-    alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+    alias = !git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
     c = commit
     ca = commit --amend
     can = commit --amend --no-edit
@@ -25,6 +25,8 @@
     ric = "!f() { git rebase --interactive HEAD~${1:-10}; }; f"
     rmf = !git ls-files | fzf --preview 'bat --force-colorization {}' | xargs git rm
     rs = restore --staged .
+    rsf = !git diff --name-only --cached | fzf --preview 'git diff {} | delta' | xargs git restore --staged
+    rsp = !git diff --name-only --cached | fzf --preview 'git diff {} | delta' | xargs -ro git restore --staged --patch
     s = status
     sp = stash pop
     su = stash -u
