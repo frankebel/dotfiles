@@ -19,6 +19,10 @@
       "src": "https://github.com/stevearc/conform.nvim",
       "version": ">=0.0.0"
     },
+    "iron.nvim": {
+      "rev": "0e07ace465edff6c4ed6db9f3b7bf919c40aeffb",
+      "src": "https://github.com/Vigemus/iron.nvim"
+    },
     "kitty-scrollback.nvim": {
       "rev": "8026a3715a93c7302d6bc4979f64102885ad1fc7",
       "src": "https://github.com/mikesmithgh/kitty-scrollback.nvim",
