@@ -72,9 +72,11 @@ ln -s ~/data/environments/flexget/bin/flexget ~/.local/bin/flexget
 # Julia
 juliaup config channelsymlinks false
 juliaup add release
-julia -e 'using Pkg; Pkg.Apps.add(url="https://github.com/aviatesk/JETLS.jl", rev="release")'
+juliaup add beta
+juliaup default beta
 julia -e 'using Pkg; Pkg.Apps.add("Runic")'
-julia -e 'using Pkg; Pkg.Apps.add(url="https://github.com/aviatesk/TestRunner.jl")'
+julia -e 'using Pkg; Pkg.Apps.add(url="https://github.com/aviatesk/JETLS.jl", rev="release")'
+julia -e 'using Pkg; Pkg.Apps.add(url="https://github.com/aviatesk/TestRunner.jl", rev="release")'
 
 # User and group management
 sudo usermod -s /bin/zsh "$USER"
