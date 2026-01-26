@@ -25,15 +25,13 @@ alias vdf='cd "$DOTDIR"; $EDITOR'
 # university
 alias cf='cd "$PROJECTDIR/Fermions.jl"; l'
 alias cj='cd "$PROJECTDIR/RAS_DMFT.jl"; l'
-alias cjo='cd "$PROJECTDIR/dmft_journal"; l'
+alias cjo='cd "$PROJECTDIR/journal"; l'
 alias cm='cd "$MASTERDIR"; l'
-alias cmc='cd "$MASTERDIR/2024w"; l'
+alias cmc='cd "$MASTERDIR/2025w"; l'
 alias cmd='cd "$MASTERDIR/masters_thesis/data"; l'
 alias cmm='cd "$MASTERDIR/masters_thesis"; l'
 alias cs='cd "$PROJECTDIR/masters_scripts"; l'
-alias ctt='cd "$PROJECTDIR/thesis_master"; l'
-alias cpo='cd "$PROJECTDIR/poster_juelich_2025"; l'
-alias vjo='cd "$PROJECTDIR/dmft_journal"; $EDITOR'
+alias vjo='cd "$PROJECTDIR/journal"; $EDITOR'
 
 # ASC
 alias sq='squeue -o "%.18i %.10Q %.12P %.40j %.8u %.2t %.10M %.6D %R" -u $USER'
