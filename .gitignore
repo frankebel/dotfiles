@@ -22,10 +22,7 @@ default.target.wants
 timers.target.wants
 
 # transmission-daemon
-dht.dat
-stats.json
-resume/
-torrents/
+**/transmission-daemon/**
 
 # zsh
 .zcompdump
