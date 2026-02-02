@@ -24,3 +24,11 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     end
   end,
 })
+
+-- Auto-resize splits when window is resized
+vim.api.nvim_create_autocmd("VimResized", {
+  group = augroup,
+  callback = function()
+    vim.cmd("tabdo wincmd =")
+  end,
+})
