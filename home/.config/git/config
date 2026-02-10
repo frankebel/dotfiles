@@ -78,6 +78,10 @@
 
 [rebase]
     autoStash = true
+    updateRefs = true
+
+[rerere]
+    enabled = true
 
 [status]
     showUntrackedFiles = all
