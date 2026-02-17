@@ -74,6 +74,7 @@ pipewire-pulse
 pkgstats
 prettier
 python
+qbittorrent
 qmk
 qt5ct
 reflector
@@ -98,7 +99,6 @@ texlive-langgerman
 thunderbird
 tokei
 torbrowser-launcher
-transmission-cli
 trash-cli
 tree-sitter-cli
 ttf-noto-nerd

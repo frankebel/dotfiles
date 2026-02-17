@@ -60,15 +60,6 @@ sudo systemctl enable cups.socket
 
 # User config
 
-# flexget inside virtual environment
-mkdir -p ~/data/environments
-uv venv ~/data/environments/flexget
-# shellcheck disable=SC1090
-. ~/data/environments/flexget/bin/activate
-uv pip install flexget transmission-rpc
-deactivate
-ln -s ~/data/environments/flexget/bin/flexget ~/.local/bin/flexget
-
 # Julia
 juliaup config channelsymlinks false
 juliaup add release
