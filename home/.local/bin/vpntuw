@@ -2,9 +2,11 @@
 # Connect with TUW VPN.
 # Disconnect with alias `vpnoff`.
 
-printf "%s" "$(pass show tuw/mail_pwd)" | sudo openconnect \
+printf "%s\n%s" "$(pass show tuw/tiss | head -n1)" "$(pass otp tuw/tiss)" | sudo openconnect \
+    --useragent="AnyConnect OpenConnect" \
+    --no-external-auth \
     --authgroup="1_TU_getunnelt" \
     --background \
     --passwd-on-stdin \
-    --user "$(pass show tuw/openconnect)" \
+    --user "$(pass show tuw/mail | awk 'NR==2 {print $2}')" \
     vpn.tuwien.ac.at
