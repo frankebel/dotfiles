@@ -1,4 +1,3 @@
-cyrus-sasl-xoauth2-git
 firefox-tridactyl-native
 juliaup
 ltex-ls-plus-bin

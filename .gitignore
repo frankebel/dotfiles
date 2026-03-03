@@ -4,9 +4,6 @@
 # Julia
 Manifest*.toml
 
-# neomutt
-token
-
 # newsboat
 urls
 

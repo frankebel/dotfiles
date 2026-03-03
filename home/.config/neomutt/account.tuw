@@ -7,23 +7,26 @@ set mbox_type = Maildir
 set folder = "~/.local/share/isync/tuw"
 set spoolfile = +INBOX
 set postponed = +Drafts
-unset record
+set record = +"Sent Items"
 set trash = +"Deleted Items"
-mailboxes =INBOX =Drafts ="Junk Email" ="Sent Items" ="Deleted Items" =Archive
+mailboxes \
+    =INBOX \
+    =Drafts \
+    -label "Spam" ="Junk Email" \
+    -label "Sent" ="Sent Items" \
+    -label "Trash" ="Deleted Items" \
+    =Archive
 
 # SMTP
-set smtp_authenticators = "xoauth2"
-set smtp_oauth_refresh_command = "$XDG_CONFIG_HOME/neomutt/mutt_oauth2.py $XDG_CONFIG_HOME/neomutt/token"
-set smtp_url = "smtp://e1429282@student.tuwien.ac.at@smtp.office365.com:587"
-set smtp_pass = "$smtp_oauth_refresh_command"
+set smtp_url = "smtp://febel@mail.intern.tuwien.ac.at:587"
+set smtp_pass = `pass show tuw/mail | head -n1`
 set my_name = "Frank Ebel"
-set from = "frank.ebel@student.tuwien.ac.at"
+set from = "frank.ebel@tuwien.ac.at"
 set ssl_starttls
 set ssl_force_tls
 
 # options
 set realname = "Frank Ebel"
-alternates "frank.ebel@student.tuwien.ac.at"
 
 # reload keybinds
 source keybinds

@@ -8,5 +8,5 @@ printf "%s\n%s" "$(pass show tuw/tiss | head -n1)" "$(pass otp tuw/tiss)" | sudo
     --authgroup="1_TU_getunnelt" \
     --background \
     --passwd-on-stdin \
-    --user "$(pass show tuw/mail | awk 'NR==2 {print $2}')" \
+    --user "$(pass show tuw/mail | awk 'NR==5 {print $2}')" \
     vpn.tuwien.ac.at
