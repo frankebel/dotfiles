@@ -9,7 +9,13 @@ set spoolfile = +INBOX
 set postponed = +Drafts
 set record = +Sent
 set trash = +Trash
-mailboxes =INBOX =Drafts =Junk =Sent =Trash =Archive
+mailboxes \
+    =INBOX \
+    =Drafts \
+    -label "Spam" =Junk \
+    =Sent \
+    =Trash \
+    =Archive
 
 # SMTP
 set smtp_url = "smtps://frank.ebel@mailbox.org@smtp.mailbox.org:465"
