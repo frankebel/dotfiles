@@ -31,9 +31,7 @@ set realname = "Frank Ebel"
 # reload keybinds
 source keybinds
 # Why does Microsoft use weird folder names with spaces?
-macro index,pager gj "<change-folder>=Junk^V Email<Enter>" "go to Junk"
 macro index,pager gs "<change-folder>=Sent^V Items<Enter>" "go to Sent"
 macro index,pager gt "<change-folder>=Deleted^V Items<Enter>" "go to Trash"
-macro index,pager Mj "<save-message>=Junk^V Email<Enter>" "move to Junk"
 macro index,pager Ms "<save-message>=Sent^V Items<Enter>" "move to Sent"
 macro index,pager Mt "<save-message>=Deleted^V Items<Enter>" "move to Trash"

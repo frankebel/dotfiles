@@ -31,13 +31,11 @@ macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract 
 macro index,pager ga "<change-folder>=Archive<Enter>" "go to Archive"
 macro index,pager gd "<change-folder>=Drafts<Enter>" "go to Drafts"
 macro index,pager gi "<change-folder>=INBOX<Enter>" "go to Inbox"
-macro index,pager gj "<change-folder>=Junk<Enter>" "go to Junk"
 macro index,pager gs "<change-folder>=Sent<Enter>" "go to Sent"
 macro index,pager gt "<change-folder>=Trash<Enter>" "go to Trash"
 
 macro index,pager Ma "<save-message>=Archive<Enter>" "move to Archive"
 macro index,pager Md "<save-message>=Drafts<Enter>" "move to Drafts"
 macro index,pager Mi "<save-message>=INBOX<Enter>" "move to Inbox"
-macro index,pager Mj "<save-message>=Junk<Enter>" "move to Junk"
 macro index,pager Ms "<save-message>=Sent<Enter>" "move to Sent"
 macro index,pager Mt "<save-message>=Trash<Enter>" "move to Trash"
