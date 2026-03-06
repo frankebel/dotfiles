@@ -2,5 +2,5 @@
 # Stop background processes.
 
 dunstctl set-paused true
-flexget daemon stop
-transmission-remote --exit
+systemctl --user stop goimapnotify@mailbox.service
+systemctl --user stop goimapnotify@tuw.service

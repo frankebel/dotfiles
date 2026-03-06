@@ -2,5 +2,5 @@
 # Start background processes.
 
 dunstctl set-paused false
-flexget daemon start -d
-transmission-daemon &
+systemctl --user start goimapnotify@mailbox.service
+systemctl --user start goimapnotify@tuw.service
