@@ -27,6 +27,9 @@ nmap("<leader>go", function()
 end, "mini.diff toggle overlay")
 
 require("mini.git").setup()
+nmap("<leader>gs", function()
+  require("mini.git").show_at_cursor()
+end, "mini.git Show Git related data at cursor (blame).")
 
 -- Appearance
 require("mini.icons").setup()
