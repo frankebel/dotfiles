@@ -22,7 +22,7 @@ bind index,pager B sidebar-toggle-visible
 bind editor <Tab> complete-query
 bind editor ^T    complete
 
-macro index,pager <f2> '<sync-mailbox><enter-command>source $XDG_CONFIG_HOME/neomutt/account.mbox<enter><change-folder>!<enter>'
+macro index,pager <f2> '<sync-mailbox><enter-command>source $XDG_CONFIG_HOME/neomutt/account.mailbox<enter><change-folder>!<enter>'
 macro index,pager <f3> '<sync-mailbox><enter-command>source $XDG_CONFIG_HOME/neomutt/account.tuw<enter><change-folder>!<enter>'
 
 macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
