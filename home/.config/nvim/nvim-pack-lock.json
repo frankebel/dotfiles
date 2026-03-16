@@ -5,7 +5,7 @@
       "src": "https://github.com/erooke/blink-cmp-latex"
     },
     "blink.cmp": {
-      "rev": "4b18c32adef2898f95cdef6192cbd5796c1a332d",
+      "rev": "451168851e8e2466bc97ee3e026c3dcb9141ce07",
       "src": "https://github.com/Saghen/blink.cmp",
       "version": ">=0.0.0"
     },
@@ -34,7 +34,7 @@
       "version": "'dev'"
     },
     "mini.nvim": {
-      "rev": "cad365c212fb1e332cb93fa8f72697125799d00a",
+      "rev": "9990c41f10f54f29a888d13024c9f765037bde23",
       "src": "https://github.com/nvim-mini/mini.nvim",
       "version": "'main'"
     },
@@ -43,7 +43,7 @@
       "src": "https://github.com/mfussenegger/nvim-lint"
     },
     "nvim-treesitter": {
-      "rev": "5cb05e1b0fa3c469958a2b26f36b3fe930af221c",
+      "rev": "ebc3201290b8372df2b3a1c23b71b9f007d972ff",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter",
       "version": "'main'"
     },
