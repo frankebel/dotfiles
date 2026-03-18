@@ -3,8 +3,7 @@
 return {
   cmd = {
     "jetls",
-    "--threads=auto",
-    "--",
+    "serve",
   },
   filetypes = { "julia" },
   root_markers = {
