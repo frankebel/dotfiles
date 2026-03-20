@@ -118,7 +118,10 @@ end, "SNACKS Find Projects")
 -- git
 nmap("<leader>gs", function()
   Snacks.picker.git_status()
-end, "Git Status")
+end, "Git status")
+nmap("<leader>gb", function()
+  Snacks.git.blame_line()
+end, "Git blame")
 
 -- Grep
 nmap("<leader>sb", function()
