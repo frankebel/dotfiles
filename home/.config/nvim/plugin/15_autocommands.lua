@@ -32,3 +32,6 @@ vim.api.nvim_create_autocmd("VimResized", {
     vim.cmd("tabdo wincmd =")
   end,
 })
+
+-- Better diff options
+vim.opt.diffopt:append("linematch:60")
