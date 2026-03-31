@@ -4,9 +4,6 @@
 # Julia
 Manifest*.toml
 
-# newsboat
-urls
-
 # neovim
 *.spl
 *.sug
