@@ -8,9 +8,6 @@ Manifest*.toml
 *.spl
 *.sug
 
-# python
-__pycache__
-
 # systemd
 default.target.wants
 timers.target.wants
