@@ -34,22 +34,22 @@ case "$host" in
         ;;
 esac
 cd ..
-# AUR install with paru
+# AUR install with yay
 cd packages || exit
-if ! [ -x /usr/bin/paru ]; then
-    git clone https://aur.archlinux.org/paru.git
-    cd paru || exit
+if ! [ -x /usr/bin/yay ]; then
+    git clone https://aur.archlinux.org/yay.git
+    cd yay || exit
     makepkg -si
     cd .. || exit
-    rm -rf paru
+    rm -rf yay
 fi
-[ -f aur.txt ] && paru -S --needed - < aur.txt
+[ -f aur.txt ] && yay -S --needed - < aur.txt
 case "$host" in
     *desktop*)
-        [ -f aur_desktop.txt ] && paru -S --needed - < aur_desktop.txt
+        [ -f aur_desktop.txt ] && yay -S --needed - < aur_desktop.txt
         ;;
     *laptop*)
-        [ -f aur_laptop.txt ] && paru -S --needed - < aur_laptop.txt
+        [ -f aur_laptop.txt ] && yay -S --needed - < aur_laptop.txt
         ;;
 esac
 cd ..

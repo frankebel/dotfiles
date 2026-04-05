@@ -2,9 +2,9 @@ firefox-tridactyl-native
 juliaup
 ltex-ls-plus-bin
 pandoc-bin
-paru
 redlib-git
 shellcheck-bin
 tessen
 ventoy-bin
+yay
 zotero-bin

@@ -79,8 +79,8 @@ alias v='$EDITOR'
 alias vpnoff='sudo killall --quiet -SIGINT openconnect'
 
 # Pacman
-alias aurs='paru -Slq | fzf --preview "paru -Si {}" | xargs -ro paru -S'
-alias aursi='paru -Slq | fzf --preview "paru -Si {}" | xargs -ro paru -Si'
+alias aurs='yay -Slq | fzf --preview "yay -Si {}" | xargs -ro yay -S'
+alias aursi='yay -Slq | fzf --preview "yay -Si {}" | xargs -ro yay -Si'
 alias explicit-installed='pacman -Qqe | grep -vx "$(pacman -Qqg texlive)"'
 alias mirror='sudo reflector --verbose --latest 8 --sort rate --protocol https --save /etc/pacman.d/mirrorlist'
 alias pacq='pacman -Qq | fzf --preview "pacman -Qi {}" | xargs -ro pacman -Qi'
