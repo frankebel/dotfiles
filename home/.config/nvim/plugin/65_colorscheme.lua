@@ -10,4 +10,4 @@ require("catppuccin").setup({
   flavour = "mocha",
 })
 
-vim.cmd("colorscheme catppuccin")
+vim.cmd.colorscheme("catppuccin-nvim")
