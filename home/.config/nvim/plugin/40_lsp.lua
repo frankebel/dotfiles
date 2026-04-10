@@ -9,6 +9,12 @@ vim.pack.add({
   },
 })
 
+-- https://github.com/barreiroleo/ltex_extra.nvim
+require("ltex_extra").setup({
+  load_langs = { "en-US" },
+  path = ".ltex",
+})
+
 vim.lsp.enable({
   -- Julia
   "jetls",

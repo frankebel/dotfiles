@@ -1,11 +1,5 @@
 -- https://github.com/ltex-plus/ltex-ls-plus
 
--- https://github.com/barreiroleo/ltex_extra.nvim
-require("ltex_extra").setup({
-  load_langs = { "en-US" },
-  path = ".ltex",
-})
-
 -- https://ltex-plus.github.io/ltex-plus/supported-languages.html#markup-languages
 local language_id_mapping = {
   pandoc = "markdown",
