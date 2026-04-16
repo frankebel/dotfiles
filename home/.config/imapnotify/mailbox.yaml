@@ -5,7 +5,7 @@ configurations:
     tlsOptions:
       rejectUnauthorized: false
     username: frank.ebel@mailbox.org
-    passwordCMD: 'pass show mail/mailbox_pwd'
+    passwordCMD: "pass show mail/mailbox | awk '$1 == \"apppwd:\" {print $2}'"
     boxes:
       - mailbox: INBOX
         onNewMail: 'mbsync -c "$XDG_CONFIG_HOME/isync/mbsyncrc" mailbox'

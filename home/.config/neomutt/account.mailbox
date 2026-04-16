@@ -19,7 +19,7 @@ mailboxes \
 
 # SMTP
 set smtp_url = "smtps://frank.ebel@mailbox.org@smtp.mailbox.org:465"
-set smtp_pass = `pass show mail/mailbox_pwd`
+set smtp_pass = `pass show mail/mailbox | awk '$1 == "apppwd:" {print $2}'`
 set my_name = "Frank Ebel"
 set from = "frank@ebel.page"
 set ssl_starttls

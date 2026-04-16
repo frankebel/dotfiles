@@ -2,8 +2,8 @@
 IMAPStore mailbox-remote
 Host imap.mailbox.org
 Port 993
-User frank.ebel@mailbox.org
-PassCmd "pass show mail/mailbox_pwd"
+UserCmd "pass show mail/mailbox | awk '$1 == \"user:\" {print $2}'"
+PassCmd "pass show mail/mailbox | awk '$1 == \"apppwd:\" {print $2}'"
 TLSType IMAPS
 AuthMechs LOGIN PLAIN
 CertificateFile /etc/ssl/certs/ca-certificates.crt
