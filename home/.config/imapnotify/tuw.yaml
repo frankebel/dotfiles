@@ -4,7 +4,7 @@ configurations:
     tls: true
     tlsOptions:
       rejectUnauthorized: false
-    usernameCMD: "pass show tuw/mail | awk 'NR==4 {print $2}'"
+    usernameCMD: "pass show tuw/mail | awk '$1 == \"user2:\" {print $2}'"
     passwordCMD: 'pass show tuw/mail | head -n1'
     boxes:
       - mailbox: INBOX
