@@ -10,7 +10,7 @@ export XDG_STATE_HOME="$HOME/.local/state"
 # Commonly used directories
 export DATADIR="$HOME/data"
 export DOTDIR="$HOME/.dotfiles"
-export MASTERDIR="$DATADIR/education/master"
+export PHDDIR="$DATADIR/education/phd"
 export PROJECTDIR="$DATADIR/projects"
 export TEMPDIR="$XDG_STATE_HOME/temp"
 export TORRENTDIR="$XDG_DATA_HOME/torrents"
