@@ -71,7 +71,6 @@ julia -e 'using Pkg; Pkg.Apps.add(url="https://github.com/aviatesk/TestRunner.jl
 
 # User and group management
 sudo usermod -s /bin/zsh "$USER"
-sudo usermod -aG libvirt "$USER"
 
 # Create directories
 mkdir -p ~/.config

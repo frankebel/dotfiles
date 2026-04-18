@@ -3,5 +3,3 @@ android-tools
 hplip
 ollama-rocm
 piper
-qemu-desktop
-virt-manager
