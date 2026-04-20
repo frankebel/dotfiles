@@ -34,7 +34,7 @@
       "version": "'dev'"
     },
     "mini.nvim": {
-      "rev": "c67822c53e8e282fe863343e88aa0a8ca3534059",
+      "rev": "418ef4930ddabe80f449c6f1323f8b6abb172d1c",
       "src": "https://github.com/nvim-mini/mini.nvim",
       "version": "'main'"
     },
