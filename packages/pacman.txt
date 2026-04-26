@@ -76,7 +76,7 @@ prettier
 python
 qbittorrent
 qmk
-qt5ct
+qt6ct
 reflector
 ripgrep
 rsync
