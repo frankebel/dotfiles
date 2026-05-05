@@ -1,5 +1,4 @@
 amd-ucode
 android-tools
 hplip
-ollama-rocm
 piper

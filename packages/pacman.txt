@@ -22,7 +22,6 @@ git
 git-delta
 goimapnotify
 grim
-htop
 hypridle
 hyprland
 hyprlock
@@ -32,7 +31,6 @@ inkscape
 isync
 jdk21-openjdk
 jq
-jupyter-notebook
 khal
 khard
 kitty
