@@ -25,6 +25,7 @@ alias vdf='cd "$DOTDIR"; $EDITOR'
 # university
 alias cdse='cd "$PROJECTDIR/DiscreteSelfEnergy"; l'
 alias cf='cd "$PROJECTDIR/Fermions.jl"; l'
+alias cfs='cd "$PROJECTDIR/Fermions_scripts"; l'
 alias cj='cd "$PROJECTDIR/RAS_DMFT.jl"; l'
 alias cjo='cd "$PROJECTDIR/journal"; l'
 alias cphd='cd "$PHDDIR"; l'
