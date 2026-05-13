@@ -1,0 +1,7 @@
+require("environment_variables")
+require("autostart")
+require("binds")
+require("monitors")
+require("variables")
+require("master_layout")
+require("window_rules")
