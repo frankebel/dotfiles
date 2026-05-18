@@ -24,7 +24,7 @@
       "src": "https://github.com/Vigemus/iron.nvim"
     },
     "kitty-scrollback.nvim": {
-      "rev": "ecb752f53a0cab8e6aba7073f0ad338620aa564e",
+      "rev": "db7ab6676774e3d33ef0d7833c96251456eecaa2",
       "src": "https://github.com/mikesmithgh/kitty-scrollback.nvim",
       "version": ">=0.0.0"
     },
@@ -34,12 +34,12 @@
       "version": "'dev'"
     },
     "mini.nvim": {
-      "rev": "a5fda91040763cf9ad70bdce1c656b0f4ba1d16e",
+      "rev": "18797ed18f347d0d0da27fec28a67979b1207f70",
       "src": "https://github.com/nvim-mini/mini.nvim",
       "version": "'main'"
     },
     "nvim-lint": {
-      "rev": "eab58b48eb11d7745c11c505e0f3057165902461",
+      "rev": "665525810630701b84181e4d9eefd24b49845b29",
       "src": "https://github.com/mfussenegger/nvim-lint"
     },
     "nvim-treesitter": {
