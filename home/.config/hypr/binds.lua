@@ -64,8 +64,8 @@ hl.bind("SUPER + v", hl.dsp.exec_cmd("kitty -e nvim"))
 hl.bind("SUPER + x", hl.dsp.exec_cmd("xournalpp"))
 hl.bind("SUPER + z", hl.dsp.exec_cmd("zotero"))
 hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | wl-copy'))
-hl.bind("SUPER + Print", hl.dsp.exec_cmd('grim -g "$(slurp)" "$TEMPDIR/$(date +%s.png)"'))
-hl.bind("SUPER + SHIFT + Print", hl.dsp.exec_cmd('grim -o DP-1 "$TEMPDIR/$(date +%s.png)"'))
+hl.bind("SUPER + Print", hl.dsp.exec_cmd('grim -g "$(slurp)" "$TEMPDIR/$(date --iso-8601=seconds).png"'))
+hl.bind("SUPER + SHIFT + Print", hl.dsp.exec_cmd('grim -o DP-1 "$TEMPDIR/$(date --iso-8601=seconds).png"'))
 hl.bind("SUPER + F12", hl.dsp.exec_cmd("hyprlock"))
 
 -- Volume control
