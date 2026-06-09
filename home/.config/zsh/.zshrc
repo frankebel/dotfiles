@@ -96,5 +96,4 @@ bindkey "^y" autosuggest-accept
 unset plugindir
 
 # fzf
-source_if_exists '/usr/share/fzf/completion.zsh'
-source_if_exists '/usr/share/fzf/key-bindings.zsh'
+command -v fzf >/dev/null 2>&1 && source <(fzf --zsh)
