@@ -63,6 +63,11 @@ hl.config({
     no_update_news = true,
     no_donation_nag = true,
   },
+
+  -- https://wiki.hypr.land/Configuring/Advanced-and-Cool/XWayland/
+  xwayland = {
+    force_zero_scaling = true,
+  },
 })
 
 hl.device({
