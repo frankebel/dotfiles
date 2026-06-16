@@ -1,5 +1,5 @@
 #!/bin/sh
-# Mirror laptop monitor to externally connected one.
+# Mirror external monitor to laptop.
 
 monitor="$(hyprctl -j monitors | jq -r '.[].name | select(. != "eDP-1")')"
-hyprctl keyword monitor "$monitor",preferred,auto,1,mirror,eDP-1
+hyprctl eval 'hl.monitor({ output="eDP-1", mode="preferred", mirror="'$monitor'" })'
