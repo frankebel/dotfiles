@@ -17,7 +17,7 @@ iron.setup({
       julia = {
         command = { "julia" },
         format = common.bracketed_paste,
-        block_dividers = { "# %%", "#%%" },
+        block_dividers = { "##", "# %%" },
       },
     },
     repl_filetype = function(_, ft)
