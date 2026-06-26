@@ -6,7 +6,6 @@
     c = commit
     ca = commit --amend
     can = commit --amend --no-edit
-    cb = !git branch | grep -v '^*' | fzf --no-multi --preview 'git lo --color=always {1}' | xargs git checkout
     conf = !git config -l | grep -v '^alias'
     d = diff
     df = !git diff --name-only | fzf --preview 'git diff {} | delta' | xargs git diff
@@ -30,6 +29,7 @@
     s = status
     sp = stash pop
     su = stash -u
+    sw = !git branch | grep -v '^*' | fzf --no-multi --preview 'git lo --color=always {1}' | xargs git switch
 
 [commit]
     gpgSign = true
