@@ -54,7 +54,6 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
-npm
 nvtop
 obs-studio
 openconnect
@@ -98,7 +97,6 @@ thunderbird
 tokei
 torbrowser-launcher
 trash-cli
-tree-sitter-cli
 ttf-noto-nerd
 typos
 udiskie
