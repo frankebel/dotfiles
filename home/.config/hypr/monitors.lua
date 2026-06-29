@@ -4,7 +4,7 @@ local hostname = require("helper").hostname
 
 if hostname == "fdesktop" then
   hl.monitor({
-    output = "DP-2",
+    output = "HDMI-A-1",
     mode = "preferred",
     position = "0x0",
     scale = 1,
@@ -26,7 +26,7 @@ if hostname == "fdesktop" then
     sdr_max_luminance = 120,
   })
   hl.monitor({
-    output = "HDMI-A-1",
+    output = "DP-2",
     mode = "preferred",
     position = "5760x0", -- 2560 + 3840/1.2 (scaling)
     scale = 1,

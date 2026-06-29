@@ -6,16 +6,16 @@
 hl.bind("SUPER + CTRL + Q", hl.dsp.exit())
 
 -- Focus between monitors
-hl.bind("SUPER + p", hl.dsp.focus({ monitor = "+1" }))
-hl.bind("SUPER + n", hl.dsp.focus({ monitor = "-1" }))
+hl.bind("SUPER + p", hl.dsp.focus({ monitor = "-1" }))
+hl.bind("SUPER + n", hl.dsp.focus({ monitor = "+1" }))
 
 -- Move active window between monitors
-hl.bind("SUPER + SHIFT + p", hl.dsp.window.move({ monitor = "+1" }))
-hl.bind("SUPER + SHIFT + n", hl.dsp.window.move({ monitor = "-1" }))
+hl.bind("SUPER + SHIFT + p", hl.dsp.window.move({ monitor = "-1" }))
+hl.bind("SUPER + SHIFT + n", hl.dsp.window.move({ monitor = "+1" }))
 
 -- Swap workspaces
-hl.bind("SUPER + s", hl.dsp.workspace.swap_monitors({ monitor1 = "current", monitor2 = "+1" }))
-hl.bind("SUPER + SHIFT + s", hl.dsp.workspace.swap_monitors({ monitor1 = "current", monitor2 = "-1" }))
+hl.bind("SUPER + s", hl.dsp.workspace.swap_monitors({ monitor1 = "current", monitor2 = "-1" }))
+hl.bind("SUPER + SHIFT + s", hl.dsp.workspace.swap_monitors({ monitor1 = "current", monitor2 = "+1" }))
 
 -- Move between workspaces
 hl.bind("SUPER + u", hl.dsp.focus({ urgent_or_last = true }))
