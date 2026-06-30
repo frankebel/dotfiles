@@ -24,6 +24,7 @@ set my_name = "Frank Ebel"
 set from = "frank.ebel@tuwien.ac.at"
 set ssl_starttls
 set ssl_force_tls
+set smtp_authenticators="login"
 
 # options
 set realname = "Frank Ebel"
