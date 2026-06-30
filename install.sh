@@ -97,7 +97,7 @@ rm ~/.bash*
 
 systemctl enable --user goimapnotify@mailbox.service
 systemctl enable --user goimapnotify@tuw.service
-systemctl enable --user huewarm.timer
+# systemctl enable --user huewarm.timer
 systemctl enable --user mailsync.timer
 systemctl enable --user newsboat.timer
 systemctl enable --user ssh-agent.service
