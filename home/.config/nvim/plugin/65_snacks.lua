@@ -12,6 +12,9 @@ require("snacks").setup({
   image = {
     doc = {
       enabled = true,
+      conceal = function(_, _)
+        return false
+      end,
       max_width = 100,
       max_height = 100,
     },
