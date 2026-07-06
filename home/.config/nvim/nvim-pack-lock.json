@@ -34,12 +34,12 @@
       "version": "'dev'"
     },
     "mini.nvim": {
-      "rev": "1345d191bb3da9c7b0e977f4387c5761f9bff68d",
+      "rev": "d74190c1528aaf12ba5f3a29d03524c6b81e18b3",
       "src": "https://github.com/nvim-mini/mini.nvim",
       "version": "'main'"
     },
     "nvim-lint": {
-      "rev": "01c9842c089069ab497430159312b2c8868a4590",
+      "rev": "a219b2c9e5b4765e5c845aba119dad55806fcaf1",
       "src": "https://github.com/mfussenegger/nvim-lint"
     },
     "nvim-treesitter": {
@@ -75,7 +75,7 @@
     "vimtex": {
       "rev": "2e1bbabeb2c34bb17d7bc8cfdf8f95b16dd0db0c",
       "src": "https://github.com/lervag/vimtex",
-      "version": ">=0.0.0"
+      "version": "'v2.17'"
     }
   }
 }
