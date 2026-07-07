@@ -206,3 +206,8 @@ end, "LSP Symbols")
 nmap("<leader>sS", function()
   Snacks.picker.lsp_workspace_symbols()
 end, "LSP Workspace Symbols")
+
+-- image
+nmap("<leader>si", function()
+  vim.fn.delete(vim.fn.stdpath("cache") .. "/snacks/image", "rf") -- only recursive not possible
+end, "Snacks delete cache")
