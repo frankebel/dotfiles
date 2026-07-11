@@ -13,7 +13,7 @@ if hostname == "fdesktop" then
     output = "DP-1",
     mode = "3840x2160@240",
     position = "2560x0",
-    scale = 1.2,
+    scale = 1.25,
     bitdepth = 10,
     cm = "hdr",
     vrr = 1,
@@ -28,7 +28,7 @@ if hostname == "fdesktop" then
   hl.monitor({
     output = "DP-2",
     mode = "preferred",
-    position = "5760x0", -- 2560 + 3840/1.2 (scaling)
+    position = "5632x0", -- 2560 + 3840/1.25 (scaling)
     scale = 1,
   })
 elseif hostname == "flaptop" then
