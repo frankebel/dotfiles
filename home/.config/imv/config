@@ -6,6 +6,7 @@ overlay = true
 overlay_font = Monospace:14
 
 [binds]
+<Ctrl+r> = rotate by 90
 n = next
 p = prev
 t = exec trash $imv_current_file
