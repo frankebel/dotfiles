@@ -1,4 +1,5 @@
 alsa-utils
+android-file-transfer
 base
 base-devel
 basedpyright
@@ -30,6 +31,7 @@ imv
 inkscape
 isync
 jdk21-openjdk
+jhead
 jq
 khal
 khard
@@ -63,6 +65,7 @@ pass
 pass-otp
 pavucontrol
 perl-file-homedir
+perl-image-exiftool
 perl-rename
 perl-yaml-tiny
 pimsync
