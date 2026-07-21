@@ -6,3 +6,4 @@ hplip
 intel-media-driver
 intel-ucode
 network-manager-applet
+zoom

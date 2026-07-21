@@ -2,7 +2,6 @@ alsa-utils
 android-file-transfer
 base
 base-devel
-basedpyright
 bat
 biber
 btop
@@ -100,6 +99,7 @@ thunderbird
 tokei
 torbrowser-launcher
 trash-cli
+tree-sitter-cli
 ttf-noto-nerd
 typos
 udiskie

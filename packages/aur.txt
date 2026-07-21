@@ -1,3 +1,4 @@
+basedpyright
 firefox-tridactyl-native
 juliaup
 ltex-ls-plus-bin
