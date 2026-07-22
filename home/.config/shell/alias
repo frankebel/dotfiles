@@ -97,7 +97,6 @@ alias m='neomutt'
 alias ms='mbsync --config "$XDG_CONFIG_HOME/isync/mbsyncrc" --all'
 alias printpath='printf "%s\n" "$PATH" | sed "s/:/\n/g"'
 alias pwdc='pwd C'
-alias shck='shellcheck'
 alias tree='tree -a -I .git' # ignore .git directory
 alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 alias z='zathura'
