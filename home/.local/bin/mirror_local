@@ -1,0 +1,5 @@
+#!/bin/sh
+# Mirror built-in display to external one.
+
+monitor="$(hyprctl -j monitors | jq -r '.[].name | select(. != "eDP-1")')"
+hyprctl eval 'hl.monitor({ output="'"$monitor"'", mode="preferred", mirror="eDP-1" })'
