@@ -3,7 +3,7 @@
 vim.pack.add({
   {
     src = "https://github.com/lervag/vimtex",
-    version = "v2.17",
+    version = "v2.18",
   },
 })
 

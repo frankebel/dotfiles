@@ -20,7 +20,7 @@
       "version": ">=0.0.0"
     },
     "iron.nvim": {
-      "rev": "88cd340407b959f1168af2a6ae5a3d180e6df32c",
+      "rev": "c7f8047d964fb155a701b7c860fa3d4143d713c5",
       "src": "https://github.com/Vigemus/iron.nvim"
     },
     "kitty-scrollback.nvim": {
@@ -34,7 +34,7 @@
       "version": "'dev'"
     },
     "mini.nvim": {
-      "rev": "a35f08f63b73f0ffac045cd175fb2a22e167c39c",
+      "rev": "946ae64e0ee807ae3c41f382f0114b4ed4915b2c",
       "src": "https://github.com/nvim-mini/mini.nvim",
       "version": "'main'"
     },
@@ -43,7 +43,7 @@
       "src": "https://github.com/mfussenegger/nvim-lint"
     },
     "nvim-treesitter": {
-      "rev": "7248feaca45e4d944591497964bc19afa89ad1c6",
+      "rev": "61df84986b4b4ec469ee745a182e433d49f8c27e",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter",
       "version": "'main'"
     },
@@ -73,9 +73,9 @@
       "version": ">=0.0.0"
     },
     "vimtex": {
-      "rev": "2e1bbabeb2c34bb17d7bc8cfdf8f95b16dd0db0c",
+      "rev": "cb1374f1f3f9717ea91787c54dc11031d673aea5",
       "src": "https://github.com/lervag/vimtex",
-      "version": "'v2.17'"
+      "version": "'v2.18'"
     }
   }
 }
