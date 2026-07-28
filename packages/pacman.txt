@@ -2,6 +2,7 @@ alsa-utils
 android-file-transfer
 base
 base-devel
+bash-language-server
 bat
 biber
 btop

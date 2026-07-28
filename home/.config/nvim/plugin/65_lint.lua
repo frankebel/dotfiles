@@ -8,9 +8,7 @@ vim.pack.add({
 
 local lint = require("lint")
 
-lint.linters_by_ft = {
-  sh = { "shellcheck" },
-}
+lint.linters_by_ft = {}
 
 -- Autocmd to trigger linting
 vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost", "InsertLeave" }, {

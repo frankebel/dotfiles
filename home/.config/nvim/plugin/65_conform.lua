@@ -11,18 +11,6 @@ require("conform").setup({
   formatters_by_ft = {
     lua = { "stylua" },
     markdown = { "prettier" },
-    sh = { "shfmt" },
-  },
-  formatters = {
-    shfmt = {
-      prepend_args = {
-        "--indent",
-        "4",
-        "--binary-next-line",
-        "--case-indent",
-        "--space-redirects",
-      },
-    },
   },
   format_on_save = {
     timeout_ms = 500,

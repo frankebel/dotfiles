@@ -16,6 +16,8 @@ require("ltex_extra").setup({
 })
 
 vim.lsp.enable({
+  -- Bash
+  "bashls",
   -- Julia
   "jetls",
   -- LaTeX

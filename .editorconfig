@@ -8,3 +8,9 @@ end_of_line = lf
 charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
+
+[*.sh]
+# shfmt
+binary_next_line = true
+space_redirects = true
+switch_case_indent = true
