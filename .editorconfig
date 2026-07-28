@@ -14,3 +14,13 @@ insert_final_newline = true
 binary_next_line = true
 space_redirects = true
 switch_case_indent = true
+indent_style = space
+indent_size = 4
+
+[**/.local/bin/**]
+# extensionless shell scripts (shfmt)
+binary_next_line = true
+space_redirects = true
+switch_case_indent = true
+indent_style = space
+indent_size = 4
