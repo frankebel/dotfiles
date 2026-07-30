@@ -2,6 +2,6 @@
   "defaultModel": "large",
   "defaultProvider": "aqueduct",
   "hideThinkingBlock": true,
-  "lastChangelogVersion": "0.82.1",
+  "lastChangelogVersion": "0.83.0",
   "theme": "catppuccin-mocha"
 }
