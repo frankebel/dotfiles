@@ -1,5 +1,11 @@
 # Global Instructions
 
+## Julia
+
+- Do not run tests after every change.
+  The user runs the test suite themselves.
+  Only run tests when explicitly asked.
+
 ## KISS
 
 Keep it simple, stupid. Don't over-engineer stuff.
