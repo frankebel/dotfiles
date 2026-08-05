@@ -29,7 +29,7 @@ map("n", "<localleader>tt", "<cmd>VimtexTocOpen<cr>", "VTEX open table of conten
 map("n", "<localleader>tv", "<cmd>VimtexView<cr>", "VTEX view in pdf")
 map("n", "<localleader>tc", "<cmd>VimtexCompile<cr>", "VTEX compile")
 -- Need to start command with `:` otherwise lines are not taken
-map("x", "<localleader>tC", ":VimtexCompileSelected<cr>", "VTEX compile selcted")
+map("x", "<localleader>tC", ":VimtexCompileSelected<cr>", "VTEX compile selected")
 map("n", "<localleader>te", "<cmd>VimtexErrors<cr>", "VTEX open errors")
 map("n", "<localleader>td", "<cmd>VimtexClean<cr>", "VTEX clean aux files (delete)")
 map("n", "<localleader>tm", "<cmd>VimtexImapsList<cr>", "VTEX list insert mode mappings")

@@ -1,0 +1,5 @@
+[default]
+extend-ignore-identifiers-re = [
+    "^[a-zA-Z0-9]{6}$", # rgb
+    "^[a-zA-Z]{1,3}$", # <= 3 letters are noise
+]
