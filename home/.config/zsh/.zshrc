@@ -2,7 +2,7 @@ source_if_exists() {
     [ -f "$1" ] && . "$1"
 }
 # Aliases
-. ~/.dotfiles/home/.config/shell/alias
+. ~/.config/shell/alias
 
 # Cursor shape
 # Set shape depending on mode.

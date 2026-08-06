@@ -21,8 +21,9 @@ while external links are written like [this]().
 ## Installation and Setup
 
 ```sh
-git clone https://github.com/frankebel/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
+mkdir -p ~/data/projects
+git clone https://github.com/frankebel/dotfiles.git ~/data/projects/dotfiles
+cd ~/data/projects/dotfiles
 ./install.sh
 ```
 

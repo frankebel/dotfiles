@@ -72,7 +72,7 @@ julia +release -e 'using Pkg; Pkg.Apps.add(url="https://github.com/aviatesk/Test
 # User and group management
 sudo usermod -s /bin/zsh "$USER"
 
-# Create directories
+# create directories such that `stow` symlinks at the desired depth
 mkdir -p ~/.config
 mkdir -p ~/.local/bin
 mkdir -p ~/.local/share/applications
@@ -85,12 +85,11 @@ mkdir -p ~/.local/share/pimsync/status
 mkdir -p ~/.local/share/torrents
 mkdir -p ~/.local/state/temp
 mkdir -p ~/.ssh
-# Set directory permission
 chmod 700 ~/.local/share/gnupg
 chmod 700 ~/.ssh
 
-# Why does "~" instead of "$HOME" cause errors in stow command?
-stow home --dir="$HOME/.dotfiles" --target="$HOME" home
+# create symblinks
+stow --dir="$HOME/data/projects/dotfiles" --target="$HOME" home
 
 # Remove bash files
 rm ~/.bash*
