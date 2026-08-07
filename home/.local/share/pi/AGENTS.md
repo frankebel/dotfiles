@@ -26,23 +26,8 @@ The pi config directory is given by the `PI_CODING_AGENT_DIR` environment variab
 
 ## Rendering LaTeX
 
-When the user asks to render, display, or show a LaTeX equation,
-first show the LaTeX source in a `math` code block,
-then render it inline with `pi_latex_inline`:
-
-```sh
-pi_latex_inline '\mathrm{i}\hbar\,\partial_t \,|\psi\rangle = \hat{H}|\psi\rangle'
-```
-
-- `pi_latex_inline` renders $\LaTeX$ math via `lualatex` and displays the result inline
-  in kitty using the graphics protocol.
-  It also saves a PDF to `/tmp/pi_latex_inline_output.pdf`.
-- Pass only the math content (no `$...$`/`\(...\)`/`\[...\]` wrappers);
-  bare math is wrapped in `\[ ... \]` automatically.
-  Top-level environments (`align*`, `gather*`, `equation*`, etc.) are passed through unwrapped.
 - Use upright forms for mathematical constants.
-- If `pi_latex_inline` is unavailable or the terminal is not kitty,
-  fall back to showing the LaTeX source in a code block.
+  Examples: `\mathrm{i}` for imaginary unit, `\mathrm{e}` for Euler's constant.
 
 ## Style
 

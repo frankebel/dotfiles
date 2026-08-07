@@ -3,5 +3,9 @@
   "defaultProvider": "aqueduct",
   "hideThinkingBlock": true,
   "lastChangelogVersion": "0.83.0",
+  "packages": [
+    "npm:pi-markdown-preview",
+    "npm:pi-web-access"
+  ],
   "theme": "catppuccin-mocha"
 }

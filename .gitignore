@@ -8,9 +8,14 @@ Manifest*.toml
 *.spl
 *.sug
 
+# pi
+**/pi/npm/
+**/pi/sessions/
+**/pi/tmp/
+
 # systemd
-default.target.wants
-timers.target.wants
+default.target.wants/
+timers.target.wants/
 
 # zsh
 .zcompdump
