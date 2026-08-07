@@ -3,6 +3,7 @@ firefox-tridactyl-native
 juliaup
 ltex-ls-plus-bin
 pandoc-bin
+pi
 redlib-git
 shellcheck-bin
 tessen
