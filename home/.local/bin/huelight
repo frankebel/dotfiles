@@ -1,6 +1,6 @@
 #!/bin/sh
-# Set colortemperature of lights in room.
-# Default value is 2700 K.
+# Set Philips HUE colortemperature and intensity.
+# Default value is "2700K".
 
 for i in 1 2 3; do
     hueadm -H "$(pass show home/hue | sed '2q;d')" \

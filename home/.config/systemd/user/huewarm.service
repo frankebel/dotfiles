@@ -1,6 +1,0 @@
-[Unit]
-Description=Hue light color temperature service
-
-[Service]
-Type=oneshot
-ExecStart=%h/.local/bin/huelight
