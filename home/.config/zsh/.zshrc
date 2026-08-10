@@ -58,10 +58,10 @@ setopt MAGIC_EQUAL_SUBST
 # History
 [ -d "$XDG_STATE_HOME/zsh" ] || mkdir "$XDG_STATE_HOME/zsh"
 HISTFILE="$XDG_STATE_HOME/zsh/history"
-HISTSIZE=10000
+HISTSIZE=20000
 SAVEHIST=10000
+setopt SHARE_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
-setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
 zshaddhistory() { whence ${${(z)1}[1]} >| /dev/null || return 1 } # `man zshmisc`
 
