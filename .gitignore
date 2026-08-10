@@ -9,6 +9,7 @@ Manifest*.toml
 *.sug
 
 # pi
+**/pi/cache/
 **/pi/npm/
 **/pi/sessions/
 **/pi/tmp/
