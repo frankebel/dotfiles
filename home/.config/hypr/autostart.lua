@@ -15,6 +15,9 @@ hl.on("hyprland.start", function()
   -- Screen sharing
   hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
 
+  -- https://wiki.hypr.land/Useful-Utilities/Systemd-start/#hyprland-sessiontarget
+  hl.exec_cmd("systemctl --user start hyprland-session.target")
+
   -- https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland
   hl.exec_cmd('gsettings set org.gnome.desktop.interface font-name "Noto Sans Mono 12"')
 
@@ -26,4 +29,9 @@ hl.on("hyprland.start", function()
   -- terminal emulator
   hl.exec_cmd("kitty")
   hl.exec_cmd("sleep 0.01 && hyprctl eval 'hl.dispatch(hl.dsp.focus({ workspace = 1 }))'")
+end)
+
+hl.on("hyprland.shutdown", function()
+  -- https://wiki.hypr.land/Useful-Utilities/Systemd-start/#hyprland-sessiontarget
+  os.execute("systemctl --user stop hyprland-session.target && sleep 0.1")
 end)
