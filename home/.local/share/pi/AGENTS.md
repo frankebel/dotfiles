@@ -10,6 +10,11 @@
 
 Keep it simple, stupid. Don't over-engineer stuff.
 
+## LaTeX
+
+- Use upright forms for mathematical constants.
+  Examples: `\mathrm{i}` for imaginary unit, `\mathrm{e}` for Euler's constant.
+
 ## Markdown
 
 - Break lines at logical locations
@@ -23,11 +28,6 @@ Keep it simple, stupid. Don't over-engineer stuff.
 
 The pi config directory is given by the `PI_CODING_AGENT_DIR` environment variable
 (not `~/.pi/agent`).
-
-## Rendering LaTeX
-
-- Use upright forms for mathematical constants.
-  Examples: `\mathrm{i}` for imaginary unit, `\mathrm{e}` for Euler's constant.
 
 ## Style
 
