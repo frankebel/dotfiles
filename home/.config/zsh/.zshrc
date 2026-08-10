@@ -10,15 +10,15 @@ source_if_exists() {
 function zle-keymap-select() {
     case $KEYMAP in
         vicmd)
-            echo -ne '\e[2 q'
+            print -n '\e[2 q'
             ;;
         viins|main)
-            echo -ne '\e[6 q'
+            print -n '\e[6 q'
             ;;
     esac
 }
 zle-line-init() {
-    echo -ne '\e[6 q'
+    print -n '\e[6 q'
 }
 zle -N zle-keymap-select
 zle -N zle-line-init
@@ -63,7 +63,6 @@ SAVEHIST=10000
 setopt SHARE_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_SPACE
-zshaddhistory() { whence ${${(z)1}[1]} >| /dev/null || return 1 } # `man zshmisc`
 
 # Zle
 setopt NO_BEEP
