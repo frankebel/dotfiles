@@ -1,7 +1,8 @@
 @import "mocha.css";
 
 * {
-    font-family: Noto Sans Mono;
+    /* mono for text, nerd font for icons */
+    font-family: "Noto Sans Mono", "NotoSans Nerd Font";
     font-size: 14px;
 }
 
