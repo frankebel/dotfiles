@@ -10,9 +10,11 @@ Manifest*.toml
 
 # pi
 **/pi/cache/
+**/pi/models-store.json
 **/pi/npm/
 **/pi/sessions/
 **/pi/tmp/
+**/pi/web-search-cache/
 
 # systemd
 default.target.wants/
