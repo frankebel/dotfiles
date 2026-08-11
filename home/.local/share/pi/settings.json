@@ -2,7 +2,7 @@
   "defaultModel": "deepseek-v4-flash-284b",
   "defaultProvider": "aqueduct",
   "hideThinkingBlock": true,
-  "lastChangelogVersion": "0.83.0",
+  "lastChangelogVersion": "0.84.1",
   "packages": [
     "npm:pi-markdown-preview",
     "npm:pi-web-access"
