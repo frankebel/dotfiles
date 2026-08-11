@@ -2,9 +2,37 @@
 
 ## Julia
 
-- Do not run tests after every change.
-  The user runs the test suite themselves.
-  Only run tests when explicitly asked.
+- Run the tests that cover your change,
+  preferring the targeted subset over the full suite,
+  before reporting it done.
+
+### Docstrings
+
+- Follow the official Julia style guide
+  ([Writing Documentation](https://docs.julialang.org/en/v1/manual/documentation/)).
+- Use the short-form signature (no type annotations)
+  for closely-related bindings
+  (e.g. `evaluate_gaussian`/`evaluate_lorentzian`).
+
+### File Structure
+
+Within each file, group the definitions in this order,
+with functions sorted alphabetically inside each block:
+
+- define the struct with potential inner creator
+
+- outer creators
+
+- methods using the struct
+
+- `Base` functions using the struct
+
+- other modules (e.g. `LinearAlgebra`) using the struct
+
+### Tests
+
+- Prefer hardcoded expected numerical values
+  over comparing the function to itself.
 
 ## KISS
 
