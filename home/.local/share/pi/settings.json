@@ -1,6 +1,7 @@
 {
   "defaultModel": "deepseek-v4-flash-284b",
   "defaultProvider": "aqueduct",
+  "defaultThinkingLevel": "max",
   "hideThinkingBlock": true,
   "lastChangelogVersion": "0.84.1",
   "packages": [
