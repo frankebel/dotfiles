@@ -10,9 +10,9 @@ export XDG_STATE_HOME="$HOME/.local/state"
 
 # Commonly used directories
 export DATADIR="$HOME/data"
+export PROJECTDIR="$DATADIR/projects"
 export DOTDIR="$PROJECTDIR/dotfiles"
 export PHDDIR="$DATADIR/education/phd"
-export PROJECTDIR="$DATADIR/projects"
 export TEMPDIR="$XDG_STATE_HOME/temp"
 export TORRENTDIR="$XDG_DATA_HOME/torrents"
 
@@ -27,7 +27,7 @@ export VISUAL="nvim"
 # https://wiki.archlinux.org/title/XDG_Base_Directory
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
-export GOPATH="XDG_DATA_HOME/go"
+export GOPATH="$XDG_DATA_HOME/go"
 export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 export JUPYTER_PLATFORM_DIRS=1
