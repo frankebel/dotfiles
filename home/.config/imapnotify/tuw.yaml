@@ -2,8 +2,6 @@ configurations:
   - host: mail.intern.tuwien.ac.at
     port: 993
     tls: true
-    tlsOptions:
-      rejectUnauthorized: false
     usernameCMD: "pass show tuw/mail | awk '$1 == \"user2:\" {print $2}'"
     passwordCMD: 'pass show tuw/mail | head -n1'
     boxes:

@@ -2,8 +2,6 @@ configurations:
   - host: imap.mailbox.org
     port: 993
     tls: true
-    tlsOptions:
-      rejectUnauthorized: false
     username: frank.ebel@mailbox.org
     passwordCMD: "pass show mail/mailbox | awk '$1 == \"apppwd:\" {print $2}'"
     boxes:
