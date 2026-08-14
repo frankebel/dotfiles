@@ -3,7 +3,7 @@
   "defaultProvider": "aqueduct",
   "defaultThinkingLevel": "max",
   "hideThinkingBlock": true,
-  "lastChangelogVersion": "0.84.1",
+  "lastChangelogVersion": "0.84.2",
   "packages": [
     "npm:pi-markdown-preview",
     "npm:pi-web-access"
