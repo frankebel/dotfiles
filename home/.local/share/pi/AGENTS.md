@@ -5,6 +5,16 @@
 - Dotfiles (incl. shell env) are synced to the SLURM cluster,
   so environment variables are available on every host.
 
+## Git
+
+- Follow [Conventional Commits](https://www.conventionalcommits.org):
+  `type(scope): subject`.
+- Keep commits atomic: one logical change per commit.
+- A header usually suffices;
+  add a body only when the change is unclear without it.
+- Tell the reader why (and add context),
+  never restate what the diff already shows.
+
 ## Julia
 
 - Run the tests that cover your change,
