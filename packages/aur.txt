@@ -7,6 +7,5 @@ pi
 redlib-git
 shellcheck-bin
 tessen
-ventoy-bin
 yay
 zotero-bin
