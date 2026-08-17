@@ -9,9 +9,12 @@ vim.pack.add({
 
 require("conform").setup({
   formatters_by_ft = {
+    bash = { "shfmt" },
     json = { "prettier" },
     lua = { "stylua" },
     markdown = { "prettier" },
+    sh = { "shfmt" },
+    zsh = { "shfmt" },
   },
   format_on_save = {
     timeout_ms = 500,
