@@ -8,7 +8,7 @@ vim.pack.add({
 })
 
 local function nmap(lhs, rhs, desc)
-  vim.keymap.set("n", lhs, rhs, { desc = desc, buffer = 0 })
+  vim.keymap.set("n", lhs, rhs, { desc = desc })
 end
 
 -- General workflow
@@ -24,7 +24,7 @@ require("mini.diff").setup({
 })
 nmap("<leader>go", function()
   require("mini.diff").toggle_overlay(0)
-end, "mini.diff toggle overlay")
+end, "mini toggle git overlay")
 
 require("mini.git").setup()
 
