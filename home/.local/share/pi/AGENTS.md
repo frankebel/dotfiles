@@ -1,5 +1,11 @@
 # Global Instructions
 
+## Date & Time
+
+- When a question involves the current date or year,
+  confirm it with `date` (or `date -u`) first
+  rather than assuming from context or prior messages.
+
 ## Environment
 
 - Dotfiles (incl. shell env) are synced to the SLURM cluster,
@@ -20,6 +26,10 @@
 - Run the tests that cover your change,
   preferring the targeted subset over the full suite,
   before reporting it done.
+- Run `runic --check` on every Julia file you edit
+  and leave no formatting violations.
+- Run `jetls check <file>` from the project root
+  on the Julia files you edit.
 
 ### Docstrings
 
@@ -65,6 +75,7 @@ Keep it simple, stupid. Don't over-engineer stuff.
 
 ## Markdown
 
+- Run `prettier` as a formatter on Markdown files.
 - Break lines at logical locations
   (commas, brackets, sentence ends)
   rather than in the middle of words or arbitrary positions.
