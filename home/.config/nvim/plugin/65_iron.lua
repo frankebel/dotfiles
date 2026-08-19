@@ -25,11 +25,7 @@ iron.setup({
     end,
     dap_integration = true,
     repl_open_cmd = {
-      view.split.vertical.rightbelow(function()
-        -- max 40 % of column width but 80 columns minimum
-        local limit = 80
-        return math.max(limit, math.min(vim.o.columns * 0.4, limit))
-      end),
+      view.right("35%"),
     },
   },
   keymaps = {
@@ -37,7 +33,7 @@ iron.setup({
     restart_repl = "<leader>iR",
     send_motion = "<leader>im",
     visual_send = "<leader>iv",
-    send_file = "<leader>if",
+    send_file = "<leader>iF",
     send_line = "<leader>il",
     send_paragraph = "<leader>ip",
     send_until_cursor = "<leader>iuc",
@@ -53,3 +49,5 @@ iron.setup({
   },
   ignore_blank_lines = true,
 })
+
+vim.keymap.set("n", "<leader>if", "<cmd>IronFocus<cr>", { desc = "iron focus on REPL" })
