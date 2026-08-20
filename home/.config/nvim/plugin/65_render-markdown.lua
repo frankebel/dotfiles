@@ -8,6 +8,9 @@ vim.pack.add({
 
 require("render-markdown").setup({
   enabled = false,
+  anti_conceal = {
+    enabled = false,
+  },
   sign = {
     enabled = false,
   },
