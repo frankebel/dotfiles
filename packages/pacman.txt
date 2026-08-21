@@ -45,7 +45,6 @@ lsd
 lua-language-server
 lxappearance
 lxsession
-lynx
 man-db
 mpv
 neomutt

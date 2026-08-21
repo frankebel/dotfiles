@@ -5,7 +5,6 @@ set sort = reverse-date
 set mark_old = no
 set markers = no
 set reverse_name
-auto_view text/html
 set mailcap_path = "$XDG_CONFIG_HOME/neomutt/mailcap"
 set query_command = "khard email --parsable %s 2> /dev/null" # https://github.com/lucc/khard/issues/335
 
