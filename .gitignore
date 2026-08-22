@@ -1,3 +1,5 @@
+**/cache/
+**/tmp/
 *.log
 *.old
 
@@ -9,11 +11,10 @@ Manifest*.toml
 *.sug
 
 # pi
-**/pi/cache/
+**/pi/git/
 **/pi/models-store.json
 **/pi/npm/
 **/pi/sessions/
-**/pi/tmp/
 **/pi/web-search-cache/
 
 # systemd

@@ -5,6 +5,7 @@
   "hideThinkingBlock": true,
   "lastChangelogVersion": "0.84.2",
   "packages": [
+    "git:github.com/DietrichGebert/ponytail",
     "npm:pi-markdown-preview",
     "npm:pi-web-access"
   ],
