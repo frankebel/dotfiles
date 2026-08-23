@@ -13,6 +13,9 @@
 
 ## Git
 
+- Never stage (`git add`) or commit unless the user explicitly approves.
+  Prepare the change (edits, checks) and present it for approval
+  before staging or committing.
 - Follow [Conventional Commits](https://www.conventionalcommits.org):
   `type(scope): subject`.
 - Keep commits atomic: one logical change per commit.
