@@ -1,0 +1,4 @@
+# Ignore third-party binaries.
+*
+!.gitignore
+!.fdignore
