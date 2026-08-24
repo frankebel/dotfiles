@@ -1,4 +1,5 @@
 # options
+auto_view text/html
 set index_format = "%4C %Z %{%FT%R} %-15.15L %s"
 set date_format = "!%FT%R"
 set sort = reverse-date

@@ -107,6 +107,7 @@ udiskie
 unzip
 urlscan
 uv
+w3m
 waybar
 wget
 wl-clipboard

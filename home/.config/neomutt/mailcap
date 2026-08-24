@@ -2,4 +2,5 @@ application/pdf; zathura %s
 image/jpeg; imv %s
 image/png; imv %s
 text/html; xdg-open %s; nametemplate=%s.html
+text/html; w3m -dump -T text/html -I %{charset} -cols 200 %s; copiousoutput; nametemplate=%s.html
 video/mp4; mpv %s
