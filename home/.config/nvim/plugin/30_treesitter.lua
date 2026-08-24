@@ -27,7 +27,7 @@ vim.api.nvim_create_autocmd("PackChanged", {
 })
 
 -- install languages
-require("nvim-treesitter").install({
+local parsers = {
   "bash",
   "c",
   "comment",
@@ -48,11 +48,12 @@ require("nvim-treesitter").install({
   "vimdoc",
   "yaml",
   "zsh",
-})
+}
+require("nvim-treesitter").install(parsers)
 
 -- enable treesitter
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = require("nvim-treesitter").get_installed(),
+  pattern = parsers,
   callback = function()
     vim.treesitter.start()
   end,
