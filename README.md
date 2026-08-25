@@ -37,8 +37,16 @@ Set up sleep, hibernation in `/etc/systemd/sleep.conf`.
 ### Only update home dotfiles
 
 ```sh
-cd ~/.dotfiles
-stow home
+stow --dir="$HOME/data/projects/dotfiles" --target="$HOME" home
+```
+
+### Setup on cluster
+
+Install programs as user with
+
+```sh
+./install-cluster.sh
+stow --dir="$HOME/data/projects/dotfiles" --target="$HOME" cluster
 ```
 
 ## Software I use
