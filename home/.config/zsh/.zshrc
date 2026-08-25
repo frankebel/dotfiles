@@ -12,7 +12,7 @@ function zle-keymap-select() {
         vicmd)
             print -n '\e[2 q'
             ;;
-        viins|main)
+        viins | main)
             print -n '\e[6 q'
             ;;
     esac
@@ -39,11 +39,11 @@ autoload -U compinit
 setopt AUTO_MENU
 zmodload zsh/complist
 zstyle ':completion:*' menu select
- # order of completion
+# order of completion
 zstyle ':completion:*' completer _expand_alias _complete _approximate
-zstyle ':completion:*' group-name '' # grouping results
+zstyle ':completion:*' group-name ''                            # grouping results
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z} r:|=* l:|=*' # man zshcompwid
-eval "$(dircolors)" # set LS_COLORS
+eval "$(dircolors)"                                             # set LS_COLORS
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*:*:*:*:corrections' format '%F{yellow}!- %d (errors: %e) -!%f'
 zstyle ':completion:*:*:*:*:descriptions' format '%F{blue}-- %D %d --%f'
@@ -74,8 +74,8 @@ zle -N edit-command-line
 bindkey -M vicmd 'v' edit-command-line
 
 # Keybinds
-bindkey -v # vi mode
-bindkey '^[[3~' delete-char # delete key. Find out with <^v + DELETE>.
+bindkey -v                            # vi mode
+bindkey '^[[3~' delete-char           # delete key. Find out with <^v + DELETE>.
 bindkey -M menuselect '\e' send-break # <Esc>
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
@@ -84,7 +84,7 @@ bindkey -M menuselect 'l' vi-forward-char
 export KEYTIMEOUT=1
 
 # Application Specific Settings
-export GPG_TTY=$(tty) # GnuPG pinentry
+export GPG_TTY=$(tty)       # GnuPG pinentry
 eval "$(starship init zsh)" # Starship
 
 # Plugins
@@ -95,4 +95,4 @@ bindkey "^y" autosuggest-accept
 unset plugindir
 
 # fzf
-command -v fzf >/dev/null 2>&1 && source <(fzf --zsh)
+command -v fzf > /dev/null 2>&1 && source <(fzf --zsh)
