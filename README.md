@@ -15,8 +15,7 @@ while external links are written like [this]().
 - [`packages`](packages/) contains a list of my installed packages.
 - [`laptop`](laptop/) contains dotfiles for my laptop.
 - [`scripts`](scripts/) contains scripts for this repository.
-- [`vsc`](vsc/) contains dotfiles for the
-  [Vienna Scientific Cluster](https://www.vsc.ac.at) (server)
+- [`cluster`](cluster/) contains dotfiles for clusters.
 
 ## Installation and Setup
 
