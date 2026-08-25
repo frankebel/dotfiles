@@ -68,7 +68,7 @@ export OPENBLAS_NUM_THREADS="1"
 export TMPDIR="/tmp"
 
 # device
-case "$(hostnamectl hostname)" in
+case "$(uname -n)" in
     *laptop*)
         export SUSPEND_COMMAND="systemctl suspend-then-hibernate"
         ;;

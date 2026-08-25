@@ -2,7 +2,7 @@
 # Set up custom installation. Run this script after base installation is done.
 # Configure packages/*.txt for packages to install.
 
-host="$(hostnamectl hostname)" # get hostname
+host="$(uname -n)" # get hostname
 
 # Global config
 
