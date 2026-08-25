@@ -1,6 +1,3 @@
-#!/bin/sh
-# vim: filetype=sh
-
 # Set PATH by editing `path` variable.
 # See <https://zsh.sourceforge.io/Guide/zshguide02.html#l24>.
 # shellcheck disable=SC3044
