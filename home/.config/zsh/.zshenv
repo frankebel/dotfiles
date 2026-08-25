@@ -4,6 +4,7 @@
 typeset -U path
 # shellcheck disable=SC2206,SC3030
 path=(~/.local/bin ~/.julia/bin $path)
+[ -d "$HOME/data/environments/juliaup/bin" ] && path=("$HOME/data/environments/juliaup/bin" $path)
 
 # Load environment variables
 # shellcheck source=/dev/null

@@ -30,3 +30,5 @@ export PATH
 
 # shellcheck source=/dev/null
 [ -f ~/.bashrc ] && . ~/.bashrc
+
+[ -x "$HOME/.local/bin/zsh" ] && exec "$HOME/.local/bin/zsh"

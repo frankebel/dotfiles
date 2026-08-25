@@ -96,3 +96,6 @@ unset plugindir
 
 # fzf
 command -v fzf > /dev/null 2>&1 && source <(fzf --zsh)
+
+# HPC modules
+[ -f /etc/profile.d/modules.sh ] && . /etc/profile.d/modules.sh
