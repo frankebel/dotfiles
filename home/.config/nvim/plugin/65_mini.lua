@@ -12,16 +12,7 @@ local function nmap(lhs, rhs, desc)
 end
 
 -- General workflow
-require("mini.diff").setup({
-  view = {
-    style = "sign",
-    signs = {
-      add = "┃",
-      change = "┃",
-      delete = "┃",
-    },
-  },
-})
+require("mini.diff").setup()
 nmap("<leader>go", function()
   require("mini.diff").toggle_overlay(0)
 end, "mini toggle git overlay")
