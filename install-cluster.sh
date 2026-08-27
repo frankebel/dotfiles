@@ -76,7 +76,7 @@ if ! installed lsd "$V"; then
 fi
 
 # nvim
-V=0.12.4
+V=0.12.5
 if ! installed nvim "$V"; then
     echo "nvim $V"
     dl nvim.tgz "https://github.com/neovim/neovim-releases/releases/download/v$V/nvim-linux-x86_64.tar.gz"
