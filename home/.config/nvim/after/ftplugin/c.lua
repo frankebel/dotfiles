@@ -1,2 +1,2 @@
 -- Formatoptions
-vim.opt.formatoptions:remove({ "r", "o" })
+vim.opt.formatoptions:remove({ "o", "r" })
