@@ -21,6 +21,7 @@ gdu
 gimp
 git
 git-delta
+github-cli
 goimapnotify
 grim
 hypridle

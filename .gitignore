@@ -3,6 +3,9 @@
 *.log
 *.old
 
+# gh
+hosts.yml
+
 # Julia
 Manifest*.toml
 
