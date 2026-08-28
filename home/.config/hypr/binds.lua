@@ -69,18 +69,18 @@ hl.bind("SUPER + SHIFT + Print", hl.dsp.exec_cmd('grim -o DP-1 "$TEMPDIR/$(date 
 hl.bind("SUPER + F12", hl.dsp.exec_cmd("hyprlock"))
 
 -- Volume control
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && volume_indicator"))
+hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && audio_indicator sink"))
 hl.bind(
   "XF86AudioLowerVolume",
-  hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%- && volume_indicator"),
+  hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%- && audio_indicator sink"),
   { repeating = true }
 )
 hl.bind(
   "XF86AudioRaiseVolume",
-  hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+ && volume_indicator"),
+  hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+ && audio_indicator sink"),
   { repeating = true }
 )
-hl.bind("SUPER + slash", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle && mic_indicator"))
+hl.bind("SUPER + slash", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle && audio_indicator source"))
 
 -- Brightness control
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl set 10%-; brightness_indicator"))
