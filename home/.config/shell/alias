@@ -73,8 +73,6 @@ alias lt='lsd --tree --almost-all'
 alias sv='sudoedit'
 alias v='$EDITOR'
 
-# openconnect
-alias vpnoff='sudo killall --quiet -SIGINT openconnect'
 
 # Pacman
 alias aurs='yay -Slq | fzf --preview "yay -Si {}" | xargs -ro yay -S'

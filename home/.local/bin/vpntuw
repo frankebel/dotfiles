@@ -1,6 +1,11 @@
 #!/bin/sh
-# Connect with TUW VPN.
-# Disconnect with alias `vpnoff`.
+# Toggle the TUW VPN.
+
+if pgrep -x openconnect > /dev/null; then
+    sudo killall --quiet -SIGINT openconnect
+    printf '%s\n' 'VPN disconnected'
+    exit 0
+fi
 
 printf "%s\n%s" "$(pass show tuw/tiss | head -n1)" "$(pass otp tuw/tiss)" | sudo openconnect \
     --useragent="AnyConnect OpenConnect" \
