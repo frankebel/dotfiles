@@ -23,6 +23,17 @@ export EDITOR="nvim"
 export READER="zathura"
 export VISUAL="nvim"
 
+# PATH
+# Prepend custom dirs to PATH if present.
+for d in "$HOME/data/environments/juliaup/bin" "$HOME/.julia/bin" "$HOME/.local/bin"; do
+    [ -d "$d" ] || continue
+    case ":$PATH:" in
+        *":$d:"*) ;;
+        *) PATH="$d:$PATH" ;;
+    esac
+done
+export PATH
+
 # Manually set environment variables
 # https://wiki.archlinux.org/title/XDG_Base_Directory
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
