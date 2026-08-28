@@ -1,0 +1,22 @@
+#!/bin/sh
+# Mirror the built-in display onto an external one (`local`), or the reverse
+# (`remote`).
+
+monitor="$(hyprctl -j monitors | jq -r '.[].name | select(. != "eDP-1")')"
+
+case "${1:-local}" in
+    local)
+        output="$monitor"
+        mirror="eDP-1"
+        ;;
+    remote)
+        output="eDP-1"
+        mirror="$monitor"
+        ;;
+    *)
+        printf 'usage: %s [Local|remote]\n' "$0" >&2
+        exit 1
+        ;;
+esac
+
+hyprctl eval 'hl.monitor({ output="'"$output"'", mode="preferred", mirror="'"$mirror"'" })'
