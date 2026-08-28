@@ -88,8 +88,8 @@ hl.bind("XF86MonBrightnessUP", hl.dsp.exec_cmd("brightnessctl set 10%+; brightne
 
 -- Start/stop background processes
 hl.bind("SUPER + SHIFT + r", hl.dsp.exec_cmd("gpg-connect-agent reloadagent /bye"))
-hl.bind("SUPER + SHIFT + c", hl.dsp.exec_cmd("backgroundstart"))
-hl.bind("SUPER + SHIFT + q", hl.dsp.exec_cmd("backgroundstop"))
+hl.bind("SUPER + SHIFT + c", hl.dsp.exec_cmd("background start"))
+hl.bind("SUPER + SHIFT + q", hl.dsp.exec_cmd("background stop"))
 
 -- dunst control
 hl.bind("SUPER + d", hl.dsp.exec_cmd("dunstctl close"), { repeating = true })

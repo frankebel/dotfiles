@@ -1,6 +1,0 @@
-#!/bin/sh
-# Stop background processes.
-
-dunstctl set-paused true
-systemctl --user stop goimapnotify@mailbox.service
-systemctl --user stop goimapnotify@tuw.service

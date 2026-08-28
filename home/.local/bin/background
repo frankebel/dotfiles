@@ -1,0 +1,21 @@
+#!/bin/sh
+# Stop (default) or start background processes.
+
+case "${1:-stop}" in
+    start)
+        state="start"
+        paused="false"
+        ;;
+    stop)
+        state="stop"
+        paused="true"
+        ;;
+    *)
+        printf 'usage: %s [start|Stop]\n' "$0" >&2
+        exit 1
+        ;;
+esac
+
+dunstctl set-paused "$paused"
+systemctl --user "$state" goimapnotify@mailbox.service
+systemctl --user "$state" goimapnotify@tuw.service
