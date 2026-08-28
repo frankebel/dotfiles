@@ -4,16 +4,18 @@
 
 host="$(uname -n)" # get hostname
 
+# Host group: "" (none), "desktop" or "laptop"
+case "$host" in
+    *desktop*) group=desktop ;;
+    *laptop*) group=laptop ;;
+    *) group= ;;
+esac
+
 # Global config
 
 # Copy /etc files
-rm /etc/security/pam_env.conf
 sudo cp -r etc /
-case "$host" in
-    *laptop*)
-        sudo cp -r laptop/etc /
-        ;;
-esac
+[ "$group" = laptop ] && sudo cp -r laptop/etc /
 
 # Install packages
 # pacman
@@ -21,18 +23,8 @@ sudo pacman -Syu
 cd packages || exit
 # shellcheck disable=SC2024
 [ -f pacman.txt ] && sudo pacman -S --needed - < pacman.txt
-case "$host" in
-    *desktop*)
-        # shellcheck disable=SC2024
-        [ -f pacman_desktop.txt ] \
-            && sudo pacman -S --needed - < pacman_desktop.txt
-        ;;
-    *laptop*)
-        # shellcheck disable=SC2024
-        [ -f pacman_laptop.txt ] \
-            && sudo pacman -S --needed - < pacman_laptop.txt
-        ;;
-esac
+# shellcheck disable=SC2024
+[ -f "pacman_$group.txt" ] && sudo pacman -S --needed - < "pacman_$group.txt"
 cd ..
 # AUR install with yay
 cd packages || exit
@@ -44,14 +36,7 @@ if ! [ -x /usr/bin/yay ]; then
     rm -rf yay
 fi
 [ -f aur.txt ] && yay -S --needed - < aur.txt
-case "$host" in
-    *desktop*)
-        [ -f aur_desktop.txt ] && yay -S --needed - < aur_desktop.txt
-        ;;
-    *laptop*)
-        [ -f aur_laptop.txt ] && yay -S --needed - < aur_laptop.txt
-        ;;
-esac
+[ -f "aur_$group.txt" ] && yay -S --needed - < "aur_$group.txt"
 cd ..
 
 # systemd
