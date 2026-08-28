@@ -9,7 +9,7 @@ if ! [ "$drives" ]; then
     exit 0
 fi
 
-# ecject only drive
+# eject only drive
 if [ "$(printf "%s\n" "$drives" | wc -l)" = 1 ]; then
     udiskie-umount "/run/media/$USER/$drives"
     exit 0
