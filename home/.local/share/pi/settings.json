@@ -3,7 +3,7 @@
   "defaultProvider": "aqueduct",
   "defaultThinkingLevel": "max",
   "hideThinkingBlock": true,
-  "lastChangelogVersion": "0.84.3",
+  "lastChangelogVersion": "0.84.4",
   "packages": [
     "git:github.com/DietrichGebert/ponytail",
     "npm:pi-markdown-preview",
