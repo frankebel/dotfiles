@@ -88,6 +88,7 @@
 
 [tag]
     gpgSign = true
+    sort = -version:refname
 
 [user]
     email = git@ebel.page
