@@ -1,39 +1,35 @@
-local function map(mode, lhs, rhs, desc)
-  vim.keymap.set(mode, lhs, rhs, { desc = desc })
-end
-
 -- Navigate buffers
-map("n", "<S-l>", "<cmd>bnext<cr>", "Next buffer")
-map("n", "<S-h>", "<cmd>bprevious<cr>", "Previous buffer")
+vim.keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer" })
+vim.keymap.set("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Previous buffer" })
 
 -- Move to window with <ctrl> hjkl
-map("n", "<C-h>", "<C-w>h", "Move left window")
-map("n", "<C-j>", "<C-w>j", "Move lower window")
-map("n", "<C-k>", "<C-w>k", "Move upper window")
-map("n", "<C-l>", "<C-w>l", "Move right window")
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move left window" })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move lower window" })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move upper window" })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move right window" })
 
 -- Resize window with <ctrl> arrow keys
-map("n", "<C-Up>", "<cmd>resize +2<cr>", "Increase window height")
-map("n", "<C-Down>", "<cmd>resize -2<cr>", "Decrease window height")
-map("n", "<C-Left>", "<cmd>vertical resize -2<cr>", "Decrease window width")
-map("n", "<C-Right>", "<cmd>vertical resize +2<cr>", "Increase window width")
+vim.keymap.set("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
+vim.keymap.set("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
+vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
+vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
 
 -- Reselect visual area
-map("v", "<", "<gv", "Shift left")
-map("v", ">", ">gv", "Shift right")
+vim.keymap.set("v", "<", "<gv", { desc = "Shift left" })
+vim.keymap.set("v", ">", ">gv", { desc = "Shift right" })
 
 -- Search
-map({ "i", "n" }, "<esc>", "<cmd>nohlsearch<cr><esc>", "Escape and clear hlsearch")
+vim.keymap.set("n", "<esc>", "<cmd>nohlsearch<cr>", { desc = "Escape and clear hlsearch" })
 
 -- Toggle options
-map("n", "<leader>ow", "<cmd>set invwrap<cr>", "Toggle wrap")
+vim.keymap.set("n", "<leader>ow", "<cmd>set invwrap<cr>", { desc = "Toggle wrap" })
 
 -- Go line by line with `wrap` unless count (e.g. 4j) is given
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 
 -- LSP
-map("n", "<leader>q", vim.diagnostic.setloclist, "Diagnostic set loclist")
+vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Diagnostic set loclist" })
 
 -- text
-map("n", "<leader>id", "<cmd>put =strftime('%F')<cr>kJA", "Insert date")
+vim.keymap.set("n", "<leader>id", "<cmd>put =strftime('%F')<cr>kJA", { desc = "Insert date" })
