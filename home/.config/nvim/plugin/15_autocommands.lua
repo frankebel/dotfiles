@@ -32,3 +32,11 @@ vim.api.nvim_create_autocmd("VimResized", {
     vim.cmd("tabdo wincmd =")
   end,
 })
+
+-- Don't use default filetype options
+vim.api.nvim_create_autocmd("BufEnter", {
+  group = augroup,
+  callback = function()
+    vim.opt.formatoptions:remove({ "o", "r" })
+  end,
+})

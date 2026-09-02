@@ -33,3 +33,11 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Diagnostic
 
 -- text
 vim.keymap.set("n", "<leader>id", "<cmd>put =strftime('%F')<cr>kJA", { desc = "Insert date" })
+
+-- clipboard
+vim.keymap.set("n", "<leader>y", function()
+  vim.fn.setreg("+", vim.fn.expand("%:p"))
+end, { desc = "Copy filepath to clipboard" })
+
+-- terminal
+vim.keymap.set("t", "<esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
