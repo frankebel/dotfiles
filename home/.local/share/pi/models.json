@@ -29,58 +29,10 @@
           }
         },
         {
-          "id": "qwen-3.6-35b",
-          "name": "Qwen 3.6 35B",
-          "input": ["text", "image"],
-          "contextWindow": 262144,
-          "maxTokens": 32000,
-          "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
-          "reasoning": true,
-          "thinkingLevelMap": {
-            "minimal": null,
-            "low": null,
-            "medium": null,
-            "high": "high",
-            "xhigh": null,
-            "max": "max"
-          },
-          "compat": {
-            "thinkingFormat": "chat-template",
-            "chatTemplateKwargs": {
-              "thinking": { "$var": "thinking.enabled" },
-              "reasoning_effort": { "$var": "thinking.effort" }
-            }
-          }
-        },
-        {
           "id": "qwen-3.5-397b",
           "name": "Qwen 3.5 397B",
           "input": ["text"],
           "contextWindow": 200000,
-          "maxTokens": 32000,
-          "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
-          "reasoning": true,
-          "thinkingLevelMap": {
-            "minimal": null,
-            "low": null,
-            "medium": null,
-            "high": "high",
-            "xhigh": null,
-            "max": "max"
-          },
-          "compat": {
-            "thinkingFormat": "chat-template",
-            "chatTemplateKwargs": {
-              "thinking": { "$var": "thinking.enabled" },
-              "reasoning_effort": { "$var": "thinking.effort" }
-            }
-          }
-        },
-        {
-          "id": "glm-5.2-744b-preview",
-          "name": "GLM 5.2 744B Preview",
-          "input": ["text"],
-          "contextWindow": 262144,
           "maxTokens": 32000,
           "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
           "reasoning": true,
