@@ -37,6 +37,7 @@ export PATH
 # Manually set environment variables
 # https://wiki.archlinux.org/title/XDG_Base_Directory
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export CLAUDE_CONFIG_DIR="$XDG_CONFIG_HOME/claude"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export GOPATH="$XDG_DATA_HOME/go"
 export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
