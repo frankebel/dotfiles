@@ -73,7 +73,6 @@ alias lt='lsd --tree --almost-all'
 alias sv='sudoedit'
 alias v='$EDITOR'
 
-
 # Pacman
 alias aurs='yay -Slq | fzf --preview "yay -Si {}" | xargs -ro yay -S'
 alias aursi='yay -Slq | fzf --preview "yay -Si {}" | xargs -ro yay -Si'
@@ -92,7 +91,7 @@ alias i='imv'
 alias j='julia'
 alias ll='ls --almost-all --human-readable -l'
 alias m='neomutt'
-alias ms='mbsync --config "$XDG_CONFIG_HOME/isync/mbsyncrc" --all'
+alias ms='mbsync --all'
 alias printpath='printf "%s\n" "$PATH" | sed "s/:/\n/g"'
 alias pwdc='pwd C'
 alias tree='tree -a -I .git' # ignore .git directory

@@ -3,4 +3,4 @@ Description=Mailbox synchronization service
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/mbsync -c "%h/.config/isync/mbsyncrc" --all
+ExecStart=/usr/bin/mbsync --all
