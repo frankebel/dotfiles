@@ -1,8 +1,53 @@
 #!/bin/sh
-# Set Philips HUE colortemperature and intensity.
-# Default value is "2700K".
+# Philips Hue control via direct bridge HTTP.
+#
+# Usage: huelight <arg>...
+#   on | off     turn lights on/off
+#   <temp>K      color temperature in Kelvin (e.g. 2700K)
+#   <num>%       brightness percent, e.g. 10% (0-100)
+#   key=value    any other numeric state field (transitiontime=50)
+
+HOST=192.168.0.101
+USER=$(pass show home/hue)
+
+[ "$#" -ge 1 ] || {
+    echo "no arguments given" >&2
+    exit 1
+}
+
+json='{"on":true'
+for arg in "$@"; do
+    case "$arg" in
+        on) json='{"on":true' ;;
+        off) json='{"on":false' ;;
+        *K)
+            # color temperature
+            # Kelvin mapped to mired
+            # https://en.wikipedia.org/wiki/Mired
+            t=${arg%K}
+            json="$json,\"ct\":$((1000000 / t))"
+            ;;
+        *%)
+            # brightness
+            # percent in [0, 100] mapped to API's [0, 254]
+            p=${arg%\%}
+            json="$json,\"bri\":$((p * 254 / 100))"
+            ;;
+        *=*)
+            # directly pass argument
+            key=${arg%%=*}
+            val=${arg#*=}
+            json="$json,\"$key\":$val"
+            ;;
+        *)
+            echo "unhandled argument: $arg" >&2
+            exit 1
+            ;;
+    esac
+done
+body="$json}"
 
 for i in 1 2 3; do
-    hueadm -H "$(pass show home/hue | sed '2q;d')" \
-        -U "$(pass show home/hue | sed '1q;d')" light "$i" "${@:-2700K}"
+    curl -sS -X PUT "http://$HOST/api/$USER/lights/$i/state" \
+        -H 'Content-Type: application/json' -d "$body"
 done
