@@ -29,5 +29,8 @@ set ssl_force_tls
 set realname = "Frank Ebel"
 alternates "@ebel.page" "@personalmail.page"
 
-# reload keybinds
-source keybinds
+# per-account macros because Microsoft uses different names
+macro index,pager gs "<change-folder>=Sent<Enter>" "go to Sent"
+macro index,pager gt "<change-folder>=Trash<Enter>" "go to Trash"
+macro index,pager Ms "<save-message>=Sent<Enter>" "move to Sent"
+macro index,pager Mt "<save-message>=Trash<Enter>" "move to Trash"

@@ -29,8 +29,6 @@ set smtp_authenticators="login"
 # options
 set realname = "Frank Ebel"
 
-# reload keybinds
-source keybinds
 # Why does Microsoft use weird folder names with spaces?
 macro index,pager gs "<change-folder>=Sent^V Items<Enter>" "go to Sent"
 macro index,pager gt "<change-folder>=Deleted^V Items<Enter>" "go to Trash"
