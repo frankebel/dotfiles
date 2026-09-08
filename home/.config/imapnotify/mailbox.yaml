@@ -6,4 +6,4 @@ configurations:
     passwordCMD: "pass show mail/mailbox | awk '$1 == \"apppwd:\" {print $2}'"
     boxes:
       - mailbox: INBOX
-        onNewMail: 'mbsync mailbox'
+        onNewMail: 'mbsync mailbox && pkill -RTMIN+5 waybar'

@@ -6,4 +6,4 @@ configurations:
     passwordCMD: 'pass show tuw/mail | head -n1'
     boxes:
       - mailbox: INBOX
-        onNewMail: 'mbsync tuw'
+        onNewMail: 'mbsync tuw && pkill -RTMIN+5 waybar'

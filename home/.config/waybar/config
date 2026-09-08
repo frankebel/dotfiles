@@ -56,7 +56,7 @@
     },
     "custom/mail": {
         "exec": "~/.config/waybar/custom/mail.sh",
-        "interval": 10,
+        "signal": 5, // re-run exec on `pkill -RTMIN+5 waybar`
         "format": " {}",
         "tooltip": false,
     },
