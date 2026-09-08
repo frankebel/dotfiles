@@ -23,6 +23,10 @@ source keybinds
 # default account
 source "account.mailbox"
 
+# auto-switch per-account settings on mailbox entry
+folder-hook '\.local/share/isync/mailbox' 'source account.mailbox'
+folder-hook '\.local/share/isync/tuw'    'source account.tuw'
+
 # color theme
 source catppuccin.muttrc
 
