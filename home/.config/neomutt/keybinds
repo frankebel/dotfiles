@@ -3,7 +3,6 @@
 bind attach,index,pager g noop
 bind index,pager M noop
 
-bind index R imap-fetch-mail
 bind pager j next-line
 bind pager k previous-line
 bind attach,index,pager \CD next-page
