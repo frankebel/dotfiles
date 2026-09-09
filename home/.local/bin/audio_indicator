@@ -29,8 +29,7 @@ case "$(wpctl get-volume "$port")" in
         notify-send -a "$app_name" -t "$timeout" -r "$id" "$icon_muted"
         ;;
     *)
-        volume="$(wpctl get-volume "$port" | grep -Po '\d\.\d+')"
-        volume="$(echo "$volume" | awk '{printf "%.0f", $1 * 100}')" # Convert to percentage
+        volume="$(wpctl get-volume "$port" | awk '{printf "%.0f", $2 * 100}')" # Convert to percentage
         notify-send -a "$app_name" -t "$timeout" -r "$id" -h int:value:"$volume" "$icon $volume %"
         ;;
 esac
