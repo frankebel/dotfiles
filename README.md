@@ -14,7 +14,6 @@ while external links are written like [this]().
 - [`home`](home/) contains dotfiles for my `$HOME` directory.
 - [`packages`](packages/) contains a list of my installed packages.
 - [`laptop`](laptop/) contains dotfiles for my laptop.
-- [`scripts`](scripts/) contains scripts for this repository.
 - [`cluster`](cluster/) contains dotfiles for clusters.
 
 ## Installation and Setup
