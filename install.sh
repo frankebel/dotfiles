@@ -18,23 +18,18 @@ sudo cp -r etc /
 [ "$group" = laptop ] && sudo cp -r laptop/etc /
 
 # Install packages
-# pacman
-sudo pacman -Syu
 cd packages || exit
+sudo pacman -Syu
+# AUR helper
+if ! [ -x /usr/bin/yay ]; then
+    git clone https://aur.archlinux.org/yay.git
+    (cd yay && makepkg -si)
+    rm -rf yay
+fi
 # shellcheck disable=SC2024
 [ -f pacman.txt ] && sudo pacman -S --needed - < pacman.txt
 # shellcheck disable=SC2024
 [ -f "pacman_$group.txt" ] && sudo pacman -S --needed - < "pacman_$group.txt"
-cd ..
-# AUR install with yay
-cd packages || exit
-if ! [ -x /usr/bin/yay ]; then
-    git clone https://aur.archlinux.org/yay.git
-    cd yay || exit
-    makepkg -si
-    cd .. || exit
-    rm -rf yay
-fi
 [ -f aur.txt ] && yay -S --needed - < aur.txt
 [ -f "aur_$group.txt" ] && yay -S --needed - < "aur_$group.txt"
 cd ..
