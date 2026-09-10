@@ -31,7 +31,7 @@ Suggestions when asked for packages:
 - pipewire-session-manager: `wireplumber`
 - vulkan-driver: on AMD use `vulkan-radeon`
 
-Set up sleep, hibernation in `/etc/systemd/sleep.conf`.
+Set up sleep, hibernation in `/etc/systemd/sleep.conf.d/sleep.conf`.
 
 ### Only update home dotfiles
 
