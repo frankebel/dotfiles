@@ -33,6 +33,11 @@ alias cs='cd "$PROJECTDIR/Fermions_scripts/"; l'
 alias vdse='cd "$PROJECTDIR/DiscreteSelfEnergy"; $EDITOR'
 alias vjo='cd "$PROJECTDIR/journal"; $EDITOR'
 
+# select project
+spr() {
+    dir="$(cd "$PROJECTDIR" && fd --max-depth 1 --type d | fzf)" && cd "$PROJECTDIR/$dir" && l
+}
+
 # ASC
 alias sq='squeue -o "%.18i %.10Q %.12P %.40j %.8u %.2t %.10M %.6D %R" -u $USER'
 alias sqa='squeue -o "%.18i %.10Q %.12P %.40j %.8u %.2t %.10M %.6D %R"'
