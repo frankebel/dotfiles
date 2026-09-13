@@ -26,11 +26,6 @@
 
 ## Julia
 
-- Run the tests that cover your change,
-  preferring the targeted subset over the full suite,
-  before reporting it done.
-- Run `runic --check` on every Julia file you edit
-  and leave no formatting violations.
 - Run `jetls check <file>` from the project root
   on the Julia files you edit.
 
@@ -61,8 +56,20 @@ with functions sorted alphabetically inside each block:
 
 - other modules (e.g. `LinearAlgebra`) using the struct
 
+### Formatting
+
+- Run `runic --check` on every Julia file you edit
+  and leave no formatting violations.
+- Keep lines under 92 characters.
+- When a function definition or call is too wide to fit in 92 characters,
+  place each argument on its own line
+  with a trailing comma after every argument (including the last).
+
 ### Tests
 
+- Run the tests that cover your change,
+  preferring the targeted subset over the full suite,
+  before reporting it done.
 - Prefer hardcoded expected numerical values
   over comparing the function to itself.
 
