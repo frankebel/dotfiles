@@ -1,3 +1,6 @@
 {
-  "startupNoticeShown": "2026-09-04"
+  "startupNoticeShown": "2026-09-04",
+  "provider": {
+    "pathToClaudeCodeExecutable": "/usr/bin/claude"
+  }
 }

@@ -6,7 +6,7 @@
   "lastChangelogVersion": "0.85.1",
   "packages": [
     "git:github.com/DietrichGebert/ponytail",
-    "npm:pi-claude-bridge",
+    "git:github.com/elidickinson/pi-claude-bridge@4a7920ac4f4449b546307b3a53d4a4867f8b6cb5",
     "npm:pi-markdown-preview",
     "npm:pi-web-access"
   ],

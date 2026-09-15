@@ -1,4 +1,5 @@
 basedpyright
+claude-code
 firefox-tridactyl-native
 juliaup
 ltex-ls-plus-bin
