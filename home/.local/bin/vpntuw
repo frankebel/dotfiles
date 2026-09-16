@@ -7,7 +7,7 @@ if pgrep -x openconnect > /dev/null; then
     exit 0
 fi
 
-printf "%s\n%s" "$(pass show tuw/tiss | head -n1)" "$(pass otp tuw/tiss)" | sudo openconnect \
+printf "%s\n%s" "$(pass show tuw/tuwien | head -n1)" "$(pass otp tuw/tuwien)" | sudo openconnect \
     --useragent="AnyConnect OpenConnect" \
     --no-external-auth \
     --authgroup="1_TU_getunnelt" \
