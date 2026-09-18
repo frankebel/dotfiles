@@ -17,6 +17,9 @@
 
 - Dotfiles (incl. shell env) are synced to the SLURM cluster,
   so environment variables are available on every host.
+- When a developer tool is missing,
+  tell me and name the official Arch package to install with `pacman`.
+  Never install it yourself.
 
 ## Git
 
@@ -60,6 +63,11 @@ The workflow for a change:
   and report what each one printed.
   A rule without a command is still a check:
   verify it instead of assuming it holds.
+  Read the diff (`git show` or `git diff`)
+  before describing what a change contains,
+  and never infer the effect from the commands you ran:
+  a sort applied to an already-sorted file changes nothing,
+  so the description must come from the diff, not the action.
 - Set `GIT_SEQUENCE_EDITOR` and `GIT_EDITOR` when scripting `rebase -i`,
   and pass `-m` to `git tag`,
   which `tag.gpgsign` makes annotated and therefore editor-opening.
@@ -82,10 +90,20 @@ The workflow for a change:
 
 - Run `jetls check <file>` from the project root
   on the Julia files you edit.
-- `Pkg.resolve` and `Pkg.instantiate` write a `[sources]` block
-  of absolute local paths into the tracked `Project.toml`.
-  Strip it before staging,
+- Never run `Pkg.develop`, or `Pkg.add` with a path or URL,
+  in an environment whose `Project.toml` is tracked:
+  they write a `[sources]` block of absolute local paths into it.
+  `Pkg.instantiate` and `Pkg.resolve` leave `Project.toml` untouched
+  once a `Manifest.toml` exists,
+  so reach for those instead.
+  Strip a `[sources]` block that appears anyway before staging,
   otherwise the machine's directory layout lands in the repository.
+- Do not set up an environment that already resolves.
+  Run the build or test command on its own first,
+  and instantiate only once it fails on a missing dependency.
+  A setup step in a CI workflow is not evidence that one is needed:
+  it bootstraps a bare checkout,
+  which a working tree is not.
 
 ### Docstrings
 
@@ -181,7 +199,8 @@ Don't over-engineer stuff.
 - When I ask to go block by block, section by section, bullet by bullet,
   or one-by-one, show a single unit and stop.
   The unit is whatever I named.
-- Applying a change does not end the unit.
+- Applying a change does not end the unit,
+  and neither does deciding or answering it.
   Show the same unit again afterwards and wait,
   and only move to the next one when I say so.
 
@@ -190,12 +209,25 @@ Don't over-engineer stuff.
 The pi config directory is given by the `PI_CODING_AGENT_DIR` environment variable
 (not `~/.pi/agent`).
 
+## Shell
+
+- Redirect a slow command to a file and inspect the file afterwards,
+  instead of piping it straight into `tail` or `grep`.
+  A summary that hides the detail forces a second run,
+  which costs minutes and reveals nothing the first run did not already produce:
+
+  ```sh
+  julia --project=. runtests.jl > /tmp/suite.log 2>&1; echo "exit: $?"
+  grep -A18 "Error During Test" /tmp/suite.log
+  ```
+
+- Label shell code with the most specific language that fits:
+  `sh` / `#!/bin/sh` for POSIX shell,
+  `bash` / `#!/bin/bash` only when bash-specific features are used.
+
 ## Style
 
 - Keep responses concise.
 - Insert a space between a number and its unit prefix
   (per BIPM's official guideline:
   "25 M", "3 kg", "5 km", not "25M", "3kg", "5km").
-- Label shell code with the most specific language that fits:
-  `sh` / `#!/bin/sh` for POSIX shell,
-  `bash` / `#!/bin/bash` only when bash-specific features are used.
