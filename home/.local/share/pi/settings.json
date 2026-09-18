@@ -20,7 +20,8 @@
     "git:github.com/DietrichGebert/ponytail",
     "git:github.com/elidickinson/pi-claude-bridge@4a7920ac4f4449b546307b3a53d4a4867f8b6cb5",
     "npm:pi-markdown-preview",
-    "npm:pi-web-access"
+    "npm:pi-web-access",
+    "git:github.com/ayghri/i-have-adhd"
   ],
   "theme": "catppuccin-mocha"
 }
