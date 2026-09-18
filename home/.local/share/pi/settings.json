@@ -2,8 +2,20 @@
   "defaultModel": "deepseek-v4-flash-284b",
   "defaultProvider": "aqueduct",
   "defaultThinkingLevel": "max",
+  "enabledModels": [
+    "aqueduct/deepseek-v4-flash-284b",
+    "aqueduct/qwen-3.5-397b",
+    "claude-bridge/claude-fable-5-1",
+    "claude-bridge/claude-opus-5"
+  ],
   "hideThinkingBlock": true,
   "lastChangelogVersion": "0.85.1",
+  "modelThinkingLevels": {
+    "aqueduct/deepseek-v4-flash-284b": "max",
+    "aqueduct/qwen-3.5-397b": "max",
+    "claude-bridge/claude-fable-5-1": "high",
+    "claude-bridge/claude-opus-5": "medium"
+  },
   "packages": [
     "git:github.com/DietrichGebert/ponytail",
     "git:github.com/elidickinson/pi-claude-bridge@4a7920ac4f4449b546307b3a53d4a4867f8b6cb5",
