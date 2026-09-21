@@ -20,7 +20,7 @@
       "version": ">=0.0.0"
     },
     "iron.nvim": {
-      "rev": "1ad44e4e82ad31b7df1cdb7f154c707bfd0d303c",
+      "rev": "0168b419bc7df70cd2d97c2ec8158b6b002450b2",
       "src": "https://github.com/Vigemus/iron.nvim"
     },
     "kitty-scrollback.nvim": {
@@ -34,7 +34,7 @@
       "version": "'dev'"
     },
     "mini.nvim": {
-      "rev": "ac5dffcc52b8378fbb15efeb0497a83e57a0b01c",
+      "rev": "81ed10ebe1144b0eb9a7f289ffae000c22772c20",
       "src": "https://github.com/nvim-mini/mini.nvim",
       "version": "'main'"
     },
@@ -43,7 +43,7 @@
       "src": "https://github.com/mfussenegger/nvim-lint"
     },
     "nvim-treesitter": {
-      "rev": "9a168f6357ed21c3a636e1727bc7d382abc451b8",
+      "rev": "f603a2f4da48728f80257fb5fbb90145fd1dc173",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter",
       "version": "'main'"
     },
@@ -63,7 +63,7 @@
       "version": ">=0.0.0"
     },
     "render-markdown.nvim": {
-      "rev": "f422cb5c6855f150e2ddcfaf44e7157b98b34f6a",
+      "rev": "640a3ec6d538bad17c328be373c7cad0293d9589",
       "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
       "version": ">=0.0.0"
     },
