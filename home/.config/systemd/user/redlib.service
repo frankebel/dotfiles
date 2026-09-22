@@ -1,9 +1,0 @@
-[Unit]
-Description=redlib daemon
-After=network.service
-
-[Service]
-ExecStart=/usr/bin/redlib
-
-[Install]
-WantedBy=default.target
