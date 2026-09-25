@@ -6,12 +6,40 @@
   my statement wins.
   Do not look for a reading that saves the assumption,
   and reread what I wrote instead of rechecking your own interpretation.
+- A direct edit of the working tree is deliberate,
+  even a small change inside a file I just wrote.
+  An unexpected difference from what I last showed you
+  is your edit, not corruption or a race:
+  never revert it, "repair" it, or claim it without asking.
+- Before staging, re-check the working tree
+  against the diff I presented for approval.
+  If they diverge, stop and ask instead of committing.
 
 ## Date & Time
 
 - When a question involves the current date or year,
   confirm it with `date` (or `date --utc`) first
   rather than assuming from context or prior messages.
+
+## Derivations
+
+- Show every intermediate step of a derivation in the document,
+  one manipulation per line in an `align` block,
+  and number every line as a sub-equation of one parent
+  (`1.1`, `1.2`, ...),
+  so that a single step can be referenced.
+  In LaTeX, wrap the `align` in `subequations`,
+  patch `\theequation` to `\theparentequation.\arabic{equation}`,
+  and put the label of the derivation on the `subequations` environment.
+  Name the step in words next to it when it is not obvious:
+  what was inserted, which identity was used, which terms were regrouped.
+- Insert definitions explicitly before simplifying,
+  and mark a term that vanishes with the reason
+  (an underbrace with the equation number, or a sentence).
+- Never collapse a product, sum, or average of several terms
+  into a regrouped form in one step.
+  Expand first, reorder second, regroup third, each on its own line.
+- This applies to LaTeX, Markdown, and docstrings alike.
 
 ## Environment
 
@@ -85,6 +113,13 @@ The workflow for a change:
   Leave out what belongs in the pull request or the changelog.
 - Tell the reader why (and add context),
   never restate what the diff already shows.
+- Title a pull request like a commit header.
+  Keep its body short:
+  one or two sentences on what was wrong or missing,
+  then at most three bullets on what changed.
+  Leave out what the commit list already shows,
+  such as refactors, helper fixes, or benchmarks,
+  unless a reviewer needs it to judge the change.
 
 ## Julia
 
@@ -161,6 +196,14 @@ Don't over-engineer stuff.
 - Use upright forms for mathematical constants.
   Examples: `\mathrm{i}` for imaginary unit,
   `\mathrm{e}` for Euler's constant.
+
+## Math in Comments
+
+- Write math in code comments and plain-text docstrings in LaTeX-like notation
+  that matches the accompanying document or docstring.
+- Brace subscripts and superscripts of more than one character
+  (`M_{cc,k}`, `ϵ_{mf}`, `G_{imp}^{-1}`),
+  and leave single characters unbraced (`δ_k`, `X_k`, `B_k^†`).
 
 ## Markdown
 
