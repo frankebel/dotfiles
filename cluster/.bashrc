@@ -1,5 +1,9 @@
 # Minimal fallback if zsh does not work.
 
+# environment variables
+# shellcheck source=/dev/null
+. ~/.config/shell/environment
+
 HISTSIZE=10000
 
 # load spack and module environment; its exported vars must exist before the

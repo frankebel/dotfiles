@@ -1,9 +1,6 @@
 #!/bin/sh
 
-# environment variables
-# shellcheck source=/dev/null
-. ~/.config/shell/environment
-
+# environment variables, spack
 # shellcheck source=/dev/null
 [ -f ~/.bashrc ] && . ~/.bashrc
 
