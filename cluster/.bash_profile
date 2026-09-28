@@ -4,4 +4,5 @@
 # shellcheck source=/dev/null
 [ -f ~/.bashrc ] && . ~/.bashrc
 
-[ -x "$HOME/.local/bin/zsh" ] && exec "$HOME/.local/bin/zsh"
+# switch to zsh only in interactive shells
+case $- in *i*) command -v zsh > /dev/null && exec zsh ;; esac
