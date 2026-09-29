@@ -22,6 +22,7 @@ gimp
 git
 git-delta
 github-cli
+gnome-keyring
 goimapnotify
 grim
 hypridle
