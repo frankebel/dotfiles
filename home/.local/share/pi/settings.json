@@ -9,7 +9,7 @@
     "claude-bridge/claude-opus-5-5"
   ],
   "hideThinkingBlock": true,
-  "lastChangelogVersion": "0.87.1",
+  "lastChangelogVersion": "0.99.1",
   "modelThinkingLevels": {
     "aqueduct/deepseek-v4-flash-284b": "max",
     "aqueduct/qwen-3.5-397b": "max",
