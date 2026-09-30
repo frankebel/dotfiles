@@ -53,13 +53,15 @@
 
 The workflow for a change:
 
-1. Open a branch.
-2. Implement one fix or feature, with its tests.
-3. Run the checks that apply (tests, `runic`, `jetls`, formatters).
-4. Create the pull request.
-5. Update the changelog if the change is user-visible.
-6. Wait for the pipelines to pass.
-7. Stop there.
+1. Read `CONTRIBUTING.md` in the repository root, if it exists, and follow it;
+   where it conflicts with these rules, it wins.
+2. Open a branch.
+3. Implement one fix or feature, with its tests.
+4. Run the checks that apply (tests, `runic`, `jetls`, formatters).
+5. Create the pull request.
+6. Update the changelog if the change is user-visible.
+7. Wait for the pipelines to pass.
+8. Stop there.
    Merging is the code owner's decision:
    I merge to `main` locally and push on repositories I own,
    and on someone else's repository the pull request is where my work ends.
@@ -102,6 +104,13 @@ The workflow for a change:
   `GIT_EDITOR=true` writes an empty message, which git rejects.
 - Follow [Conventional Commits](https://www.conventionalcommits.org):
   `type(scope): subject`.
+  In a Julia package, the scope is the submodule the change lives in,
+  spelled like the module (`Solvers`, not `solvers`);
+  leave it out for the top-level module,
+  and never use a file name.
+- Put code names (functions, types, variables, operators) in backticks,
+  in commit headers and bodies alike:
+  ``fix: handle empty input in `parse` ``.
 - Keep commits atomic: one logical change per commit.
 - Write the header only.
   Add a body when the diff alone would mislead:
@@ -123,8 +132,8 @@ The workflow for a change:
 
 ## Julia
 
-- Run `jetls check <file>` from the project root
-  on the Julia files you edit.
+- Run `jetls check` from the project root
+  on the package entry file (`src/PKG.jl`) and on `test/runtests.jl`.
 - Never run `Pkg.develop`, or `Pkg.add` with a path or URL,
   in an environment whose `Project.toml` is tracked:
   they write a `[sources]` block of absolute local paths into it.
