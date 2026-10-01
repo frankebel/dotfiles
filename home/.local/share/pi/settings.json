@@ -1,7 +1,6 @@
 {
   "defaultModel": "claude-opus-5-5",
   "defaultProvider": "claude-bridge",
-  "defaultThinkingLevel": "max",
   "enabledModels": [
     "aqueduct/deepseek-v4-flash-284b",
     "aqueduct/qwen-3.5-397b",
