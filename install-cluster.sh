@@ -74,6 +74,15 @@ if ! installed jq "$V"; then
     mv "$TMP/jq" "$DEST/jq"
 fi
 
+# juliaup
+V=1.22.7
+S=d7d4a4249da97fdca5e4b312f4cd0d2ecf2bf52111f3421f8c026ef131ec8df2
+if ! installed juliaup "$V"; then
+    echo "juliaup $V"
+    dl juliaup.tar.gz "https://github.com/JuliaLang/juliaup/releases/download/v$V/juliaup-$V-x86_64-unknown-linux-musl-portable.tar.gz" "$S"
+    tar -xzf "$TMP/juliaup.tar.gz" -C "$DEST" ./juliaup ./julia
+fi
+
 # lsd
 V=1.2.0
 S=77849da1210336534258551a581401ba19ae6b8d7b66a2a1feff148ad41e3814
