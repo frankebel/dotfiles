@@ -188,11 +188,14 @@ if ! installed typos "$V"; then
     mv "$TMP/typos" "$DEST/typos"
 fi
 
-# uv (not version-pinned; `uv self update` after)
-if [ ! -x "$DEST/uv" ]; then
-    echo "uv"
-    env UV_INSTALL_DIR="$DEST" UV_UNMANAGED_INSTALL=1 sh -c \
-        'curl -LsSf https://astral.sh/uv/install.sh | sh'
+# uv
+V=0.12.21
+S=d69d543a55ec9cdf9d3d9f2648b0a161847e3dbddc477e3be6b5813a6d46f639
+if ! installed uv "$V"; then
+    echo "uv $V"
+    dl uv.tar.gz "https://github.com/astral-sh/uv/releases/download/$V/uv-x86_64-unknown-linux-musl.tar.gz" "$S"
+    tar -xzf "$TMP/uv.tar.gz" -C "$TMP"
+    mv "$TMP/uv-x86_64-unknown-linux-musl/uv" "$TMP/uv-x86_64-unknown-linux-musl/uvx" "$DEST/"
 fi
 
 # zsh: no static build for old glibc; build ncurses + zsh from source into
