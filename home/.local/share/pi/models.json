@@ -27,30 +27,6 @@
               "reasoning_effort": { "$var": "thinking.effort" }
             }
           }
-        },
-        {
-          "id": "qwen-3.5-397b",
-          "name": "Qwen 3.5 397B",
-          "input": ["text"],
-          "contextWindow": 200000,
-          "maxTokens": 32000,
-          "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
-          "reasoning": true,
-          "thinkingLevelMap": {
-            "minimal": null,
-            "low": null,
-            "medium": null,
-            "high": "high",
-            "xhigh": null,
-            "max": "max"
-          },
-          "compat": {
-            "thinkingFormat": "chat-template",
-            "chatTemplateKwargs": {
-              "thinking": { "$var": "thinking.enabled" },
-              "reasoning_effort": { "$var": "thinking.effort" }
-            }
-          }
         }
       ]
     }
