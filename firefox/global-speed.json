@@ -1,0 +1,83 @@
+{
+  "browserKeybinds": [],
+  "enabled": true,
+  "hideBadge": true,
+  "hideMediaView": true,
+  "menuKeybinds": [],
+  "pageKeybinds": [
+    {
+      "adjustMode": 2,
+      "command": "speed",
+      "enabled": true,
+      "greedy": true,
+      "id": "4161672091",
+      "key": {
+        "altKey": false,
+        "code": "BracketLeft",
+        "ctrlKey": false,
+        "metaKey": false,
+        "shiftKey": false
+      },
+      "valueNumber": -0.1
+    },
+    {
+      "adjustMode": 2,
+      "command": "speed",
+      "enabled": true,
+      "greedy": true,
+      "id": "3217259260",
+      "key": {
+        "altKey": false,
+        "code": "BracketRight",
+        "ctrlKey": false,
+        "metaKey": false,
+        "shiftKey": false
+      },
+      "valueNumber": 0.1
+    },
+    {
+      "command": "speed",
+      "enabled": true,
+      "greedy": true,
+      "id": "7394595972",
+      "key": {
+        "altKey": false,
+        "code": "Digit1",
+        "ctrlKey": false,
+        "metaKey": false,
+        "shiftKey": false
+      },
+      "valueNumber": 1
+    },
+    {
+      "command": "speed",
+      "enabled": true,
+      "greedy": true,
+      "id": "4144355369",
+      "key": {
+        "altKey": false,
+        "code": "Digit2",
+        "ctrlKey": false,
+        "metaKey": false,
+        "shiftKey": false
+      },
+      "valueNumber": 2
+    },
+    {
+      "command": "speed",
+      "enabled": true,
+      "greedy": true,
+      "id": "8855923307",
+      "key": {
+        "altKey": false,
+        "code": "Digit3",
+        "ctrlKey": false,
+        "metaKey": false,
+        "shiftKey": false
+      },
+      "valueNumber": 3
+    }
+  ],
+  "speed": 3,
+  "version": 15
+}

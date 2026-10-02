@@ -15,6 +15,7 @@ while external links are written like [this]().
 - [`packages`](packages/) contains a list of my installed packages.
 - [`laptop`](laptop/) contains dotfiles for my laptop.
 - [`cluster`](cluster/) contains dotfiles for clusters.
+- [`firefox`](firefox/) contains exported Firefox add-on settings to import manually.
 
 ## Installation and Setup
 
