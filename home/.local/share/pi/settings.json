@@ -2,7 +2,7 @@
   "defaultModel": "claude-opus-5-5",
   "defaultProvider": "claude-bridge",
   "enabledModels": [
-    "aqueduct/deepseek-v4-flash-284b",
+    "aqueduct/deepseek-v4-vision-exp-284b",
     "aqueduct/glm-5.3-744b-experimental",
     "claude-bridge/claude-fable-5-1",
     "claude-bridge/claude-opus-5-5"
@@ -10,7 +10,7 @@
   "hideThinkingBlock": true,
   "lastChangelogVersion": "1.0.0",
   "modelThinkingLevels": {
-    "aqueduct/deepseek-v4-flash-284b": "max",
+    "aqueduct/deepseek-v4-vision-exp-284b": "max",
     "aqueduct/glm-5.3-744b-experimental": "max",
     "claude-bridge/claude-fable-5-1": "high",
     "claude-bridge/claude-opus-5-5": "high"

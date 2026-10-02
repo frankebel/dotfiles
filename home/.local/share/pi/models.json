@@ -5,16 +5,16 @@
       "api": "openai-completions",
       "models": [
         {
-          "id": "deepseek-v4-flash-284b",
-          "name": "DeepSeek V4 Flash",
-          "input": ["text"],
+          "id": "deepseek-v4-vision-exp-284b",
+          "name": "DeepSeek-V4-Flash-Vision-Exp",
+          "input": ["text", "image"],
           "contextWindow": 393216,
           "maxTokens": 32000,
           "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
           "reasoning": true,
           "thinkingLevelMap": {
             "minimal": null,
-            "low": null,
+            "low": "low",
             "medium": null,
             "high": "high",
             "xhigh": null,
