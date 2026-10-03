@@ -1,7 +1,6 @@
 -- https://wiki.hypr.land/Configuring/Basics/Variables/
 
 local colors = require("mocha")
-local hostname = require("helper").hostname
 
 hl.config({
   general = {
@@ -22,7 +21,6 @@ hl.config({
   input = {
     kb_layout = "us",
     kb_variant = "altgr-intl",
-    kb_options = "grp:alt_shift_toggle",
     resolve_binds_by_sym = 1,
     repeat_rate = 50,
     repeat_delay = 250,
@@ -70,12 +68,6 @@ hl.config({
   },
 })
 
-hl.device({
-  name = "splitkb.com-aurora-corne-rev1",
-  kb_layout = "us",
-  kb_variant = "altgr-intl",
-})
-
 -- laptop touchpad
 hl.device({
   name = "synps/2-synaptics-touchpad",
@@ -83,11 +75,9 @@ hl.device({
 })
 
 -- laptop keyboard
-if hostname == "flaptop" then
-  hl.config({
-    input = {
-      kb_layout = "us,de",
-      kb_variant = "colemak,",
-    },
-  })
-end
+hl.device({
+  name = "at-translated-set-2-keyboard",
+  kb_layout = "us,de",
+  kb_variant = "colemak,",
+  kb_options = "grp:alt_shift_toggle",
+})
