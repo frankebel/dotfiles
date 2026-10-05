@@ -1,0 +1,14 @@
+#!/bin/sh
+# Open tessen only if gpg-agent has the pass key cached.
+
+keygrip=F85CE96403956F69EF0E0A3903ABBFDAA89897D7
+
+# gpg-connect-agent "HELP KEYINFO" /bye
+# KEYINFO <keygrip> <type> <serialno> <idstr> <cached> <protection> <fpr>
+cached=$(gpg-connect-agent "KEYINFO $keygrip" /bye | awk '{ print $7; exit }')
+[ "$cached" = 1 ] || {
+    notify-send "tessen" "GPG key not cached"
+    exit 1
+}
+
+exec tessen "$@"
