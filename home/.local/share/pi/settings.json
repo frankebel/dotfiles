@@ -25,5 +25,6 @@
     "npm:pi-markdown-preview",
     "npm:pi-web-access"
   ],
-  "theme": "catppuccin-mocha"
+  "theme": "catppuccin-mocha",
+  "treeFilterMode": "no-tools"
 }
