@@ -1,0 +1,6 @@
+#!/bin/sh
+# Sync mail and dependencies.
+
+mbsync "${1:---all}" || exit
+notmuch new || exit
+pkill -RTMIN+5 waybar || true

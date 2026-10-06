@@ -9,6 +9,7 @@ set reverse_name
 set mailcap_path = "$XDG_CONFIG_HOME/neomutt/mailcap"
 set query_command = "khard email --parsable %s"
 set sleep_time = 0
+set nm_default_url = "notmuch:///home/frank/.local/share/isync"
 
 # sidebar settings
 set sidebar_visible

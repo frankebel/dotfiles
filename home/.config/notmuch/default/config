@@ -1,0 +1,17 @@
+# vim: set ft=dosini:
+
+[database]
+path=/home/frank/.local/share/isync
+
+[user]
+name=Frank Ebel
+primary_email=frank@ebel.page
+other_email=frank.ebel@tuwien.ac.at
+
+[new]
+ignore=.mbsyncstate;.uidvalidity;
+
+[search]
+exclude_tags=deleted;spam;
+
+[maildir]
