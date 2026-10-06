@@ -1,4 +1,7 @@
 {
+  "branchSummary": {
+    "skipPrompt": true
+  },
   "defaultModel": "claude-opus-5-5",
   "defaultProvider": "claude-bridge",
   "enabledModels": [
