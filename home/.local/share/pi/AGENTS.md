@@ -11,6 +11,10 @@
   An unexpected difference from what I last showed you
   is your edit, not corruption or a race:
   never revert it, "repair" it, or claim it without asking.
+- Re-read a file right before changing it,
+  and change it with targeted edits instead of rewriting it whole,
+  so edits I made since you last read it survive.
+  Rewrite a whole file only when it is new or I ask for it.
 - Before staging, re-check the working tree
   against the diff I presented for approval.
   If they diverge, stop and ask instead of committing.
@@ -102,6 +106,17 @@ The workflow for a change:
   and pass `-m` to `git tag`,
   which `tag.gpgsign` makes annotated and therefore editor-opening.
   `GIT_EDITOR=true` writes an empty message, which git rejects.
+- Before committing or tagging, check that the signing key is unlocked,
+  without triggering a passphrase prompt:
+
+  ```sh
+  gpg --batch --pinentry-mode error --local-user "$(git config user.signingkey)" \
+      --sign < /dev/null > /dev/null
+  ```
+
+  If it fails, ask me to unlock the key instead of committing,
+  and never fall back to `--no-gpg-sign`.
+
 - Follow [Conventional Commits](https://www.conventionalcommits.org):
   `type(scope): subject`.
   In a Julia package, the scope is the submodule the change lives in,
@@ -132,7 +147,7 @@ The workflow for a change:
 
 ## Julia
 
-- Run `jetls check` from the project root
+- Run `jetls check --show-severity=hint` from the project root
   on the package entry file (`src/PKG.jl`) and on `test/runtests.jl`.
 - Never run `Pkg.develop`, or `Pkg.add` with a path or URL,
   in an environment whose `Project.toml` is tracked:
@@ -283,3 +298,25 @@ The pi config directory is given by the `PI_CODING_AGENT_DIR` environment variab
 - Insert a space between a number and its unit prefix
   (per BIPM's official guideline:
   "25 M", "3 kg", "5 km", not "25M", "3kg", "5km").
+- Draw structures and operations (trees, pointers, bit patterns, data flow)
+  as ASCII art in a code block instead of describing them in prose
+  or as an indented list.
+  Pick the form that fits the content, e.g. a tree for nested structures
+
+  ```
+        root
+       /    \
+      A      B
+     / \      \
+    1   2      3
+  ```
+
+  and aligned columns for bit operations:
+
+  ```
+  site       3 2 1 0
+  s          1 1 0 1
+  mask       0 0 1 1
+  ------------------
+  s & mask   0 0 0 1
+  ```
