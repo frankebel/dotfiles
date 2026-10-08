@@ -11,7 +11,7 @@
     "claude-bridge/claude-opus-5-5"
   ],
   "hideThinkingBlock": true,
-  "lastChangelogVersion": "1.0.4",
+  "lastChangelogVersion": "1.1.0",
   "modelThinkingLevels": {
     "aqueduct/deepseek-v4-vision-exp-284b": "max",
     "aqueduct/glm-5.3-744b-experimental": "max",
