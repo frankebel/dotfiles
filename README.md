@@ -108,9 +108,9 @@ Videos can be directly viewed with [mpv](https://mpv.io).
 ### Editor
 
 I use [Neovim](https://neovim.io/) as my text editor.
-As I use [lazy.nvim](https://github.com/folke/lazy.nvim) as my package manager,
+As I use `vim.pack` as my package manager,
 the list of installed plugins can be viewed in
-[`lazy-lock.json`](home/.config/nvim/lazy-lock.json).
+[`nvim-pack-lock.json`](home/.config/nvim/nvim-pack-lock.json).
 Further information can be read [`here`](home/.config/nvim/README.md).
 
 ### Operating System
