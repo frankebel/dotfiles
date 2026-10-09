@@ -52,8 +52,6 @@ hl.config({
     disable_hyprland_logo = true,
     disable_splash_rendering = true,
     vrr = 1,
-    enable_swallow = true,
-    swallow_regex = "^(kitty)$",
     background_color = "rgb(000000)",
   },
 
