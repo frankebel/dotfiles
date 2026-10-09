@@ -7,13 +7,6 @@ set -eu
 DEST="$HOME/.local/bin"
 TMP="${TMPDIR:-/tmp}/cluster-tools"
 
-for c in curl sha256sum; do
-    command -v "$c" > /dev/null 2>&1 || {
-        echo "$c required" >&2
-        exit 1
-    }
-done
-
 mkdir -p "$DEST" "$HOME/.local/opt" "$TMP"
 
 dl() { # $1 = file name, $2 = URL, $3 = SHA-256
