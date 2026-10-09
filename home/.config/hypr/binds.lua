@@ -48,10 +48,13 @@ hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- group
 hl.bind("SUPER + g", hl.dsp.group.toggle())
-hl.bind("SUPER + left", hl.dsp.group.prev())
-hl.bind("SUPER + right", hl.dsp.group.next())
+hl.bind("SUPER + SHIFT + tab", hl.dsp.group.prev())
+hl.bind("SUPER + tab", hl.dsp.group.next())
 hl.bind("SUPER + SHIFT + left", hl.dsp.group.move_window({ forward = false }))
 hl.bind("SUPER + SHIFT + right", hl.dsp.group.move_window())
+hl.bind("SUPER + down", hl.dsp.window.move({ out_of_group = true }))
+hl.bind("SUPER + left", hl.dsp.window.move({ into_group = "l" }))
+hl.bind("SUPER + right", hl.dsp.window.move({ into_group = "r" }))
 
 -- Launch applications
 hl.bind("SUPER + return", hl.dsp.exec_cmd("kitty"))
