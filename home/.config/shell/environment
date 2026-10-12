@@ -33,6 +33,7 @@ export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 export JULIAUP_DEPOT_PATH="$XDG_DATA_HOME/julia"
 export JULIA_DEPOT_PATH="$XDG_DATA_HOME/julia:" # `:` keeps the bundled depots
+export JULIA_PROJECT="@."
 export JUPYTER_PLATFORM_DIRS=1
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass"
