@@ -57,6 +57,9 @@
 [fetch]
     prune = true
 
+[includeIf "gitdir:~/data/projects/RAS_DMFT.jl/"]
+    path = RAS_DMFT.jl/config
+
 [init]
     defaultBranch = main
 

@@ -1,0 +1,11 @@
+# vim: ft=gitconfig
+# See git-config(1)
+# ~/data/projects/RAS_DMFT.jl uses the local Fermions.jl checkout,
+# while the repository keeps its URL.
+
+[core]
+    attributesFile = ~/.config/git/RAS_DMFT.jl/attributes
+
+[filter "fermions"]
+    smudge = sed \"s|{url = \\\"https://github.com/tuwien-cms/Fermions.jl\\\", rev = \\\"main\\\"}|{path = \\\"$HOME/data/projects/Fermions.jl\\\"}|\"
+    clean = sed \"s|{path = \\\"$HOME/data/projects/Fermions.jl\\\"}|{url = \\\"https://github.com/tuwien-cms/Fermions.jl\\\", rev = \\\"main\\\"}|\"

@@ -1,0 +1,3 @@
+# vim: ft=gitattributes
+# See gitattributes(5)
+Project.toml filter=fermions
