@@ -1,5 +1,4 @@
-// vim: ft=jsonc
-// See https://github.com/Alexays/Waybar
+// See waybar(5)
 
 {
     "layer": "top",

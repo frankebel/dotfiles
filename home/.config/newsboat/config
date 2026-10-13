@@ -1,3 +1,5 @@
+# See newsboat(1)
+
 # Options
 datetime-format "%FT%T"
 max-items 8

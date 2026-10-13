@@ -1,2 +1,5 @@
+# vim: ft=confini
+# See wofi(5)
+
 key_forward=Ctrl-n
 key_backward=Ctrl-p

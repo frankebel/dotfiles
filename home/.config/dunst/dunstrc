@@ -1,6 +1,6 @@
-# See dunst(5) for all configuration options
+# vim: ft=confini
+# See dunst(5)
 # Default config at /etc/dunst/dunstrc
-# vim: ft=cfg
 
 [global]
     follow = keyboard

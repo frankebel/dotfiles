@@ -1,5 +1,4 @@
-# Startup file for julia.
-# See <https://docs.julialang.org/en/v1/manual/command-line-interface/#Startup-file>.
+# See https://docs.julialang.org/en/v1/manual/command-line-interface/#Startup-file
 
 if isinteractive()
     # Add revise in REPL
