@@ -8,6 +8,7 @@ vim.pack.add({
 
 require("catppuccin").setup({
   flavour = "mocha",
+  transparent_background = true, -- use kitty background
 })
 
 vim.cmd.colorscheme("catppuccin-nvim")
