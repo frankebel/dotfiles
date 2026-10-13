@@ -84,8 +84,8 @@ esac
 # Uncategorized
 export MANPAGER='nvim +Man!'        # use neovim as manpager
 export QT_QPA_PLATFORMTHEME="qt6ct" # Configure Qt 6 applications without DE
-# `ssh-agent` setup with systemd user unit
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+# `ssh-agent` setup with systemd user unit, unless an agent is forwarded over ssh
+[ -n "$SSH_AUTH_SOCK" ] || export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 # prepend custom dirs to PATH
 for d in "$XDG_DATA_HOME/julia/bin" "$HOME/.local/bin"; do
