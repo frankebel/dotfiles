@@ -1,3 +1,6 @@
+# colorscheme
+source mocha
+
 # options
 auto_view text/html
 set index_format = "%4C %Z %{%FT%R} %-15.15L %s"
@@ -31,9 +34,6 @@ source "account.mailbox"
 # auto-switch per-account settings on mailbox entry
 folder-hook '\.local/share/isync/mailbox' 'source account.mailbox'
 folder-hook '\.local/share/isync/tuw'    'source account.tuw'
-
-# color theme
-source catppuccin.muttrc
 
 # encryption
 set crypt_use_gpgme = yes
