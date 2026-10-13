@@ -78,7 +78,7 @@ systemctl enable --user goimapnotify@mailbox.service
 systemctl enable --user goimapnotify@tuw.service
 systemctl enable --user mailsync.timer
 systemctl enable --user newsboat.timer
-systemctl enable --user ssh-agent.service
+systemctl enable --user ssh-agent.socket
 systemctl enable --user syncthing.service
 systemctl enable --user trash-empty.timer
 
