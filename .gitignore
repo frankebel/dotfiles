@@ -22,6 +22,7 @@ Manifest*.toml
 
 # systemd
 default.target.wants/
+sockets.target.wants/
 timers.target.wants/
 
 # zsh
