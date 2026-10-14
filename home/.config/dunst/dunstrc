@@ -37,8 +37,8 @@
     frame_color = "#fab387"
     timeout = 0
 
-[changebrighness]
-    appname = changebrighness
+[changebrightness]
+    appname = changebrightness
     history_ignore = true
 
 [changevolume]
