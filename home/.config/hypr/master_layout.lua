@@ -1,4 +1,4 @@
--- https://wiki.hyprland.org/Configuring/Layouts/Master-Layout/
+-- https://wiki.hypr.land/Configuring/Layouts/Master-Layout/
 
 hl.config({
   master = {

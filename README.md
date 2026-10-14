@@ -54,13 +54,13 @@ stow --dir="$HOME/data/projects/dotfiles" --target="$HOME" cluster
 | Type                    | Name                                                                    | Repository                                       | Config                              |
 | :---------------------- | :---------------------------------------------------------------------- | :----------------------------------------------- | :---------------------------------- |
 | Operating System        | [Arch Linux](https://archlinux.org/)                                    | [GitLab](https://gitlab.archlinux.org/archlinux) |                                     |
-| Compositor              | [Hyprland](https://hyprland.org)                                        | [GitHub](https://github.com/hyprwm/Hyprland)     | [`hypr`](home/.config/hypr)         |
+| Compositor              | [Hyprland](https://hypr.land)                                           | [GitHub](https://github.com/hyprwm/Hyprland)     | [`hypr`](home/.config/hypr)         |
 | Shell                   | [Zsh](https://www.zsh.org/)                                             | [GitHub](https://github.com/zsh-users/zsh)       | [`zsh`](home/.config/zsh)           |
 | Shell Prompt            | [Starship](https://starship.rs/)                                        | [GitHub](https://github.com/starship/starship)   | [`starship`](home/.config/starship) |
 | Terminal Emulator       | [kitty](https://sw.kovidgoyal.net/kitty/)                               | [GitHub](https://github.com/kovidgoyal/kitty)    | [`kitty`](home/.config/kitty)       |
 | Application Launcher    | Wofi                                                                    | [sourcehut](https://hg.sr.ht/~scoopta/wofi)      | [`wofi`](home/.config/wofi)         |
 | Color Scheme            | [Catppuccin Mocha](https://catppuccin.com)                              | [GitHub](https://github.com/catppuccin)          |                                     |
-| Browser                 | [Firefox](https://www.mozilla.org/en-US/firefox/new/)                   |                                                  |                                     |
+| Browser                 | [Firefox](https://www.firefox.com/)                                     |                                                  |                                     |
 | Editor                  | [Neovim](https://neovim.io/)                                            | [GitHub](https://github.com/neovim/neovim)       | [`nvim`](home/.config/nvim)         |
 | Font                    | [Noto Sans Mono](https://fonts.google.com/noto/specimen/Noto+Sans+Mono) | [GitHub](https://github.com/notofonts)           |                                     |
 | Image Viewer            | imv                                                                     | [sourcehut](https://sr.ht/~exec64/imv/)          | [`imv`](home/.config/imv)           |
@@ -68,7 +68,7 @@ stow --dir="$HOME/data/projects/dotfiles" --target="$HOME" cluster
 | Mailbox Synchronization | [isync](https://isync.sourceforge.io/)                                  |                                                  | [`isync`](home/.config/isync)       |
 | Media Player            | [mpv](https://mpv.io/)                                                  | [GitHub](https://github.com/mpv-player/mpv)      | [`mpv`](home/.config/mpv)           |
 | Notifications           | [dunst](https://dunst-project.org/)                                     | [GitHub](https://github.com/dunst-project/dunst) | [`dunst`](home/.config/dunst)       |
-| PDF Viewer              | [zathura](https://pwmt.org/projects/zathura/)                           | [GitLab](https://git.pwmt.org/pwmt/zathura)      | [`zathura`](home/.config/zathura)   |
+| PDF Viewer              | [zathura](https://pwmt.org/projects/zathura/)                           | [GitHub](https://github.com/pwmt/zathura)        | [`zathura`](home/.config/zathura)   |
 | Encryption              | [GnuPG](https://gnupg.org/)                                             |                                                  | [`gnupg`](home/.local/share/gnupg)  |
 | Password Manager        | [pass](https://www.passwordstore.org/)                                  | [Repo](https://git.zx2c4.com/password-store/)    |                                     |
 | RSS Reader              | [Newsboat](https://newsboat.org/)                                       |                                                  | [`newsboat`](home/.config/newsboat) |
@@ -77,14 +77,14 @@ stow --dir="$HOME/data/projects/dotfiles" --target="$HOME" cluster
 ## Explanation about software
 
 If possible I try to follow the
-[XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html).
+[XDG Base Directory Specification](https://specifications.freedesktop.org/basedir/latest/).
 For software which does not follow it, I try to export the environment variables in
 [`environment`](home/.config/shell/environment).
 
 ### Compositor
 
 Since I like the tiling workflow and want to use [Wayland](https://wayland.freedesktop.org/),
-[Hyprland](https://hyprland.org) is my Wayland compositor of choice.
+[Hyprland](https://hypr.land) is my Wayland compositor of choice.
 For the status bar I run [Waybar](https://github.com/Alexays/Waybar).
 
 ### Calendar and contacts
@@ -123,7 +123,7 @@ for faster setup.
 ### Password Management
 
 I use [pass](https://www.passwordstore.org/) and
-[pass-otp](https://github.com/tadfisher/pass-otp) to store and manage my passwords.
+[pass-otp](https://github.com/pass-extension/pass-otp) to store and manage my passwords.
 It is set up as a git repository containing `*.gpg` files which makes version control very easy.
 To quickly retrieve and enter my credentials, I use [tessen](https://github.com/ayushnix/tessen).
 

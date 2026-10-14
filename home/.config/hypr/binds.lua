@@ -1,6 +1,6 @@
 -- File containing key- and mousebinds
--- https://wiki.hypr.land/Configuring/Binds/
--- https://wiki.hypr.land/Configuring/Dispatchers/
+-- https://wiki.hypr.land/Configuring/Basics/Binds/
+-- https://wiki.hypr.land/Configuring/Basics/Dispatchers/
 
 -- Quit hyprland
 hl.bind("SUPER + CTRL + Q", hl.dsp.exit())

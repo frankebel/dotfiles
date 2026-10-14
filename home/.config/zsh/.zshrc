@@ -6,7 +6,7 @@ source_if_exists() {
 
 # Cursor shape
 # Set shape depending on mode.
-# shape list: https://ttssh2.osdn.jp/manual/4/en/usage/tips/vim.html
+# shape list: https://teratermproject.github.io/manual/5/en/usage/tips/vim.html
 function zle-keymap-select() {
     case $KEYMAP in
         vicmd)

@@ -1,4 +1,4 @@
--- https://wiki.hyprland.org/Configuring/Basics/Window-Rules/
+-- https://wiki.hypr.land/Configuring/Basics/Window-Rules/
 
 hl.window_rule({
   name = "games",
