@@ -46,6 +46,8 @@ starts the header on the second line.
 - Formats that quote like shell, such as neomutt and bat's config,
   follow the [shell code](#shell-code) rules.
 - Other formats quote a value only when the format requires it.
+- Write `=` the same way throughout a file,
+  as the format's documentation does.
 
 ## Shell code
 

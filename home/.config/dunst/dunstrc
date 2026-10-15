@@ -19,7 +19,7 @@
     mouse_middle_click = context
     mouse_right_click = close_current
     frame_color = "#89b4fa"
-    separator_color= frame
+    separator_color = frame
     highlight = "#89b4fa"
 
 [urgency_low]
