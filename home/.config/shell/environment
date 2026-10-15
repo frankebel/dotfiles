@@ -52,19 +52,19 @@ export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=$XDG_CONFIG_HOME/java"
 # fzf
 export FZF_DEFAULT_COMMAND='fd --follow --hidden'
 export FZF_DEFAULT_OPTS='
---layout reverse --height 40% --multi
---bind ctrl-f:preview-down,ctrl-b:preview-up
+--layout=reverse --height=40% --multi
+--bind=ctrl-f:preview-down,ctrl-b:preview-up
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc
 --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8
 --color=selected-bg:#45475a
 --color=border:#313244,label:#cdd6f4'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_CTRL_T_OPTS="--preview '[ -f {} ] \
+export FZF_CTRL_T_OPTS="--preview='[ -f {} ] \
 && bat --style=numbers --color=always {} \
 || tree -a -C -L 1 {}'"
-export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND --type d"
-export FZF_ALT_C_OPTS="--preview 'tree -a --gitignore -C -L 1 {}'"
+export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND --type=d"
+export FZF_ALT_C_OPTS="--preview='tree -a --gitignore -C -L 1 {}'"
 
 # Julia
 export JULIA_NUM_THREADS="$(($(nproc) < 8 ? $(nproc) : 8))" # at most 8 threads

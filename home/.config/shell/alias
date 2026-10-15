@@ -39,7 +39,7 @@ alias sqa='squeue -o "%.18i %.10Q %.12P %.40j %.8u %.2t %.10M %.6D %R"'
 
 # fd
 alias fd='fd --follow --hidden'
-alias fd1='fd --exact-depth 1'
+alias fd1='fd --exact-depth=1'
 alias ftree='fd | tree --fromfile'
 
 # kitty
@@ -63,10 +63,10 @@ alias mv='mv -iv'
 alias rm='rm -Iv'
 
 # lsd
-alias l='lsd --long --almost-all --ignore-glob ""' # don't ignore anything
-alias lt1='lsd --tree --almost-all --depth 1'
-alias lt2='lsd --tree --almost-all --depth 2'
-alias lt3='lsd --tree --almost-all --depth 3'
+alias l='lsd --long --almost-all --ignore-glob=""' # don't ignore anything
+alias lt1='lsd --tree --almost-all --depth=1'
+alias lt2='lsd --tree --almost-all --depth=2'
+alias lt3='lsd --tree --almost-all --depth=3'
 alias lt='lsd --tree --almost-all'
 
 # Neovim
@@ -74,19 +74,19 @@ alias sv='sudoedit'
 alias v='$EDITOR'
 
 # Pacman
-alias aurs='yay -Slq | fzf --preview "yay -Si {}" | xargs -ro yay -S'
-alias aursi='yay -Slq | fzf --preview "yay -Si {}" | xargs -ro yay -Si'
+alias aurs='yay -Slq | fzf --preview="yay -Si {}" | xargs -ro yay -S'
+alias aursi='yay -Slq | fzf --preview="yay -Si {}" | xargs -ro yay -Si'
 alias explicit-installed='pacman -Qqe | grep -vx "$(pacman -Qqg texlive)"'
-alias mirrorlist='sudo reflector --verbose --latest 8 --sort rate --protocol https --save /etc/pacman.d/mirrorlist'
-alias pacq='pacman -Qq | fzf --preview "pacman -Qi {}" | xargs -ro pacman -Qi'
-alias pacr='pacman -Qqe | fzf --preview "pacman -Qi {}" | xargs -ro sudo pacman -Rns'
-alias pacs='pacman -Slq | fzf --preview "pacman -Si {}" | xargs -ro sudo pacman -S'
-alias pacsi='pacman -Slq | fzf --preview "pacman -Si {}" | xargs -ro pacman -Si'
+alias mirrorlist='sudo reflector --verbose --latest=8 --sort=rate --protocol=https --save=/etc/pacman.d/mirrorlist'
+alias pacq='pacman -Qq | fzf --preview="pacman -Qi {}" | xargs -ro pacman -Qi'
+alias pacr='pacman -Qqe | fzf --preview="pacman -Qi {}" | xargs -ro sudo pacman -Rns'
+alias pacs='pacman -Slq | fzf --preview="pacman -Si {}" | xargs -ro sudo pacman -S'
+alias pacsi='pacman -Slq | fzf --preview="pacman -Si {}" | xargs -ro pacman -Si'
 
 # select project
 spr() {
     dir="$(cd "$PROJECTDIR" \
-        && fd --max-depth 1 --type d | fzf --no-multi)" \
+        && fd --max-depth=1 --type=d | fzf --no-multi)" \
         && cd "$PROJECTDIR/$dir" && l
 }
 

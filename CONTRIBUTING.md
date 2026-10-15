@@ -49,6 +49,7 @@ starts the header on the second line.
   unless the string contains a single quote.
 - Write variables as `$var`,
   with braces only where needed (`${var}_suffix`, `${var:-default}`).
+- Write long options with a value as `--option=value`.
 
 ## Upstream content
 

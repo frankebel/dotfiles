@@ -19,7 +19,7 @@ tar_and_encrypt() {
     # encrypted tarball
     printf 'Encrypting %s\n' "$1"
     tar -cf - "$1" \
-        | gpg --encrypt --recipient BCCE722BD83CC643E1DF8DA86DAF5CC9ECB2A203 \
+        | gpg --encrypt --recipient=BCCE722BD83CC643E1DF8DA86DAF5CC9ECB2A203 \
             > "$DEST_DIR/$1.tar.gpg"
 }
 

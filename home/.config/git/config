@@ -1,37 +1,37 @@
 # See git-config(1)
 
 [alias]
-    af = !git diff --name-only | fzf --preview 'git diff {} | delta' | xargs git add
-    afn = !git ls-files --others --exclude-standard | fzf --preview 'bat --force-colorization {}' | xargs git add
-    afp = !git diff --name-only | fzf --preview 'git diff {} | delta' | xargs -ro git add --patch
+    af = !git diff --name-only | fzf --preview='git diff {} | delta' | xargs git add
+    afn = !git ls-files --others --exclude-standard | fzf --preview='bat --force-colorization {}' | xargs git add
+    afp = !git diff --name-only | fzf --preview='git diff {} | delta' | xargs -ro git add --patch
     alias = !git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
     c = commit
     ca = commit --amend
     can = commit --amend --no-edit
     conf = !git config -l | grep -v '^alias'
     d = diff
-    df = !git diff --name-only | fzf --preview 'git diff {} | delta' | xargs git diff
+    df = !git diff --name-only | fzf --preview='git diff {} | delta' | xargs git diff
     ds = diff --staged
     l = log
-    lf = !fd --hidden . | fzf --preview 'git {} | delta' | xargs git log
+    lf = !fd --hidden . | fzf --preview='git {} | delta' | xargs git log
     lo = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     loa = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
     logp = log --patch
     pl = pull
     ps = push
     rc = rebase --continue
-    rf = !git diff --name-only | fzf --preview 'git diff {} | delta' | xargs git restore
-    rfp = !git diff --name-only | fzf --preview 'git diff {} | delta' | xargs -ro git restore --patch
+    rf = !git diff --name-only | fzf --preview='git diff {} | delta' | xargs git restore
+    rfp = !git diff --name-only | fzf --preview='git diff {} | delta' | xargs -ro git restore --patch
     ri = rebase --interactive
     ric = "!f() { git rebase --interactive HEAD~${1:-10}; }; f"
-    rmf = !git ls-files | fzf --preview 'bat --force-colorization {}' | xargs git rm
+    rmf = !git ls-files | fzf --preview='bat --force-colorization {}' | xargs git rm
     rs = restore --staged .
-    rsf = !git diff --name-only --cached | fzf --preview 'git diff {} | delta' | xargs git restore --staged
-    rsp = !git diff --name-only --cached | fzf --preview 'git diff {} | delta' | xargs -ro git restore --staged --patch
+    rsf = !git diff --name-only --cached | fzf --preview='git diff {} | delta' | xargs git restore --staged
+    rsp = !git diff --name-only --cached | fzf --preview='git diff {} | delta' | xargs -ro git restore --staged --patch
     s = status
     sp = stash pop
     su = stash -u
-    sw = !git branch | grep -v '^*' | fzf --no-multi --preview 'git lo --color=always {1}' | xargs git switch
+    sw = !git branch | grep -v '^*' | fzf --no-multi --preview='git lo --color=always {1}' | xargs git switch
 
 [commit]
     gpgSign = true
@@ -41,7 +41,7 @@
     pager = delta
 
 [credential]
-    helper = cache --timeout 86400
+    helper = cache --timeout=86400
 
 [delta]
     light = false
