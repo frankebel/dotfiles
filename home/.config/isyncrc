@@ -1,3 +1,5 @@
+# See mbsync(1)
+
 # Mailbox
 IMAPStore mailbox-remote
 Host imap.mailbox.org

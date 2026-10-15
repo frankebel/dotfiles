@@ -1,3 +1,5 @@
+# See systemd.target(5)
+
 [Unit]
 Description=Hyprland session
 BindsTo=graphical-session.target

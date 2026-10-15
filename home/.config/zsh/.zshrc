@@ -1,3 +1,5 @@
+# See zsh(1)
+
 source_if_exists() {
     [ -f "$1" ] && . "$1"
 }

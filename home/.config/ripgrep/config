@@ -1,4 +1,4 @@
-# See https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md#configuration-file
+# See rg(1)
 
 # Ignore `.git` directory
 --glob=!.git/*

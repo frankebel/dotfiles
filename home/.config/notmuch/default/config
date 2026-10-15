@@ -1,4 +1,5 @@
-# vim: set ft=dosini:
+# vim: ft=confini
+# See notmuch-config(1)
 
 [database]
 path=/home/frank/.local/share/isync

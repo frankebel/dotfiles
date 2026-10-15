@@ -1,3 +1,5 @@
+# See git-config(1)
+
 [alias]
     af = !git diff --name-only | fzf --preview 'git diff {} | delta' | xargs git add
     afn = !git ls-files --others --exclude-standard | fzf --preview 'bat --force-colorization {}' | xargs git add

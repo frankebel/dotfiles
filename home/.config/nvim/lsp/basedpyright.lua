@@ -1,4 +1,4 @@
--- https://github.com/detachhead/basedpyright
+-- See https://github.com/detachhead/basedpyright
 
 return {
   cmd = { "basedpyright-langserver", "--stdio" },

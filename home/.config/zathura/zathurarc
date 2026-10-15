@@ -1,3 +1,5 @@
+# See zathurarc(5)
+
 set default-fg                 rgba(205,214,244,1)
 set default-bg                 rgba(30,30,46,1)
 

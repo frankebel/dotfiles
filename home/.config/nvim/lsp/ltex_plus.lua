@@ -1,4 +1,4 @@
--- https://github.com/ltex-plus/ltex-ls-plus
+-- See https://github.com/ltex-plus/ltex-ls-plus
 
 -- https://ltex-plus.github.io/ltex-plus/supported-languages.html#markup-languages
 local language_id_mapping = {

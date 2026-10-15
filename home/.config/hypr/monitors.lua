@@ -1,4 +1,4 @@
--- https://wiki.hypr.land/Configuring/Basics/Monitors/
+-- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 
 local hostname = require("helper").hostname
 

@@ -1,4 +1,4 @@
--- https://github.com/astral-sh/ruff
+-- See https://github.com/astral-sh/ruff
 
 return {
   cmd = {

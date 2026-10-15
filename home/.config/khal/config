@@ -1,5 +1,5 @@
-# vim: ft=ini
-# https://khal.readthedocs.io/en/latest/configure.html
+# vim: ft=confini
+# See khal(1)
 
 [calendars]
 

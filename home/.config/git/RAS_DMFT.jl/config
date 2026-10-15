@@ -1,5 +1,4 @@
 # vim: ft=gitconfig
-# See git-config(1)
 # ~/data/projects/RAS_DMFT.jl uses the local Fermions.jl checkout,
 # while the repository keeps its URL.
 

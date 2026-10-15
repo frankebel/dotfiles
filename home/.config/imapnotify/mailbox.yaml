@@ -1,3 +1,5 @@
+# See https://gitlab.com/shackra/goimapnotify
+
 configurations:
   - host: imap.mailbox.org
     port: 993

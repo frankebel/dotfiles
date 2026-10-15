@@ -1,5 +1,4 @@
-# Configuration file for LSDeluxe (lsd).
-# See <https://github.com/lsd-rs/lsd>.
+# See lsd(1)
 
 blocks:
   - permission

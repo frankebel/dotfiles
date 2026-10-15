@@ -1,4 +1,4 @@
--- https://github.com/latex-lsp/texlab
+-- See https://github.com/latex-lsp/texlab
 
 return {
   cmd = { "texlab" },

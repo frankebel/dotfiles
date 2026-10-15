@@ -1,6 +1,4 @@
--- Language Server Protocol LSP
--- https://microsoft.github.io/language-server-protocol/
--- `:help lsp`
+-- See `:help lsp`
 
 vim.pack.add({
   {

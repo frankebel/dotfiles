@@ -1,4 +1,4 @@
--- https://wiki.hypr.land/Configuring/Basics/Autostart/
+-- See https://wiki.hypr.land/Configuring/Basics/Autostart/
 
 local hostname = require("helper").hostname
 

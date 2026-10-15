@@ -1,3 +1,5 @@
+-- See Hyprland(1)
+
 require("environment_variables")
 require("autostart")
 require("binds")

@@ -1,4 +1,4 @@
--- https://github.com/aviatesk/JETLS.jl
+-- See https://github.com/aviatesk/JETLS.jl
 
 return {
   cmd = {

@@ -1,5 +1,5 @@
-# vim: ft=toml
-# See `man 5 imv`
+# vim: ft=confini
+# See imv(5)
 
 [options]
 overlay = true

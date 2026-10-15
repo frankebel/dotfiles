@@ -1,4 +1,4 @@
--- https://github.com/luals/lua-language-server
+-- See https://github.com/luals/lua-language-server
 
 return {
   cmd = { "lua-language-server" },

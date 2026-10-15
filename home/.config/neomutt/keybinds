@@ -1,4 +1,4 @@
-# vim: filetype=muttrc
+# vim: ft=neomuttrc
 # keybinds
 bind attach,index,pager g noop
 bind index,pager M noop

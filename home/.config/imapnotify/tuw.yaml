@@ -1,3 +1,5 @@
+# See https://gitlab.com/shackra/goimapnotify
+
 configurations:
   - host: mail.intern.tuwien.ac.at
     port: 993

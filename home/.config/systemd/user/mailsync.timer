@@ -1,3 +1,5 @@
+# See systemd.timer(5)
+
 [Unit]
 Description=Mailbox synchronization timer
 

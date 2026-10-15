@@ -1,5 +1,4 @@
--- File containing key- and mousebinds
--- https://wiki.hypr.land/Configuring/Basics/Binds/
+-- See https://wiki.hypr.land/Configuring/Basics/Binds/
 -- https://wiki.hypr.land/Configuring/Basics/Dispatchers/
 
 -- Quit hyprland

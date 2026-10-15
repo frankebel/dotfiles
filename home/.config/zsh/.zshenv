@@ -1,3 +1,5 @@
+# See zsh(1)
+
 # Load environment variables
 # shellcheck source=/dev/null
 . ~/.config/shell/environment

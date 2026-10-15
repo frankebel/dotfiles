@@ -1,3 +1,5 @@
+# See systemd.service(5)
+
 [Unit]
 Description=Newsboat feed reload service
 

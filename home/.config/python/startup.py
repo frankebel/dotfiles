@@ -1,3 +1,5 @@
+# See python(1)
+
 # https://docs.python.org/3/library/readline.html?highlight=readline#example
 import atexit
 import os

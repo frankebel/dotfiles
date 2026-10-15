@@ -1,3 +1,5 @@
+-- See yay(8)
+
 -- Only track changes compared to default.
 
 yay.opt.answer_clean = "None"

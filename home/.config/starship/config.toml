@@ -1,4 +1,4 @@
-# https://starship.rs/config/
+# See https://starship.rs/config/
 
 # prompt
 command_timeout = 2_000
