@@ -70,7 +70,11 @@
     date = iso8601-strict
 
 [merge]
-    conflictStyle = diff3
+    conflictStyle = zdiff3
+    tool = nvimdiff
+
+[mergetool]
+    keepBackup = false
 
 [pull]
     rebase = true
