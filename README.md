@@ -5,7 +5,8 @@
 This repository contains my personal configuration files (dotfiles) which I
 mainly manage with [GNU Stow](https://www.gnu.org/software/stow/).
 Feel free to be inspired by them and use parts of it.
-The color scheme I use is [Catppuccin Mocha](https://catppuccin.com).
+The color scheme I use is [Catppuccin Mocha](https://catppuccin.com),
+with its darkest color `crust` (`#11111b`) as background.
 
 Links to my files within this repository are written like [`this`](),
 while external links are written like [this]().
