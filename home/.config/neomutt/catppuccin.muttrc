@@ -1,6 +1,7 @@
 # vim: ft=neomuttrc
 # Copied from https://github.com/catppuccin/neomutt/blob/main/neomuttrc
 # tabs expanded with `expand -t 2`
+# double quotes without expansion replaced with single quotes
 
 color normal      default default         # Text is "Text"
 color index       color2 default ~N       # New Messages are Green
@@ -18,8 +19,8 @@ color tree        color15 default         # thread tree arrows Subtext 0
 color tilde       color15 default         # blank line padding Subtext 0
 
 color hdrdefault  color13 default         # default headers Pink
-color header      color13 default "^From:"
-color header      color13 default "^Subject:"
+color header      color13 default '^From:'
+color header      color13 default '^Subject:'
 
 color quoted      color15 default         # Subtext 0
 color quoted1     color7 default          # Subtext 1

@@ -3,34 +3,34 @@
 unmailboxes *
 
 # local storage
-set mbox_type = Maildir
-set folder = "~/.local/share/isync/mailbox"
-set spoolfile = +INBOX
-set postponed = +Drafts
-set record = +Sent
-set trash = +Trash
+set mbox_type = 'Maildir'
+set folder = '~/.local/share/isync/mailbox'
+set spoolfile = '+INBOX'
+set postponed = '+Drafts'
+set record = '+Sent'
+set trash = '+Trash'
 mailboxes \
     =INBOX \
     =Drafts \
-    -label "Spam" =Junk \
+    -label 'Spam' =Junk \
     =Sent \
     =Trash \
     =Archive
 
 # SMTP
-set smtp_url = "smtps://frank.ebel@mailbox.org@smtp.mailbox.org:465"
-set smtp_pass = `pass show mail/mailbox | awk '$1 == "apppwd:" {print $2}'`
-set my_name = "Frank Ebel"
-set from = "frank@ebel.page"
+set smtp_url = 'smtps://frank.ebel@mailbox.org@smtp.mailbox.org:465'
+set smtp_pass = "`pass show mail/mailbox | awk '/^apppwd:/ {print $2}'`"
+set my_name = 'Frank Ebel'
+set from = 'frank@ebel.page'
 set ssl_starttls
 set ssl_force_tls
 
 # options
-set realname = "Frank Ebel"
-alternates "@ebel.page" "@personalmail.page"
+set realname = 'Frank Ebel'
+alternates '@ebel.page' '@personalmail.page'
 
 # per-account macros because Microsoft uses different names
-macro index,pager gs "<change-folder>=Sent<Enter>" "go to Sent"
-macro index,pager gt "<change-folder>=Trash<Enter>" "go to Trash"
-macro index,pager Ms "<save-message>=Sent<Enter>" "move to Sent"
-macro index,pager Mt "<save-message>=Trash<Enter>" "move to Trash"
+macro index,pager gs '<change-folder>=Sent<Enter>' 'go to Sent'
+macro index,pager gt '<change-folder>=Trash<Enter>' 'go to Trash'
+macro index,pager Ms '<save-message>=Sent<Enter>' 'move to Sent'
+macro index,pager Mt '<save-message>=Trash<Enter>' 'move to Trash'

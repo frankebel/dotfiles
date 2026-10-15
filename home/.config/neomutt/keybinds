@@ -27,13 +27,13 @@ bind index,pager \\ vfolder-from-query
 macro index,pager <f2> '<sync-mailbox><enter-command>source $XDG_CONFIG_HOME/neomutt/account.mailbox<enter><change-folder>!<enter>'
 macro index,pager <f3> '<sync-mailbox><enter-command>source $XDG_CONFIG_HOME/neomutt/account.tuw<enter><change-folder>!<enter>'
 
-macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
-macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+macro index,pager \cb '<pipe-message> urlscan<Enter>' 'call urlscan to extract URLs out of a message'
+macro attach,compose \cb '<pipe-entry> urlscan<Enter>' 'call urlscan to extract URLs out of a message'
 
-macro index,pager ga "<change-folder>=Archive<Enter>" "go to Archive"
-macro index,pager gd "<change-folder>=Drafts<Enter>" "go to Drafts"
-macro index,pager gi "<change-folder>=INBOX<Enter>" "go to Inbox"
+macro index,pager ga '<change-folder>=Archive<Enter>' 'go to Archive'
+macro index,pager gd '<change-folder>=Drafts<Enter>' 'go to Drafts'
+macro index,pager gi '<change-folder>=INBOX<Enter>' 'go to Inbox'
 
-macro index,pager Ma "<save-message>=Archive<Enter>" "move to Archive"
-macro index,pager Md "<save-message>=Drafts<Enter>" "move to Drafts"
-macro index,pager Mi "<save-message>=INBOX<Enter>" "move to Inbox"
+macro index,pager Ma '<save-message>=Archive<Enter>' 'move to Archive'
+macro index,pager Md '<save-message>=Drafts<Enter>' 'move to Drafts'
+macro index,pager Mi '<save-message>=INBOX<Enter>' 'move to Inbox'

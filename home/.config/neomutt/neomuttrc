@@ -2,24 +2,24 @@
 
 # options
 auto_view text/html
-set index_format = "%4C %Z %{%FT%R} %-15.15L %s"
-set date_format = "!%FT%R"
-set sort = reverse-date
-set mark_old = no
-set markers = no
+set index_format = '%4C %Z %{%FT%R} %-15.15L %s'
+set date_format = '!%FT%R'
+set sort = 'reverse-date'
+set mark_old = 'no'
+set markers = 'no'
 set reverse_name
 set mailcap_path = "$XDG_CONFIG_HOME/neomutt/mailcap"
-set query_command = "khard email --parsable %s"
+set query_command = 'khard email --parsable %s'
 set sleep_time = 0
-set nm_default_url = "notmuch:///home/frank/.local/share/isync"
+set nm_default_url = 'notmuch:///home/frank/.local/share/isync'
 
 # sidebar settings
 set sidebar_visible
-set sidebar_format = "%D%?F? [%F]?%* %?N?%N/?%S"
+set sidebar_format = '%D%?F? [%F]?%* %?N?%N/?%S'
 set mail_check_stats
 set sidebar_short_path
 set sidebar_folder_indent
-set sidebar_indent_string="    "
+set sidebar_indent_string='    '
 
 # refresh the waybar mail widget when leaving neomutt
 shutdown-hook 'echo `pkill -RTMIN+5 waybar`'
@@ -28,7 +28,7 @@ shutdown-hook 'echo `pkill -RTMIN+5 waybar`'
 source keybinds
 
 # default account
-source "account.mailbox"
+source account.mailbox
 
 # auto-switch per-account settings on mailbox entry
 folder-hook '\.local/share/isync/mailbox' 'source account.mailbox'
@@ -38,8 +38,8 @@ folder-hook '\.local/share/isync/tuw'    'source account.tuw'
 source catppuccin.muttrc
 
 # encryption
-set crypt_use_gpgme = yes
-set postpone_encrypt = yes
-set pgp_self_encrypt = yes
-set crypt_autopgp = yes
-set pgp_default_key = BCCE722BD83CC643E1DF8DA86DAF5CC9ECB2A203
+set crypt_use_gpgme = 'yes'
+set postpone_encrypt = 'yes'
+set pgp_self_encrypt = 'yes'
+set crypt_autopgp = 'yes'
+set pgp_default_key = 'BCCE722BD83CC643E1DF8DA86DAF5CC9ECB2A203'

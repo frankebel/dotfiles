@@ -1,7 +1,7 @@
 # See newsboat(1)
 
 # Options
-datetime-format "%FT%T"
+datetime-format %FT%T
 max-items 8
 reload-threads 100
 scrolloff 8
@@ -22,17 +22,17 @@ color title cyan default
 color info white black
 
 # Highlighting text
-highlight feedlist "---.*---" blue default bold
+highlight feedlist ---.*--- blue default bold
 # highlight feedlist ".*0/0.." default default invis
-highlight article "(^Feed:.*|^Title:.*|^Author:.*)" cyan default bold
-highlight article "(^Link:.*|^Date:.*)" default default
+highlight article (^Feed:.*|^Title:.*|^Author:.*) cyan default bold
+highlight article (^Link:.*|^Date:.*) default default
 highlight article "https?://[^ ]+" yellow default
-highlight article "^(Title):.*$" blue default
-highlight article "\\[[0-9]+\\]" magenta default bold
+highlight article ^(Title):.*$ blue default
+highlight article \[[0-9]+\] magenta default bold
 highlight article "\\[image\\ [0-9]+\\]" green default bold
 highlight article "\\[embedded flash: [0-9]+\\]" green default bold
-highlight article ":.*\\(link\\)$" cyan default
-highlight article ":.*\\(image\\)$" blue default
+highlight article :.*\(link\)$ cyan default
+highlight article :.*\(image\)$ blue default
 highlight article ":.*\\(embedded flash\\)$" magenta default
 
 # Macros

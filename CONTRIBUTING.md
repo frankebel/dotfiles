@@ -41,6 +41,12 @@ and neither has a file in a format without comments, such as JSON.
 A format whose first line is fixed, such as XML,
 starts the header on the second line.
 
+## Other config files
+
+- Formats that quote like shell, such as neomutt and bat's config,
+  follow the [shell code](#shell-code) rules.
+- Other formats quote a value only when the format requires it.
+
 ## Shell code
 
 - Quote assignment values, except plain integers.
