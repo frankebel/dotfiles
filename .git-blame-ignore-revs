@@ -1,5 +1,10 @@
 # Run `git config blame.ignoreRevsFile .git-blame-ignore-revs`
 
 # autoformat files
-71b815fe394d78bdbd271176cbbdfe5dca6b6d51
 68592e078ae3bf506c1f3060bc98b014ff0932ea
+
+# unify quoting and spacing
+9cf8efb402494027d4e5f1317cfeb9fdc8338a2e
+649c4f3ef464341efcde98e26c92844a84eb37ae
+a13b3a6751c149629644ee75c3718600959d6195
+cceb39bbff75997257e313fbdab161f98c95ac22
