@@ -2,7 +2,7 @@
 # Aliases for often used commands.
 
 # man zshbuiltins
-if [ "$SHELL" = "/bin/zsh" ]; then
+if [ "$SHELL" = '/bin/zsh' ]; then
     alias -g C='| wl-copy'
     alias -g P='"$(wl-paste)"'
     alias -s git='git clone'

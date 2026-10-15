@@ -3,12 +3,12 @@
 
 case "${1:-stop}" in
     start)
-        state="start"
-        paused="false"
+        state='start'
+        paused='false'
         ;;
     stop)
-        state="stop"
-        paused="true"
+        state='stop'
+        paused='true'
         ;;
     *)
         printf 'usage: %s [start|Stop]\n' "$0" >&2

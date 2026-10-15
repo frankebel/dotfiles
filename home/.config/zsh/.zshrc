@@ -28,7 +28,7 @@ zle -N zle-line-init
 # Changing Directories
 # View stack with `dirs -v`.
 # Navigate with `cd -n` with "n" being the number.
-DIRSTACKSIZE="20"
+DIRSTACKSIZE=20
 setopt AUTO_CD
 setopt AUTO_PUSHD
 setopt PUSHD_IGNORE_DUPS
@@ -86,14 +86,14 @@ bindkey -M menuselect 'l' vi-forward-char
 export KEYTIMEOUT=1
 
 # Application Specific Settings
-export GPG_TTY=$(tty)       # GnuPG pinentry
+export GPG_TTY="$(tty)"     # GnuPG pinentry
 eval "$(starship init zsh)" # Starship
 
 # Plugins
 plugindir='/usr/share/zsh/plugins'
 source_if_exists "$plugindir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source_if_exists "$plugindir/zsh-autosuggestions/zsh-autosuggestions.zsh"
-bindkey "^y" autosuggest-accept
+bindkey '^y' autosuggest-accept
 unset plugindir
 
 # fzf

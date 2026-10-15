@@ -7,11 +7,11 @@
 #   <num>%       brightness percent, e.g. 10% (0-100)
 #   key=value    any other numeric state field (transitiontime=50)
 
-HOST=192.168.0.101
-USER=$(pass show home/hue)
+HOST='192.168.0.101'
+USER="$(pass show home/hue)"
 
 [ "$#" -ge 1 ] || {
-    echo "no arguments given" >&2
+    echo 'no arguments given' >&2
     exit 1
 }
 
@@ -24,19 +24,19 @@ for arg in "$@"; do
             # color temperature
             # Kelvin mapped to mired
             # https://en.wikipedia.org/wiki/Mired
-            t=${arg%K}
+            t="${arg%K}"
             json="$json,\"ct\":$((1000000 / t))"
             ;;
         *%)
             # brightness
             # percent in [0, 100] mapped to API's [0, 254]
-            p=${arg%\%}
+            p="${arg%\%}"
             json="$json,\"bri\":$((p * 254 / 100))"
             ;;
         *=*)
             # directly pass argument
-            key=${arg%%=*}
-            val=${arg#*=}
+            key="${arg%%=*}"
+            val="${arg#*=}"
             json="$json,\"$key\":$val"
             ;;
         *)

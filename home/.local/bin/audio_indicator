@@ -4,16 +4,16 @@
 
 case "${1:-}" in
     sink)
-        port="@DEFAULT_AUDIO_SINK@"
+        port='@DEFAULT_AUDIO_SINK@'
         id=4528
-        icon_muted="󰖁"
-        icon="󰕾"
+        icon_muted='󰖁'
+        icon='󰕾'
         ;;
     source)
-        port="@DEFAULT_AUDIO_SOURCE@"
+        port='@DEFAULT_AUDIO_SOURCE@'
         id=7016
-        icon_muted="󰍭"
-        icon="󰍬"
+        icon_muted='󰍭'
+        icon='󰍬'
         ;;
     *)
         printf 'usage: %s sink|source\n' "$0" >&2
@@ -21,7 +21,7 @@ case "${1:-}" in
         ;;
 esac
 
-app_name="changevolume"
+app_name='changevolume'
 timeout=2000
 
 case "$(wpctl get-volume "$port")" in

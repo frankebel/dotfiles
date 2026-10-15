@@ -6,7 +6,7 @@ find "/run/media/$USER" -mindepth 1 -maxdepth 1 \
         --delimiter=/ \
         --exit-0 \
         --multi \
-        --prompt="Select drives to eject:" \
+        --prompt='Select drives to eject:' \
         --select-1 \
         --with-nth=-1 \
     | xargs -r -d '\n' udiskie-umount

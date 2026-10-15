@@ -1,7 +1,7 @@
 #!/bin/sh
 # Show notification with brightness indicator
 
-app_name="changebrightness"
+app_name='changebrightness'
 timeout=2000
 id=7014 # Random, but unique
 

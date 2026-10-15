@@ -6,8 +6,8 @@ host="$(uname -n)" # get hostname
 
 # Host group: "" (none), "desktop" or "laptop"
 case "$host" in
-    *desktop*) group=desktop ;;
-    *laptop*) group=laptop ;;
+    *desktop*) group='desktop' ;;
+    *laptop*) group='laptop' ;;
     *) group= ;;
 esac
 

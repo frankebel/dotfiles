@@ -7,10 +7,10 @@ monitor="$(hyprctl -j monitors | jq -r '.[].name | select(. != "eDP-1")')"
 case "${1:-local}" in
     local)
         output="$monitor"
-        mirror="eDP-1"
+        mirror='eDP-1'
         ;;
     remote)
-        output="eDP-1"
+        output='eDP-1'
         mirror="$monitor"
         ;;
     *)

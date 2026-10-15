@@ -41,6 +41,15 @@ and neither has a file in a format without comments, such as JSON.
 A format whose first line is fixed, such as XML,
 starts the header on the second line.
 
+## Shell code
+
+- Quote assignment values, except plain integers.
+- Use double quotes when the string contains an expansion (`$`),
+  and single quotes otherwise,
+  unless the string contains a single quote.
+- Write variables as `$var`,
+  with braces only where needed (`${var}_suffix`, `${var:-default}`).
+
 ## Upstream content
 
 A file copied from upstream follows the same rules as any other file.
