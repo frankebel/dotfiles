@@ -26,5 +26,6 @@
     "npm:pi-web-access"
   ],
   "theme": "catppuccin-mocha",
-  "treeFilterMode": "no-tools"
+  "treeFilterMode": "no-tools",
+  "tuiMode": "regular"
 }
