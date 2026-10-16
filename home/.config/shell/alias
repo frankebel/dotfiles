@@ -2,10 +2,14 @@
 # Aliases for often used commands.
 
 # man zshbuiltins
-if [ "$SHELL" = '/bin/zsh' ]; then
-    alias -g C='| wl-copy'
-    alias -g P='"$(wl-paste)"'
+if [ -n "$ZSH_VERSION" ]; then
     alias -s git='git clone'
+    if [ -n "$WAYLAND_DISPLAY" ]; then
+        alias -g C='| wl-copy'
+        alias -g P='"$(wl-paste)"'
+        alias cdp='cd P'
+        alias pwdc='pwd C'
+    fi
 fi
 
 # Color automatically
@@ -92,7 +96,6 @@ spr() {
 
 # Uncategorized
 alias cal='cal -m' # Monday first day of week.
-alias cdp='cd P'
 alias ff='firefox'
 alias i='imv'
 alias j='julia'
@@ -100,7 +103,6 @@ alias ll='ls --almost-all --human-readable -l'
 alias m='neomutt'
 alias ms='mailsync'
 alias printpath='printf "%s\n" "$PATH" | sed "s/:/\n/g"'
-alias pwdc='pwd C'
 alias tree='tree -a -I .git' # ignore .git directory
 alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 alias z='zathura'
