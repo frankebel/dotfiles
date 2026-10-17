@@ -66,7 +66,7 @@ stow --dir="$HOME/data/projects/dotfiles" --target="$HOME" cluster
 | Font                    | [Noto Sans Mono](https://fonts.google.com/noto/specimen/Noto+Sans+Mono) | [GitHub](https://github.com/notofonts)           |                                     |
 | Image Viewer            | imv                                                                     | [sourcehut](https://sr.ht/~exec64/imv/)          | [`imv`](home/.config/imv)           |
 | Mail                    | [Neomutt](https://neomutt.org/)                                         | [GitHub](https://github.com/neomutt/neomutt)     | [`neomutt`](home/.config/neomutt)   |
-| Mailbox Synchronization | [isync](https://isync.sourceforge.io/)                                  |                                                  | [`isync`](home/.config/isync)       |
+| Mailbox Synchronization | [isync](https://isync.sourceforge.io/)                                  |                                                  | [`isyncrc`](home/.config/isyncrc)   |
 | Media Player            | [mpv](https://mpv.io/)                                                  | [GitHub](https://github.com/mpv-player/mpv)      | [`mpv`](home/.config/mpv)           |
 | Notifications           | [dunst](https://dunst-project.org/)                                     | [GitHub](https://github.com/dunst-project/dunst) | [`dunst`](home/.config/dunst)       |
 | PDF Viewer              | [zathura](https://pwmt.org/projects/zathura/)                           | [GitHub](https://github.com/pwmt/zathura)        | [`zathura`](home/.config/zathura)   |
