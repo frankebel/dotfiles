@@ -14,11 +14,10 @@ return {
       diagnostics = {
         globals = {
           "Snacks",
-          "vim",
         },
       },
       format = { enable = false },
-      workspace = { checkThirdParty = false },
+      workspace = { checkThirdParty = false, library = { vim.env.VIMRUNTIME } },
       telemetry = { enable = false },
     },
   },
