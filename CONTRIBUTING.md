@@ -58,6 +58,7 @@ starts the header on the second line.
 - Write variables as `$var`,
   with braces only where needed (`${var}_suffix`, `${var:-default}`).
 - Write long options with a value as `--option=value`.
+- In a shell script, print with `printf`, not `echo`.
 
 ## Upstream content
 
