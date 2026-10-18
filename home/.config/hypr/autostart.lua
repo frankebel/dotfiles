@@ -20,6 +20,8 @@ hl.on("hyprland.start", function()
 
   -- https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland
   hl.exec_cmd('gsettings set org.gnome.desktop.interface font-name "Noto Sans Mono 12"')
+  hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme Adwaita")
+  hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme prefer-dark")
 
   -- device-specific
   if hostname == "fdesktop" then
