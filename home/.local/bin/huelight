@@ -40,7 +40,7 @@ for arg in "$@"; do
             json="$json,\"$key\":$val"
             ;;
         *)
-            echo "unhandled argument: $arg" >&2
+            printf 'unhandled argument: %s\n' "$arg" >&2
             exit 1
             ;;
     esac

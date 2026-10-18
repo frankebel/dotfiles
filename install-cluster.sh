@@ -11,7 +11,7 @@ mkdir -p "$DEST" "$HOME/.local/opt" "$TMP"
 
 dl() { # $1 = file name, $2 = URL, $3 = SHA-256
     curl -fsSL -o "$TMP/$1" "$2"
-    echo "$3  $TMP/$1" | sha256sum -c --quiet -
+    printf '%s  %s\n' "$3" "$TMP/$1" | sha256sum -c --quiet -
 }
 
 installed() { # $1 = binary name, $2 = version substring to expect
