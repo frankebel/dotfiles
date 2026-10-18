@@ -102,6 +102,9 @@ The workflow for a change:
   and never infer the effect from the commands you ran:
   a sort applied to an already-sorted file changes nothing,
   so the description must come from the diff, not the action.
+- Check the repository state (`git status`, `git log`) before describing it,
+  instead of carrying it over from an earlier turn:
+  I may have committed, merged, or pushed in the meantime.
 - Set `GIT_SEQUENCE_EDITOR` and `GIT_EDITOR` when scripting `rebase -i`,
   and pass `-m` to `git tag`,
   which `tag.gpgsign` makes annotated and therefore editor-opening.
@@ -201,6 +204,12 @@ with functions sorted alphabetically inside each block:
   and end the last argument with a trailing comma.
   Give each argument its own line
   when they do not all fit on one continuation line.
+
+### Naming
+
+- Write epsilon as `ϵ` (U+03F5, `\epsilon`)
+  and phi as `ϕ` (U+03D5, `\phi`),
+  never as `ε` (U+03B5, `\varepsilon`) or `φ` (U+03C6, `\varphi`):
 
 ### Tests
 
