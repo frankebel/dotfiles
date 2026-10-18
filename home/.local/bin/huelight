@@ -11,7 +11,7 @@ HOST='192.168.0.101'
 USER="$(pass show home/hue)"
 
 [ "$#" -ge 1 ] || {
-    echo 'no arguments given' >&2
+    printf 'no arguments given\n' >&2
     exit 1
 }
 

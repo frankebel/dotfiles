@@ -3,7 +3,7 @@
 
 if pgrep -x openconnect > /dev/null; then
     sudo killall --quiet -SIGINT openconnect
-    printf '%s\n' 'VPN disconnected'
+    printf 'VPN disconnected\n'
     exit 0
 fi
 
