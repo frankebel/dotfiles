@@ -44,10 +44,11 @@
     helper = cache --timeout=86400
 
 [delta]
-    light = false
-    line-numbers = true
+    blame-timestamp-output-format = %Y-%m-%dT%H:%M:%S%:z
+    features = catppuccin-mocha
+    hyperlinks = true
+    hyperlinks-file-link-format = "file://{path}#{line}"
     navigate = true
-    syntax-theme = Dracula
 
 [diff]
     colorMoved = default
@@ -58,6 +59,9 @@
 
 [fetch]
     prune = true
+
+[include]
+    path = catppuccin.gitconfig
 
 [includeIf "gitdir:~/data/projects/RAS_DMFT.jl/"]
     path = RAS_DMFT.jl/config
