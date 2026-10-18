@@ -9,4 +9,4 @@ text="$M1 $M2"
 
 # check if widget should be active, otherwise empty string
 Mtot="$((M1 + M2))"
-[ "$Mtot" -gt 0 ] && printf '%s\n' "$text" || printf ''
+[ "$Mtot" -eq 0 ] || printf '%s\n' "$text"
