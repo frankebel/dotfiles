@@ -33,6 +33,12 @@ Suggestions when asked for packages:
 - pipewire-session-manager: `wireplumber`
 - vulkan-driver: on AMD use `vulkan-radeon`
 
+### Thunderbird theme
+
+Download the [Catppuccin Mocha Blue theme](https://github.com/catppuccin/thunderbird/raw/main/themes/mocha/mocha-blue.xpi)
+and install it in Thunderbird via
+Settings → Add-ons and Themes → gear icon → Install Add-on From File.
+
 ### Only update home dotfiles
 
 ```sh
