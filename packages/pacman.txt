@@ -104,7 +104,7 @@ tokei
 torbrowser-launcher
 trash-cli
 tree-sitter-cli
-ttf-noto-nerd
+ttf-nerd-fonts-symbols-mono
 typos
 udiskie
 unzip
