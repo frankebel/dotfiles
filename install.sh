@@ -83,4 +83,4 @@ systemctl enable --user syncthing.service
 systemctl enable --user trash-empty.timer
 
 # Finalize
-printf '\033[1mCustom installation is done. Please reboot.\n'
+printf '\033[1mCustom installation is done. Please reboot.\033[0m\n'
