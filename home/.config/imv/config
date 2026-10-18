@@ -5,6 +5,13 @@
 overlay = true
 overlay_font = Monospace:14
 
+# Catppuccin Mocha
+# Copied from https://github.com/catppuccin/imv/blob/main/themes/mocha.config
+# spaces added around `=`
+background = 1e1e2e
+overlay_text_color = cdd6f4
+overlay_background_color = 11111b
+
 [binds]
 <Ctrl+r> = rotate by 90
 n = next
