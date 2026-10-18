@@ -102,7 +102,7 @@ alias j='julia'
 alias ll='ls --almost-all --human-readable -l'
 alias m='neomutt'
 alias ms='mailsync'
-alias printpath='printf "%s\n" "$PATH" | sed "s/:/\n/g"'
+alias printpath='printf "%s\n" "$PATH" | tr ":" "\n"'
 alias tree='tree -a -I .git' # ignore .git directory
 alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 alias z='zathura'
