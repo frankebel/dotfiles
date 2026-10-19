@@ -301,6 +301,10 @@ The pi config directory is given by the `PI_CODING_AGENT_DIR` environment variab
   `sh` / `#!/bin/sh` for POSIX shell,
   `bash` / `#!/bin/bash` only when bash-specific features are used.
 
+- Delete files and directories with `trash` instead of `rm`,
+  so that a deletion can be undone with `trash-restore`.
+  Fall back to `rm` only where `trash` is not installed.
+
 ## Style
 
 - Keep responses concise.
