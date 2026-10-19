@@ -22,7 +22,6 @@
     "git:github.com/ayghri/i-have-adhd@839872f9d1cd634fed642b4589ce7226199cc15f",
     "npm:@dietrichgebert/ponytail",
     "npm:pi-claude-bridge",
-    "npm:pi-markdown-preview",
     "npm:pi-web-access"
   ],
   "theme": "catppuccin-mocha",
