@@ -32,7 +32,6 @@ Create `pi-notes/.gitignore` with the single line `*` if it is missing.
 
 ## Write
 
-Follow the "Derivations" and "LaTeX" rules of the global `AGENTS.md`.
 Write the `.tex` file before compiling it,
 in a separate step, never in parallel with the build.
 
