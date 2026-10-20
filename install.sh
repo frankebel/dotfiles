@@ -4,10 +4,11 @@
 
 host="$(uname -n)" # get hostname
 
-# Host group: "" (none), "desktop" or "laptop"
+# Host group
 case "$host" in
     *desktop*) group='desktop' ;;
     *laptop*) group='laptop' ;;
+    *tuw*) group='work' ;;
     *) group= ;;
 esac
 
