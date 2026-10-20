@@ -19,7 +19,7 @@
     "claude-bridge/claude-opus-5-5": "high"
   },
   "packages": [
-    "git:github.com/ayghri/i-have-adhd@839872f9d1cd634fed642b4589ce7226199cc15f",
+    "git:github.com/ayghri/i-have-adhd@v0.4.1",
     "npm:@dietrichgebert/ponytail",
     "npm:pi-claude-bridge",
     "npm:pi-web-access"
