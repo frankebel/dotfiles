@@ -5,9 +5,9 @@
 set -eu
 
 DEST="$HOME/.local/bin"
-TMP="${TMPDIR:-/tmp}/cluster-tools"
+TMP="$(mktemp -d)"
 
-mkdir -p "$DEST" "$HOME/.local/opt" "$TMP"
+mkdir -p "$DEST" "$HOME/.local/opt"
 
 dl() { # $1 = file name, $2 = URL, $3 = SHA-256
     curl -fsSL -o "$TMP/$1" "$2"
