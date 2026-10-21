@@ -3,6 +3,6 @@
 hl.config({
   master = {
     mfact = 0.5,
-    new_status = "inherit",
+    new_status = "slave",
   },
 })
