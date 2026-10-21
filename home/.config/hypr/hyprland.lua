@@ -7,3 +7,5 @@ require("monitors")
 require("variables")
 require("master_layout")
 require("window_rules")
+-- custom scripts
+require("keep_focus")

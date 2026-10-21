@@ -19,6 +19,9 @@ They will be sourced automatically (`:help runtimepath`).
 │   ├── language1.lua
 │   ├── language2.lua
 │   ⋮
+├── lua
+│   ├── module1.lua
+│   ⋮
 ├── plugin
 │   ├── 1_file.lua
 │   ├── 2_file.lua

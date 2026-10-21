@@ -19,7 +19,9 @@ local function map(mode, l, r, desc)
 end
 -- compilation
 map("n", "<localleader>tt", "<cmd>VimtexTocOpen<cr>", "VTEX open table of contents ToC")
-map("n", "<localleader>tv", "<cmd>VimtexView<cr>", "VTEX view in pdf")
+map("n", "<localleader>tv", function()
+  require("keep_focus")(vim.cmd.VimtexView)
+end, "VTEX view in pdf")
 map("n", "<localleader>tc", "<cmd>VimtexCompile<cr>", "VTEX compile")
 -- Need to start command with `:` otherwise lines are not taken
 map("x", "<localleader>tC", ":VimtexCompileSelected<cr>", "VTEX compile selected")
