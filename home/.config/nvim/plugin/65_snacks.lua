@@ -9,27 +9,6 @@ vim.pack.add({
 
 require("snacks").setup({
   bigfile = {},
-  image = {
-    doc = {
-      enabled = true,
-      conceal = function(_, _)
-        return false
-      end,
-      max_width = 100,
-      max_height = 100,
-    },
-    math = {
-      latex = {
-        font_size = "large",
-        packages = {
-          "amsmath",
-          "amssymb",
-          "mathtools",
-          "unicode-math",
-        },
-      },
-    },
-  },
   indent = {
     animate = {
       enabled = false,
@@ -206,8 +185,3 @@ end, "LSP Symbols")
 nmap("<leader>sS", function()
   Snacks.picker.lsp_workspace_symbols()
 end, "LSP Workspace Symbols")
-
--- image
-nmap("<leader>si", function()
-  vim.fn.delete(vim.fn.stdpath("cache") .. "/snacks/image", "rf") -- only recursive not possible
-end, "Snacks delete cache")
