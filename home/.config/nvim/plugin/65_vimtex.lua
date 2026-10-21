@@ -8,6 +8,7 @@ vim.pack.add({
 })
 
 vim.g.vimtex_view_method = "zathura_simple" -- no `xdotool` on Wayland
+vim.g.vimtex_view_automatic = 0
 vim.g.vimtex_toc_config = {
   hide_line_numbers = 0,
   layer_status = {
