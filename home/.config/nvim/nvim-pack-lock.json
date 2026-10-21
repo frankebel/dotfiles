@@ -28,6 +28,11 @@
       "src": "https://github.com/mikesmithgh/kitty-scrollback.nvim",
       "version": ">=0.0.0"
     },
+    "live-preview.nvim": {
+      "rev": "a6307fa340ed7c0d96f5c567afc8c991aad94ce0",
+      "src": "https://github.com/brianhuster/live-preview.nvim",
+      "version": ">=0.0.0"
+    },
     "ltex_extra.nvim": {
       "rev": "7b2d27828308aacf30bff94e63cc8f8eb6c85de2",
       "src": "https://github.com/barreiroleo/ltex_extra.nvim",
