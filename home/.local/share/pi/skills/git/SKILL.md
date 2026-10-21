@@ -64,6 +64,10 @@ description: >-
   Leave out what belongs in the pull request or the changelog.
 - Tell the reader why (and add context),
   never restate what the diff already shows.
+- Break commit and pull request bodies like Markdown:
+  one sentence per line, broken at commas or phrase boundaries,
+  never wrapped at a fixed column such as 72.
+  Run the two checks of the markdown skill on the message file before committing.
 - Title a pull request like a commit header.
   Keep its body short:
   one or two sentences on what was wrong or missing,
