@@ -1,0 +1,5 @@
+{
+  "workspace": {
+    "ignoreDir": ["home/.config/hypr", "home/.config/yay"]
+  }
+}
