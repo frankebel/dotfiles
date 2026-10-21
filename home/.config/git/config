@@ -43,6 +43,9 @@
 [credential]
     helper = cache --timeout=86400
 
+[credential "https://git.overleaf.com"]
+    username = git
+
 [delta]
     blame-timestamp-output-format = %Y-%m-%dT%H:%M:%S%:z
     features = catppuccin-mocha
