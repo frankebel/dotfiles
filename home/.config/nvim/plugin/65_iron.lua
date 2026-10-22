@@ -69,7 +69,7 @@ iron.setup({
     send_line = "<leader>il",
     send_paragraph = "<leader>ip",
     send_until_cursor = "<leader>iuc",
-    send_mark = "<leader>im",
+    send_mark = "<leader>ia", -- repeat last
     send_code_block = "<leader>ib",
     send_code_block_and_move = "<leader>in",
     interrupt = "<leader>cc",
