@@ -13,7 +13,7 @@
     df = !git diff --name-only | fzf --preview='git diff {} | delta' | xargs git diff
     ds = diff --staged
     l = log
-    lf = !fd --hidden . | fzf --preview='git {} | delta' | xargs git log
+    lf = !fd --hidden . | fzf --preview='bat --force-colorization {}' | xargs git log
     lo = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     loa = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --exclude=refs/remotes/*/gh-pages --all
     logp = log --patch
