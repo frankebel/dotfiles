@@ -9,6 +9,7 @@ vim.pack.add({
 
 require("snacks").setup({
   bigfile = {},
+  image = { enabled = false },
   indent = {
     animate = {
       enabled = false,
