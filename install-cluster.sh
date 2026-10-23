@@ -57,6 +57,23 @@ if ! installed fzf "$V"; then
     tar -xzf "$TMP/fzf.tgz" -C "$DEST" fzf
 fi
 
+# git: no static build upstream; build from source.
+# Without curl and openssl headers on the cluster, borrow the system's https helper.
+V='2.56.0'
+S='26c56c296b38c0695b26fa95f475f1d01704d2d38e73465ca30b0b2f5dc789d3'
+if ! installed git "$V"; then
+    printf 'git %s\n' "$V"
+    dl git.tar.xz "https://mirrors.edge.kernel.org/pub/software/scm/git/git-$V.tar.xz" "$S"
+    tar -xJf "$TMP/git.tar.xz" -C "$TMP"
+    cd "$TMP/git-$V"
+    make -j"$(nproc)" prefix="$HOME/.local" NO_CURL=1 NO_GETTEXT=1 NO_OPENSSL=1 NO_RUST=1 install
+    cd /
+    # link the system git's https helper; /usr/bin/git because plain `git` is now the new one
+    for p in http https; do
+        ln -sf "$(/usr/bin/git --exec-path)/git-remote-http" "$HOME/.local/libexec/git-core/git-remote-$p"
+    done
+fi
+
 # jq
 V='1.7.1'
 S='5942c9b0934e510ee61eb3e30273f1b3fe2590df93933a93d7c58b81d19c8ff5'
