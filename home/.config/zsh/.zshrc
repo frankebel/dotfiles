@@ -58,7 +58,7 @@ _comp_options+=(globdots) # include hidden files
 setopt MAGIC_EQUAL_SUBST
 
 # History
-[ -d "$XDG_STATE_HOME/zsh" ] || mkdir "$XDG_STATE_HOME/zsh"
+[ -d "$XDG_STATE_HOME/zsh" ] || mkdir -p "$XDG_STATE_HOME/zsh"
 HISTFILE="$XDG_STATE_HOME/zsh/history"
 HISTSIZE=20000
 SAVEHIST=10000
