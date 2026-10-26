@@ -53,7 +53,12 @@ require("nvim-treesitter").install(parsers)
 
 -- enable treesitter
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = parsers,
+  -- filetype != parser name
+  pattern = vim.list_extend({
+    "gitrebase",
+    "jsonc",
+    "sh",
+  }, parsers),
   callback = function()
     vim.treesitter.start()
   end,
