@@ -54,6 +54,7 @@
     navigate = true
 
 [diff]
+    algorithm = histogram
     colorMoved = default
 
 [diff "gpg"]
