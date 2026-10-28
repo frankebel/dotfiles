@@ -27,14 +27,12 @@ alias ct='cd "$TEMPDIR"; l'
 alias ctor='cd "$TORRENTDIR"; l'
 alias vdf='cd "$DOTDIR"; $EDITOR'
 # university
-alias cc='cd "$PROJECTDIR/CeRu4Sn6/"; l'
+alias c1='cd "$PROJECTDIR/CeRu4Sn6/"; l'
+alias c3='cd "$PROJECTDIR/Ce3Bi4Pd3/"; l'
 alias cf='cd "$PROJECTDIR/Fermions.jl"; l'
-alias cfs='cd "$PROJECTDIR/Fermions_scripts"; l'
-alias cj='cd "$PROJECTDIR/RAS_DMFT.jl"; l'
+alias cr='cd "$PROJECTDIR/RAS_DMFT.jl"; l'
 alias cjo='cd "$PROJECTDIR/journal"; l'
 alias cphd='cd "$PHDDIR"; l'
-alias cs='cd "$PROJECTDIR/Fermions_scripts/"; l'
-alias vdse='cd "$PROJECTDIR/DiscreteSelfEnergy"; $EDITOR'
 alias vjo='cd "$PROJECTDIR/journal"; $EDITOR'
 
 # ASC
