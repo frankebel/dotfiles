@@ -64,12 +64,12 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -Iv'
 
-# lsd
-alias l='lsd --long --almost-all --ignore-glob=""' # don't ignore anything
-alias lt1='lsd --tree --almost-all --depth=1'
-alias lt2='lsd --tree --almost-all --depth=2'
-alias lt3='lsd --tree --almost-all --depth=3'
-alias lt='lsd --tree --almost-all'
+# eza
+alias l='eza --long --almost-all --group --git --time-style="+%F %T" --group-directories-first --icons=auto'
+alias lt='eza --tree --almost-all --group-directories-first --icons=auto --git-ignore --ignore-glob=".build|.git|.mypy_cache|.venv|build|venv"'
+alias lt1='lt --level=1'
+alias lt2='lt --level=2'
+alias lt3='lt --level=3'
 
 # Neovim
 alias sv='sudoedit'

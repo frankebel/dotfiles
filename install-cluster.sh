@@ -38,6 +38,15 @@ if ! installed delta "$V"; then
     mv "$TMP/delta-$V-x86_64-unknown-linux-musl/delta" "$DEST/delta"
 fi
 
+# eza
+V='0.23.5'
+S='e06eebab74b73d6b7d51a796a353824b001bea82df077706382e100815d28904'
+if ! installed eza "$V"; then
+    printf 'eza %s\n' "$V"
+    dl eza.tar.gz "https://github.com/eza-community/eza/releases/download/v$V/eza_x86_64-unknown-linux-musl.tar.gz" "$S"
+    tar -xzf "$TMP/eza.tar.gz" -C "$DEST" ./eza
+fi
+
 # fd
 V='10.4.2'
 S='def59805cd14b5651b68990855f426ad087f3b96881296d963910431ba3143c8'

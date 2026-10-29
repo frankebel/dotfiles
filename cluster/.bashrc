@@ -12,4 +12,4 @@ HISTSIZE=10000
 [ -f /opt/spack/share/spack/setup-env.sh ] && . /opt/spack/share/spack/setup-env.sh
 
 # fallback aliases
-command -v lsd > /dev/null 2>&1 || alias l='ls --almost-all --human-readable -l'
+command -v eza > /dev/null 2>&1 || alias l='ls --almost-all --human-readable -l'
