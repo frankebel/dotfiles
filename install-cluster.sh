@@ -102,16 +102,6 @@ if ! installed juliaup "$V"; then
     tar -xzf "$TMP/juliaup.tar.gz" -C "$DEST" ./juliaup ./julia
 fi
 
-# lsd
-V='1.2.0'
-S='77849da1210336534258551a581401ba19ae6b8d7b66a2a1feff148ad41e3814'
-if ! installed lsd "$V"; then
-    printf 'lsd %s\n' "$V"
-    dl lsd.tgz "https://github.com/lsd-rs/lsd/releases/download/v$V/lsd-v$V-x86_64-unknown-linux-musl.tar.gz" "$S"
-    tar -xzf "$TMP/lsd.tgz" -C "$TMP"
-    mv "$TMP/lsd-v$V-x86_64-unknown-linux-musl/lsd" "$DEST/lsd"
-fi
-
 # nvim
 V='0.12.5'
 S='9e4a0e9c2aebbcf1eb5f6cdf645b460c9249f517650d0191170f9f152ecfd721'

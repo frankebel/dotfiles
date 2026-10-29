@@ -44,7 +44,6 @@ libreoffice-fresh
 linux
 linux-firmware
 lostfiles
-lsd
 lua-language-server
 lxappearance
 lxsession
