@@ -1,8 +1,0 @@
-# See systemd.target(5)
-
-[Unit]
-Description=Hyprland session
-BindsTo=graphical-session.target
-Wants=graphical-session-pre.target
-After=graphical-session-pre.target
-PropagatesStopTo=graphical-session.target
