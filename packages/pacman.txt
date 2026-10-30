@@ -92,7 +92,6 @@ steam
 stow
 stylua
 syncthing
-system-config-printer
 tealdeer
 texlab
 texlive

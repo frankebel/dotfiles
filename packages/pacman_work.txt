@@ -2,8 +2,5 @@ amd-ucode
 blueman
 bluez
 bluez-utils
-bottom
 chezmoi
-git-lfs
 openmpi
-tmux
