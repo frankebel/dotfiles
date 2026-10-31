@@ -17,6 +17,7 @@ Manifest*.toml
 **/pi/git/
 **/pi/models-store.json
 **/pi/npm/
+**/pi/pi-web-access/
 **/pi/sessions/
 **/pi/web-search-cache/
 
