@@ -1,1 +1,2 @@
+elan-lean
 lyx
