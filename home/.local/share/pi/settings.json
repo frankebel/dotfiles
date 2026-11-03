@@ -11,7 +11,7 @@
     "claude-bridge/claude-opus-5-5"
   ],
   "hideThinkingBlock": true,
-  "lastChangelogVersion": "1.4.0",
+  "lastChangelogVersion": "1.5.0",
   "modelThinkingLevels": {
     "aqueduct/deepseek-v4-vision-exp-284b": "max",
     "aqueduct/glm-5.3-744b-experimental": "max",
@@ -26,5 +26,8 @@
   ],
   "theme": "catppuccin-mocha",
   "treeFilterMode": "no-tools",
-  "tuiMode": "regular"
+  "tuiMode": "regular",
+  "extensionChangelogVersions": {
+    "{\"source\":\"npm:pi-web-access\",\"scope\":\"user\"}": "0.46.0"
+  }
 }
