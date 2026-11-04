@@ -68,6 +68,21 @@ with functions sorted alphabetically inside each block:
   and phi as `ϕ` (U+03D5, `\phi`),
   never as `ε` (U+03B5, `\varepsilon`) or `φ` (U+03C6, `\varphi`):
 
+## Performance
+
+- Benchmark before and after every optimization with `@btime f($x)`,
+  interpolating external variables with `$`.
+  For code that mutates its input,
+  use `@btime f!(w) setup=(w = copy($x)) evals=1`,
+  without `$` on the setup variable `w`.
+- Profile before optimizing,
+  and read the call tree rather than the hottest line.
+- Add type annotations, `@inbounds`, or `@fastmath` for speed
+  only with a measured gain and tests that cover the change.
+- Report the Julia version, the thread counts (`-t` and BLAS), and the inputs
+  with every timing.
+- Follow the [Performance Tips](https://docs.julialang.org/en/v1/manual/performance-tips/).
+
 ## Tests
 
 - Prefer hardcoded expected numerical values
