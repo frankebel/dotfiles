@@ -5,7 +5,6 @@ local hostname = require("helper").hostname
 hl.on("hyprland.start", function()
   -- Compositor-independent
   hl.exec_cmd("udiskie")
-  hl.exec_cmd("lxsession")
 
   -- Window manager specific
   hl.exec_cmd("hypridle")
@@ -20,6 +19,8 @@ hl.on("hyprland.start", function()
   -- device-specific
   if hostname == "fdesktop" then
     hl.exec_cmd("sleep 1 && qbittorrent") -- without wait starts maximized
+  else
+    hl.exec_cmd("blueman-applet")
   end
 
   -- terminal emulator

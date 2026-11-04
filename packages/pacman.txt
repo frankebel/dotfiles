@@ -46,7 +46,6 @@ linux-firmware
 lostfiles
 lua-language-server
 lxappearance
-lxsession
 man-db
 mpv
 neomutt
