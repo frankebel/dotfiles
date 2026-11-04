@@ -1,0 +1,5 @@
+#!/bin/sh
+# Forget cached phrases and keys.
+
+gpg-connect-agent reloadagent /bye
+ssh-add -D

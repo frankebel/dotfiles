@@ -89,7 +89,7 @@ hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl set 10%-; bright
 hl.bind("XF86MonBrightnessUP", hl.dsp.exec_cmd("brightnessctl set 10%+; brightness_indicator"))
 
 -- Start/stop background processes
-hl.bind("SUPER + SHIFT + r", hl.dsp.exec_cmd("gpg-connect-agent reloadagent /bye"))
+hl.bind("SUPER + SHIFT + r", hl.dsp.exec_cmd("reset_agents"))
 hl.bind("SUPER + SHIFT + c", hl.dsp.exec_cmd("background start"))
 hl.bind("SUPER + SHIFT + q", hl.dsp.exec_cmd("background stop"))
 
