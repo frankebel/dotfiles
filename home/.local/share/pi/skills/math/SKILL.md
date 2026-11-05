@@ -33,6 +33,9 @@ description: >-
 - Use upright forms for mathematical constants.
   Examples: `\mathrm{i}` for imaginary unit,
   `\mathrm{e}` for Euler's constant.
+- Write subscripts and superscripts that name something upright (`\mathrm`),
+  and those that are variables or indices italic:
+  `$T_\mathrm{K}$`, `$n_\mathrm{bath}$`, but `$n_k$`, `$\Sigma_{ij}$`.
 
 ## Math in Comments
 
