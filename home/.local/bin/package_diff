@@ -1,0 +1,28 @@
+#!/bin/bash
+# Compare explicitly installed packages with the package lists in packages/.
+# Column 1: listed but not installed. Column 2: installed but not listed.
+
+# Host group, as in install.sh
+case "$(uname -n)" in
+    *desktop*) group='desktop' ;;
+    *laptop*) group='laptop' ;;
+    *tuw*) group='work' ;;
+    *) group='' ;;
+esac
+
+cd "$DOTDIR/packages" || exit
+
+installed() {
+    # texlive is listed as a group, so collapse its members into its name
+    texlive="$(pacman -Qqg texlive 2> /dev/null)"
+    pacman -Qqe | grep -vx "$texlive"
+    [ -n "$texlive" ] && printf 'texlive\n'
+}
+
+listed() {
+    for f in pacman.txt aur.txt "pacman_$group.txt" "aur_$group.txt"; do
+        [ -f "$f" ] && cat "$f"
+    done
+}
+
+comm -3 <(listed | sort) <(installed | sort)
