@@ -41,7 +41,8 @@ The workflow for a change:
    where it conflicts with these rules, it wins.
 2. Open a branch.
 3. Implement one fix or feature, with its tests.
-4. Run the checks that apply (tests, `runic`, `jetls`, formatters).
+4. Run the checks that apply (tests, `runic`, `jetls`, formatters),
+   and review the change with the `review` skill.
 5. Create the pull request.
 6. Update the changelog if the change is user-visible.
 7. Wait for the pipelines to pass.
