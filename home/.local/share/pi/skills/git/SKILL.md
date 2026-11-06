@@ -53,6 +53,8 @@ description: >-
 - Put code names (functions, types, variables, operators) in backticks,
   in commit headers and bodies alike:
   ``fix: handle empty input in `parse` ``.
+- Write no Unicode super- or subscripts in commit messages:
+  `4f5/2`, not `4f₅/₂`.
 - Keep commits atomic: one logical change per commit.
 - Write the header only.
   Add a body when the diff alone would mislead:
