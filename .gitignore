@@ -14,6 +14,7 @@ Manifest*.toml
 *.sug
 
 # pi
+**/pi/claude-bridge/sessions/
 **/pi/git/
 **/pi/models-store.json
 **/pi/npm/
