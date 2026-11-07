@@ -117,6 +117,12 @@ The pi config directory is given by the `PI_CODING_AGENT_DIR` environment variab
   so that a deletion can be undone with `trash-restore`.
   Fall back to `rm` only where `trash` is not installed.
 
+- Never kill processes by name or pattern
+  (`pkill -f`, `killall`, `pgrep … | xargs kill`):
+  other sessions run the same commands.
+  Record the PID when starting a background job (`echo $! > file`),
+  and kill only that PID or its process group.
+
 ## Style
 
 - Keep responses concise.
