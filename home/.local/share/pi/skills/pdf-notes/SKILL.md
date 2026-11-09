@@ -20,6 +20,7 @@ one subdirectory per topic, with a short `snake_case` name:
 <project root>/
 └── pi-notes/
     ├── .gitignore           contains `*`, so git ignores the directory, itself included
+    ├── .fdignore            re-includes the PDFs for `fd`
     └── <topic>/
         ├── <topic>.tex
         ├── <topic>.pdf
@@ -29,6 +30,15 @@ one subdirectory per topic, with a short `snake_case` name:
 Create or change nothing outside `pi-notes/`,
 so that deleting `pi-notes/` removes every note and build file.
 Create `pi-notes/.gitignore` with the single line `*` if it is missing.
+Create `pi-notes/.fdignore` if it is missing,
+so that `fd` finds the PDFs but not the build files:
+
+```
+!*/
+!*.pdf
+```
+
+`!*/` is needed because `fd` does not descend into the ignored topic directories.
 
 ## Write
 
