@@ -93,6 +93,7 @@ spr() {
 
 # Uncategorized
 alias cal='cal -m' # Monday first day of week.
+alias claude='"$PI_CODING_AGENT_DIR/npm/node_modules/@anthropic-ai/claude-agent-sdk-linux-x64/claude"' # bundled with pi-claude-bridge
 alias ff='firefox'
 alias i='imv'
 alias j='julia'
