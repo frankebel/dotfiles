@@ -44,6 +44,19 @@ description: >-
 
 ## Commit messages and pull requests
 
+- Write a suggested commit message to `commit.md` in the repository root,
+  and commit with `git commit -F commit.md`.
+- Write a suggested pull request to `pr.md` in the repository root,
+  laid out like a commit message:
+  the title on the first line, a blank line, then the body.
+  Open it with
+
+  ```sh
+  gh pr create --title "$(head -n 1 pr.md)" --body "$(tail -n +3 pr.md)"
+  ```
+
+- Never stage `commit.md` or `pr.md`.
+  Trash `commit.md` after the commit and `pr.md` after the pull request is opened.
 - Follow [Conventional Commits](https://www.conventionalcommits.org):
   `type(scope): subject`.
   In a Julia package, the scope is the submodule the change lives in,
