@@ -11,3 +11,9 @@ from TU Wien dataLAB.
 ## Models
 
 See the models configured in [models.json](models.json) in this directory.
+
+## Third-party skills
+
+Copied verbatim; resync by copying again and diffing.
+
+- `skills/socratic-tutor/`: [janestreet/agent_skills](https://github.com/janestreet/agent_skills) at `7c6715c`, MIT
