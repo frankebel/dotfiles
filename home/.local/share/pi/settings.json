@@ -7,7 +7,7 @@
   "enabledModels": [
     "aqueduct/deepseek-v4-vision-exp-284b",
     "aqueduct/glm-5.3-744b-experimental",
-    "claude-bridge/claude-fable-5-1",
+    "claude-bridge/claude-fable-5-2",
     "claude-bridge/claude-opus-5-5"
   ],
   "hideThinkingBlock": true,
@@ -15,7 +15,7 @@
   "modelThinkingLevels": {
     "aqueduct/deepseek-v4-vision-exp-284b": "max",
     "aqueduct/glm-5.3-744b-experimental": "max",
-    "claude-bridge/claude-fable-5-1": "high",
+    "claude-bridge/claude-fable-5-2": "high",
     "claude-bridge/claude-opus-5-5": "high"
   },
   "packages": [

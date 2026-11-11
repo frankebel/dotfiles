@@ -79,7 +79,7 @@ to `/tmp/review-BRANCH-own.md`, one line each.
    ```sh
    cd /tmp/review-BRANCH
    setsid pi -p --no-session --no-mcp --tools read,bash \
-       --model claude-bridge/claude-fable-5-1:high \
+       --model claude-bridge/fable:high \
        "$(cat /tmp/review-BRANCH-prompt.md)" > /tmp/review-BRANCH.md &
    echo $! > /tmp/review-BRANCH.pid
    ```
