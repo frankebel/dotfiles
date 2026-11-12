@@ -1,8 +1,10 @@
 -- Plugin to preview Markdown files live in the browser
 vim.pack.add({
   {
-    src = "https://github.com/brianhuster/live-preview.nvim",
-    version = vim.version.range("*"),
+    src = "https://github.com/frankebel/live-preview.nvim",
+    -- shortcut: fork branch for brianhuster/live-preview.nvim#392,
+    -- back to upstream + range("*") once a release contains it
+    version = "super-subscripts",
   },
 })
 
