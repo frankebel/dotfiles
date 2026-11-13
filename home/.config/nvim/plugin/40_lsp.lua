@@ -23,6 +23,8 @@ vim.lsp.enable({
   "texlab",
   -- Lua
   "lua_ls",
+  -- Markdown
+  "markdown_oxide",
   -- Python
   "basedpyright",
   "ruff",

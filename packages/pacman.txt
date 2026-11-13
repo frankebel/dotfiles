@@ -47,6 +47,7 @@ lostfiles
 lua-language-server
 lxappearance
 man-db
+markdown-oxide
 mpv
 neomutt
 neovim
