@@ -32,6 +32,8 @@
 - When a developer tool is missing,
   tell me and name the official Arch package to install with `pacman`.
   Never install it yourself.
+- I write environment variable names in lowercase to save typing:
+  `$var` means `$VAR`.
 
 ## Git
 
