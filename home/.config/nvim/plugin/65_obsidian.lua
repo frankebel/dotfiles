@@ -37,7 +37,12 @@ require("obsidian").setup({
     end,
   },
   completion = { create_new = false },
-  daily_notes = { folder = "daily", date_format = "YYYY/MM/YYYY-MM-DD" },
+  daily_notes = {
+    folder = "daily",
+    date_format = "YYYY/MM/YYYY-MM-DD",
+    -- {{title}} is the file stem `YYYY-MM-DD`; {{date}} would be today's date
+    template = vim.fn.stdpath("config") .. "/templates/day.md",
+  },
   frontmatter = { enabled = false },
   ui = { enable = false },
   picker = { name = "snacks.picker" },
