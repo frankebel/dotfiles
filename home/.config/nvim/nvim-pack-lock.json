@@ -62,6 +62,11 @@
       "src": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
       "version": "'main'"
     },
+    "obsidian.nvim": {
+      "rev": "15af492b64f4677959fe95008f1d5b782fe1f86a",
+      "src": "https://github.com/obsidian-nvim/obsidian.nvim",
+      "version": ">=0.0.0"
+    },
     "oil.nvim": {
       "rev": "17c0a8faaf48298a0c0cfb0d757c0eaee4ff7a32",
       "src": "https://github.com/stevearc/oil.nvim",
