@@ -1,5 +1,5 @@
 #!/bin/sh
-# Philips Hue control via direct bridge HTTP.
+# Philips Hue control via direct bridge HTTPS.
 #
 # Usage: huelight <arg>...
 #   on | off     turn lights on/off
@@ -48,6 +48,7 @@ done
 body="$json}"
 
 for i in 1 2 3; do
-    curl -sS -X PUT "http://$HOST/api/$USER/lights/$i/state" \
+    # -k: the bridge serves a self-signed certificate
+    curl -sSk -X PUT "https://$HOST/api/$USER/lights/$i/state" \
         -H 'Content-Type: application/json' -d "$body"
 done
