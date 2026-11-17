@@ -47,6 +47,7 @@ lostfiles
 lua-language-server
 lxappearance
 man-db
+man-pages
 mpv
 neomutt
 neovim
