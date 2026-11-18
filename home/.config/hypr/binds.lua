@@ -88,10 +88,8 @@ hl.bind("SUPER + slash", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ 
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl set 10%-; brightness_indicator"))
 hl.bind("XF86MonBrightnessUP", hl.dsp.exec_cmd("brightnessctl set 10%+; brightness_indicator"))
 
--- Start/stop background processes
+-- reset daemons, etc.
 hl.bind("SUPER + SHIFT + r", hl.dsp.exec_cmd("reset_agents"))
-hl.bind("SUPER + SHIFT + c", hl.dsp.exec_cmd("background start"))
-hl.bind("SUPER + SHIFT + q", hl.dsp.exec_cmd("background stop"))
 
 -- dunst control
 hl.bind("SUPER + d", hl.dsp.exec_cmd("dunstctl close"), { repeating = true })
