@@ -98,6 +98,13 @@ unset plugindir
 
 # fzf
 command -v fzf > /dev/null 2>&1 && source <(fzf --zsh)
+# <Alt-t>: like <Ctrl-t>, but only the current directory
+fzf-file-widget-depth1() {
+    local FZF_CTRL_T_COMMAND="$FZF_CTRL_T_COMMAND --exact-depth=1"
+    zle fzf-file-widget
+}
+zle -N fzf-file-widget-depth1
+bindkey '\et' fzf-file-widget-depth1
 
 # HPC modules
 [ -f /etc/profile.d/modules.sh ] && . /etc/profile.d/modules.sh
