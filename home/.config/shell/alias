@@ -8,7 +8,7 @@ if [ -n "$ZSH_VERSION" ]; then
         alias -g C='| wl-copy'
         alias -g P='"$(wl-paste)"'
         alias cdp='cd P'
-        alias pwdc='pwd C'
+        rpc() { realpath -- "${1:-.}" | wl-copy; }
     fi
 fi
 
