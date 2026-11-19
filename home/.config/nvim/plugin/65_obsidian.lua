@@ -84,7 +84,7 @@ vim.api.nvim_create_autocmd("User", {
 
     -- Headings across the vault; obsidian-ls reports them as kind String, files as File
     vim.keymap.set("n", "<leader>fh", function()
-      Snacks.picker.lsp_workspace_symbols({ filter = { markdown = { "String" } } })
+      Snacks.picker.lsp_workspace_symbols({ live = false, filter = { markdown = { "String" } } })
     end, {
       buffer = ev.buf,
       desc = "Journal: find headings",
